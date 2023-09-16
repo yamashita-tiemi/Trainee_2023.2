@@ -15,6 +15,7 @@
 
 * Aurea Prado
 * Felipe Souza
+* Leandro Carlos
 * Livia Faria
 * Taynara Carlos
 
