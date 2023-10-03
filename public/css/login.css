@@ -1,0 +1,15 @@
+
+body{
+    background: linear-gradient(117deg, #6F0550 0%, #DD0B64 35.31%, #FF5D57 69.69%, #CFB698 100%);
+}
+
+
+form{
+    background-color:#401C2A;
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
