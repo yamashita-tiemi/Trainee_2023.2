@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    background-color: #cfb698;
+    margin: 0 0 0 0;
+}
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="../../../public/css/navbar.css">
+        <link rel="stylesheet" href="../../../public/css/global.css">
+    </head>
+
+    <div class="navbarContainer">
+        <div class="logoContainer">
+            <img src="../../../public/assets/saltoaltologo.png" height="100%" width="auto">
+        </div>
+        <div class="bottomRow">
+            <div class="redirectsContainer">
+                <a href=""><h2 id="inicio" class="redirects">INÍCIO</h2></a>
+                <a href=""><h2 id="blog" class="redirects">BLOG</h2></a>
+                <a href=""><h2 id="contato" class="redirects">CONTATO</h2></a>
+            </div>
+            <div class="navButtonsContainer">
+                <div class="searchBar" tabindex="-1">
+                    <input type="text" class="searchInput" tabindex="-1" height="auto" width="0%">
+                    <img id="lupa" class="lupa" src="../../../public/assets/lupa.png" height="60%" width="auto">
+                </div>
+                <script>
+                    var focused = false;
+                    document.getElementById("lupa").addEventListener("click", () => {
+                        let bar = document.getElementsByClassName("searchBar")[0]
+                        let input = document.getElementsByClassName("searchInput")[0]
+
+                        bar.classList.toggle("selected")
+                        input.classList.toggle("selected")
+                        if(!focused){
+                            input.focus()
+                            focused = true
+                        } else {
+                            input.blur()
+                            focused = false
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <script> 
+    </script>
+</html>

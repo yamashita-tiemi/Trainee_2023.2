@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="../../../public/css/footer.css">
+        <link rel="stylesheet" href="../../../public/css/global.css">
+    </head>
+
+    <div class="footerContainer">
+        <div class="duvidasContainer">
+            <h2 class="duvidas">Dúvidas ou sugestões?</h2>
+            <h2 class="duvidas">Entre em contato por meio de nossos canais:</h2>
+        </div>
+        <div class="socialsRow">
+            <div class="socialsContainer">
+                <a><img src="../../../public/assets/Group 17.png" height="40%"></a>
+                <a><img src="../../../public/assets/Group 23.png" height="40%"></a>
+                <a><img src="../../../public/assets/Group 24.png" height="40%"></a>
+                <a><img src="../../../public/assets/Group 25.png" height="40%"></a>
+            </div>
+        </div>
+        <div class="bottomRow">
+            <div class="roundLogoContainer"><img src="../../../public/assets/round_logo.png" height="100%"></div>
+            <div class="absoluteLine">
+                <div id="mvvMissao" class="mvvContainer">
+                    <h2 class="redirects">MISSÃO</h2>
+                    <img id="missaoImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                </div>
+                <div id="mvvVisao" class="mvvContainer">
+                    <h2 class="redirects">VISÃO</h2>
+                    <img id="visaoImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                </div>
+                <div id="mvvValores" class="mvvContainer">
+                    <h2 class="redirects">VALORES</h2>
+                    <img id="valoresImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                </div>
+            </div>
+        </div>
+        <div class="mvvRow">
+            <div class="mvvTextsContainer">
+                <h2 id="missaoTxt" class="mvvTexts">Capacitar e conectar
+                    mulheres na tecnologia,
+                    fornecendo recursos 
+                    para que elas alcancem
+                    seu pleno potencial.</h2>
+                <h2 id="visaoTxt" class="mvvTexts">Um mundo onde as mulheres estão
+                    igualmente representadas e liderando
+                    na indústria de tecnologia,moldando 
+                    o futuro da área e promovendo a 
+                    igualdade de gênero.</h2>
+                <h2 id="valoresTxt" class="mvvTexts">Empoderamento<br>Inclusão<br>Educação<br>Respeito<br>Inovação</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".mvvContainer").forEach(el => {
+            let id = el.id;
+            el.addEventListener("click", () => {
+                switch(id) {
+                    case "mvvMissao":
+                       document.getElementById("missaoImg").classList.toggle("pressed")
+                       document.getElementById("missaoTxt").classList.toggle("selected")
+
+                    break
+                    case "mvvVisao":
+                       document.getElementById("visaoImg").classList.toggle("pressed")
+                       document.getElementById("visaoTxt").classList.toggle("selected")
+                    break
+                    case "mvvValores":
+                       document.getElementById("valoresImg").classList.toggle("pressed")
+                       document.getElementById("valoresTxt").classList.toggle("selected")
+                    break
+                }
+            })
+        });
+    </script>
+</html>

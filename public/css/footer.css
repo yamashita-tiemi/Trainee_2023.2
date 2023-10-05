@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Your custom CSS styles
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&family=Roboto+Mono:wght@100&display=swap');
+
+   h2.duvidas {
+       font-size: 1.2rem;
+       margin: 0.5rem 0 0.5rem 0;
+       font-family: "Manjari", sans-serif;
+       color: #cfb698;
+       text-justify:auto;
+   }
+   
+   h2.redirects {
+       font-size: 1.2rem;
+       margin: 0.5rem 0 0.5rem 0;
+       font-family: "Manjari", sans-serif;
+       color: #401c2a;
+       text-justify:auto;
+       transform: translateY(15%);
+   }
+
+   h2.mvvTexts {
+       font-family: "Roboto Mono", monospace;
+       font-size: 1rem;
+       color: #cfb698;
+       margin-top: -1vw;
+       width: 24vw;
+       text-align: center;
+       opacity: 0;
+   }
+   
+   h2.mvvTexts.selected {
+      opacity: 1;
+      transition: all 0.3s;
+   }
+
+   div.footerContainer {
+       background-color: #401c2a;
+       padding-bottom: 2vh;
+       width: 100%;
+       height: fit-content;
+   }
+
+   div.duvidasContainer {
+       display: flex;
+       padding-top: 1rem;
+       flex-direction: column;
+       height: 25%;
+       align-items: center;
+   }
+   
+   div.tripeContainer {
+       display: flex;
+       flex-direction: row;
+       height: 100%;
+       width: 35%;
+       justify-content: space-evenly;
+       align-items: center;
+   }
+   
+   div.navButtonsContainer {
+       display: flex;
+       flex-direction: row;
+       height: 60%;
+       width: 30%;
+       padding-right: 4%;
+       justify-content: flex-end;
+       align-items: center;
+   }
+   div.bottomRow {
+       display: flex;
+       flex-direction: row;
+       margin-top: -2%;
+       /* justify-content: center; */
+       align-items: center;
+       height: 11vw;
+       width: 100%;
+   }
+   
+   div.socialsContainer {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       width: 25%;
+   }
+
+   div.socialsRow {
+       display: flex;
+       justify-content: center;
+       height: 8vw;
+       width: 100%;
+   }
+  
+   div.mvvContainer {
+       display: flex; flex-direction: row; align-items: center; justify-content: center;
+       padding-left: 2vw;
+       height: 2vw;
+       width: 12vw;
+       cursor: pointer;
+   }
+   
+   img.seta {
+       margin-left: 0.5vw;
+       transform: translateY(8%) rotateZ(0deg);
+   }
+   
+   img.seta.pressed {
+       transform: translateY(-2%) rotateZ(180deg);
+       transition: all 0.3s ease-in-out;
+   }
+   
+   div.mvvRow {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+   }
+   
+   div.mvvTextsContainer {
+       display: flex;
+       height: auto;
+       width: 92%;
+       justify-content: space-evenly;
+   }
+
+  div.absoluteLine {
+    display: flex;
+    overflow: visible;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    aspect-ratio: 18;
+    background-color: #cfb698;
+  }
+  
+
+  div.roundLogoContainer {
+    align-self: flex-start;
+    margin-left: 3%;
+    width: 11vw;
+    aspect-ratio: 1;
+    z-index: 2;
+  }
+   /* ==========================================================================
+      Your custom CSS styles for smartphones and screens smaller than 480 px
+      ========================================================================== */
+   
+   @media only screen and (max-width: 480px) {
+       /* insert styles here */
+   }
+   
+   
+   
+   
+   /* ==========================================================================
+      Helper classes
+      ========================================================================== */
+   
+   .hidden {
+       display: none !important;
+       visibility: hidden;
+   }
+   
+   /* Clearfix
+    * Adding a 'clearfix' class will allow parent elements to contain a floated child element
+    */
+   
+   .clearfix:before,
+   .clearfix:after {
+       content: " "; /* 1 */
+       display: table; /* 2 */
+   }
+   
+   .clearfix:after {
+       clear: both;
+   }
+   
+   /*
+    * For IE 6/7 only
+    * Include this rule to trigger hasLayout and contain floats.
+    */
+   
+   .clearfix {
+       zoom: 1;
+   }
+   
