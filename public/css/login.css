@@ -3,8 +3,16 @@ body{
     background: linear-gradient(117deg, #6F0550 0%, #DD0B64 35.31%, #FF5D57 69.69%, #CFB698 100%);
 }
 
+.separacao{
+    
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
 
 form{
+    width: 400px;
+    height: 500px;
     background-color:#401C2A;
     border-radius: 10px;
     display: inline-block;
@@ -17,9 +25,11 @@ form{
 
 img{
     width: 300px;
+    margin-top: 0px;
 }
 
 .cadastrar{
+    
     color: #FFF;
     text-align: center;
     font-family: Manjari;
@@ -27,7 +37,6 @@ img{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-transform: lowercase;
     justify-content: center;
     
 }
@@ -42,14 +51,14 @@ input{
 
 .ciculos{
    letter-spacing: 0px;
-    
 } 
 
 .efetuarcadastro{
     border-radius: 0px 0px 10px 10px;
     background: #FF5D57;
-    width: 350px;
-    height: 50px;
+    width: 400px;
+    height: 51px;
+    margin-top: 40px;
 }
 
 .efetuarcadastro a{
@@ -59,8 +68,9 @@ input{
     text-align: center;
     text-decoration: none;
     position: absolute;
-    top: 96%;
+    top: 97%;
     left: 50%;
     margin: -25px 0 0 -25px;
+    margin-top: 18px;
 }
 
