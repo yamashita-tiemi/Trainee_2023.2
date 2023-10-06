@@ -42,6 +42,7 @@ img{
     justify-content: center;
 }
 
+
 input{
     border-radius: 10px;
     background: #CFB698;
@@ -82,7 +83,7 @@ input{
         width: 220px;
         height: 360px;
     }
-    svg{
+    .separacao svg{
         width: 14px;
         height: 14px;
     }
@@ -99,6 +100,10 @@ input{
         width: 150px;
         height: 20px;
     }
+    .ciculos svg{
+        width: 16px;
+        height: 16px;
+    }
     .efetuarcadastro{
         width: 220px;
         height: 40px;
@@ -106,6 +111,42 @@ input{
     }
     .efetuarcadastro a{
         font-size: 18px;
-        
+    }
+}
+
+@media ( min-width: 321px) and (max-width: 768px){
+    form{
+        width: 280px;
+        height: 380px;
+    }
+    .separacao svg{
+        width: 14px;
+        height: 14px;
+    }
+    img{
+        width: 180px;
+        margin-left: -20px;
+        margin-top: 4px;
+    }
+    .cadastrar{
+        margin-top: 26px;
+        font-size: 18px;
+    }
+    input{
+        width: 160px;
+        height: 24px;
+    }
+    .ciculos svg{
+        width: 24px;
+        height: 24px;
+    }
+    .efetuarcadastro{
+        width: 280px;
+        height: 40px;
+        margin-top: 34px;
+    }
+    
+    .efetuarcadastro a{
+        font-size: 18px;
     }
 }
