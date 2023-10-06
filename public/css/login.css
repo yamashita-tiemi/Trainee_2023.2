@@ -4,10 +4,11 @@ body{
 }
 
 .separacao{
-    
     width: 10%;
+    display: inline-block;
+    float: left;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 form{
@@ -24,22 +25,23 @@ form{
 }
 
 img{
-    width: 300px;
-    margin-top: 0px;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: -48px;
+    display: inline-block;
 }
 
 .cadastrar{
-    
     color: #FFF;
     text-align: center;
     font-family: Manjari;
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     line-height: normal;
     justify-content: center;
-    
 }
+
 input{
     border-radius: 10px;
     background: #CFB698;
@@ -55,10 +57,11 @@ input{
 
 .efetuarcadastro{
     border-radius: 0px 0px 10px 10px;
-    background: #FF5D57;
+    background-color: #FF5D57;
     width: 400px;
     height: 51px;
-    margin-top: 40px;
+    margin-top: 64px;
+    
 }
 
 .efetuarcadastro a{
@@ -71,6 +74,38 @@ input{
     top: 97%;
     left: 50%;
     margin: -25px 0 0 -25px;
-    margin-top: 18px;
+    margin-top: -22px;
 }
 
+@media (max-width: 320px){
+    form{
+        width: 220px;
+        height: 360px;
+    }
+    svg{
+        width: 14px;
+        height: 14px;
+    }
+    img{
+        width: 150px;
+        margin-left: -20px;
+        margin-top: 4px;
+    }
+    .cadastrar{
+        margin-top: 26px;
+        font-size: 14px;
+    }
+    input{
+        width: 150px;
+        height: 20px;
+    }
+    .efetuarcadastro{
+        width: 220px;
+        height: 40px;
+        margin-top: 59px;
+    }
+    .efetuarcadastro a{
+        font-size: 18px;
+        
+    }
+}
