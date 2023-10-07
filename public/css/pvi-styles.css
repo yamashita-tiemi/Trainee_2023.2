@@ -2,17 +2,23 @@ body {
     background-color: #CFB698;
     margin: 0 0 0 0;
     padding: 0;
+    font-family: 'Manjari', sans-serif;
 }
 
 .ondastitulo {
     width: 100%;
     margin: 0;
+    padding: 0;
+}
+
+.ondastitulo svg {
+    margin-top: -7px;
 }
 
 .titulopvi {
     text-align: center;
     color: #401C2A;
-    font-family: 'Manjari', sans-serif;
+    
 }
 
 .navpvi {
@@ -24,43 +30,42 @@ body {
 
 
 .imagedivpvi {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     float: left;
-    text-align: center;
-    background-color: aqua;
     height: auto;
-    width: auto;
+    width: 35%;
     border-radius: 25px;
     background: rgba(221, 11, 100, 0.60);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.30);
-    padding: 5px;
-    margin: 2%;
+    padding: 0;
+    margin: 3%;
 }
 
 .imagedivpvi img {
-    width: 88%;
+    width: 85%;
     height: auto;
     vertical-align: middle;
-    margin: 4% 4% 0 5%;
+    margin: 5% 0 0 0;
     max-width: 100%;
 }
 
 .imagedivpvi figcaption {
-    width: 85%;
+    width: 80%;
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
     color: #000;
-    font-family: 'Manjari', sans-serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 1%;
 }
 
 .corpopvi p {
     color: #000;
     text-align: justify;
-    font-family: 'Manjari', sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -70,10 +75,28 @@ body {
     margin: 5%;
 }
 
+.corpopvi h2 {
+    color: #000;
+    font-family: 'Manjari', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 1200px) {
     .corpopvi p {
         font-size: 24px;
         letter-spacing: 2px;
+    }
+
+    .corpopvi h2{
+        font-size: 20px;
     }
 
     .imagedivpvi figcaption {
@@ -87,26 +110,30 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    .corpopvi {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .corpopvi p {
         font-size: 16px;
         letter-spacing: 1px;
+        margin-top: 0;
+    }
+
+    .corpopvi h2 {
+        font-size: 12px;
     }
 
     .imagedivpvi {
         width: 60%;
         height: auto;
         float: none;
-        display: block;
     }
 
     .imagedivpvi figcaption {
         font-size: 12px;
-    }
-
-    .corpopvi {
-        direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
     }
 }
