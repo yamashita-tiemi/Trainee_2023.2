@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Posts</title>
+    <title>Lista de Usuários</title>
     <link rel="stylesheet" href="../../../public/css/userList.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +13,10 @@
 <body>
 
     <!-- Botões para abrir os modais -->
-    <button onclick="openModal('createModal')">Criar Post</button>
-    <button onclick="openModal('viewModal')">Visualizar Posts</button>
-    <button onclick="openModal('editModal')">Editar Post</button>
-    <button onclick="openModal('deleteModal')">Deletar Post</button>
+    <button onclick="openModal('createModal')">Criar Usuário</button>
+    <button onclick="openModal('viewModal')">Visualizar Usuários</button>
+    <button onclick="openModal('editModal')">Editar Usuário</button>
+    <button onclick="openModal('deleteModal')">Deletar Usuário</button>
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
@@ -24,7 +24,7 @@
     <!-- Modais -->
     <div id="createModal" class="modal">
         <div class="modal-container">
-            <h2>Criar Post</h2>
+            <h2>Criar Usuário</h2>
             <!-- Formulário para criar post -->
             <button onclick="closeModal('createModal')">Fechar</button>
         </div>
@@ -32,7 +32,7 @@
 
     <div id="viewModal" class="modal">
         <div class="modal-container">
-            <h2>Visualizar Posts</h2>
+            <h2>Visualizar Usuários</h2>
             <!-- Lista de posts -->
             <button onclick="closeModal('viewModal')">Fechar</button>
         </div>
@@ -40,7 +40,7 @@
 
     <div id="editModal" class="modal">
         <div class="modal-container">
-            <h2>Editar Post</h2>
+            <h2>Editar Usuário</h2>
             <!-- Formulário para editar post -->
             <button onclick="closeModal('editModal')">Fechar</button>
         </div>
@@ -48,9 +48,9 @@
 
     <div id="deleteModal" class="modal">
         <div class="modal-container">
-            <h2>Deletar Post</h2>
+            <h2>Deletar Usuário</h2>
             <!-- Confirmação de exclusão -->
-            <h3>Realmente deseja deletar esse post?</h3>
+            <h3>Realmente deseja deletar esse Usuário?</h3>
             <button onclick="confirmDelete()">Confirmar</button>
             <button onclick="closeModal('deleteModal')">Cancelar</button>
         </div>
