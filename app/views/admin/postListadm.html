@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/css/postListAdm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="../../../public/js/postListadm.js"></script>
+    <title>Lista de Posts</title>
+</head>
+<body>
+
+    <!-- Botões para abrir os modais -->
+    <button onclick="openModal('createModal')">Criar Post</button>
+    <button onclick="openModal('viewModal')">Visualizar Posts</button>
+    <button onclick="openModal('editModal')">Editar Post</button>
+    <button onclick="openModal('deleteModal')">Deletar Post</button>
+
+    <!-- Sobreposição -->
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+    <!-- Modais -->
+    <div id="createModal" class="modal">
+        <div class="modal-container">
+            <h2>Criar Post</h2>
+            <!-- Formulário para criar post -->
+            <button onclick="closeModal('createModal')">Fechar</button>
+        </div>
+    </div>
+
+    <div id="viewModal" class="modal">
+        <div class="modal-container">
+            <h2>Visualizar Posts</h2>
+            <!-- Lista de posts -->
+            <button onclick="closeModal('viewModal')">Fechar</button>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-container">
+            <h2>Editar Post</h2>
+            <!-- Formulário para editar post -->
+            <button onclick="closeModal('editModal')">Fechar</button>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-container">
+            <h2>Deletar Post</h2>
+            <!-- Confirmação de exclusão -->
+            <h3>Realmente deseja deletar esse post?</h3>
+            <button onclick="confirmDelete()">Confirmar</button>
+            <button onclick="closeModal('deleteModal')">Cancelar</button>
+        </div>
+    </div>
+
+</body>
+</html>
