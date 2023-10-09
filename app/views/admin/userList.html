@@ -12,11 +12,38 @@
 </head>
 <body>
 
-    <!-- Botões para abrir os modais -->
-    <button onclick="openModal('createModal')">Criar Usuário</button>
-    <button onclick="openModal('viewModal')">Visualizar Usuários</button>
-    <button onclick="openModal('editModal')">Editar Usuário</button>
-    <button onclick="openModal('deleteModal')">Deletar Usuário</button>
+    <div class="headerula">
+        <h1>Lista de Usuários</h1>
+        <button onclick="openModal('createModal')">Criar Usuário</button>
+    </div>
+    <div>
+            <div class="grid-container legendagridula">
+            <div class="grid-item col1">ID</div>
+            <div class="grid-item col2">Username</div>
+            <div class="grid-item col3">Email</div>
+            <div class="grid-item col4">Ações</div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item col1">Item 1</div>
+            <div class="grid-item col2">Item 2</div>
+            <div class="grid-item col3">Item 3</div>
+            <div class="grid-item col4">
+                <button onclick="openModal('viewModal')">Visualizar</button>
+                <button onclick="openModal('editModal')">Editar</button>
+                <button onclick="openModal('deleteModal')"><img class="deleteimgula" alt="deletar usuario" src="../../../public/imagens/delete.png">  Deletar</button>
+            </div>
+            <div class="grid-item col1">Item 4</div>
+            <div class="grid-item col2">Item 5</div>
+            <div class="grid-item col3">Item 6</div>
+            <div class="grid-item col4">
+                <button onclick="openModal('viewModal')">Visualizar</button>
+                <button onclick="openModal('editModal')">Editar</button>
+                <button onclick="openModal('deleteModal')"><img class="deleteimgula" alt="deletar usuario" src="../../../public/imagens/delete.png">  Deletar</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
@@ -25,14 +52,21 @@
     <div id="createModal" class="modal">
         <div class="modal-container">
             <h2>Criar Usuário</h2>
-            <!-- Formulário para criar post -->
+            <form class="criaruser">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username">
+                <label for="useremail">Email do Usuário</label>
+                <input type="email" id="useremail" name="useremail">
+                <label for="userpassword">Senha do Usuário</label>
+                <input type="password" id="userpassword" name="userpassword">
+            </form>
             <button onclick="closeModal('createModal')">Fechar</button>
         </div>
     </div>
 
     <div id="viewModal" class="modal">
         <div class="modal-container">
-            <h2>Visualizar Usuários</h2>
+            <h2>Visualizar Usuário</h2>
             <!-- Lista de posts -->
             <button onclick="closeModal('viewModal')">Fechar</button>
         </div>

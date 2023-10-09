@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manjari', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,4 +49,86 @@ button {
 
 button:hover {
     background-color: #6f0550;
+}
+
+.criaruser input {
+    display: block;
+}
+
+.criaruser label {
+    display: block;
+}
+
+.deleteimgula {
+    margin-top: 3px;
+    width: 15px;
+    height: auto;
+    filter: grayscale(100%) brightness(1000%) invert(100%);
+}
+
+.headerula {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 10% 0 10%;
+    height: 100px;
+    width: 85%;
+    background: linear-gradient(117deg, #6F0550 0%, #DD0B64 35.31%, #FF5D57 69.69%, #CFB698 100%);
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+}
+
+.headerula h1 {
+    display: inline-block;
+    margin-right: 20%;
+}
+
+.headerula button {
+    margin-left: 10%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 3fr; /* Aqui você pode ajustar o número de colunas e o tamanho delas */
+    gap: 16px; /* Espaçamento entre os itens */
+}
+
+.grid-item {
+    border: 1px solid #ddd; /* Adicione uma borda para separar os itens */
+    padding: 16px;
+    text-align: center;
+}
+
+.legendagridula {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(117deg, #6F0550 0%, #DD0B64 35.31%, #FF5D57 69.69%);
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 7px rgba(0, 0, 0, 0.25);
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.legendagridula .grid-item {
+    border: 0;
+}
+
+.col1 {
+    grid-column: 1;
+}
+
+.col2 {
+    grid-column: 2;
+}
+
+.col3 {
+    grid-column: 3;
+}
+
+.col4 {
+    grid-column: 4;
 }
