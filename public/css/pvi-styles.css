@@ -12,20 +12,18 @@ body {
 }
 
 .ondastitulo svg {
-    margin-top: -7px;
+    margin: -5px 0 0 0;
+    padding: 0;
+}
+
+.ondastitulo g, .ondastitulo path {
+    margin: 0;
 }
 
 .titulopvi {
     text-align: center;
     color: #401C2A;
     
-}
-
-.navpvi {
-    background-color: #401C2A;
-    height: 60px;
-    width: 100%;
-    margin-bottom: 0;
 }
 
 
@@ -50,6 +48,17 @@ body {
     vertical-align: middle;
     margin: 5% 0 0 0;
     max-width: 100%;
+}
+
+.opacityimgpvi {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 .imagedivpvi figcaption {
@@ -89,7 +98,7 @@ body {
     justify-content: center;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
     .corpopvi p {
         font-size: 24px;
         letter-spacing: 2px;
@@ -136,4 +145,25 @@ body {
     .imagedivpvi figcaption {
         font-size: 12px;
     }
+}
+
+@media only screen and (max-width: 700px) {
+    .imagedivpvi figcaption {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .imagedivpvi figcaption {
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+    .imagedivpvi figcaption {
+        font-size: 8px;
+    }
+
 }
