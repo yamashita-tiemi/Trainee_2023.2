@@ -24,10 +24,10 @@
 
    h2.mvvTexts {
        font-family: "Roboto Mono", monospace;
-       font-size: 1rem;
+       font-size: 1.2rem;
        color: #cfb698;
        margin-top: -1vw;
-       width: 24vw;
+       width: 33%;
        text-align: center;
        opacity: 0;
    }
@@ -56,7 +56,7 @@
        display: flex;
        flex-direction: row;
        height: 100%;
-       width: 35%;
+       width: 70%;
        justify-content: space-evenly;
        align-items: center;
    }
@@ -97,9 +97,8 @@
   
    div.mvvContainer {
        display: flex; flex-direction: row; align-items: center; justify-content: center;
-       padding-left: 2vw;
        height: 2vw;
-       width: 12vw;
+       width: 30%;
        cursor: pointer;
    }
    
@@ -122,7 +121,7 @@
    div.mvvTextsContainer {
        display: flex;
        height: auto;
-       width: 92%;
+       width: 70%;
        justify-content: space-evenly;
    }
 
@@ -131,7 +130,7 @@
     overflow: visible;
     position: absolute;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100vw;
     aspect-ratio: 18;
     background-color: #cfb698;
@@ -149,7 +148,7 @@
       Your custom CSS styles for smartphones and screens smaller than 480 px
       ========================================================================== */
    
-   @media only screen and (max-width: 480px) {
+   @media only screen and (max-width: 768px) {
        /* insert styles here */
    }
    

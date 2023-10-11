@@ -10,18 +10,21 @@ h2.redirects {
     color: #cfb698;
 }
 
+h2.redirects:hover {
+    text-decoration: underline;
+    text-underline-offset: 7%;
+    text-decoration-thickness: 0.09rem;
+}
+
 div.navbarContainer {
     background-color: #401c2a;
     width: 100%;
-    aspect-ratio: 7;
-    /* border-bottom: solid rgb(0, 0, 0, 100%) 10px;
-    border-bottom-style: outset; */
-    box-shadow: 0 5px 4px rgba(58, 58, 58, 0.8);
+    aspect-ratio: 10;
 }
 
 div.logoContainer {
     display: flex;
-    height: 70%;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -38,30 +41,33 @@ div.redirectsContainer {
 div.navButtonsContainer {
     display: flex;
     flex-direction: row;
-    height: 60%;
     width: 30%;
-    padding-right: 4%;
+    padding-right: 3%;
     justify-content: flex-end;
     align-items: center;
 }
+
 div.bottomRow {
+    position: sticky;
+    background-color: #401c2a;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 30%;
+    height: 6vw;
+    box-shadow: 0 5px 4px rgba(58, 58, 58, 0.8);
 }
 
 /* Barra de pesquisa */
 
-img.lupa:hover {
+img.bottomRowIcons:hover {
     cursor: pointer;
 }
 
 input.searchInput {
+    display: none;
     border: 0;
-    padding: 0 0 0 0rem;
     height: 100%;
-    width: 0%;
     outline: none;
     background: rgb(0, 0, 0, 0);
     padding-right: 0;
@@ -77,16 +83,16 @@ input.searchInput.selected {
 }
 
 
-div.searchBar {
+div.searchBar, div.singIn {
     display: flex;
-    height: 110%;
+    height: 46%;
     aspect-ratio: 1;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
     border: 0.2vw solid #cfb698;
     background: rgb(0, 0, 0, 0);
-    padding-right: 0;
+    margin-right: 2%;
 }
 
 div.searchBar.selected {
@@ -99,45 +105,66 @@ div.searchBar.selected {
 
 
 
-/* ==========================================================================
-   Your custom CSS styles for smartphones and screens smaller than 480 px
-   ========================================================================== */
+/* Telas menores */
+@media screen and (max-width: 768px) {
+    h2.redirects {
+        font-size: 0.8rem;
+        margin: 2% 0 2% 0;
+    }
 
-@media only screen and (max-width: 480px) {
-    /* insert styles here */
-}
+    div.navbarContainer {
+        background-color: #401c2a;
+        width: 100%;
+        aspect-ratio: 7;
+    }
 
+    div.redirectsContainer {
+        width: 50%;
+    }
 
+    div.bottomRow {
+        height: 8vw;
+        box-shadow: 0 2px 1px rgba(58, 58, 58, 0.8);
+    }
+    
+    div.navButtonsContainer {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+        padding-right: 0;
+        margin-right: 3%;
+    }
 
+    div.searchBar, div.singIn {
+        height: 5vw;
+        width: auto;
+        margin-right: 1%;
+    }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+    input.searchInput.selected {
+        font-size: 0.6rem;
+        padding: 0.06rem 0 0 0.3rem;
+    }
+    /*   
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
+    div.bottomRow {
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
 
-/* Clearfix
- * Adding a 'clearfix' class will allow parent elements to contain a floated child element
- */
+    div.redirectsContainer {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 60%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    zoom: 1;
+    div.searchBar, div.singIn {
+        height: 5vw;
+    } */
 }

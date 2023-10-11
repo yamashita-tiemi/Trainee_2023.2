@@ -20,17 +20,19 @@
         <div class="bottomRow">
             <div class="roundLogoContainer"><img src="../../../public/assets/round_logo.png" height="100%"></div>
             <div class="absoluteLine">
-                <div id="mvvMissao" class="mvvContainer">
-                    <h2 class="redirects">MISSÃO</h2>
-                    <img id="missaoImg" class="seta" src="../../../public/assets/seta.png" height="100%">
-                </div>
-                <div id="mvvVisao" class="mvvContainer">
-                    <h2 class="redirects">VISÃO</h2>
-                    <img id="visaoImg" class="seta" src="../../../public/assets/seta.png" height="100%">
-                </div>
-                <div id="mvvValores" class="mvvContainer">
-                    <h2 class="redirects">VALORES</h2>
-                    <img id="valoresImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                <div class="tripeContainer">
+                    <div id="mvvMissao" class="mvvContainer">
+                        <h2 class="redirects">MISSÃO</h2>
+                        <img id="missaoImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                    </div>
+                    <div id="mvvVisao" class="mvvContainer">
+                        <h2 class="redirects">VISÃO</h2>
+                        <img id="visaoImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                    </div>
+                    <div id="mvvValores" class="mvvContainer">
+                        <h2 class="redirects">VALORES</h2>
+                        <img id="valoresImg" class="seta" src="../../../public/assets/seta.png" height="100%">
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,26 +52,5 @@
             </div>
         </div>
     </div>
-    <script>
-        document.querySelectorAll(".mvvContainer").forEach(el => {
-            let id = el.id;
-            el.addEventListener("click", () => {
-                switch(id) {
-                    case "mvvMissao":
-                       document.getElementById("missaoImg").classList.toggle("pressed")
-                       document.getElementById("missaoTxt").classList.toggle("selected")
-
-                    break
-                    case "mvvVisao":
-                       document.getElementById("visaoImg").classList.toggle("pressed")
-                       document.getElementById("visaoTxt").classList.toggle("selected")
-                    break
-                    case "mvvValores":
-                       document.getElementById("valoresImg").classList.toggle("pressed")
-                       document.getElementById("valoresTxt").classList.toggle("selected")
-                    break
-                }
-            })
-        });
-    </script>
+    <script src="../../../public/js/footer.js"></script>
 </html>
