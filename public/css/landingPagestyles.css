@@ -21,6 +21,30 @@ body {
     line-height: 1.2;
     margin-left: 8%;
 }
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    width: 4vw;
+    height: 4vw;
+    bottom: 5%;
+    right: 3%;
+    background-color:#6f0550;
+    box-shadow: 0 2px 4px #dd0b64;
+    font-size: 1.5vw;
+    
+    opacity: 0.8;
+    border: none;
+    border-radius: 10vw;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#scrollToTopBtn:hover {
+    background-color:#6f0550;
+    opacity: 1;
+    box-shadow: 0 4px 8px #dd0b64;
+}
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -34,10 +58,10 @@ body {
 #left,
 #right {
     top: 50%;
-    height: 4vw;
-    width: 4vw;
+    height: 3.8vw;
+    width: 3.8vw;
     cursor: pointer;
-    font-size: 1.25vw;
+    font-size: 1.2vw;
     position: absolute;
     text-align: center;
     line-height: 4vw;
@@ -49,9 +73,21 @@ body {
     color: #cfb698;
     z-index: 2;
 }
-
+#right:hover {
+    height: 4vw;
+    width: 4vw;
+    font-size: 1.25vw;
+    box-shadow: 0 2px 6px #dd0b64;
+}
+#left:hover{
+    height: 4vw;
+    width: 4vw;
+    font-size: 1.25vw;
+    box-shadow: 0 2px 6px #dd0b64;
+}
 .wrapper i:first-child{
   left: 4%;
+ display: none;
 
 }
 .wrapper i:last-child{
@@ -65,15 +101,17 @@ body {
   aspect-ratio: 3;
   display: flex;
   overflow: hidden;
-  gap: 0; /* Espaço entre os itens do carousel */
-  flex-wrap: nowrap; /* Evita que os itens quebrem para a próxima linha */
+  flex-wrap: nowrap; 
   position: relative;
-  margin-left: 0vw;
-  padding: 0vw; /* Remova qualquer preenchimento para evitar espaços indesejados */
-  scroll-snap-type: x mandatory; /* O conteúdo deve ser rolado em intervalos */
-  scroll-behavior: smooth; /* Adiciona rolagem suave */
-  scrollbar-width: none; /* Remove a barra de rolagem padrão (compatibilidade com navegadores Firefox) */
-  overflow-x: auto; /* Adiciona uma barra de rolagem horizontal quando necessário */
+  padding: 0vw; 
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth; 
+  scrollbar-width: none; 
+  margin: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  overflow-x: auto; 
+  
 }
 .carousel::-webkit-scrollbar {
     display: none;
@@ -97,7 +135,6 @@ body {
 .carousel .card {
     aspect-ratio: 2;
     width: 0%;
-    
     flex: 0 0 50%;
     scroll-snap-align: start;
     list-style: none;
@@ -106,11 +143,14 @@ body {
     position: relative;
     z-index: 1;
 }
+
+
+
 .container {
     display: flex;
     justify-content: center;
     height: 96%;
-    width: 50%;
+    width: 62%;
     position: relative;
     z-index: 2;
     
@@ -136,24 +176,25 @@ body {
     
 }
 .background .img {
-    width: 80%;
-    height: 40%;
-    top: 4vh;
+    width: 75%;
+    height: 45%;
+    top: 2vh;
     position: absolute;
     border-radius: 1vw;
     object-fit: cover;
 }
 .background h2 {
     
-    width: 90%;
-    height: 30%;
-    top: 52%;
+    width: 95%;
+    height: 26%;
+    top: 57%;
     position: relative;
-    font-size: 1.1vw;
+    font-size: 56%;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.1vw;
     color: #CFB698;
+    margin:0%;
 }
 .circle {
     width: 7vw;
@@ -162,10 +203,20 @@ body {
     align-self:flex-end;
     position: absolute;
     background: #cfb698;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.50);
     border-radius: 10vw;
     text-decoration-line: underline;
     font-size: 1.2vw;
     z-index: 2;
+}
+.circle a{
+    color: #401C2A;
+}
+.circle:hover{
+    width: 7.2vw;
+    height: 7.2vw;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.50);
+    font-size: 1.3vw;
 }
 .postMeio{
     display: flex;  
@@ -207,7 +258,6 @@ body {
 
 #element2 .img{
     width: 63%;
-    height: 70%;
     margin-left: 20%;
     z-index: 2;
 }
@@ -265,7 +315,7 @@ body {
 .sobreNoscard
 {  
     width: 100%;
-    aspect-ratio: 1.8;
+    
     margin-top: 10%;
     margin-bottom: 8%;
 }
@@ -275,7 +325,6 @@ body {
     align-items: center;
     position: absolute; 
     width: 15%;
-    height: 10%;
     background-color: #401C2A;
     color: #CFB698;
     border-radius: 10vw;
@@ -283,6 +332,8 @@ body {
     z-index: 2;
 }
 .iconeSobreNos h3 {
+    margin-top: 10%;
+    margin-bottom: 10%;
     font-size: 2vw;
     font-style: normal;
     font-weight: 400;
@@ -297,7 +348,7 @@ body {
     align-items: center;
     margin-top: 2%;
     width: 100%;
-    aspect-ratio: 2;
+    aspect-ratio: 1.7;
     background-color: #ad817f;
     z-index: 1;
 
@@ -305,18 +356,18 @@ body {
 .sobreelement {
     display: flex;
     justify-content: center;
-    width: 50%;
-    height: 110%;
+    width: 42.5%;
+    height: 107%;
     border-radius: 4%;
 }
 #sobreelement1 .img {
-    width: 38%;
-    height: 66%;
+    width: 35%;
+    height: 58%;
     position: absolute;
     border-radius: 5%;
     object-fit: cover;
     z-index: 2;
-    margin-top: 1%;
+    margin-top: 3.5%;
 }
 #sobreelement1 img{
     width: 100%;
@@ -324,17 +375,17 @@ body {
     object-fit: cover;
 }
 #sobreelement1 h4 {
-    width: 90%;
+    width: 94%;
     height: 35%;
     text-align: center;
     font-size: 2vw;
     font-weight: 400;
     letter-spacing: 1.6px;
-    margin-top: 75%;
+    margin-top: 95%;
 }
 #sobreelement2 .img {
     width: 37%;
-    height: 65%;
+    height: 60%;
     position: absolute;
     border-radius: 5%;
     object-fit: cover;
@@ -346,13 +397,13 @@ body {
     object-fit: cover;
 }
 #sobreelement2 h4 {
-    width: 90%;
+    width: 94%;
     height: 35%;
     text-align: center;
     font-size: 2vw;
     font-weight: 400;
     letter-spacing: 1.6px;
-    margin-top: 75%;
+    margin-top: 95%;
 }
 
 
@@ -360,8 +411,90 @@ body {
 
 
 @media screen and (max-width: 740px) {
+
+    .wrapper .carousel{
+
+        left: 0%;
+        aspect-ratio: 2;
+    }
+    #scrollToTopBtn{
+        font-size: 1.6vw;
+    }
     .carousel .card {
+        left: 0%;
+        margin-right: 0%;
         flex: 0 0 100%;
         width: 0%;
+
     }
+    .background {
+        width: 72%;
+        height: 90%;
+        
+    }
+    #left,#right {
+    top: 50%;
+    height: 5vw;
+    width: 5vw;
+    font-size: 1.5vw;
+    line-height: 5vw;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.background .img {
+    width: 82%;
+    height: 45%;
+    top: 3%;
+   
+}
+.background h2 {
+    
+    width: 91%;
+    height: 30%;
+    top: 52%;
+    font-size: 2.0vw;
+    text-align: -webkit-center;
+}
+.circle {
+    width: 10vw;
+    height: 10vw;
+    font-size: 1.7vw;
+}
+
+.sobreNos
+{
+    flex-direction: column;
+    aspect-ratio: 0;
+}
+.sobreelement {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 50%;
+    border-radius: 4%;
+}
+#sobreelement1 .img {
+    width: 38%;
+    height: 30%;
+    margin-top: 3%;
+}
+#sobreelement1 h4 {
+    width: 100%;
+    height: 35%;
+    font-size: 2.6vw;
+    margin-top: 43%;
+}
+#sobreelement2 .img {
+    width: 37%;
+    height: 32%;
+    top:48%;
+}
+#sobreelement2 h4 {
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    font-size: 2.6vw;
+    margin-top: 41%;
+}
+
 }
