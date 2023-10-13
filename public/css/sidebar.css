@@ -1,3 +1,64 @@
-body nav .navegador{
-    height: 1000px;
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+}
+
+
+nav.nav1{
+    width:50px;
+    height: 90%;
+    background-color: #6f0550;
+    margin-top: 1.6%;
+    margin-left: 5px;
+    border-radius: 10px;
+    position: fixed;
+    overflow: hidden;
+    
+}
+
+nav.nav1:hover{
+    width: 250px;
+}
+
+.botao{
+    margin-left: 8px;
+    padding-top: 15px;
+    padding-left: 3%;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li a{
+    
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+ul li:hover{
+    background: #dd0b64;
+}
+ul li{
+    transition: .2s;
+}
+.icone{
+    font-size: 30px;
+    margin-left: 8px;
+}
+.texto{
+    font-family: 'Manjari', sem serifa;;
+    margin-left: 14px;
 }
