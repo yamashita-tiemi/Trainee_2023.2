@@ -50,18 +50,31 @@
 
     <!-- Modais -->
     <div id="createModal" class="modal">
+        <button onclick="closeModal('createModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1.4vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg></button>
+
         <div class="modal-container">
-            <h2>Criar Usuário</h2>
-            <form class="criaruser">
-                <label for="username">Nome de Usuário:</label>
-                <input type="text" id="username" name="username">
-                <label for="useremail">Email do Usuário</label>
-                <input type="email" id="useremail" name="useremail">
-                <label for="userpassword">Senha do Usuário</label>
-                <input type="password" id="userpassword" name="userpassword">
-            </form>
-            <button onclick="closeModal('createModal')">Fechar</button>
+            <div class="dados">
+                <h2>Criar Usuário</h2>
+                <form class="criaruser">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text"placeholder="Nome Sobrenome" id="username" name="username">
+                    <label for="useremail">Email do Usuário</label>
+                    <input type="email" placeholder="exemplo@email.com" id="useremail" name="useremail">
+                    <label for="userpassword">Senha do Usuário</label>
+                    <input type="password" placeholder="********" id="userpassword" name="userpassword">
+                    <label for="passwordconfirm">Confirme a Senha</label>
+                    <input type="password"placeholder="********" id="passwordconfirm" name="passwordconfirm">
+                    <button type="reset">Limpar seções</button>
+                </form> 
+            </div>
+            <div class="ilutracao">
+                <img src="../../../public/assets/ilustracao_user.png">
+            </div>
         </div>
+
+        <button id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
     </div>
 
     <div id="viewModal" class="modal">

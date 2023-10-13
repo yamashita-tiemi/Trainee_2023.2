@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Manjari', sans-serif;
     display: flex;
@@ -7,24 +8,6 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-}
-
-.modal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
 }
 
 .overlay {
@@ -50,14 +33,6 @@ button {
 
 button:hover {
     background-color: #6f0550;
-}
-
-.criaruser input {
-    display: block;
-}
-
-.criaruser label {
-    display: block;
 }
 
 .deleteimgula {
@@ -137,4 +112,113 @@ button:hover {
 
 .col4 {
     grid-column: 4;
+}
+
+
+
+
+
+
+.modal-container {
+    background-image: url("../assets/img-usuar.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0%
+    
+}
+form
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+input {
+    border: 0.1vw solid #401c2a;
+    border-radius: 1.5vw;
+    font-size: 1.25vw;
+    margin-bottom: 0.5vw;
+    padding: 0.6vw;
+    width: 18vw;
+    outline: none;
+
+}
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 7%;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.ilutracao{
+    width: 70%;
+}
+.ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal {
+    
+    display: none;
+    position: fixed;
+    width: 64%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+
+}
+.criaruser button{
+    align-self: flex-end;
+    font-size: 1.1vw;
+    border-radius: 1vw;
+    padding: 2.5%;
+    background-color: #dd0b63a9;
+    color: #401c2a;
+    font-weight: 700;
+}
+.criaruser button:hover{
+    background-color: #dd0b63dd;
+}
+.fechar{
+    display: flex;
+    background-color: #dd0b64;
+    text-align: -web;
+}
+.fechar:hover{
+    background-color: #dd0b6391;
+}
+#botaosalvar{
+    font-size: 1.4vw;
+    margin-right: 5%;
+    letter-spacing: 0.15vw;
+    text-decoration-line: underline;
+    border-radius: 0.8vw;
+    padding: 1%;
+    background-color: #dd0b63;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+#botaosalvar:hover{
+    background-color: #dd0b63ac;
+}
+#createModal img
+{
+    white-space: inherit;
+    z-index: 1;
 }

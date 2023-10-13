@@ -17,3 +17,21 @@ function confirmDelete() {
     alert('Usuário deletado com sucesso!');
     closeModal('deleteModal');
 }
+function confirmarSalvarFormulario() {
+    var mensagem = "Você tem certeza de que deseja salvar o formulário?";
+    if (window.confirm(mensagem)) {
+        // Coletar os dados do formulário
+        var username = document.getElementById("username").value;
+        var useremail = document.getElementById("useremail").value;
+        var userpassword = document.getElementById("userpassword").value;
+        var userpasswordconfirm = document.getElementById("userpasswordconfirm").value;
+
+        // Valide os dados do formulário, se necessário
+
+        // Enviar os dados para onde você precisar (por exemplo, usando uma solicitação AJAX)
+        // Aqui você pode enviar os dados para o seu servidor ou realizar ações necessárias.
+
+        // Após a conclusão, você pode fechar o modal
+        closeModal('createModal');
+    }
+}
