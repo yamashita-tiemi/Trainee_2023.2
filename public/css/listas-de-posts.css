@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
+
+/* Metade superior */
+body{
+    background-color: #CFB698;
+}
+
+.backgroundImg {
+    background: #30141f;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1, h2 {
+    font-family: "Manjari", sans-serif;
+    color: #ffffff;
+}
+
+div.cardContainer {
+    margin-top: 100px;
+    margin-left: 32px;
+    margin-bottom: 0;
+    display: inline-block;
+    position: relative;
+    background-color: #401c2a;
+    flex-direction: column;
+    width: 30%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 3%;
+    box-shadow: 0.3vw 0.3vw 0.3vw #1111119c;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.blurrableDiv {
+    width: 100%; height: 100%;
+}
+
+div.cardContainer:hover {
+    transform: scale(110%);
+}
+div.cardContainer:hover .blurrableDiv{
+    filter: blur(0.2rem);
+}
+
+.absoluteTitleContainer {
+    height: 0;
+    width: 100%;
+}
+
+.cardContainer h1 {
+    text-align: center;
+    position: absolute;
+    font-size: 2.2vw;
+    padding: 0 ;
+    width: 30vw;
+    text-wrap: wrap;
+    margin: 0;
+    transform: translateY(-100%);
+    text-shadow: 0.08em 0.08em 0px #2e2e2e ;
+}
+
+/* Metade inferior */
+
+.cardContainer h2 {
+    font-size: 3.5vh;
+    margin: 0;
+    padding: 2% 8% 0 8%;
+    height: 100%;
+    width: 100%;
+    text-align: justify;
+}
+
+.previewContainer {
+    display: flex;
+    height: 50%;
+    overflow: hidden;
+}
+
+.previewContainer::before {
+    content: "";
+    position: absolute;
+    align-self: flex-end;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #401c2a);
+}
+
+.imgContainer {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction:column;
+    justify-content: flex-start;
+    height: 50%;
+    width: 100%;
+}
+
+/* Botão hover */
+.cardHover {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff00;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.cardHover:hover {
+    opacity: 1;
+}
+
+.cardHover img{
+    height: 15%;
+    width: auto;
+    filter: none;
+
+    transition: all 0.15s;
+}
+
+.cardHover img:hover{
+    height: 16%;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 767px) {
+    div.cardContainer {
+        width: 80%;
+    }
+    .cardContainer h1 {
+        font-size: 6vw;
+        width: 100%;
+        text-shadow: 0.08em 0.08em 0px #2e2e2e ;
+    }
+
+    .cardContainer h2 {
+        font-size: 4vw;
+    }
+    
+    /* Hover */
+    .cardHover img:hover{
+        height: 15%;
+        cursor: pointer;
+    }
+
+}
