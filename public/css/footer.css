@@ -105,11 +105,11 @@
    img.seta {
        margin-left: 0.5vw;
        transform: translateY(8%) rotateZ(0deg);
+       transition: all 0.3s ease-in-out;
    }
    
    img.seta.pressed {
        transform: translateY(-2%) rotateZ(180deg);
-       transition: all 0.3s ease-in-out;
    }
    
    div.mvvRow {
