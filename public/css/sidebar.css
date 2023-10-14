@@ -62,3 +62,8 @@ ul li{
     font-family: 'Manjari', sem serifa;;
     margin-left: 14px;
 }
+
+.logout{
+    margin-top: 84px;
+    border-radius: 0 0 10px 10px;
+}
