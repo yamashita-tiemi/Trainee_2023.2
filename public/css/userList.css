@@ -95,28 +95,10 @@ button:hover {
     gap: 10px;
 }
 
-.legendagridula .grid-item {
-    border: 0;
-}
-
-.col1 {
-    grid-column: 1;
-}
-
-.col2 {
-    grid-column: 2;
-}
-
-.col3 {
-    grid-column: 3;
-}
-
-.col4 {
-    grid-column: 4;
-}
 
 table {
-    width: 85%;
+    width: 80%;
+    height: auto;
     border-collapse: collapse;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -145,4 +127,11 @@ th {
 
 .actionula {
     border-radius: 0 10px 0 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    
+    body {
+        overflow-x: auto;
+    }
 }
