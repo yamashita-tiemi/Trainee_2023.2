@@ -12,19 +12,15 @@ function closeModal(modalId) {
     document.getElementById('overlay').style.display = 'none';
 }
 
-function confirmDelete() {
-    // Adicione aqui a lógica para excluir o post
-    alert('Usuário deletado com sucesso!');
-    closeModal('deleteModal');
-}
+
 function confirmarSalvarFormulario() {
-    var mensagem = "Você tem certeza de que deseja salvar o formulário?";
+    var mensagem = "Você tem certeza de que deseja salvar as informações do usuário?";
     if (window.confirm(mensagem)) {
         // Coletar os dados do formulário
         var username = document.getElementById("username").value;
         var useremail = document.getElementById("useremail").value;
         var userpassword = document.getElementById("userpassword").value;
-        var userpasswordconfirm = document.getElementById("userpasswordconfirm").value;
+        var passwordconfirm = document.getElementById("passwordconfirm").value;
 
         // Valide os dados do formulário, se necessário
 
@@ -32,6 +28,6 @@ function confirmarSalvarFormulario() {
         // Aqui você pode enviar os dados para o seu servidor ou realizar ações necessárias.
 
         // Após a conclusão, você pode fechar o modal
-        closeModal('createModal');
+        closeModal('editModal');
     }
 }
