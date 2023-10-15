@@ -17,10 +17,9 @@ function confirmarSalvarFormulario() {
     var mensagem = "Você tem certeza de que deseja salvar as informações do usuário?";
     if (window.confirm(mensagem)) {
         // Coletar os dados do formulário
-        var username = document.getElementById("username").value;
-        var useremail = document.getElementById("useremail").value;
-        var userpassword = document.getElementById("userpassword").value;
-        var passwordconfirm = document.getElementById("passwordconfirm").value;
+        var username = document.getElementById("editusername").value;
+        var useremail = document.getElementById("edituseremail").value;
+        var userpassword = document.getElementById("edituserpassword").value;
 
         // Valide os dados do formulário, se necessário
 
