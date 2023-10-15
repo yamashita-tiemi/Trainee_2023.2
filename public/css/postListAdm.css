@@ -1,3 +1,6 @@
+
+/*codigos para a pagina principal, se necessario altere o '.modal' para ficar no tamanho que precisa para o design*/
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -50,3 +53,6 @@ button {
 button:hover {
     background-color: #6f0550;
 }
+
+
+/*implemente os codigos do modal a partir daqui */
