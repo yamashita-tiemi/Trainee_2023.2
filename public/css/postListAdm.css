@@ -1,29 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manjari', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-}
-
-.modal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
 }
 
 .overlay {
@@ -49,4 +31,71 @@ button {
 
 button:hover {
     background-color: #6f0550;
+}
+
+
+/*modal delte*/
+
+.modal-delete {
+    
+    display: none;
+    position: fixed;
+    width: 33%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    
+}
+.modal-container-delete {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0%
+    
+}
+.dados-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+    font-size: 1vw;
+    font-weight: 700;
+}
+.dados-delete h2{
+    margin: 0.5vw;
+    margin-top: 1.5vw;
+
+}
+.dados-delete h3{
+    margin: 0.5vw;
+    margin-bottom: 1.5vw;
+
+}
+.ilutracao{
+    width: 80%;
+}
+.ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.botoes button {
+    padding: 0.45vw;
+    padding-bottom: 0.2vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+    background-color: #6f0550;
+    color: #fff;
+    border: none;
+    border-radius: 0.3vw;
+    font-size: 0.95vw;
+    font-family: 'Manjari', sans-serif;
+}
+.botoes button:hover {
+    background-color: #a7107a;
 }
