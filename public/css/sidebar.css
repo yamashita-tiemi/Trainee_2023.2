@@ -94,3 +94,24 @@ ul li{
         margin-top: 114px;
     }
 }
+@media (min-width:321px) and (max-width:768px){
+    .texto{
+        font-size: 18px;
+        line-height: 46px;
+        margin-top: -5px;
+    }
+    .icone{
+        font-size: 20px;
+        margin-top: -5px;
+    }
+    .botao{
+        font-size: 24px;
+    }
+    .logout{
+        margin-top: 64px;
+    }
+    ul li{
+        height: 70px;
+    }
+   
+}
