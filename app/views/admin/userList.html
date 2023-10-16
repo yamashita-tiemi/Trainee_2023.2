@@ -13,33 +13,16 @@
 <body>
 
     <div class="headerula">
-        <h1>Lista de Usuários</h1>
         <button onclick="openModal('createModal')">Criar Usuário</button>
     </div>
     <div class="mainula">
-            <div class="grid-container legendagridula">
-            <div class="grid-item col1">ID</div>
-            <div class="grid-item col2">Username</div>
-            <div class="grid-item col3">Email</div>
-            <div class="grid-item col4">Ações</div>
-        </div>
-
-        <div class="grid-container">
-            <div class="grid-item col1">Item 1</div>
-            <div class="grid-item col2">Item 2</div>
-            <div class="grid-item col3">Item 3</div>
             <div class="grid-item col4">
                 <button onclick="openModal('viewModal')">Visualizar</button>
                 <button onclick="openModal('editModal')">Editar</button>
-                <button onclick="openModal('deleteModal')"><img class="deleteimgula" alt="deletar usuario" src="../../../public/imagens/delete.png">  Deletar</button>
-            </div>
-            <div class="grid-item col1">Item 4</div>
-            <div class="grid-item col2">Item 5</div>
-            <div class="grid-item col3">Item 6</div>
-            <div class="grid-item col4">
-                <button onclick="openModal('viewModal')">Visualizar</button>
-                <button onclick="openModal('editModal')">Editar</button>
-                <button onclick="openModal('deleteModal')"><img class="deleteimgula" alt="deletar usuario" src="../../../public/imagens/delete.png">  Deletar</button>
+                <button onclick="openModal('deleteModal')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                  </svg>    delete</button>
             </div>
         </div>
     </div>
@@ -47,6 +30,7 @@
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
 
     <!-- Modais -->
     <div id="createModal" class="modal">
