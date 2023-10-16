@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
     <link rel="stylesheet" href="../../../public/css/userList.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
 
     <div class="headerula">
         <h1>Lista de Usuários</h1>
-        <button onclick="openModal('createModal')">Criar Usuário</button>
+        <button onclick="openModal('createModal')"> <i class="bi bi-person-add"></i> Criar Usuário</button>
     </div>
     <div class="tableconteinerula">
         <table>
@@ -36,7 +37,7 @@
                     <td>
                         <button onclick="openModal('viewModal')"> <ion-icon name="eye-outline"></ion-icon> Visualizar</button>
                         <button onclick="openModal('editModal')"> <ion-icon name="create-outline"></ion-icon> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <ion-icon name="skull-outline"></ion-icon> Deletar</button>
+                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +46,7 @@
                     <td>livia@saltoalto.com</td>
                     <td>
                         <button onclick="openModal('viewModal')">Visualizar</button>
-                        <button onclick="openModal('editModal')">Editar</button>
+                        <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
                         <button onclick="openModal('deleteModal')"> <ion-icon name="trash-bin-outline"></ion-icon> Deletar</button>
                     </td>
                 </tr>
@@ -80,12 +81,22 @@
                     </td>
                     <tr>
                         <td>06</td>
-                        <td>Sara</td>
-                        <td>ingrid@saltoalto.com</td>
+                        <td>Leticia</td>
+                        <td>lett@saltoalto.com</td>
                         <td>
-                            <button onclick="openModal('viewModal')"> <ion-icon name="eye-outline"></ion-icon></button>
-                            <button onclick="openModal('editModal')"> <ion-icon name="create-outline"></ion-icon></button>
-                            <button onclick="openModal('deleteModal')"> <ion-icon name="skull-outline"></ion-icon></button>
+                            <button onclick="openModal('viewModal')"> <ion-icon name="eye-outline"></ion-icon> </button>
+                            <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> </button>
+                            <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>Isabelly</td>
+                        <td>isa@saltoalto.com</td>
+                        <td>
+                            <button onclick="openModal('viewModal')"> <ion-icon name="eye-outline"></ion-icon> </button>
+                            <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> </button>
+                            <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> </button>
                         </td>
                     </tr>
                 </tr>
