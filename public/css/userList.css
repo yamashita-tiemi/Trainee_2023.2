@@ -108,6 +108,7 @@ button {
     border: 0.3vw solid #6f0550; /* Espessura da borda e cor (preto) */
     padding: 0.6vw;
     margin: 0%;
+    font-size: 2vw;
 }
 .userInfo
 {
