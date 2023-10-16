@@ -75,7 +75,7 @@ button:hover {
 
 
 
-/*criar usuario */
+/*visualizar usuario */
 .modal {
     
     display: none;
@@ -109,6 +109,7 @@ button:hover {
 .dados-visualiz h2{
     border: 0.3vw solid #6f0550; /* Espessura da borda e cor (preto) */
     padding: 0.6vw;
+    padding-bottom: 0vw;
     margin: 0%;
     font-size: 2vw;
 }
@@ -136,12 +137,3 @@ button:hover {
 .fechar:hover{
     background-color: #dd0b6391;
 }
-
-
-
-
-
-
-
-
-/* editar usuario*/
