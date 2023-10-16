@@ -3,20 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Posts Admin</title>
     <link rel="stylesheet" href="../../../public/css/postListAdm.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
     <script src="../../../public/js/postListadm.js"></script>
-    <title>Lista de Posts</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
-    <!-- Botões para abrir os modais -->
-    <button onclick="openModal('createModal')">Criar Post</button>
-    <button onclick="openModal('viewModal')">Visualizar Posts</button>
-    <button onclick="openModal('editModal')">Editar Post</button>
-    <button onclick="openModal('deleteModal')">Deletar Post</button>
+    <div class="headerula">
+        <h1>Lista de Posts</h1>
+        <button onclick="openModal('createModal')"> <i class="bi bi-file-plus"></i>  Criar Post</button>
+    </div>
+    <div class="tableconteinerula">
+        <table>
+            <thead>
+                <tr>
+                    <th class="idula">ID</th>
+                    <th>Titulo</th>
+                    <th>Criador</th>
+                    <th class="actionula">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Como treinar seu dragão</td>
+                    <td>Áurea</td>
+                    <td>
+                        <button onclick="openModal('viewModal')"> <ion-icon name="eye-outline"></ion-icon> Visualizar</button>
+                        <button onclick="openModal('editModal')">  Editar</button>
+                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Como ser foda</td>
+                    <td>Livia</td>
+                    <td>
+                        <button onclick="openModal('viewModal')">Visualizar</button>
+                        <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i>Editar</button>
+                        <button onclick="openModal('deleteModal')"> <ion-icon name="trash-bin-outline"></ion-icon> Deletar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Como ser uma mãe atensiosa</td>
+                    <td>Tiemi</td>
+                    <td>
+                        <button onclick="openModal('viewModal')">Visualizar</button>
+                        <button onclick="openModal('editModal')">Editar</button>
+                        <button onclick="openModal('deleteModal')"> <ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Ada Lovelace</td>
+                    <td>Taynara</td>
+                    <td>
+                        <button onclick="openModal('viewModal')">Visualizar</button>
+                        <button onclick="openModal('editModal')">Editar</button>
+                        <button onclick="openModal('deleteModal')">Deletar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>Como programar em Assembly</td>
+                    <td>Felipe</td>
+                    <td>
+                        <button onclick="openModal('viewModal')">Visualizar</button>
+                        <button onclick="openModal('editModal')"><i class="bi bi-pencil-square"></i></button>
+                        <button onclick="openModal('deleteModal')">Deletar</button>
+                    </td>
+                    <tr>
+                        <td>06</td>
+                        <td>Como vender um gato</td>
+                        <td>Leticia</td>
+                        <td>
+                            <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i></ion-icon></button>
+                            <button onclick="openModal('editModal')"> <ion-icon name="create-outline"></ion-icon></button>
+                            <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i></ion-icon></button>
+                        </td>
+                    </tr>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
@@ -25,14 +105,21 @@
     <div id="createModal" class="modal">
         <div class="modal-container">
             <h2>Criar Post</h2>
-            <!-- Formulário para criar post -->
+            <form class="criaruser">
+                <label for="username">Titulo do Post:</label>
+                <input type="text" id="username" name="username">
+                <label for="conteudo">Conteudo:</label>
+                <textarea id="conteudo" name="conteudo"></textarea>
+                <label for="userpassword">Senha do Usuário</label>
+                <input type="password" id="userpassword" name="userpassword">
+            </form>
             <button onclick="closeModal('createModal')">Fechar</button>
         </div>
     </div>
 
     <div id="viewModal" class="modal">
         <div class="modal-container">
-            <h2>Visualizar Posts</h2>
+            <h2>Visualizar Post</h2>
             <!-- Lista de posts -->
             <button onclick="closeModal('viewModal')">Fechar</button>
         </div>
@@ -50,7 +137,7 @@
         <div class="modal-container">
             <h2>Deletar Post</h2>
             <!-- Confirmação de exclusão -->
-            <h3>Realmente deseja deletar esse post?</h3>
+            <h3>Realmente deseja deletar esse Post?</h3>
             <button onclick="confirmDelete()">Confirmar</button>
             <button onclick="closeModal('deleteModal')">Cancelar</button>
         </div>
