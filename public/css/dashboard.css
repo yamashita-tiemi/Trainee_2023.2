@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&family=Roboto+Mono:wght@100&display=swap');
+
+
+body {
+    font-family: "Manjari", sans-serif;
+    margin: 0;
+    background-color: #cfb698;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding-top: 1.7%;
+    color: #cfb698;
+}
+
+h2 {
+    padding-top: 4%;
+    font-weight: 400;
+    font-size: 2vw;
+    color: #202020;
+}
+
+
+.nav {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    background: #401c2a;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav h1 {
+    font-size: 5vw;
+}
+
+.logout {
+    display: flex;
+    padding: 0 0.5vw 0 1vw;
+    background: #cfb698;
+    margin-right: 1vw;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: fit-content;
+    align-self: flex-end;
+    box-shadow: 0px 0.4vw 6px #202020 ;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    transform: scale(100%);
+    transition: all 0.2s;
+}
+
+.logout:hover {
+    transform: scale(105%);
+}
+
+.logout img {
+    height: 80%;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #401c2a;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10px;
+    margin: 0 2% 0 2%;
+    box-shadow: 0.2vw 0.3vw 0.5vw #202020b9;
+    
+    transform: scale(100%);
+    transition: all 0.2s;
+}
+
+.cards div:hover {
+    transform: scale(110%);
+}
+
+.cards div img{
+    height: 50%;
+    width: auto;
+}
+
+.cards h2 {
+    color: #cfb698;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        padding-top: 4%;
+        font-size: 4vw;
+        color: #202020;
+    }
+
+    .nav {
+        height: 10vh;
+    }
+
+    .cards {
+        height: 90vh;
+        flex-direction: column;
+    }
+
+    .cards div {
+        width: 40vw;
+        height: 40vw;
+        margin: 3% 0 3% 0;
+    }
+}
