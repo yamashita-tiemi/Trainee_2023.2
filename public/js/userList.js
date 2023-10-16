@@ -12,11 +12,6 @@ function closeModal(modalId) {
     document.getElementById('overlay').style.display = 'none';
 }
 
-function confirmDelete() {
-    // Adicione aqui a lógica para excluir o post
-    alert('Usuário deletado com sucesso!');
-    closeModal('deleteModal');
-}
 function confirmarSalvarFormulario() {
     var mensagem = "Você tem certeza de que deseja salvar o formulário?";
     if (window.confirm(mensagem)) {
