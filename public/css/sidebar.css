@@ -95,6 +95,12 @@ ul li{
     }
 }
 @media (min-width:321px) and (max-width:768px){
+    nav.nav1{
+        width: 40px;
+    }
+    nav.nav1:hover{
+        width: 180px;
+    }
     .texto{
         font-size: 18px;
         line-height: 46px;
@@ -108,10 +114,10 @@ ul li{
         font-size: 24px;
     }
     .logout{
-        margin-top: 64px;
+        margin-top: 74px;
     }
     ul li{
-        height: 70px;
+        height: 68px;
     }
    
 }
