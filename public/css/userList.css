@@ -86,7 +86,7 @@ button {
     
 }
 .modal-container {
-    background-image: url("../assets/img-usuar.png");
+    background-image: url("../assets/img-user-art.png");
     background-size: cover;
     background-repeat: no-repeat;
     gap: 15%;
@@ -154,7 +154,6 @@ input {
 .fechar{
     display: flex;
     background-color: #dd0b64;
-    text-align: -web;
 }
 .fechar:hover{
     background-color: #dd0b6391;
@@ -180,9 +179,55 @@ button:hover {
     background-color: #6f0550;
 }
 
-#createModal img
-{
-    white-space: inherit;
-    z-index: 1;
-}
 
+
+@media screen and (max-width: 940px){
+    .modal {
+        width: 90%;
+    }
+    .modal-container {
+        background-image: url("../assets/img-usuer-respon.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        gap: 15%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin:0%
+    }
+    .dados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    input {
+        font-size: 3.2vw;
+        margin-bottom: 1.3vw;
+        padding: 0.6vw;
+        padding-left: 1.5vw;
+        width: 45vw;
+        outline: none;
+    }
+    .ilutracao{
+        width: 50%;
+    }
+    .criaruser button{
+        font-size: 2.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    .fechar svg{
+        width: 2vw;
+        
+    }
+    #botaosalvar{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 0.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+    }
+}
