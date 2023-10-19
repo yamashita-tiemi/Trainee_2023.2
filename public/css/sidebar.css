@@ -37,7 +37,7 @@ body{
 }
 
 .navegador{
-    height: 78%;
+    height: 77.4%;
     list-style-type: none;
 }
 
@@ -68,6 +68,9 @@ a.texto{
     border-radius: 0 0 10px 10px;
 }
 
+a{
+    transition: all .2s;
+}
 .logout a.texto{
     margin-left: 20px;
 }
@@ -138,7 +141,7 @@ a.texto{
         width: 180px;
     }
     .navegador{
-        height: 72%;
+        height: 75%;
     }
 
     .logout a,
@@ -148,7 +151,7 @@ a.texto{
     
     .texto{
         font-size: 18px;
-        line-height: 46px;
+        line-height: 30px;
         margin-top: -5px;
     }
     .icone{
