@@ -189,3 +189,54 @@ button:hover {
 
 
 /* editar usuario*/
+.modal-container-edit{
+    background-image: url("../assets/img-edit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+}
+
+.dados-edit{        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        font-size: 1.5vw;
+        font-weight: 700;
+        margin-left: 7%;
+    
+}
+
+#botaosalvaredit{
+    background-color:#dd0b63;
+        font-size: 1.4vw;
+        margin-right: 86%;
+        letter-spacing: 0.15vw;
+        border-radius: 0.8vw;
+        padding: 1%;
+        box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+        font-weight: 700;
+        text-align: center;
+        
+}
+
+
+
+.ilutracao-edit{
+    width: 70%;
+}
+.ilutracao-edit img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#editModal img
+{
+    white-space: inherit;
+    z-index: 1;
+}
