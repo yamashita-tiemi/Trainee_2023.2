@@ -189,3 +189,21 @@ button:hover {
 
 
 /* editar usuario*/
+
+.modal-container-edit{
+    
+    display: flex;
+}
+
+.dados-edit{
+    background-color: #9c9c9c;
+    margin-right: 64vw;
+}
+
+.dados-edit h2{
+    text-align: center;
+    
+}
+.edituser{
+    
+}
