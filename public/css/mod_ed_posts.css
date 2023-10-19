@@ -1,0 +1,211 @@
+
+/*codigos para a pagina principal, se necessario altere o '.modal' para ficar no tamanho que precisa para o design*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #401c2a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #6f0550;
+}
+
+
+/*implemente os codigos do modal a partir daqui */
+
+.modal {
+    
+    display: none;
+    position: fixed;
+    width: 64%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    
+}
+.modal-container-edit {
+    background-image: url("../assets/img-user-art.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0%
+    
+}
+.dados-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 7%;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+form
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+input {
+    border: 0.1vw solid #401c2a;
+    border-radius: 1.5vw;
+    font-size: 1.25vw;
+    margin-bottom: 0.5vw;
+    padding: 0.6vw;
+    width: 18vw;
+    outline: none;
+
+}
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
+
+.ilutracao{
+    width: 70%;
+}
+.ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.criaruser button{
+    font-family: 'Manjari', sans-serif;
+    align-self: flex-end;
+    font-size: 1.1vw;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
+    background-color: #dd0b63a9;
+    color: #000;
+    font-weight: 700;
+}
+
+.criaruser button:hover{
+    background-color: #dd0b63dd;
+}
+
+.fechar{
+    display: flex;
+    background-color: #dd0b64;
+}
+.fechar:hover{
+    background-color: #dd0b6391;
+}
+#botaosalvar{
+    font-size: 1.1vw;
+    font-family: 'Manjari', sans-serif;
+    margin-right: 5%;
+    letter-spacing: 0.15vw;
+    border-radius: 0.8vw;
+    padding: 0.5vw;
+    padding-bottom: 0vw;
+    background-color: #dd0b63;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+#botaosalvar:hover{
+    background-color: #dd0b63ac;
+}
+
+button:hover {
+    background-color: #6f0550;
+}
+
+
+
+@media screen and (max-width: 940px){
+    .modal {
+        width: 90%;
+    }
+    .modal-container {
+        background-image: url("../assets/img-usuer-respon.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        gap: 15%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin:0%
+    }
+    .dados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    input {
+        font-size: 3.2vw;
+        margin-bottom: 1.3vw;
+        padding: 0.6vw;
+        padding-left: 1.5vw;
+        width: 45vw;
+        outline: none;
+    }
+    .ilutracao{
+        width: 50%;
+    }
+    .criaruser button{
+        font-size: 2.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    .fechar svg{
+        width: 2vw;
+        
+    }
+    #botaosalvar{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 0.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+    }
+}
