@@ -1,8 +1,8 @@
 body {
     font-family: 'Manjari', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -64,9 +64,8 @@ button:hover {
 .headerula {
     display: flex;
     justify-content: space-around;
-    position: fixed;
     top: 0;
-    margin: 0 10% 0 10%;
+    margin: 0 10% 5% 10%;
     height: 100px;
     width: 80%;
     border-radius: 10px;
@@ -82,16 +81,19 @@ button:hover {
 
 .headerula button {
     margin-left: 10%;
+    width: 20%;
+    height: 50%;
+    font-size: 24px;
 }
 
 .tableconteinerula {
     width: 100%;
-    overflow-x: auto;
     display: flex;
     justify-content: center;
 }
 
 table {
+    overflow-x: scroll;
     width: 80%;
     white-space: nowrap;
     border-collapse: collapse;
@@ -108,12 +110,19 @@ thead {
 td {
     padding: 8px;
     text-align: center;
-    background-color: #ddd;
 }
 
 th {
     background: rgba(255, 93, 87, 0.85);
     padding-top: 10px;
+}
+
+.tbory tr {
+    background-color: #ddd;
+}
+
+tr:hover {
+    background-color: rgba(221, 11, 100, 0.3);
 }
 
 .idula {
@@ -128,17 +137,19 @@ th {
     
     .headerula h1 {
         font-size: 28px;
+        white-space: nowrap;
+    }
+
+    .headerula button {
+        font-size: 18px;
+        width: fit-content;
+        white-space: nowrap;
+        height: 40%;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 780px) {
 
-    table {
-        display: inline-block;
-    }
-    .tableconteinerula {
-        text-align: center;
-    }
     .headerula h1 {
         font-size: 24px;
         margin-left: 10%;
@@ -146,6 +157,18 @@ th {
     .headerula button {
         margin-right: 10%;
         font-size: 12px;
+    }
+    /* table {
+        display: block;
+    } */
+}
+
+@media only screen and (max-width: 50px) {
+    .headerula button {
+        margin-right: 2%;
+    }
+    .headerula h1 {
+        margin-left: 2%;
     }
 }
 
@@ -166,3 +189,15 @@ th {
         font-size: 8px;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .headerula button {
+        margin-top: -2%;
+    }
+}
+
+/* @media only screen and (max-height: 650px) {
+    .tableconteinerula {
+        margin-top: 15%;
+    }
+} */
