@@ -190,7 +190,7 @@ button:hover {
 
 /* editar usuario*/
 .modal-container-edit{
-    background-image: url("../assets/img-edit.png");
+    background-image: url("../assets/img-edit-user-fundo.png");
     background-size: cover;
     background-repeat: no-repeat;
     gap: 15%;
@@ -233,6 +233,7 @@ button:hover {
 
 .ilutracao-edit{
     width: 70%;
+    
 }
 
 .ilutracao-edit img{
@@ -253,4 +254,93 @@ button:hover {
 
 #editModal > button{
     background-color: #E181C1;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    .modal {
+        width: 74%;
+    }
+    .modal-container-edit {
+        background-image: url("../assets/img-edituser-respon.png");
+        flex-direction: column-reverse;
+    }
+    .ilutracao-edit{
+        width: 50%;
+    }
+    .ilutracao-edit img{
+        margin: auto;
+    }
+    
+    .dados-edit{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+        margin-right: 0%;
+        ;
+    }
+    input {
+        font-size: 3.3vw;
+        border-radius: 2.5vw;
+        margin-bottom: 1.3vw;
+        padding-left: 1.5vw;
+        width: 45vw;
+    }   
+    
+    .dados-edit button{
+        font-size: 2.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    .fechar svg{
+        width: 2vw;   
+    }
+    #botaosalvaredit{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 0.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+        text-align: center;
+        margin-bottom: 2%;
+        letter-spacing: 0.15vw;
+        font-weight: 700;
+    }
+}
+
+
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .modal {
+        width: 80%;
+    }
+    .fechar svg{
+        width: 1.5vw;   
+    }
+    .dados{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+   
+    input {
+        font-size: 1.6vw;
+        width: 25vw;
+    }
+    
+    .ilutracao{
+        width: 67%;
+    }
+    
+    .criaruser button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    #botaosalvar{
+        font-size: 1.9vw;
+        letter-spacing: 0.2vw;
+        border-radius: 0.8vw;
+        padding: 0.6vw;
+    }
+    
 }
