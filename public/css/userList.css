@@ -72,11 +72,13 @@ button {
 
 
 
+
+
+
 /*criar usuario */
 .modal {
-    
     display: none;
-    position: fixed;
+    position: absolute;
     width: 64%;
     background-color: #fff;
     z-index: 1;
@@ -181,36 +183,29 @@ button:hover {
 
 
 
-@media screen and (max-width: 940px){
+
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
     .modal {
-        width: 90%;
+        width: 74%;
     }
     .modal-container {
         background-image: url("../assets/img-usuer-respon.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        gap: 15%;
-        display: flex;
         flex-direction: column-reverse;
-        align-items: center;
-        margin:0%
     }
     .dados{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 71%;
         margin-left: 0%;
         font-size: 3.8vw;
     }
     input {
-        font-size: 3.2vw;
+        font-size: 3.3vw;
+        border-radius: 2.5vw;
         margin-bottom: 1.3vw;
-        padding: 0.6vw;
         padding-left: 1.5vw;
         width: 45vw;
-        outline: none;
-    }
+    }   
     .ilutracao{
         width: 50%;
     }
@@ -220,8 +215,7 @@ button:hover {
         padding-bottom: 0.2vw;
     }
     .fechar svg{
-        width: 2vw;
-        
+        width: 2vw;   
     }
     #botaosalvar{
         font-size: 2.6vw;
@@ -230,4 +224,50 @@ button:hover {
         padding: 0.8vw;
         padding-bottom: 0vw;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .modal {
+        width: 80%;
+    }
+    .fechar svg{
+        width: 1.5vw;   
+    }
+    .dados{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+   
+    input {
+        font-size: 1.6vw;
+        width: 25vw;
+    }
+    
+    .ilutracao{
+        width: 67%;
+    }
+    
+    .criaruser button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    #botaosalvar{
+        font-size: 1.9vw;
+        letter-spacing: 0.2vw;
+        border-radius: 0.8vw;
+        padding: 0.6vw;
+    }
+    
 }
