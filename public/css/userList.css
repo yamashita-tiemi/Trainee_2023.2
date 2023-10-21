@@ -142,3 +142,37 @@ button:hover {
 .botoes button:hover {
     background-color: #a7107a;
 }
+
+
+
+
+@media screen and (min-width: 436px) and (max-width: 800px){
+    .modal-delete{
+        width: 40%;
+    }
+    .botoes button{
+        font-size: 1.5vw;
+        border-radius: 0.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 1.5vw;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 435px){
+    .modal-delete{
+        width: 71%;
+    }
+    .botoes button{
+        font-size: 3vw;
+        border-radius: 0.7vw;
+        padding: 1vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 2.8vw;
+    }
+
+}
