@@ -38,12 +38,13 @@ body{
 }
 
 .navegador{
-    height: 60vh;
+    height: auto;
     list-style-type: none;
 }
 
 .navegador a{
     width: 250px;
+    height: fit-content;
     display: inline-block;
     font-size: 20px;
     color: #fff;
@@ -61,11 +62,15 @@ a.texto{
 
 .logout a {
     width: 250px;
+    margin-top: 18vh;
+    height: fit-content;
     display: inline-block;
     font-size: 20px;
     color: #fff;
     text-decoration: none;
     border-radius: 0 0 10px 10px;
+    padding: 20px 4%;
+    line-height: 40px;
 }
 
 a{
@@ -79,6 +84,7 @@ a{
 .navegador a:hover{
     background-color: #dd0b64;
 }
+
 
 
 .icone{
@@ -115,7 +121,7 @@ a{
     .navegador a:hover{
     background-color: #dd0b64;
     
-}
+    }
 
     .texto{
         font-size: 14px;
@@ -132,16 +138,9 @@ a{
    
 }
 
-@media (min-width:321px) and (max-width:768px){
-    .nav1{
-        width: 40px;
-        height: 85%;
-    }
+@media screen and (max-width:768px){
     .nav1:hover{
         width: 180px;
-    }
-    .navegador{
-        height: 75%;
     }
 
     .logout a,
@@ -155,12 +154,10 @@ a{
         margin-top: -5px;
     }
     .icone{
-        font-size: 20px;
+        font-size: 25px;
         margin-top: -5px;
     }
     .botao{
         font-size: 24px;
     }
-    
-   
 }
