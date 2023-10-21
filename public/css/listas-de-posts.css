@@ -30,7 +30,6 @@ div.cardContainer {
     overflow: hidden;
     border-radius: 3%;
     box-shadow: 0.3vw 0.3vw 0.3vw #1111119c;
-
     transition: all 0.2s ease-in-out;
 }
 
@@ -42,7 +41,7 @@ div.cardContainer:hover {
     transform: scale(110%);
 }
 div.cardContainer:hover .blurrableDiv{
-    filter: blur(0.2rem);
+    filter: blur(0.1rem);
 }
 
 .absoluteTitleContainer {
@@ -73,9 +72,11 @@ div.cardContainer:hover .blurrableDiv{
     width: 100%;
     text-align: justify;
     font-weight: 400;
+    
 }
 
 .previewContainer {
+    margin-top: 1.5vh;
     display: flex;
     height: 50%;
     overflow: hidden;
@@ -102,6 +103,7 @@ div.cardContainer:hover .blurrableDiv{
 
 /* Botão hover */
 .cardHover {
+    
     display: flex;
     position: absolute;
     z-index: 2;
@@ -119,6 +121,7 @@ div.cardContainer:hover .blurrableDiv{
 }
 
 .cardHover img{
+    
     height: 15%;
     width: auto;
     filter: none;
@@ -132,12 +135,13 @@ div.cardContainer:hover .blurrableDiv{
 }
 ul li{
     margin-top: 3.5%;
-    text-align: center;
+    
     display: flex;
     display: inline-block;
     margin-left: 30px;
-    
+    text-align: center;
 }
+
 ul li a{
     margin-left: 20px;
     font-size: 20px;
@@ -187,6 +191,7 @@ ul li a:hover{
     }
     ul li a{
         font-size: 16px;
+        margin-left: 13vw;
     }
 }
 
