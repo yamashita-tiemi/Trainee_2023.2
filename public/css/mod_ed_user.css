@@ -74,9 +74,8 @@ button {
 
 /*criar usuario */
 .modal {
-    
     display: none;
-    position: fixed;
+    position: absolute;
     width: 64%;
     background-color: #fff;
     z-index: 1;
@@ -86,7 +85,7 @@ button {
     
 }
 .modal-container {
-    background-image: url("../assets/img-usuar.png");
+    background-image: url("../assets/img-user-art.png");
     background-size: cover;
     background-repeat: no-repeat;
     gap: 15%;
@@ -136,12 +135,14 @@ input {
 }
 
 .criaruser button{
+    font-family: 'Manjari', sans-serif;
     align-self: flex-end;
     font-size: 1.1vw;
     border-radius: 1vw;
-    padding: 2.5%;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
     background-color: #dd0b63a9;
-    color: #401c2a;
+    color: #000;
     font-weight: 700;
 }
 
@@ -152,20 +153,19 @@ input {
 .fechar{
     display: flex;
     background-color: #dd0b64;
-    text-align: -web;
 }
 .fechar:hover{
     background-color: #dd0b6391;
 }
 #botaosalvar{
-    font-size: 1.4vw;
+    font-size: 1.1vw;
+    font-family: 'Manjari', sans-serif;
     margin-right: 5%;
     letter-spacing: 0.15vw;
-    text-decoration-line: underline;
     border-radius: 0.8vw;
-    padding: 1%;
+    padding: 0.5vw;
+    padding-bottom: 0vw;
     background-color: #dd0b63;
-    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     font-weight: 700;
     text-align: center;
@@ -178,106 +178,23 @@ button:hover {
     background-color: #6f0550;
 }
 
-#createModal img
-{
-    white-space: inherit;
-    z-index: 1;
-}
 
 
 
-
-
-/* editar usuario*/
-.modal-container-edit{
-    background-image: url("../assets/img-edit-user-fundo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    gap: 15%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0%;
-    text-align: center;
-}
-
-.dados-edit{        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: auto;
-        width: 50%;
-        font-size: 1.5vw;
-        font-weight: 700;
-        margin-right:  7%;
-    
-}
-
-#botaosalvaredit{
-    background-color:  #BE72A1;
-    background-color: #E181C1;
-    font-size: 1.4vw;
-    margin-right: 86%;
-    letter-spacing: 0.15vw;
-    border-radius: 0.8vw;
-    padding: 1%;
-    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
-    color: #ffffff;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 7px;
-    margin-top: 6px;       
-}
-
-
-
-.ilutracao-edit{
-    width: 70%;
-    
-}
-
-.ilutracao-edit img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-left: 12px;
-}
-
-#editModal img{
-    white-space: inherit;
-    z-index: 1;
-}
-
-.dados-edit > h2{
-    display: inline-block;
-}
-
-#editModal > button{
-    background-color: #E181C1;
-}
 
 
 @media screen and (min-width: 0px) and (max-width: 436px){
     .modal {
         width: 74%;
     }
-    .modal-container-edit {
-        background-image: url("../assets/img-edituser-respon.png");
+    .modal-container {
+        background-image: url("../assets/img-usuer-respon.png");
         flex-direction: column-reverse;
     }
-    .ilutracao-edit{
-        width: 50%;
-    }
-    .ilutracao-edit img{
-        margin: auto;
-    }
-    
-    .dados-edit{
+    .dados{
         width: 71%;
         margin-left: 0%;
         font-size: 3.8vw;
-        margin-right: 0%;
-        ;
     }
     input {
         font-size: 3.3vw;
@@ -286,8 +203,10 @@ button:hover {
         padding-left: 1.5vw;
         width: 45vw;
     }   
-    
-    .dados-edit button{
+    .ilutracao{
+        width: 50%;
+    }
+    .criaruser button{
         font-size: 2.8vw;
         padding: 0.8vw;
         padding-bottom: 0.2vw;
@@ -295,18 +214,23 @@ button:hover {
     .fechar svg{
         width: 2vw;   
     }
-    #botaosalvaredit{
+    #botaosalvar{
         font-size: 2.6vw;
         letter-spacing: 0.4vw;
         border-radius: 0.8vw;
         padding: 0.8vw;
         padding-bottom: 0vw;
-        text-align: center;
-        margin-bottom: 2%;
-        letter-spacing: 0.15vw;
-        font-weight: 700;
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -340,6 +264,203 @@ button:hover {
         font-size: 1.9vw;
         letter-spacing: 0.2vw;
         border-radius: 0.8vw;
+        padding: 0.6vw;
+    }
+    
+}
+
+
+/* editar usuario*/
+.modal-container-edit{
+    background-image: url("../assets/img-edit-user-fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+    text-align: center;
+}
+
+
+.dados-edit{        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: auto;
+        width: 50%;
+        font-size: 1.5vw;
+        font-weight: 700;
+        margin-right:  7%;
+    
+}
+
+.dados-edit button{
+    background-color:  #DD0B63;
+    font-size: 1.9vw;
+    padding: 0.6vw;
+    font-family: 'Manjari', sans-serif;
+    align-self: flex-end;
+    font-size: 1.0vw;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
+    color: #000;
+    font-weight: 700;
+}
+
+.dados-edit button:hover{
+    background-color: #dd0b63dd;
+}
+
+
+#botaosalvaredit{
+    
+    background-color: #DD0B63;
+    margin-right: 86%;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 7px;
+    margin-top: 6px;       
+    font-size: 1.1vw;
+    letter-spacing: 0.15vw;
+    border-radius: 0.8vw;
+    padding: 0.5vw;
+}
+
+#botaosalvaredit:hover{
+    background-color: #dd0b63ac;
+}
+
+
+
+.ilutracao-edit{
+    width: 70%;
+    
+}
+
+.ilutracao-edit img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 12px;
+}
+
+#editModal img{
+    white-space: inherit;
+    z-index: 1;
+}
+
+
+.dados-edit > h2{
+    display: inline-block;
+}
+
+
+#editModal > button{    
+    background-color: #DD0B63;
+}
+
+#editModal > button:hover{
+    background-color: #dd0b6391;
+}
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    .modal {
+        width: 74%;
+    }
+    .modal-container-edit {
+        background-image: url("../assets/img-edituser-respon.png");
+        flex-direction: column-reverse;
+    }
+    .ilutracao-edit{
+        width: 50%;
+    }
+    .ilutracao-edit img{
+        margin: auto;
+    }
+    
+    .dados-edit{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+        margin-right: 0%;
+    }
+    input {
+        font-size: 3.3vw;
+        border-radius: 2.5vw;
+        margin-bottom: 1.3vw;
+        padding-left: 1.5vw;
+        width: 45vw;
+    }   
+    
+    .dados-edit button{
+        font-size: 2.2vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+        border-radius: 25px;
+    }
+    .fechar svg{
+        width: 2vw;   
+    }
+    #botaosalvaredit{
+        font-size: 2.7vw;
+        letter-spacing: 0.4vw;
+        border-radius: 1.5vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+        text-align: center;
+        margin-bottom: 2%;
+        letter-spacing: 0.15vw;
+        font-weight: 700;
+        padding: 0.5vw;
+        height: 17px;
+    }
+}
+
+
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .modal {
+        width: 80%;
+    }
+    .fechar svg{
+        width: 1.5vw;   
+    }
+    .dados-edit{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+    .dados-edit > h2{
+        font-size: 21px;
+
+    }
+   
+    input {
+        font-size: 1.6vw;
+        width: 25vw;
+    }
+    
+    .ilutracao-edit{
+        width: 67%;
+    }
+    
+    .dados-edit > button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    #botaosalvaredit{
+        font-size: 1.5vw;
+        letter-spacing: 0.2vw;
+        border-radius: 1.2vw;
         padding: 0.6vw;
     }
     
