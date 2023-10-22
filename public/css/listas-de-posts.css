@@ -18,7 +18,7 @@ h1, h2 {
 }
 
 div.cardContainer {
-    margin-top: 10%;
+    margin-top: 10vh;
     margin-left: 6%;
     margin-bottom: 0;
     display: inline-block;
@@ -138,12 +138,12 @@ ul li{
     
     display: flex;
     display: inline-block;
-    margin-left: 30px;
+   
     text-align: center;
 }
 
 ul li a{
-    margin-left: 20px;
+    
     font-size: 20px;
     color:#2e2e2e;
     text-decoration: none;
@@ -151,8 +151,18 @@ ul li a{
     font-family: 'Manjari', sans-serif;
     position: absolute;
 }
-nav{
-    margin-left: 38%;
+.options{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li{
+    margin-bottom: 10%;
+    margin-left: 20px;
+}
+ul li a{
+    font-size: 16px;
 }
 
 ul li a:hover{
@@ -182,22 +192,32 @@ ul li a:hover{
         height: 15%;
         cursor: pointer;
     }
-    nav{
-        margin-left: 3%;
+    .options{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    ul{
+        margin-right: 26vw;
     }
     ul li{
         margin-bottom: 10%;
-        margin-left: 20px;
+        margin-left: 5vw;
+        
     }
     ul li a{
-        font-size: 16px;
-        margin-left: 13vw;
+        font-size: 14px;
+        
+    }
+
+    ul li a:hover{
+        transform: scale(100%);
     }
 }
 
 @media (min-width:768px) and (max-width:1023px){
     div.cardContainer {
-        margin-top: 16%;
+        margin-top: 8vh;
         margin-left: 2%;
         width: 30%;
     }
@@ -206,11 +226,12 @@ ul li a:hover{
         width: 100%;
     }
     .cardContainer h2 {
-        font-size: 2vw;
+        font-size: 1.9vw;
     }
-    nav{
-        margin-left: 31%;
-        margin-top: 40px;
+    .options{
+        display:flex;
+        align-items: center;
+        justify-content: center;
     }
     ul li{
         margin-bottom: 10%;

@@ -110,21 +110,27 @@
         </div>
     </div>
 
-    <nav>
+    
+
+    <div class="options">
         <ul>
           
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            
           
           
         </ul>
-      </nav>
+    </div>
 
 </body>
 </html>
 
     <script>
         const NumberPage = 5
-        for(var page = 2; page <= NumberPage; page++){
+        for(var page = 5; page <= NumberPage; page++){
         const newPage = document.createElement("li")
         newPage.classList.add("page-item")
 
@@ -138,4 +144,4 @@
         const newList = document.querySelector("ul")
         newList.append(newPage)
         }
-    </script>
+    </script> 
