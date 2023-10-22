@@ -66,7 +66,7 @@ button:hover {
     justify-content: space-around;
     top: 0;
     margin: 0 10% 5% 10%;
-    height: 100px;
+    height: 18vh;
     width: 80%;
     border-radius: 10px;
     background: linear-gradient(271deg, #FF5D57 0%, #DD0B64 101.04%);
@@ -89,6 +89,7 @@ button:hover {
 .tableconteinerula {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -148,32 +149,30 @@ tr:hover {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    
+    table {
+        display: inline-block;
+    }
+}
+
 @media only screen and (max-width: 780px) {
 
     .headerula h1 {
         font-size: 24px;
+        margin-right: 10%;
         margin-left: 10%;
     }
     .headerula button {
         margin-right: 10%;
-        font-size: 12px;
+        font-size: 14px;
     }
-    /* table {
-        display: block;
-    } */
 }
 
-@media only screen and (max-width: 50px) {
-    .headerula button {
-        margin-right: 2%;
-    }
-    .headerula h1 {
-        margin-left: 2%;
-    }
-}
 
 @media only screen and (max-width: 500px) {
     .headerula {
+        padding-top: 3%;
         height: 10%;
         flex-wrap: wrap;
         padding-bottom: 5%;
@@ -186,7 +185,7 @@ tr:hover {
     .headerula button {
         margin-right: 10%;
         margin-left: 10%;
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 
@@ -194,10 +193,7 @@ tr:hover {
     .headerula button {
         margin-top: -2%;
     }
-}
-
-/* @media only screen and (max-height: 650px) {
-    .tableconteinerula {
-        margin-top: 15%;
+    .headerula h1 {
+        font-size: 18px;
     }
-} */
+}
