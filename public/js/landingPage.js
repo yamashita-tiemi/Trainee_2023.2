@@ -63,5 +63,3 @@ arrowBtns.forEach(btn => {
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
-
-

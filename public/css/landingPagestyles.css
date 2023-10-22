@@ -186,15 +186,17 @@ body {
 .background h2 {
     
     width: 95%;
-    height: 26%;
+    max-height: 26%;
     top: 57%;
     position: relative;
-    font-size: 56%;
+    font-size: 1.14vw;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.1vw;
     color: #CFB698;
     margin:0%;
+    overflow: hidden; 
+
 }
 .circle {
     width: 7vw;
