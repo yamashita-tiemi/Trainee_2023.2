@@ -1,8 +1,8 @@
 body {
     font-family: 'Manjari', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -64,9 +64,8 @@ button:hover {
 .headerula {
     display: flex;
     justify-content: space-around;
-    position: fixed;
     top: 0;
-    margin: 0 10% 0 10%;
+    margin: 0 10% 5% 10%;
     height: 100px;
     width: 80%;
     border-radius: 10px;
@@ -82,16 +81,20 @@ button:hover {
 
 .headerula button {
     margin-left: 10%;
+    width: 20%;
+    height: 50%;
+    font-size: 24px;
 }
 
 .tableconteinerula {
     width: 100%;
-    overflow-x: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
 table {
+    overflow-x: scroll;
     width: 80%;
     white-space: nowrap;
     border-collapse: collapse;
@@ -108,12 +111,19 @@ thead {
 td {
     padding: 8px;
     text-align: center;
-    background-color: #ddd;
 }
 
 th {
     background: rgba(255, 93, 87, 0.85);
     padding-top: 10px;
+}
+
+.tborypla tr {
+    background-color: #ddd;
+}
+
+tr:hover {
+    background-color: rgba(221, 11, 100, 0.3);
 }
 
 .idula {
@@ -128,29 +138,60 @@ th {
     
     .headerula h1 {
         font-size: 28px;
+        white-space: nowrap;
+    }
+
+    .headerula button {
+        font-size: 18px;
+        width: fit-content;
+        white-space: nowrap;
+        height: 40%;
     }
 }
 
-@media only screen and (max-width: 700px) {
-
+@media only screen and (max-width: 1000px) {
+    
     table {
         display: inline-block;
     }
-    .tableconteinerula {
-        text-align: center;
-    }
+}
+
+@media only screen and (max-width: 780px) {
+
     .headerula h1 {
         font-size: 24px;
         margin-left: 10%;
+    }
+    .headerula button {
+        margin-right: 10%;
+        font-size: 14px;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .headerula {
+        padding-top: 3%;
         height: 10%;
+        flex-wrap: wrap;
+        padding-bottom: 5%;
+    }
+    .headerula h1 {
+        font-size: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .headerula button {
+        margin-right: 10%;
+        margin-left: 10%;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .headerula button {
+        margin-top: -2%;
     }
     .headerula h1 {
         font-size: 18px;
-        margin-left: 10%;
     }
 }
