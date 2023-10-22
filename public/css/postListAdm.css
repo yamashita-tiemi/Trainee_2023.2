@@ -26,8 +26,9 @@ button {
     background-color: #401c2a;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5vw;
 }
+
 
 button:hover {
     background-color: #6f0550;
@@ -36,11 +37,14 @@ button:hover {
 
 
 /*visualizar usuario */
-.modal {
+#viewModal-post{
     
     display: none;
     position: fixed;
     width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     z-index: 1;
     margin: 0%;
@@ -48,7 +52,7 @@ button:hover {
     text-align: -webkit-right;
     
 }
-.modal-container-visualizacao {
+.modal-container-visualizacao-post {
     background-image: url("../assets/img-visualiz.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,7 +62,20 @@ button:hover {
     margin:0%
     
 }
-.dados-visualiz{
+#viewModal-post .fechar i{
+    font-size: 1.4vw;
+        
+}
+#viewModal-post button{
+    margin: 0%;
+    padding: 0.5%;
+    width: 2.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.dados-visualiz-post{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,7 +83,7 @@ button:hover {
     font-size: 1.5vw;
     font-weight: 700;
 }
-.dados-visualiz h2{
+.dados-visualiz-post h2{
     border: 0.3vw solid #6f0550; /* Espessura da borda e cor (preto) */
     padding: 0.6vw;
     padding-bottom: 0vw;
@@ -81,22 +98,79 @@ button:hover {
     width: 100%;
     
 }
-.modal-container-visualizacao .ilutracao{
-    width: 70%;
-}
-.ilutracao-post{
+.ilutracao-visualiz-post{
     width: 40%;
 
 }
-.ilutracao-post img{
+.ilutracao-visualiz-post img{
     width: 100%;
 }
 
-.fechar{
+.modal-visualiz-post .fechar{
     display: flex;
     background-color: #dd0b64;
     font-size: 0.8vw;
 }
-.fechar:hover{
+.modal-visualiz-post .fechar:hover{
     background-color: #dd0b6391;
+}
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    #viewModal-post {
+        width: 74%;
+    }
+    .modal-container-visualizacao-post {
+        flex-direction: column-reverse;
+    }
+    .dados-visualiz-post{
+        width: 92%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    .dados-visualiz-post h2{
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+        font-size: 3.5vw;
+    }
+
+
+    #viewModal-post .fechar i{
+        font-size: 2.6vw;
+    }
+    #viewModal-post button{
+        width: 3.6vw;
+    }
+}
+
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    #viewModal-post {
+        width: 80%;
+    }
+    .dados-visualiz-post{
+        width: 100%;
+        font-size: 2.2vw;
+    }
+    .ilutracao-visualiz-post {
+        width: 45%;
+    }
+
+    #viewModal-post .fechar i{
+        font-size: 1.4vw;
+            
+    }
+    #viewModal-post button{
+        margin: 0%;
+        padding: 0.5%;
+        width: 2.4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
 }

@@ -15,7 +15,7 @@
 
     <!-- Botões para abrir os modais -->
     <button onclick="openModal('createModal')">Criar Post</button>
-    <button onclick="openModal('viewModal')">Visualizar Posts</button>
+    <button onclick="openModal('viewModal-post')">Visualizar Posts</button>
     <button onclick="openModal('editModal')">Editar Post</button>
     <button onclick="openModal('deleteModal')">Deletar Post</button>
 
@@ -23,10 +23,10 @@
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
 
     <!-- Modais -->
-    <div id="viewModal" class="modal">
-        <button onclick="closeModal('createModal')" class="fechar"><i class="bi bi-x-lg"></i></button>
-        <div class="modal-container-visualizacao">
-            <div class="dados-visualiz">
+    <div id="viewModal-post" class="modal">
+        <button onclick="closeModal('viewModal-post')" class="fechar"><i class="bi bi-x-lg"></i></button>
+        <div class="modal-container-visualizacao-post">
+            <div class="dados-visualiz-post">
                 <h2>Dados do Post</h2>
                 <div id="PostInfo">
                         
@@ -39,7 +39,7 @@
 
                 </div>
             </div>
-            <div class="ilutracao-post">
+            <div class="ilutracao-visualiz-post">
                 <img src="../../../public/assets/visualiz-post.png">
             </div>
         </div> 
