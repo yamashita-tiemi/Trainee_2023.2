@@ -102,24 +102,32 @@ input {
 }
 
 .ilustracaomep {
+    display: none;
     width: 70%;
-    padding-right: 10%;
+    padding: 2% 0 2% 0;
+    background-color: #6f0550;
+    margin-left: 25%;
+    margin-right: 3%;
+    text-align: center;
+    border-radius: 1.5vw;
 }
 .ilustracaomep img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0.7vw;
 }
 
 .EditarPost button{
     font-family: 'Manjari', sans-serif;
     align-self: flex-end;
-    font-size: 1.1vw;
+    margin-top: -1%;
+    font-size: 0.9vw;
     border-radius: 1vw;
     padding: 0.5vw;
     padding-bottom: 0.1vw;
     background-color: #dd0b63a9;
-    color: #000;
+    color: #fff;
     font-weight: 700;
 }
 
@@ -127,12 +135,14 @@ input {
     background-color: #dd0b63dd;
 }
 
-#imagem-preview {
-    background-color: #000;
+#conteudopost {
+    height: 16vh;
+    width: 20vw;
+    border-radius: 0.7vw;
 }
 
-#conteudopost {
-    height: 10vh;
+.imagempostmep {
+    margin-top: 2%;
 }
 
 .itenpostmep {
@@ -140,17 +150,17 @@ input {
     text-align: center;
 }
 
-.fechar{
+.Fechar{
     display: flex;
     background-color: #dd0b64;
 }
-.fechar:hover{
+.Fechar:hover{
     background-color: #dd0b6391;
 }
 #botaosalvar{
     font-size: 1.1vw;
     font-family: 'Manjari', sans-serif;
-    margin-right: 5%;
+    margin-right: 3%;
     letter-spacing: 0.15vw;
     border-radius: 0.8vw;
     padding: 0.5vw;
