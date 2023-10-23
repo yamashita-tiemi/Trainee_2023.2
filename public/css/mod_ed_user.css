@@ -270,6 +270,7 @@ button:hover {
 }
 
 
+
 /* editar usuario*/
 .modal-container-edit{
     background-image: url("../assets/img-edit-user-fundo.png");
@@ -297,7 +298,7 @@ button:hover {
 }
 
 .dados-edit button{
-    background-color:  #E85D97;
+    background-color:  #f18fcd;
     font-size: 1.9vw;
     padding: 0.6vw;
     font-family: 'Manjari', sans-serif;
@@ -306,18 +307,18 @@ button:hover {
     border-radius: 1vw;
     padding: 0.5vw;
     padding-bottom: 0.1vw;
-    color: #000;
+    color: #000000;
     font-weight: 700;
 }
 
 .dados-edit button:hover{
-    background-color: #dd0b63dd;
+    background-color: #e379c0;
 }
 
 
 #botaosalvaredit{
     
-    background-color: #DD0B63;
+    background-color: #dd0b63;
     margin-right: 86%;
     box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
     color: #ffffff;
@@ -332,7 +333,7 @@ button:hover {
 }
 
 #botaosalvaredit:hover{
-    background-color: #dd0b63ac;
+    background-color: #f18fcd;
 }
 
 
@@ -361,11 +362,11 @@ button:hover {
 
 
 #editModal > button{    
-    background-color: #DD0B63;
+    background-color: #E181C1;
 }
 
 #editModal > button:hover{
-    background-color: #dd0b6391;
+    background-color:  #f18fcd;
 }
 
 
@@ -378,7 +379,7 @@ button:hover {
     }
     .modal-container-edit {
         background-image: url("../assets/img-edituser-respon.png");
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .ilutracao-edit{
         width: 50%;
