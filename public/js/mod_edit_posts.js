@@ -51,7 +51,7 @@ function confirmarSalvarFormularioposts() {
 }
 
 function previewImage() {
-    var input = document.getElementById('imagem');
+    var input = document.getElementById('imagempost');
     var preview = document.getElementById('imagem-preview');
     var file = input.files[0];
     var reader = new FileReader();

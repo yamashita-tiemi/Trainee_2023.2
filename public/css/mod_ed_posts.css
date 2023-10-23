@@ -2,10 +2,11 @@
 /*codigos para a pagina principal, se necessario altere o '.modal' para ficar no tamanho que precisa para o design*/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manjari', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
@@ -13,7 +14,6 @@ body {
 
 .modal {
     display: none;
-    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -30,7 +30,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -52,26 +52,23 @@ button:hover {
 /*implemente os codigos do modal a partir daqui */
 
 .modal {
-    
     display: none;
-    position: fixed;
-    width: 64%;
+    position: absolute;
+    width: 72%;
     background-color: #fff;
     z-index: 1;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
-    
 }
 .modal-container-edit {
-    background-image: url("../assets/img-user-art.png");
+    background-image: url("../assets/Frame\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
-    gap: 15%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin:0%
+    margin: 0%;
     
 }
 .dados-edit{
@@ -104,16 +101,17 @@ input {
     color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
 }
 
-.ilutracao{
+.ilustracaomep {
     width: 70%;
+    padding-right: 10%;
 }
-.ilutracao img{
+.ilustracaomep img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.criaruser button{
+.EditarPost button{
     font-family: 'Manjari', sans-serif;
     align-self: flex-end;
     font-size: 1.1vw;
@@ -125,8 +123,21 @@ input {
     font-weight: 700;
 }
 
-.criaruser button:hover{
+.EditarPost button:hover{
     background-color: #dd0b63dd;
+}
+
+#imagem-preview {
+    background-color: #000;
+}
+
+#conteudopost {
+    height: 10vh;
+}
+
+.itenpostmep {
+    flex: 1;
+    text-align: center;
 }
 
 .fechar{
