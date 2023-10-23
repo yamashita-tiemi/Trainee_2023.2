@@ -378,10 +378,10 @@ button:hover {
     }
     .modal-container-edit {
         background-image: url("../assets/img-edituser-respon.png");
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .ilutracao-edit{
-        width: 50%;
+        width: 55%;
     }
     .ilutracao-edit img{
         margin: auto;
