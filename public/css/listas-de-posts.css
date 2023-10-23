@@ -142,9 +142,9 @@ ul li{
     text-align: center;
 }
 
-ul li a{
+.options ul li a{
     
-    font-size: 20px;
+    font-size: 22px;
     color:#2e2e2e;
     text-decoration: none;
     font-weight: 600;
@@ -161,9 +161,7 @@ ul li{
     margin-bottom: 10%;
     margin-left: 20px;
 }
-ul li a{
-    font-size: 16px;
-}
+
 
 ul li a:hover{
     color:  #dd0b64;
@@ -197,21 +195,21 @@ ul li a:hover{
         align-items: center;
         justify-content: center;
     }
-    ul{
+    .options ul{
         margin-right: 26vw;
     }
-    ul li{
+    .options ul li{
         margin-bottom: 10%;
         margin-left: 5vw;
         
     }
-    ul li a{
-        font-size: 14px;
+    .options ul li a{
+        font-size: 16px;
         
     }
 
     ul li a:hover{
-        transform: scale(100%);
+        transform: scale(110%);
     }
 }
 
