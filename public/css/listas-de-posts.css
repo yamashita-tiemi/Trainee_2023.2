@@ -34,7 +34,7 @@ div.cardContainer {
     position: relative;
     background-color: #401c2a;
     flex-direction: column;
-    width: 25%;
+    width: 27%;
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 3%;
@@ -60,14 +60,12 @@ div.cardContainer:hover .blurrableDiv{
 }
 
 .cardContainer h1 {
-    
+    width: 100%;
     margin-top: 0px;
     position: absolute;
     font-size: 2vw;
     padding: 0 ;
-    width: 28vw;
     text-wrap: wrap;
-    
     transform: translateY(-100%);
     text-shadow: 0.08em 0.08em 0px #2e2e2e ;
 }
@@ -146,7 +144,7 @@ div.cardContainer:hover .blurrableDiv{
 .options ul{
     padding: 0;
     display: flex;
-    width: 50%;
+    width: 20%;
     justify-content: space-evenly;
 }
 
@@ -161,7 +159,7 @@ div.cardContainer:hover .blurrableDiv{
 
 .options ul li a{
     
-    font-size: 22px;
+    font-size: 20px;
     color:#2e2e2e;
     text-decoration: none;
     font-weight: 600;
@@ -209,14 +207,15 @@ ul li a:hover{
         cursor: pointer;
     }
    
+    .options ul{
+        width: 50%;
+    }
     .options ul li{
         margin-bottom: 10%;
-        
-        
     }
+
     .options ul li a{
         font-size: 16px;
-        
     }
 
     ul li a:hover{
