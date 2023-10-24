@@ -115,14 +115,29 @@ form
     
 }
 input {
+    font-family: 'Manjari', sans-serif;
     border: 0.1vw solid #401c2a;
     border-radius: 1.5vw;
-    font-size: 1.25vw;
+    font-size: 1.2vw;
     margin-bottom: 0.5vw;
-    padding: 0.6vw;
-    width: 18vw;
+    padding: 0.6vw 2.4vw 0.3vw 0.7vw;
+    width: 17vw;
     outline: none;
+    flex-grow: 1;
 
+}
+
+.olhinho {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#btn-senha-userpassword, #btn-senha-passwordconfirm {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    color: #858585;
 }
 ::placeholder {
     color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
@@ -201,10 +216,11 @@ button:hover {
     }
     input {
         font-size: 3.3vw;
-        border-radius: 2.5vw;
+        border-radius: 3vw;
         margin-bottom: 1.3vw;
-        padding-left: 1.5vw;
-        width: 45vw;
+        padding: 1.1vw;
+        padding-right: 5.7vw;
+        width: 40vw;
     }   
     .ilutracao{
         width: 50%;
@@ -251,7 +267,8 @@ button:hover {
    
     input {
         font-size: 1.6vw;
-        width: 25vw;
+        padding-right: 3.5vw;
+        width: 23vw;
     }
     
     .ilutracao{
