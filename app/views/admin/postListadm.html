@@ -30,32 +30,39 @@
             <!-- Formulário para criar post -->
             <div class="dados-Criar">
 
-                <h2>Criar um Novo Post</h2>
                 <form class="CriarPost" method="post" enctype="multipart/form-data">
-                    <label for="titulopost">Título:</label>
-                    <input type="text" name="titulopost" id="titulopost" required>
-                    <br>
-                    <label for="conteudopost">Conteúdo:</label>
-                    <textarea name="conteudopost" id="conteudopost" required></textarea>
-                    <br>
-                    <label for="imagempost">Imagem:</label>
-                    <input type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
-                    <br>
-                    <img id="imagem-preview" src="" alt="Preview da Imagem" style="max-width: 300px;">
-                    <br>
-                    <label for="data_criacaopost">Data de Criação:</label>
-                    <input type="date" name="data_criacaopost" id="data_criacaopost" required>
-                    <br>
-                    <label for="autorpost">Autor (Usuário):</label>
-                    <input type="text" name="autorpost" id="autorpost" required>
-                    <br>
-                    <button type="reset">Limpar seções</button>
+                    <div class="inputsContainer">
+                        <div class="left">
+                            <h2>Criar um Novo Post</h2>
+                            <label for="titulopost">Título:</label>
+                            <input type="text" name="titulopost" id="titulopost" required>
+                            <br>
+                            <label for="conteudopost">Conteúdo:</label>
+                            <textarea name="conteudopost" id="conteudopost" required></textarea>
+                            <br>
+                            <label for="data_criacaopost">Data de Criação:</label>
+                            <input type="date" name="data_criacaopost" id="data_criacaopost" required>
+                            <br>
+                            <label for="autorpost">Autor (Usuário):</label>
+                            <input type="text" name="autorpost" id="autorpost" required>
+                            <br>
+                        </div>
+                        <div class="right">
+                            <label for="imagempost">Imagem:</label>
+                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
+                            <br>
+                            <img id="imagem-preview" src="" style="max-width: 300px;">
+                        </div>
+                    </div>
+                    <div style="display: flex; width: 100%; justify-content: center;">
+                        <button type="reset">Limpar seções</button>
+                        <!--botão de salvar o formulario-->
+                        <button id="botaosalvar" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
+                    </div>
                 </form>
             </div>
              <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
         </div>
-        <!--botão de salvar o formulario-->
-        <button id="botaosalvar" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
     </div>
 
 
