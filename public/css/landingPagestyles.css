@@ -13,7 +13,6 @@ body {
 }
 .Titulo {
     width: 55%;
-    max-width: 700px;
     color: #401C2A;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.30);
     font-size: 2vw;
