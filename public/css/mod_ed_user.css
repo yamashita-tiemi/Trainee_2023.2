@@ -227,13 +227,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
 @media screen and (min-width: 437px) and (max-width: 769px) {
     .modal {
         width: 80%;
@@ -298,7 +291,7 @@ button:hover {
 }
 
 .dados-edit button{
-    background-color:  #f18fcd;
+    background-color:  #e690c9;
     font-size: 1.9vw;
     padding: 0.6vw;
     font-family: 'Manjari', sans-serif;
@@ -378,8 +371,10 @@ button:hover {
         width: 74%;
     }
     .modal-container-edit {
-        background-image: url("../assets/img-edituser-respon.png");
+        background-image: url("../assets/img-edit-user-responsiv.png");
         flex-direction: column;
+        margin-top: 10px;
+        padding-bottom: 15px;
     }
     .ilutracao-edit{
         width: 55%;
