@@ -3,6 +3,10 @@
 
 
 body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
     font-family: "Manjari", sans-serif;
     margin: 0;
     background-color: #cfb698;
@@ -15,14 +19,14 @@ h1, h2 {
 h1 {
     margin: 0;
     padding-top: 1.7%;
-    color: #cfb698;
+    color: #91003c;
 }
 
 h2 {
     padding-top: 4%;
     font-weight: 400;
     font-size: 2vw;
-    color: #202020;
+    color: #660033;
 }
 
 
@@ -30,9 +34,11 @@ h2 {
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 100%;
+    border-radius: 14px;
+    width: 70%;
     height: 20vh;
-    background: #401c2a;
+    margin-top: 3vh;
+    background: linear-gradient(90deg, rgba(255, 0, 106, 0.795) 2%, rgba(255,94,71,1) 100%);
     align-items: center;
     justify-content: center;
 }
@@ -44,7 +50,7 @@ h2 {
 .logout {
     display: flex;
     padding: 0 0.5vw 0 1vw;
-    background: #cfb698;
+    background: rgb(255, 119, 98);
     margin-right: 1vw;
     position: absolute;
     justify-content: center;
@@ -72,7 +78,8 @@ h2 {
 
 .cards {
     display: flex;
-    height: 80vh;
+    height: 70vh;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -82,11 +89,11 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #401c2a;
+    background: linear-gradient(90deg, rgba(255, 25, 121, 0.815) 0%, rgba(255,94,71,1) 100%);;
     width: 15vw;
     height: 15vw;
     border-radius: 10px;
-    margin: 0 2% 0 2%;
+    margin: 0 2%;
     box-shadow: 0.2vw 0.3vw 0.5vw #202020b9;
     
     transform: scale(100%);
@@ -103,14 +110,14 @@ h2 {
 }
 
 .cards h2 {
-    color: #cfb698;
+    color: #660033;
     text-align: center;
 }
 
 @media screen and (max-width: 767px) {
     h2 {
         padding-top: 4%;
-        font-size: 4vw;
+        font-size: 3vw;
         color: #202020;
     }
 
@@ -127,5 +134,9 @@ h2 {
         width: 40vw;
         height: 40vw;
         margin: 3% 0 3% 0;
+    }
+
+    .logout {
+        height: 30%;
     }
 }
