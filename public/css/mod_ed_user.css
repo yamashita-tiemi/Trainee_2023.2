@@ -304,7 +304,7 @@ button:hover {
     padding: 0.6vw;
     font-family: 'Manjari', sans-serif;
     align-self: flex-center;
-    font-size: 11px;
+    font-size: 15px;
     border-radius: 1vw;
     padding: 0.5vw;
     padding-bottom: 0.1vw;
@@ -387,8 +387,7 @@ button:hover {
 
 
 
-
-@media screen and (min-width: 0px) and (max-width: 436px){
+@media screen and (min-width: 0px) and (max-width: 330px){
     .modal {
         width: 74%;
     }
@@ -420,7 +419,65 @@ button:hover {
     }   
     
     .dados-edit button{
-        font-size: 2.2vw;
+        font-size: 9px;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+        border-radius: 25px;
+    }
+    .fechar svg{
+        width: 2vw;   
+    }
+    #botaosalvaredit{
+        font-size: 2.7vw;
+        letter-spacing: 0.4vw;
+        border-radius: 1.5vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+        text-align: center;
+        margin-bottom: 2%;
+        letter-spacing: 0.15vw;
+        font-weight: 700;
+        padding: 0.5vw;
+        height: 17px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 330px) and (max-width: 436px){
+    .modal {
+        width: 74%;
+    }
+    .modal-container-edit {
+        background-image: url("../assets/img-edit-user-responsiv.png");
+        flex-direction: column;
+        margin-top: 10px;
+        padding-bottom: 15px;
+    }
+    .ilutracao-edit{
+        width: 55%;
+    }
+    .ilutracao-edit img{
+        margin: auto;
+    }
+    
+    .dados-edit{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+        margin-right: 0%;
+    }
+    input {
+        font-size: 3.3vw;
+        border-radius: 2.5vw;
+        margin-bottom: 1.3vw;
+        padding-left: 1.5vw;
+        width: 45vw;
+    }   
+    
+    .dados-edit button{
+        font-size: 10px;
         padding: 0.8vw;
         padding-bottom: 0.2vw;
         border-radius: 25px;
@@ -474,7 +531,11 @@ button:hover {
         font-size: 1.9vw;
         padding: 0.6vw;
     }
-    
+
+    .dados-edit button{
+        font-size: 11px;
+    }
+
     #botaosalvaredit{
         font-size: 1.5vw;
         letter-spacing: 0.2vw;
@@ -482,4 +543,47 @@ button:hover {
         padding: 0.6vw;
     }
     
+}
+
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+    .modal {
+        width: 80%;
+    }
+    .fechar svg{
+        width: 1.5vw;   
+    }
+    .dados-edit{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+    .dados-edit > h2{
+        font-size: 21px;
+
+    }
+   
+    input {
+        font-size: 1.6vw;
+        width: 25vw;
+    }
+    
+    .ilutracao-edit{
+        width: 67%;
+    }
+    
+    .dados-edit > button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+
+    .dados-edit button{
+        font-size: 14px;
+    }
+
+    #botaosalvaredit{
+        font-size: 1.5vw;
+        letter-spacing: 0.2vw;
+        border-radius: 1.2vw;
+        padding: 0.6vw;
+    }    
+
 }
