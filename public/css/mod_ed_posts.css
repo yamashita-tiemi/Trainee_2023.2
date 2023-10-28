@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Manjari', sans-serif;
+    font-size: 1.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,15 +13,20 @@ body {
     background-color: #f4f4f4;
 }
 
-.modal {
+#editModal {
     display: none;
+    position: fixed;
+    width: 70vw;
     top: 50%;
     left: 50%;
+    margin: 0%;
     transform: translate(-50%, -50%);
-    padding: 20px;
     background-color: #fff;
+    border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
     z-index: 1;
+    padding: 0%;
 }
 
 .overlay {
@@ -51,69 +57,84 @@ button:hover {
 
 /*implemente os codigos do modal a partir daqui */
 
-.modal {
-    display: none;
-    position: absolute;
-    width: 72%;
-    background-color: #fff;
-    z-index: 1;
-    margin: 0%;
-    padding: 0%;
-    text-align: -webkit-right;
-}
 .modal-container-edit {
-    background-image: url("../assets/Frame\ 1.png");
+    background-image: url("../assets/fundo-roxo.png");
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     margin: 0%;
-    
+    border-radius: 0 0 6px 6px;
 }
-.dados-edit{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    margin-left: 7%;
-    font-size: 1.5vw;
-    font-weight: 700;
-}
-form
-{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-}
-input {
-    border: 0.1vw solid #401c2a;
-    border-radius: 1.5vw;
-    font-size: 1.25vw;
-    margin-bottom: 0.5vw;
-    padding: 0.6vw;
-    width: 18vw;
-    outline: none;
 
-}
 ::placeholder {
     color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
 }
 
-.ilustracaomep {
-    display: none;
-    width: 70%;
-    padding: 2% 0 2% 0;
-    background-color: #6f0550;
-    margin-left: 25%;
-    margin-right: 3%;
-    text-align: center;
-    border-radius: 1.5vw;
+.EditarPost input, .EditarPost textarea {
+    margin-bottom: 1.5vh;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    padding: 0.6vw;
+    outline: none;
+    border: 1px #272727 solid;
+    width: 50%;
 }
+
+.EditarPost textarea {
+    height: 15vh;
+}
+
+.leftmep, .rightmep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftmep {
+    width: 60%;
+}
+
+.rightmep {
+    justify-content: center;
+    width: 40%;
+}
+
+.imagempost {
+    width: 80%;
+    font-size: 1vw;
+}
+
+.imagem-preview {
+    background-color: #6f0550;
+    min-width: 60%;
+    height: 50%;
+    width: auto;
+    border-radius: 8px;
+}
+
+.inputsContainermep {
+    display: flex;
+    width: 100%;
+}
+
+.botoesinferioresmep {
+    display: flex;
+    width: 100%; 
+    justify-content: space-around;
+}
+
+.dados-edit h2 {
+    margin: 0;
+    padding: 2% 0 0 42%;
+}
+
+.ilustracaomep {
+    margin-right: 3%;
+}
+
 .ilustracaomep img{
     width: 100%;
-    height: 100%;
+    max-height: 80%;
     object-fit: cover;
     border-radius: 0.7vw;
 }
@@ -135,41 +156,35 @@ input {
     background-color: #dd0b63dd;
 }
 
-#conteudopost {
-    height: 16vh;
-    width: 20vw;
-    border-radius: 0.7vw;
+.botoesinferioresmep button {
+    font-size: 1.4vw;
 }
 
-.imagempostmep {
-    margin-top: 2%;
-}
-
-.itenpostmep {
-    flex: 1;
-    text-align: center;
-}
-
-.Fechar{
+.Fechar {
     display: flex;
     background-color: #dd0b64;
+    justify-content: center;
+    align-items: center;
 }
+
 .Fechar:hover{
     background-color: #dd0b6391;
 }
+
 #botaosalvar{
-    font-size: 1.1vw;
+    font-size: 2.6vw;
     font-family: 'Manjari', sans-serif;
     margin-right: 3%;
-    letter-spacing: 0.15vw;
+    letter-spacing: 0.4vw;
     border-radius: 0.8vw;
-    padding: 0.5vw;
+    padding: 0.8vw;
     padding-bottom: 0vw;
     background-color: #dd0b63;
     color: #ffffff;
     font-weight: 700;
     text-align: center;
 }
+
 #botaosalvar:hover{
     background-color: #dd0b63ac;
 }
@@ -178,30 +193,85 @@ button:hover {
     background-color: #6f0550;
 }
 
+@media screen and (max-width: 430px) {
+    .modal {
+        height: 50%;
+    }
 
+    #editModal {
+        height: 70vh;
+    }
+
+    .modal-container-edit {
+        background-image: url("../assets/fundo-roxo-vertical.jpg");
+        height: 100%;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .inputsContainermep {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dados-edit h2 {
+        margin-left: -5%;
+        font-size: 3.5vw;
+    }
+    
+    .EditarPost input, .EditarPost textarea {
+        width: 50%;
+        font-size: 2vw;
+    }
+
+    .EditarPost label {
+        font-size: 2.5vw;
+    }
+
+    .leftmep {
+        width: 100%;
+    }
+    
+    .rightmep {
+        width: 100%;
+    }
+
+    .ilustracaomep img{
+        max-width: 30vw;
+        max-height: 15vh;
+    }
+
+    .botoesinferioresmep {
+        margin-top: 3%;
+    }
+
+    .botoesinferioresmep button {
+        font-size: 2vw;
+    }
+
+    .bi-x-lg::before {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    #editModal {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 260px) {
+
+    #editModal {
+        height: 60vh;
+    }
+}
 
 @media screen and (max-width: 940px){
     .modal {
         width: 90%;
     }
-    .modal-container {
-        background-image: url("../assets/img-usuer-respon.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        gap: 15%;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        margin:0%
-    }
-    .dados{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 71%;
-        margin-left: 0%;
-        font-size: 3.8vw;
-    }
+
     input {
         font-size: 3.2vw;
         margin-bottom: 1.3vw;
@@ -210,23 +280,30 @@ button:hover {
         width: 45vw;
         outline: none;
     }
+
     .ilutracao{
         width: 50%;
     }
+
     .criaruser button{
         font-size: 2.8vw;
         padding: 0.8vw;
         padding-bottom: 0.2vw;
     }
-    .fechar svg{
-        width: 2vw;
-        
+
+    .Fechar {
+        width: 3vw;
+        height: 3vw;
     }
+
+    .botoesinferioresmep button {
+        font-size: 1.2vw;
+    }
+
     #botaosalvar{
-        font-size: 2.6vw;
-        letter-spacing: 0.4vw;
+        font-size: 2vw;
+        letter-spacing: 0.15vw;
         border-radius: 0.8vw;
-        padding: 0.8vw;
         padding-bottom: 0vw;
     }
 }
