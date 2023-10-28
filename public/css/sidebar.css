@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.nav1{
+    position: fixed;
+    top: 8%;
+    left: 1%;
+    z-index: 1;
+    overflow: hidden;
+    flex-direction: column;
+    width:50px;
+    height: fit-content;
+    background: linear-gradient(180deg, rgba(146, 0, 61, 0.795) 20%, rgb(161, 22, 0) 120%);
+    /* background: #6f0550; */
+    margin-top: 1.6%;
+    margin-left: 5px;
+    border-radius: 10px;
+       
+}
+
+.nav1:hover{
+    width: 250px;
+}
+
+.botao{
+    width: 20%;
+    margin-left: 8px;
+    padding-top: 15px;
+    padding-left: 3%;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+.navegador{
+    height: auto;
+    list-style-type: none;
+}
+
+.navegador a{
+    width: 250px;
+    height: fit-content;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 4%;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.texto{
+    margin-left: 20px;
+}
+a.texto{
+    display: flex;
+}
+
+.logout a {
+    width: 250px;
+    margin-top: 18vh;
+    height: fit-content;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    padding: 20px 4%;
+    line-height: 40px;
+}
+
+a{
+    transition: all .2s;
+}
+.logout a.texto{
+    margin-left: 20px;
+}
+
+.logout a:hover,
+.navegador a:hover{
+    background-color: #dd0b64;
+}
+
+
+
+.icone{
+    font-size: 30px;
+    margin-left: 8px;
+}
+.texto{
+    font-family: 'Manjari', sans-serif;
+    margin-left: 14px;
+}
+
+
+
+
+@media (max-width: 320px){
+    .nav1{
+        top: 20%;
+        height: 80%;
+        width: 40px;
+    }
+    .nav1:hover{
+        width: 180px;
+    }
+    
+    .navegador{
+        height: 74%;
+    }
+    .logout a,
+    .navegador a{
+        width: 180px;
+        line-height: 24px;
+    }
+
+    .logout a:hover,
+    .navegador a:hover{
+    background-color: #dd0b64;
+    
+    }
+
+    .texto{
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: -11px;
+    }
+    .icone{
+        font-size: 20px;
+        margin-top: -11px;
+    }
+    .botao{
+        font-size: 24px;
+    }
+   
+}
+
+@media screen and (max-width:768px){
+    .nav1 {
+        top: 20%;
+    }
+    .nav1:hover{
+        width: 180px;
+    }
+
+    .logout a,
+    .navegador a{
+        width: 180px;
+    }
+    
+    .texto{
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: -5px;
+    }
+    .icone{
+        font-size: 25px;
+        margin-top: -5px;
+    }
+    .botao{
+        font-size: 24px;
+    }
+}
