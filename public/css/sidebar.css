@@ -12,14 +12,19 @@ body{
 
 
 .nav1{
+    
+    background: linear-gradient(180deg, rgba(146, 0, 61, 0.795) 20%, rgb(161, 22, 0) 120%);
+    position: fixed;
+    top: 6%;
+    left: 1%;
+    z-index: 1;
+    overflow: hidden;
     flex-direction: column;
     width:50px;
     height: fit-content;
-    background-color: #6b2340;
     margin-top: 1.6%;
     margin-left: 5px;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .nav1:hover{
@@ -63,6 +68,7 @@ a.texto{
 .logout a {
     width: 250px;
     margin-top: 18vh;
+    margin-left: 1px;
     height: fit-content;
     display: inline-block;
     font-size: 20px;
@@ -98,9 +104,9 @@ a{
 
 
 
-
-@media (max-width: 320px){
+@media (min-width:281px) and (max-width: 319px){
     .nav1{
+        
         height: 80%;
         width: 40px;
     }
@@ -130,17 +136,18 @@ a{
     }
     .icone{
         font-size: 20px;
-        margin-top: -11px;
+        margin-left: 6px;
     }
     .botao{
         font-size: 24px;
+        margin-left: 6px;
     }
    
 }
 
 @media screen and (max-width:768px){
     .nav1:hover{
-        width: 180px;
+        width: 170px;
     }
 
     .logout a,
@@ -155,9 +162,12 @@ a{
     }
     .icone{
         font-size: 25px;
-        margin-top: -5px;
+        margin-left: 10px;
     }
     .botao{
         font-size: 24px;
+        margin-left: 10px;
     }
 }
+
+
