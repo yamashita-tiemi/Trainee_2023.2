@@ -265,6 +265,9 @@ button:hover {
 
 
 /* editar usuario*/
+.modal {
+    border-radius: 10px;
+}
 .modal-container-edit{
     background-image: url("../assets/img-edit-user-fundo.png");
     background-size: cover;
@@ -277,6 +280,8 @@ button:hover {
     text-align: center;
 }
 
+
+    
 
 .dados-edit{        
         display: flex;
@@ -311,6 +316,21 @@ button:hover {
     background-color: #e379c0;
 }
 
+.olhinho {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#btn-senha-userpassword, #btn-senha-passwordconfirm {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    color: #858585;
+}
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
 
 #botaosalvaredit{
     
@@ -364,7 +384,6 @@ button:hover {
 #editModal > button:hover{
     background-color:  #f18fcd;
 }
-
 
 
 
