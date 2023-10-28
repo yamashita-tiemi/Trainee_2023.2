@@ -119,6 +119,16 @@ h2 {
     text-align: center;
 }
 
+@media screen and (max-width: 1280px) {
+    .cards div {
+        width: 30vw;
+    }
+
+    .logoutBtn img {
+        height: 60%;
+    }
+}
+
 @media screen and (max-width: 820px) {
     h2 {
         padding-top: 4%;
@@ -140,7 +150,8 @@ h2 {
         margin: 3% 0 3% 0;
     }
 
-    .logoutBtn {
-        height: 30%;
+    .logoutBtn img {
+        height: 60%;
     }
+
 }
