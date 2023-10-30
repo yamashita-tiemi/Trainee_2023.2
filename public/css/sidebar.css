@@ -105,11 +105,7 @@ a{
 
 
 @media (min-width:281px) and (max-width: 319px){
-    .nav1{
-        
-        height: 80%;
-        width: 40px;
-    }
+   
     .nav1:hover{
         width: 180px;
     }
