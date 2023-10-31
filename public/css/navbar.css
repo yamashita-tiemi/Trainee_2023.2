@@ -106,6 +106,7 @@ div.searchBar.selected {
 
 
 /* Telas menores */
+
 @media screen and (max-width: 768px) {
     h2.redirects {
         font-size: 0.8rem;
@@ -119,18 +120,29 @@ div.searchBar.selected {
     }
 
     div.redirectsContainer {
-        width: 50%;
+        width: 100%;
+    }
+
+    div.searchBar {
+        aspect-ratio: 8;
+        justify-content: flex-end;
+        border-radius: 2vw;
+        padding-right: 2%;
+        margin: 0 0 1vw 0;
     }
 
     div.bottomRow {
-        height: 8vw;
+        display: flex;
+        flex-direction: column;
+        height: auto;
         box-shadow: 0 2px 1px rgba(58, 58, 58, 0.8);
     }
     
     div.navButtonsContainer {
         display: flex;
         flex-direction: row;
-        width: 40%;
+        justify-content: center;
+        width: 100%;
         padding-right: 0;
         margin-right: 3%;
     }
@@ -138,12 +150,20 @@ div.searchBar.selected {
     div.searchBar, div.singIn {
         height: 5vw;
         width: auto;
-        margin-right: 1%;
+        margin: 2vw 0 2vw 0.5vw;
     }
 
-    input.searchInput.selected {
+    div.signIn {
+        align-self: flex-end;
+    }
+    
+
+    input.searchInput {
+        display: flex;
         font-size: 0.6rem;
+        width: 100%;
         padding: 0.06rem 0 0 0.3rem;
+        align-items: center;
     }
     /*   
 
