@@ -333,7 +333,7 @@ button:hover {
     
     background-color: #dd0b63;
     margin-right: 10px;
-    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     font-weight: 700;
     text-align: center;
@@ -375,7 +375,7 @@ button:hover {
 
 
 #editModal > button{    
-    background-color: #E181C1;
+    background-color: #b74b93;
 }
 
 #editModal > button:hover{
