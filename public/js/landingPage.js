@@ -10,7 +10,8 @@ const showHideIcons = () => {
     // showing and hiding prev/next icon according to carousel scroll left value
     let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
     arrowBtns[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowBtns[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+    var aux=scrollWidth-100;
+    arrowBtns[1].style.display = carousel.scrollLeft >= aux ? "none" : "block";
     
 }
 
