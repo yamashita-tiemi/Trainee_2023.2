@@ -85,6 +85,7 @@ button {
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
+    border-radius: 0.7vw;
     
 }
 .modal-container {
@@ -187,6 +188,7 @@ input {
     color: #ffffff;
     font-weight: 700;
     text-align: center;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
 }
 #botaosalvar:hover{
     background-color: #dd0b63ac;
@@ -204,6 +206,7 @@ button:hover {
 @media screen and (min-width: 0px) and (max-width: 436px){
     .modal {
         width: 74%;
+        border-radius: 1vw;
     }
     .modal-container {
         background-image: url("../assets/img-usuer-respon.png");
@@ -236,7 +239,7 @@ button:hover {
     #botaosalvar{
         font-size: 2.6vw;
         letter-spacing: 0.4vw;
-        border-radius: 0.8vw;
+        border-radius: 1.7vw;
         padding: 0.8vw;
         padding-bottom: 0vw;
     }
@@ -283,8 +286,9 @@ button:hover {
     #botaosalvar{
         font-size: 1.9vw;
         letter-spacing: 0.2vw;
-        border-radius: 0.8vw;
+        border-radius: 1.2vw;
         padding: 0.6vw;
+        padding-bottom: 0vw;
     }
     
 }
