@@ -88,7 +88,7 @@ button {
     border-radius: 0.7vw;
     
 }
-.modal-container {
+#createModal .modal-container {
     background-image: url("../assets/img-user-art.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -99,7 +99,7 @@ button {
     margin:0%
     
 }
-.dados{
+#createModal .dados{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,10 +144,10 @@ input {
     color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
 }
 
-.ilutracao{
+#createModal .ilutracao{
     width: 70%;
 }
-.ilutracao img{
+#createModal .ilutracao img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -169,14 +169,14 @@ input {
     background-color: #dd0b63dd;
 }
 
-.fechar{
+#createModal .fechar{
     display: flex;
     background-color: #dd0b64;
 }
-.fechar:hover{
+#createModal .fechar:hover{
     background-color: #dd0b6391;
 }
-#botaosalvar{
+#createModal #botaosalvar{
     font-size: 1.1vw;
     font-family: 'Manjari', sans-serif;
     margin-right: 5%;
@@ -190,15 +190,9 @@ input {
     text-align: center;
     box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
 }
-#botaosalvar:hover{
+#createModal #botaosalvar:hover{
     background-color: #dd0b63ac;
 }
-
-button:hover {
-    background-color: #6f0550;
-}
-
-
 
 
 
@@ -208,11 +202,11 @@ button:hover {
         width: 74%;
         border-radius: 1vw;
     }
-    .modal-container {
+    #createModal .modal-container {
         background-image: url("../assets/img-usuer-respon.png");
         flex-direction: column-reverse;
     }
-    .dados{
+    #createModal .dados{
         width: 71%;
         margin-left: 0%;
         font-size: 3.8vw;
@@ -225,7 +219,7 @@ button:hover {
         padding-right: 5.7vw;
         width: 40vw;
     }   
-    .ilutracao{
+    #createModal .ilutracao{
         width: 50%;
     }
     .criaruser button{
@@ -233,10 +227,10 @@ button:hover {
         padding: 0.8vw;
         padding-bottom: 0.2vw;
     }
-    .fechar svg{
+    #createModal .fechar svg{
         width: 2vw;   
     }
-    #botaosalvar{
+    #createModal #botaosalvar{
         font-size: 2.6vw;
         letter-spacing: 0.4vw;
         border-radius: 1.7vw;
@@ -260,10 +254,10 @@ button:hover {
     .modal {
         width: 80%;
     }
-    .fechar svg{
+    #createModal .fechar svg{
         width: 1.5vw;   
     }
-    .dados{
+    #createModal .dados{
         width: 50%;
         font-size: 2.1vw;
     }
@@ -274,7 +268,7 @@ button:hover {
         width: 23vw;
     }
     
-    .ilutracao{
+    #createModal .ilutracao{
         width: 67%;
     }
     
@@ -283,7 +277,7 @@ button:hover {
         padding: 0.6vw;
     }
     
-    #botaosalvar{
+    #createModal #botaosalvar{
         font-size: 1.9vw;
         letter-spacing: 0.2vw;
         border-radius: 1.2vw;
