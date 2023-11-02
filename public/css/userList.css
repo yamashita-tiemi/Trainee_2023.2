@@ -30,9 +30,6 @@ button {
     border: none;
     border-radius: 4px;
 }
-button:hover {
-    background-color: #6f0550;
-}
 
 .headerula {
     display: flex;
@@ -68,6 +65,8 @@ button:hover {
 .col4 {
     grid-column: 4;
 }
+
+
 
 
 
@@ -180,4 +179,215 @@ button:hover {
         font-size: 2.8vw;
     }
 
+
+/*criar usuario */
+.modal {
+    display: none;
+    position: absolute;
+    width: 64%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    border-radius: 0.7vw;
+    
+}
+#createModal .modal-container {
+    background-image: url("../assets/img-user-art.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0%
+    
+}
+#createModal .dados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 7%;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+form
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+input {
+    font-family: 'Manjari', sans-serif;
+    border: 0.1vw solid #401c2a;
+    border-radius: 1.5vw;
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+    padding: 0.6vw 2.4vw 0.3vw 0.7vw;
+    width: 17vw;
+    outline: none;
+    flex-grow: 1;
+
+}
+
+.olhinho {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#btn-senha-userpassword, #btn-senha-passwordconfirm {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    color: #858585;
+}
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
+
+#createModal .ilutracao{
+    width: 70%;
+}
+#createModal .ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.criaruser button{
+    font-family: 'Manjari', sans-serif;
+    align-self: flex-end;
+    font-size: 1.1vw;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
+    background-color: #dd0b63a9;
+    color: #000;
+    font-weight: 700;
+}
+
+.criaruser button:hover{
+    background-color: #dd0b63dd;
+}
+
+#createModal .fechar{
+    display: flex;
+    background-color: #dd0b64;
+}
+#createModal .fechar:hover{
+    background-color: #dd0b6391;
+}
+#createModal #botaosalvar{
+    font-size: 1.1vw;
+    font-family: 'Manjari', sans-serif;
+    margin-right: 5%;
+    letter-spacing: 0.15vw;
+    border-radius: 0.8vw;
+    padding: 0.5vw;
+    padding-bottom: 0vw;
+    background-color: #dd0b63;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
+}
+#createModal #botaosalvar:hover{
+    background-color: #dd0b63ac;
+}
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    .modal {
+        width: 74%;
+        border-radius: 1vw;
+    }
+    #createModal .modal-container {
+        background-image: url("../assets/img-usuer-respon.png");
+        flex-direction: column-reverse;
+    }
+    #createModal .dados{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    input {
+        font-size: 3.3vw;
+        border-radius: 3vw;
+        margin-bottom: 1.3vw;
+        padding: 1.1vw;
+        padding-right: 5.7vw;
+        width: 40vw;
+    }   
+    #createModal .ilutracao{
+        width: 50%;
+    }
+    .criaruser button{
+        font-size: 2.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    #createModal .fechar svg{
+        width: 2vw;   
+    }
+    #createModal #botaosalvar{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 1.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .modal {
+        width: 80%;
+    }
+    #createModal .fechar svg{
+        width: 1.5vw;   
+    }
+    #createModal .dados{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+   
+    input {
+        font-size: 1.6vw;
+        padding-right: 3.5vw;
+        width: 23vw;
+    }
+    
+    #createModal .ilutracao{
+        width: 67%;
+    }
+    
+    .criaruser button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    #createModal #botaosalvar{
+        font-size: 1.9vw;
+        letter-spacing: 0.2vw;
+        border-radius: 1.2vw;
+        padding: 0.6vw;
+        padding-bottom: 0vw;
+    }
+    
 }
