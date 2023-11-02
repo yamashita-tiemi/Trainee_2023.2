@@ -132,7 +132,7 @@ button {
     padding: 0.45vw;
     padding-bottom: 0.2vw;
     margin: 0.7vw;
-    margin-bottom: 0.5vw;
+    margin-bottom: 1vw;
     cursor: pointer;
     background-color: #b74b93;
     color: #fff;
@@ -179,9 +179,9 @@ button {
         font-size: 2.8vw;
     }
 
-
+}
 /*criar usuario */
-.modal {
+#createModal{
     display: none;
     position: absolute;
     width: 64%;

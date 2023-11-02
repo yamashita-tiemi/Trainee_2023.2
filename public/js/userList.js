@@ -5,7 +5,7 @@ function openModal(modalId) {
 }
 
 function closeModal(modalId) {
-    const modals = document.querySelectorAll('#deleteModal');
+    const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
         modal.style.display = 'none';
     });
