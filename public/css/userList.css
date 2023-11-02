@@ -120,30 +120,32 @@ button:hover {
     margin-bottom: 1.4vw;
 
 }
-.ilutracao{
+.modal-container-delete .ilutracao{
     width: 58%;
     margin-top: 1%;
 }
-.ilutracao img{
+.modal-container-delete .ilutracao img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.botoes button {
+.dados-delete .botoes button {
     padding: 0.45vw;
     padding-bottom: 0.2vw;
     margin: 0.7vw;
     margin-bottom: 0.5vw;
     cursor: pointer;
-    background-color: #741257;
+    background-color: #b74b93;
     color: #fff;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
     border: none;
     border-radius: 0.3vw;
     font-size: 0.95vw;
     font-family: 'Manjari', sans-serif;
 }
-.botoes button:hover {
-    background-color: #a7107a;
+.dados-delete .botoes button:hover {
+    background-color:  #f18fcd;
+
 }
 
 
@@ -153,7 +155,7 @@ button:hover {
     .modal-delete{
         width: 40%;
     }
-    .botoes button{
+    .dados-delete .botoes button{
         font-size: 1.5vw;
         border-radius: 0.7vw;
         padding: 0.8vw;
@@ -168,7 +170,7 @@ button:hover {
     .modal-delete{
         width: 71%;
     }
-    .botoes button{
+    .dados-delete .botoes button{
         font-size: 3vw;
         border-radius: 0.7vw;
         padding: 1vw;
