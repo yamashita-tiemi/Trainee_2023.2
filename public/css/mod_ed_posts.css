@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;700&display=swap');
 
 /*codigos para a pagina principal, se necessario altere o '.modal' para ficar no tamanho que precisa para o design*/
 
@@ -7,26 +8,38 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
 }
 
+img {
+    background-color: #6f0550;
+    min-width: 60%;
+    height: 50%;
+    width: auto;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+}
+
 #editModal {
     display: none;
     position: fixed;
+    height: 85vh;
     width: 70vw;
     top: 50%;
     left: 50%;
-    margin: 0%;
     transform: translate(-50%, -50%);
+    padding: 20px;
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url(../assets/fundo-roxo.png);
     background-size: cover;
     z-index: 1;
-    padding: 0%;
 }
 
 .overlay {
@@ -36,7 +49,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -56,38 +69,33 @@ button:hover {
 
 
 /*implemente os codigos do modal a partir daqui */
-
-.modal-container-edit {
-    background-image: url("../assets/fundo-roxo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-items: center;
-    margin: 0%;
-    border-radius: 0 0 6px 6px;
-}
-
-::placeholder {
-    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
-}
-
-.EditarPost input, .EditarPost textarea {
-    margin-bottom: 1.5vh;
+input, textarea {
     font-size: 1.5vw;
     border-radius: 5px;
-    padding: 0.6vw;
-    outline: none;
     border: 1px #272727 solid;
     width: 50%;
 }
 
-.EditarPost textarea {
+.escolherImg {
+    width: 80%;
+    font-size: 1vw;
+}
+
+textarea {
     height: 15vh;
+}
+
+.inputsContainermep {
+    display: flex;
+    height: 70vh;
+    width: 100%;
 }
 
 .leftmep, .rightmep {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .leftmep {
@@ -99,211 +107,48 @@ button:hover {
     width: 40%;
 }
 
-.imagempost {
-    width: 80%;
-    font-size: 1vw;
+.EditarPost button {
+    background-color: #6f054ff0;
 }
 
-.imagem-preview {
-    background-color: #6f0550;
-    min-width: 60%;
-    height: 50%;
-    width: auto;
-    border-radius: 8px;
+.EditarPost button:hover {
+    background-color: #770b57e2;
 }
 
-.inputsContainermep {
-    display: flex;
-    width: 100%;
-}
-
-.botoesinferioresmep {
-    display: flex;
-    width: 100%; 
-    justify-content: space-around;
-}
-
-.dados-edit h2 {
-    margin: 0;
-    padding: 2% 0 0 42%;
-}
-
-.ilustracaomep {
-    margin-right: 3%;
-}
-
-.ilustracaomep img{
-    width: 100%;
-    max-height: 80%;
-    object-fit: cover;
-    border-radius: 0.7vw;
-}
-
-.EditarPost button{
-    font-family: 'Manjari', sans-serif;
-    align-self: flex-end;
-    margin-top: -1%;
-    font-size: 0.9vw;
-    border-radius: 1vw;
-    padding: 0.5vw;
-    padding-bottom: 0.1vw;
-    background-color: #dd0b63a9;
-    color: #fff;
+.EditarPost label {
     font-weight: 700;
 }
 
-.EditarPost button:hover{
-    background-color: #dd0b63dd;
+#editModal .Fechar {
+    padding: 1vw;
+    background-color: #6f054ff0;
 }
 
-.botoesinferioresmep button {
-    font-size: 1.4vw;
+#editModal .Fechar:hover {
+    background-color: #770b57e2;
 }
 
-.Fechar {
-    display: flex;
-    background-color: #dd0b64;
-    justify-content: center;
-    align-items: center;
-}
-
-.Fechar:hover{
-    background-color: #dd0b6391;
-}
-
-#botaosalvar{
-    font-size: 2.6vw;
-    font-family: 'Manjari', sans-serif;
-    margin-right: 3%;
-    letter-spacing: 0.4vw;
-    border-radius: 0.8vw;
-    padding: 0.8vw;
-    padding-bottom: 0vw;
-    background-color: #dd0b63;
-    color: #ffffff;
-    font-weight: 700;
-    text-align: center;
-}
-
-#botaosalvar:hover{
-    background-color: #dd0b63ac;
-}
-
-button:hover {
-    background-color: #6f0550;
-}
-
-@media screen and (max-width: 430px) {
+/* @media screen and (max-width: 767px) {
     .modal {
-        height: 50%;
+        height: 50vh;
     }
-
-    #editModal {
-        height: 70vh;
-    }
-
-    .modal-container-edit {
-        background-image: url("../assets/fundo-roxo-vertical.jpg");
-        height: 100%;
-        border-radius: 0 0 6px 6px;
-    }
-
-    .inputsContainermep {
+    .inputsContainer {
         flex-direction: column;
         align-items: center;
-    }
-
-    .dados-edit h2 {
-        margin-left: -5%;
-        font-size: 3.5vw;
+        height: 40vh;
     }
     
-    .EditarPost input, .EditarPost textarea {
-        width: 50%;
-        font-size: 2vw;
-    }
-
-    .EditarPost label {
-        font-size: 2.5vw;
-    }
-
-    .leftmep {
-        width: 100%;
-    }
-    
-    .rightmep {
-        width: 100%;
-    }
-
-    .ilustracaomep img{
-        max-width: 30vw;
-        max-height: 15vh;
-    }
-
-    .botoesinferioresmep {
-        margin-top: 3%;
-    }
-
-    .botoesinferioresmep button {
-        font-size: 2vw;
-    }
-
-    .bi-x-lg::before {
-        font-size: 3vw;
-    }
-}
-
-@media screen and (max-width: 320px) {
-
-    #editModal {
-        height: 65vh;
-    }
-}
-
-@media screen and (max-width: 260px) {
-
-    #editModal {
-        height: 60vh;
-    }
-}
-
-@media screen and (max-width: 940px){
-    .modal {
-        width: 90%;
-    }
-
-    input {
-        font-size: 3.2vw;
-        margin-bottom: 1.3vw;
-        padding: 0.6vw;
-        padding-left: 1.5vw;
-        width: 45vw;
-        outline: none;
-    }
-
-    .ilutracao{
+    input, textarea {
         width: 50%;
     }
 
-    .criaruser button{
-        font-size: 2.8vw;
-        padding: 0.8vw;
-        padding-bottom: 0.2vw;
+    .left {
+        width: 100%;
+        height: 60%;
     }
-
-    .Fechar {
-        width: 3vw;
-        height: 3vw;
+    
+    .right {
+        width: 100%;
+        height: 40%;
     }
-
-    .botoesinferioresmep button {
-        font-size: 1.2vw;
-    }
-
-    #botaosalvar{
-        font-size: 2vw;
-        letter-spacing: 0.15vw;
-        border-radius: 0.8vw;
-        padding-bottom: 0vw;
-    }
-}
+} */

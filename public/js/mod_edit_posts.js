@@ -52,9 +52,9 @@ function confirmarSalvarFormularioposts() {
 
 function previewImage() {
     var input = document.getElementById('imagempost');
-    var preview = document.getElementById('imagem-preview');
-    var fundoimg = document.getElementById('fundoimgmep');
-    fundoimg.style.display = 'block';
+    var preview = document.getElementById('imagem-previewmep');
+    // var fundoimg = document.getElementById('fundoimgmep');
+    // fundoimg.style.display = 'block';
     var file = input.files[0];
     var reader = new FileReader();
 
