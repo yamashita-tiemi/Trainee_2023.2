@@ -76,7 +76,7 @@ button:hover {
 
 
 /*visualizar usuario */
-.modal-visualiz {
+#viewModal  {
     
     display: none;
     position: fixed;
@@ -129,12 +129,12 @@ button:hover {
     object-fit: cover;
 }
 
-.fechar{
+#viewModal .fechar{
     display: flex;
     background-color: #dd0b64;
     font-size: 0.8vw;
 }
-.fechar:hover{
+#viewModal .fechar:hover{
     background-color: #dd0b6391;
 }
 
@@ -153,7 +153,7 @@ button:hover {
 
 
 @media screen and (min-width: 0px) and (max-width: 436px){
-    .modal-visualiz  {
+    #viewModal {
         width: 74%;
     }
     .modal-container-visualizacao {
@@ -172,7 +172,7 @@ button:hover {
         font-size: 3.7vw;
     }
       
-    .fechar i{
+    #viewModal .fechar i{
         font-size: 1.7vw;
             
     }
@@ -190,7 +190,7 @@ button:hover {
 
 
 @media screen and (min-width: 437px) and (max-width: 769px) {
-    .modal-visualiz  {
+    #viewModal  {
         width: 80%;
     }
     .fechar i{
