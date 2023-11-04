@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
+
+/* Metade superior */
+body{
+    background-color: #CFB698;
+}
+
+.backgroundImg {
+    background: #30141f;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1, h2 {
+    font-family: "Manjari", sans-serif;
+    color: #ffffff;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+}
+
+div.cardContainer {
+    margin-top: 10vh;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 0;
+    display: inline-block;
+    position: relative;
+    background-color: #401c2a;
+    flex-direction: column;
+    width: 27%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 3%;
+    box-shadow: 0.3vw 0.3vw 0.3vw #1111119c;
+    transition: all 0.2s ease-in-out;
+}
+
+.blurrableDiv {
+    width: 100%; height: 100%;
+}
+
+div.cardContainer:hover {
+    transform: scale(110%);
+}
+div.cardContainer:hover .blurrableDiv{
+    filter: blur(0.1rem);
+}
+
+.absoluteTitleContainer {
+    text-align: center;
+    height: 0;
+    width: 100%;
+}
+
+.cardContainer h1 {
+    width: 100%;
+    margin-top: 0px;
+    position: absolute;
+    font-size: 2vw;
+    padding: 0 ;
+    text-wrap: wrap;
+    transform: translateY(-100%);
+    text-shadow: 0.08em 0.08em 0px #2e2e2e ;
+}
+
+/* Metade inferior */
+
+.cardContainer h2 {
+    font-size: 3.2vh;
+    margin: 0;
+    padding: 2% 8% 0 8%;
+    height: 100%;
+    width: 100%;
+    text-align: justify;
+    font-weight: 400;
+    
+}
+
+.previewContainer {
+    margin-top: 1.5vh;
+    display: flex;
+    height: 50%;
+    overflow: hidden;
+}
+
+.previewContainer::before {
+    content: "";
+    position: absolute;
+    align-self: flex-end;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #401c2a);
+}
+
+.imgContainer {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction:column;
+    justify-content: flex-start;
+    height: 50%;
+    width: 100%;
+}
+
+/* Botão hover */
+.cardHover {
+    
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff00;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.cardHover:hover {
+    opacity: 1;
+}
+
+.cardHover img{
+    
+    height: 15%;
+    width: auto;
+    filter: none;
+
+    transition: all 0.15s;
+}
+
+.cardHover img:hover{
+    height: 16%;
+    cursor: pointer;
+}
+.options ul{
+    padding: 0;
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+}
+
+ .options ul li{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    display: flex;
+    display: inline-block;
+   
+    text-align: center;
+}
+
+.options ul li a{
+    
+    font-size: 20px;
+    color:#2e2e2e;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Manjari', sans-serif;
+}
+.options{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+ul li{
+    margin-bottom: 10%;
+    
+}
+
+
+ul li a:hover{
+    color:  #dd0b64;
+    font-size: 24px;
+    transform: scale(110%);
+    transition: 0.2s ;
+}
+
+@media only screen and (max-width: 767px) {
+    div.cardContainer {
+        /*margin-left: 9%;*/
+        width: 80%;
+    }
+    .cardContainer h1 {
+        font-size: 6vw;
+        width: 100%;
+        text-shadow: 0.08em 0.08em 0px #2e2e2e ;
+    }
+
+    .cardContainer h2 {
+        font-size: 4vw;
+    }
+    
+    /* Hover */
+    .cardHover img:hover{
+        height: 15%;
+        cursor: pointer;
+    }
+   
+    .options ul{
+        width: 50%;
+    }
+    .options ul li{
+        margin-bottom: 10%;
+    }
+
+    .options ul li a{
+        font-size: 16px;
+    }
+
+    ul li a:hover{
+        transform: scale(110%);
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    main{
+        width: 100%;
+    }
+    div.cardContainer {
+        margin-top: 8vh;
+        margin-left: 2%;
+        width: 29%;
+        margin-right: 2%;
+    }
+    .cardContainer h1 {
+        font-size: 2.3vw;
+        width: 100%;
+    }
+    .cardContainer h2 {
+        font-size: 1.9vw;
+    }
+    
+    ul li{
+        margin-bottom: 10%;
+        
+    }
+    ul li a{
+        font-size: 16px;
+    }
+}
