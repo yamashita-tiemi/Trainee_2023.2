@@ -1,0 +1,504 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+html, body{
+    margin: 0%;
+    padding: 0%;
+
+}
+body {
+   
+    background: #cfb698;
+    font-family: 'Manjari', sans-serif;;
+}
+.Titulo {
+    width: 55%;
+    color: #401C2A;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.30);
+    font-size: 2vw;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-left: 8%;
+}
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    width: 4vw;
+    height: 4vw;
+    bottom: 5%;
+    right: 3%;
+    background-color:#6f0550;
+    box-shadow: 0 2px 4px #dd0b64;
+    font-size: 1.5vw;
+    
+    opacity: 0.8;
+    border: none;
+    border-radius: 10vw;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#scrollToTopBtn:hover {
+    background-color:#6f0550;
+    opacity: 1;
+    box-shadow: 0 4px 8px #dd0b64;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #401c2a;
+    width: 100%;
+    aspect-ratio: 3;
+    position: relative;
+    margin-top: 5%;
+      
+}
+#left,
+#right {
+    top: 50%;
+    height: 3.8vw;
+    width: 3.8vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    position: absolute;
+    text-align: center;
+    line-height: 4vw;
+    background: #6f0550;
+    border-radius: 10vw;
+    box-shadow: 0 2px 4px #dd0b64;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    color: #cfb698;
+    z-index: 2;
+}
+#right:hover {
+    height: 4vw;
+    width: 4vw;
+    font-size: 1.25vw;
+    box-shadow: 0 2px 6px #dd0b64;
+}
+#left:hover{
+    height: 4vw;
+    width: 4vw;
+    font-size: 1.25vw;
+    box-shadow: 0 2px 6px #dd0b64;
+}
+.wrapper i:first-child{
+  left: 4%;
+ display: none;
+
+}
+.wrapper i:last-child{
+  right: 4%;
+}
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+.wrapper .carousel {
+  width: 100%;
+  aspect-ratio: 3;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap; 
+  position: relative;
+  padding: 0vw; 
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth; 
+  scrollbar-width: none; 
+  margin: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  overflow-x: auto; 
+  
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+.carousel :where(.card, .img, .circle) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .card {
+    aspect-ratio: 2;
+    width: 0%;
+    flex: 0 0 50%;
+    scroll-snap-align: start;
+    list-style: none;
+    cursor: pointer;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 96%;
+    width: 62%;
+    position: relative;
+    z-index: 2;
+    
+}
+.background {
+    display: flex;
+    justify-content: center;
+    width: 94%;
+    height: 90%;
+    position: relative;
+    border-radius: 2vw;
+    border-bottom: 2px solid #CFB698;
+    background: #4d2535;
+    box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.50);
+    z-index: 1;
+    
+}
+.background .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+    object-fit: cover;
+    
+}
+.background .img {
+    width: 75%;
+    height: 45%;
+    top: 2vh;
+    position: absolute;
+    border-radius: 1vw;
+    object-fit: cover;
+}
+.background h2 {
+    
+    width: 95%;
+    max-height: 26%;
+    top: 57%;
+    position: relative;
+    font-size: 1.14vw;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.1vw;
+    color: #CFB698;
+    margin:0%;
+    overflow: hidden; 
+
+}
+.circle {
+    width: 7vw;
+    height: 7vw;
+    letter-spacing: 1%;
+    align-self:flex-end;
+    position: absolute;
+    background: #cfb698;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.50);
+    border-radius: 10vw;
+    text-decoration-line: underline;
+    font-size: 1.2vw;
+    z-index: 2;
+}
+.circle a{
+    color: #401C2A;
+}
+.circle:hover{
+    width: 7.2vw;
+    height: 7.2vw;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.50);
+    font-size: 1.3vw;
+}
+a {
+    text-decoration: none;
+ }
+.postMeio{
+    display: flex;  
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-top: 20%;
+}
+.element {
+    width: 40%;
+    height: 70%;
+    border-radius: 4%;
+    position: relative;
+    line-height: 1.3;
+}
+
+#element1 {
+    
+    width: 36%;
+    height: 75%;
+    background: rgba(221, 11, 100, 0.65);
+    z-index: 1;
+    align-self: center;
+    position: absolute;
+    order: 2;
+    
+}
+
+#element2 {
+    background: #5B0040;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 15%;
+}
+
+#element2 .img{
+    width: 63%;
+    margin-left: 20%;
+    z-index: 2;
+}
+
+#element2 img{
+    width: 90%;
+    height: 95%;
+    object-fit: cover;
+}
+#element2 h4{
+    width: 70%;
+    height: 19%;
+    text-align:left;
+    font-size: 1.8vw;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    color: #CFB698;
+    margin-left: 2%;
+    margin-top: 4%;
+}
+
+#element3 {
+    background: #b5b5b5;
+    order: 3;
+    z-index: 3;
+    align-self:flex-end;
+    margin-top: 14%;
+    margin-right: 15%;
+}
+#element3 .img{
+    width: 70%;
+    height: 60%;
+    margin-left: 20%;
+    z-index: 2;
+}
+
+#element3 img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+#element3 h4{
+    width: 70%;
+    height: 2%;
+    text-align:right;
+    float: right;
+    font-size: 1.8vw;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    color: #401C2A;
+    margin-right: 2%;
+}
+
+
+.sobreNoscard
+{  
+    width: 100%;
+    
+    margin-top: 10%;
+    margin-bottom: 8%;
+}
+.iconeSobreNos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    width: 15%;
+    background-color: #401C2A;
+    color: #CFB698;
+    border-radius: 10vw;
+    margin-left: 20%;
+    z-index: 2;
+}
+.iconeSobreNos h3 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.6px;
+}
+.sobreNos
+{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2.5%;
+    width: 100%;
+    aspect-ratio: 1.7;
+    background-color: #ad817f;
+    z-index: 1;
+
+}
+.sobreelement {
+    display: flex;
+    justify-content: center;
+    width: 42.5%;
+    height: 107%;
+    border-radius: 4%;
+}
+#sobreelement1 .img {
+    width: 35%;
+    height: 58%;
+    position: absolute;
+    border-radius: 5%;
+    object-fit: cover;
+    z-index: 2;
+    margin-top: 3.5%;
+}
+#sobreelement1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#sobreelement1 h4 {
+    width: 94%;
+    height: 35%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    margin-top: 95%;
+}
+#sobreelement2 .img {
+    width: 37%;
+    height: 60%;
+    position: absolute;
+    border-radius: 5%;
+    object-fit: cover;
+    z-index: 2;
+}
+#sobreelement2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#sobreelement2 h4 {
+    width: 94%;
+    height: 35%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    margin-top: 95%;
+}
+
+
+
+
+
+@media screen and (max-width: 740px) {
+
+    .wrapper .carousel{
+
+        left: 0%;
+        aspect-ratio: 2;
+    }
+    #scrollToTopBtn{
+        font-size: 1.6vw;
+    }
+    .carousel .card {
+        left: 0%;
+        margin-right: 0%;
+        flex: 0 0 100%;
+        width: 0%;
+
+    }
+    .background {
+        width: 72%;
+        height: 90%;
+        
+    }
+    #left,#right {
+    top: 50%;
+    height: 5vw;
+    width: 5vw;
+    font-size: 1.5vw;
+    line-height: 5vw;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.background .img {
+    width: 82%;
+    height: 45%;
+    top: 3%;
+   
+}
+.background h2 {
+    
+    width: 91%;
+    height: 30%;
+    top: 52%;
+    font-size: 2.0vw;
+    text-align: -webkit-center;
+}
+.circle {
+    width: 10vw;
+    height: 10vw;
+    font-size: 1.7vw;
+}
+
+.sobreNos
+{
+    flex-direction: column;
+    aspect-ratio: 0;
+}
+.sobreelement {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 50%;
+    border-radius: 4%;
+}
+#sobreelement1 .img {
+    width: 38%;
+    height: 30%;
+    margin-top: 3%;
+}
+#sobreelement1 h4 {
+    width: 100%;
+    height: 35%;
+    font-size: 2.2vw;
+    margin-top: 43%;
+}
+#sobreelement2 .img {
+    width: 37%;
+    height: 32%;
+    top:48%;
+}
+#sobreelement2 h4 {
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    font-size: 2.2vw;
+    margin-top: 41%;
+}
+
+}
