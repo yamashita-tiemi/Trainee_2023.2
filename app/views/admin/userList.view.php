@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
-    <script src="../../../public/js/userList.js"></script>
+    <script src="../../../public/js/userListAdm.js"></script>
 </head>
 <body>
 
@@ -43,7 +43,7 @@
         <div class="modal-container">
             <div class="dados">
                 <h2>Criar Usuário</h2>
-                <form class="criaruser">
+                <form class="criaruser" method="post" action="/users/create" id="createform">
                     <label for="username">Nome de Usuário:</label>
                     <input type="text"placeholder="Nome Sobrenome" id="username" name="username">
                     <label for="useremail">Email do Usuário</label>
@@ -60,14 +60,22 @@
                         <i class="bi bi-eye-fill" id="btn-senha-passwordconfirm" style="display: none;" onclick="mostrarSenha('passwordconfirm')"></i>
                     </div>
                     <button type="reset">Limpar seções</button>
+                    
                 </form> 
             </div>
             <div class="ilutracao">
                 <img src="../../../public/assets/ilustracao_user.png">
             </div>
         </div>
+        <button type="submit" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
+<script>
+    function enviarFormulario(){
+        var formulario=document.getElementById('createform');
+        formulario.submit();
+    }
+</script>
 
-        <button id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
+        
     </div>
 
     <div id="deleteModal" class="modal">

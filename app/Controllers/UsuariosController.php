@@ -9,7 +9,7 @@ class UsuariosController{
 
     public function view(){
 
-        return view ('admin/userListAdm');
+        return view ('admin/userList');
     }
 
     public function createUsers(){
