@@ -112,7 +112,7 @@
     <div id="createModal" class="modal">
         <div class="modal-container">
             <h2>Criar Usuário</h2>
-            <form class="criaruser">
+            <form class="criaruser" action="/users/create" method="post">
                 <label for="username">Nome de Usuário:</label>
                 <input type="text" id="username" name="username">
                 <label for="useremail">Email do Usuário</label>
@@ -120,7 +120,7 @@
                 <label for="userpassword">Senha do Usuário</label>
                 <input type="password" id="userpassword" name="userpassword">
             </form>
-            <button onclick="closeModal('createModal')">Fechar</button>
+            <button type="submit" onclick="closeModal('createModal')">Fechar</button>
         </div>
     </div>
 
@@ -151,7 +151,7 @@
     </div>
 
 </body>
-<script src="../../../public/js/userList.js"></script>
+<script src="../../../public/js/userListAdm.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
