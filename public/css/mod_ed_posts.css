@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;700&display=swap');
+
+/*codigos para a pagina principal, se necessario altere o '.modal' para ficar no tamanho que precisa para o design*/
+
+body {
+    font-family: 'Manjari', sans-serif;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+img {
+    background-color: #6f0550;
+    min-width: 60%;
+    height: 50%;
+    width: auto;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+}
+
+#editModal {
+    display: none;
+    position: fixed;
+    height: 85vh;
+    width: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url(../assets/mod_edit_posts/fundo-roxo.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #401c2a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #6f0550;
+}
+
+
+/*implemente os codigos do modal a partir daqui */
+input, textarea {
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: 1px #272727 solid;
+    width: 50%;
+}
+
+.escolherImg {
+    width: 80%;
+    font-size: 1vw;
+}
+
+textarea {
+    height: 15vh;
+}
+
+.inputsContainermep {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+}
+
+.leftmep, .rightmep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.leftmep {
+    width: 60%;
+}
+
+.rightmep {
+    justify-content: center;
+    width: 40%;
+}
+
+.rightmep img {
+    object-fit: cover;
+    background-size: cover;
+}
+
+.EditarPost button {
+    background-color: #6f054ff0;
+}
+
+.EditarPost button:hover {
+    background-color: #770b57e2;
+}
+
+.EditarPost label {
+    font-weight: 700;
+}
+
+#editModal .Fechar {
+    padding: 1vw;
+    background-color: #6f054ff0;
+}
+
+#editModal .Fechar:hover {
+    background-color: #770b57e2;
+}
+
+/* @media screen and (max-width: 767px) {
+    .modal {
+        height: 50vh;
+    }
+    .inputsContainer {
+        flex-direction: column;
+        align-items: center;
+        height: 40vh;
+    }
+    
+    input, textarea {
+        width: 50%;
+    }
+
+    .left {
+        width: 100%;
+        height: 60%;
+    }
+    
+    .right {
+        width: 100%;
+        height: 40%;
+    }
+} */
+
+
+@media screen and (max-width: 430px) {
+    .modal {
+        height: 50%;
+    }
+
+    #editModal {
+        height: 70vh;
+        background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
+        border-radius: 0 0 6px 6px;
+    }
+
+    .inputsContainermep {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dados-edit h2 {
+        margin-left: -5%;
+        font-size: 3.5vw;
+    }
+    
+    .EditarPost input, .EditarPost textarea {
+        width: 50%;
+        font-size: 2vw;
+    }
+
+    .EditarPost textarea {
+        height: 10vh;
+    }
+
+    .EditarPost label {
+        font-size: 2.5vw;
+    }
+
+    .leftmep, .rightmep {
+        height: fit-content;
+    }
+
+    .leftmep {
+        width: 100%;
+    }
+    
+    .rightmep {
+        height: 10%;
+        width: 100%;
+        justify-content: normal;
+    }
+
+    #imagem-previewmep {
+        height: 16vh;
+        min-width: 50%;
+    }
+
+    .ilustracaomep img{
+        max-width: 30vw;
+        max-height: 15vh;
+    }
+
+    .botoesinferioresmep {
+        margin-top: 3%;
+    }
+
+    .botoesinferioresmep button {
+        font-size: 3vw;
+    }
+
+    .bi-x-lg::before {
+        font-size: 3vw;
+    }
+
+    #editModal .Fechar {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    #editModal {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 260px) {
+
+    #editModal {
+        height: 60vh;
+    }
+}
