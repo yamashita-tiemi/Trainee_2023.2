@@ -18,7 +18,7 @@ class ExampleController
     }
 
     public function create() {
-        $parametros [
+        $parametros = [
             'titulopost' => $_POST['titulopost'],
             'conteudopost' => $_POST['conteudopost'],
             'autorpost' => $_POST['autorpost'],
@@ -30,13 +30,13 @@ class ExampleController
     }
 
     public function edit() {
-        $parametros [
-            'titulopost' => 
-            'conteudopost' =>
-            'autorpost' =>
-            'data_criacaopost' =>
-            'imagempost' =>
-        ]
+        $parametros = [
+            'titulopost' => $_POST['titulopost'],
+            'conteudopost' => $_POST['conteudopost'],
+            'autorpost' => $_POST['autorpost'],
+            'data_criacaopost' => $_POST['data_criacaopost'],
+            'imagempost' => $_POST['imagempost'],
+        ];
 
         return view('admin/postListadm', $tables);
     }

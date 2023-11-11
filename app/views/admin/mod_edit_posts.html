@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>Lista de Posts</title>
 </head>
-<body>
+<body id="bodymep">
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
@@ -24,7 +24,7 @@
             <!-- Formulário para criar post -->
             <div class="dados-edit">
 
-                <form class="EditarPost" method="post" enctype="multipart/form-data">
+                <form class="EditarPost" action="/posts/createPosts" method="post" enctype="multipart/form-data">
                     <div class="inputsContainermep">
                         <div class="leftmep">
                             <h2>Editar Post</h2>
@@ -51,7 +51,7 @@
                     <div class="botoesinferioresmep" style="display: flex; width: 100%; justify-content: center;">
                         <button type="reset">Limpar seções</button>
                         <!--botão de salvar o formulario-->
-                        <button id="botaosalvar" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
+                        <button id="botaosalvar" type="submit" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
                     </div>
                 </form>
             </div>

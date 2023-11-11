@@ -2,7 +2,7 @@
 
 /*codigos para a pagina principal, se necessario altere o '.modal' para ficar no tamanho que precisa para o design*/
 
-body {
+#bodymep {
     font-family: 'Manjari', sans-serif;
     font-size: 1.5vw;
     display: flex;
@@ -13,7 +13,7 @@ body {
     background-color: #f4f4f4;
 }
 
-img {
+#imagem-previewmep {
     background-color: #6f0550;
     min-width: 60%;
     height: 50%;

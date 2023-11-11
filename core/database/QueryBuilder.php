@@ -28,4 +28,21 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function insert($table, $parametros) {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)',
+            $table,
+            implode(', ', array_keys($parametros)),
+            ':' . implode(', :', array_keys($parametros))
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parametros);
+        } catch (Exception $e) {
+            die("An error ocurred when trying to insert into database: {$e->getMessage()}");
+        }
+    }
 }
