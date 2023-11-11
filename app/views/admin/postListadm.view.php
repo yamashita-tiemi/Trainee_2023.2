@@ -1,3 +1,9 @@
+<?php 
+
+    require 'mod_create_posts.html';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
