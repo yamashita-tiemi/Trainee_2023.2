@@ -8,19 +8,24 @@ use Exception;
 class UsuariosController{
 
     public function view(){
-        return view ('admin/userListAdm');
+        $users = App::get('database')->selectAll('users');
+        $tables = [
+            'userListAdm'=> $users,
+        ];
+        return view ('admin/userListAdm', $tables);
     }
 
     public function createUsers(){
 
-        $nome = $_POST["username"];
-        $email = $_POST["useremail"];
-        $email = $_POST["userpassword"];
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
 
-        var_dump(compact('nome', 'email', 'senha'));
-        App::get('database')->insert('users', compact('nome', 'email', 'senha'));
+        
+        App::get('database')->insert('users', compact('name', 'email', 'password'));
 
         return redirect('users');
+
     }
 
     

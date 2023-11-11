@@ -8,6 +8,7 @@
 
 body{
     height: 100vh;
+    background-color:antiquewhite;
 }
 
 
@@ -81,14 +82,21 @@ a.texto{
 a{
     transition: all .2s;
 }
+
+a.ativo{
+    background-color: #e95095;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
 .logout a.texto{
     margin-left: 20px;
 }
 
 .logout a:hover,
 .navegador a:hover{
-    background-color: #dd0b64;
-    border: 2px solid #fff;
+    background-color: #d33b7b;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 

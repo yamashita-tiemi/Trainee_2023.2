@@ -27,7 +27,8 @@
                 </tr>
             </thead>
             <tbody class="tbory">
-                <tr>
+
+                <!--</tr>
                     <td>01</td>
                     <td>Lorem</td>
                     <td>ipsum@saltoalto.com</td>
@@ -36,67 +37,27 @@
                         <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
                         <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
-                </tr>
-                <tr>
-                    <td>02</td>
-                    <td>Lorem</td>
-                    <td>ipsum@saltoalto.com</td>
-                    <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')">  <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>03</td>
-                    <td>Lorem</td>
-                    <td>ipsum@saltoalto.com</td>
-                    <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>04</td>
-                    <td>Lorem</td>
-                    <td>ipsum@saltoalto.com</td>
-                    <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"><i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>05</td>
-                    <td>Lorem</td>
-                    <td>ipsum@saltoalto.com</td>
-                    <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"><i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
+                </tr>*/-->
+
+                <?php if (isset($users) && !empty($users)) : ?>
+                    <?php foreach ($users as $user) : ?>
+                        <tr>
+                            <td><?=$user->id ?></td>
+                            <td><?=$user->name ?></td>
+                            <td><?=$user->email ?></td>
+                            <td>
+                                <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
+                                <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
+                                <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else : ?>
                     <tr>
-                        <td>06</td>
-                        <td>Lorem</td>
-                        <td>ipsum@saltoalto.com</td>
-                        <td>
-                            <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar </button>
-                            <button onclick="openModal('editModal')"><i class="bi bi-person-gear"></i> Editar </button>
-                            <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                        </td>
+                        <td colspan="4">Nenhum usuario disponível</td>
                     </tr>
-                    <tr>
-                        <td>07</td>
-                        <td>Lorem</td>
-                        <td>ipsum@saltoalto.com</td>
-                        <td>
-                            <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar </button>
-                            <button onclick="openModal('editModal')"><i class="bi bi-person-gear"></i> Editar </button>
-                            <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                        </td>
-                    </tr>
-                </tr>
+                <?php endif; ?>
+                
             </tbody>
             <tfoot>
                 <tr>
@@ -117,14 +78,14 @@
         <div class="modal-container">
             <div class="dados">
                 <h2>Criar Usuário</h2>
-                <form id="criaruser" class="criaruser" method="post" action="/users/">
+                <form id="criaruser" class="criaruser" method="post" action="/users/create">
                     <label for="username">Nome de Usuário:</label>
-                    <input type="text"placeholder="Nome Sobrenome" id="username" name="username">
+                    <input type="text"placeholder="Nome Sobrenome"  name="name">
                     <label for="useremail">Email do Usuário</label>
-                    <input type="email" placeholder="exemplo@email.com" id="useremail" name="useremail">
+                    <input type="email" placeholder="exemplo@email.com"  name="email">
                     <label for="userpassword">Senha do Usuário</label>
                     <div class="olhinho">
-                        <input type="password" placeholder="********" id="userpassword" name="userpassword" oninput="inputChanged('userpassword')">
+                        <input type="password" placeholder="********" id="userpassword" name="password" oninput="inputChanged('userpassword')">
                         <i class="bi bi-eye-fill" id="btn-senha-userpassword" style="display: none;" onclick="mostrarSenha('userpassword')"></i>
                     </div>
 
@@ -141,7 +102,7 @@
             </div>
         </div>
 
-        <button form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
+        <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
     </div>
 
     <div id="viewModal" class="modal">
