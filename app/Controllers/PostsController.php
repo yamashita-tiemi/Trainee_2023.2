@@ -5,7 +5,9 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class ExampleController
+require_once '../../../core/App.php';
+
+class PostsController
 {
 
     public function view() {
@@ -14,7 +16,7 @@ class ExampleController
             'postlist' => $posts,
         ];
 
-        return view('admin/postListadm', $tables);
+        return view('postListadm', $tables);
     }
 
     public function createPosts() {

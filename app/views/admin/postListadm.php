@@ -1,6 +1,11 @@
 <?php 
 
     require 'mod_create_posts.html';
+    require_once '../../Controllers/PostsController.php';
+    use App\Controllers\PostsController;
+
+    $controller = new PostsController();
+    $controller->view();
 
 ?>
 
@@ -35,7 +40,7 @@
                 </tr>
             </thead>
             <tbody class="tborypla">
-            <tr>
+            <!-- <tr>
                     <td>1</td>
                     <td>Lorem</td>
                     <td>Lorem</td>
@@ -44,19 +49,25 @@
                         <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
                         <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
-                </tr>
-                <!-- ?php foreach ($posts as $post) : ?>
-                <tr>
-                    <td>?=$post->id ?></td>
-                    <td>?=$post->title ?></td>
-                    <td>?=$post->author ?></td>
-                    <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
-                </tr>
-                ?php endforeach; ?> -->
+                </tr> -->
+                <?php if (isset($posts) && !empty($posts)) : ?>
+                    <?php foreach ($posts as $post) : ?>
+                        <tr>
+                            <td><?=$post->id ?></td>
+                            <td><?=$post->title ?></td>
+                            <td><?=$post->author ?></td>
+                            <td>
+                                <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
+                                <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
+                                <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <tr>
+                        <td colspan="4">Nenhum post disponível</td>
+                    </tr>
+                <?php endif; ?>
             </tbody>
             <tfoot>
                 <tr>
