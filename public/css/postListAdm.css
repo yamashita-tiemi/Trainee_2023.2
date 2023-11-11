@@ -19,7 +19,7 @@ body {
     aspect-ratio: 1.5;
     border-radius: 8px;
 
-    background-image: url(../assets/create_modal/capa-ciencia-da-computacao.jpg);
+    background-image: none;
     background-size: cover;
 }
 
@@ -35,7 +35,7 @@ body {
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url(../assets/create_modal/Frame\ 1.png);
+    background-image: url(../assets/create_modal/fundo-roxo.png);
     background-size: cover;
     z-index: 1;
 }
@@ -86,7 +86,7 @@ textarea {
 
 .inputsContainer {
     display: flex;
-    height: 70vh;
+    height: 71vh;
     width: 100%;
 }
 
@@ -107,6 +107,10 @@ textarea {
     width: 40%;
 }
 
+
+/* Responsividade */
+
+
 @media screen and (max-width: 767px) {
     body {
         font-size: 2.5vw;
@@ -114,6 +118,7 @@ textarea {
 
     .modal {
         height: auto;
+        background-image: url(../assets/create_modal/fundo-roxo-vertical.jpg);
     }
 
     .imgPreview {
