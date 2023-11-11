@@ -117,7 +117,7 @@
         <div class="modal-container">
             <div class="dados">
                 <h2>Criar Usuário</h2>
-                <form id="criaruser" class="criaruser">
+                <form id="criaruser" class="criaruser" method="post" action="/users/">
                     <label for="username">Nome de Usuário:</label>
                     <input type="text"placeholder="Nome Sobrenome" id="username" name="username">
                     <label for="useremail">Email do Usuário</label>
