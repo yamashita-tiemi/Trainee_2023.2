@@ -49,6 +49,7 @@ class PostsController
     }
 
     public function deletePosts() {
+        $id= $_POST[$id];
         $posts = App::get('database')->selectAll('postlist');
         $tables = [
             'postlist' => $posts,

@@ -14,5 +14,5 @@ use PostsController;
 
     $router->get('posts', 'PostsController@view');
     $router->post('posts/create', 'PostsController@createPosts');
-
+    $router->post('posts/delete', 'PostsController@deletePosts');
 ?>
