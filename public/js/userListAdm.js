@@ -12,25 +12,6 @@ function closeModal(modalId) {
     document.getElementById('overlay').style.display = 'none';
 }
 
-function confirmarSalvarFormulario() {
-    var mensagem = "Você tem certeza de que deseja salvar o formulário?";
-    if (window.confirm(mensagem)) {
-        // Coletar os dados do formulário
-        var username = document.getElementById("username").value;
-        var useremail = document.getElementById("useremail").value;
-        var userpassword = document.getElementById("userpassword").value;
-        var userpasswordconfirm = document.getElementById("userpasswordconfirm").value;
-
-        // Valide os dados do formulário, se necessário
-
-        // Enviar os dados para onde você precisar (por exemplo, usando uma solicitação AJAX)
-        // Aqui você pode enviar os dados para o seu servidor ou realizar ações necessárias.
-
-        // Após a conclusão, você pode fechar o modal
-        closeModal('createModal');
-    }
-}
-
 function mostrarSenha(inputId) {
     var inputPass = document.getElementById(inputId);
     var btnShowPass = document.getElementById(`btn-senha-${inputId}`);
@@ -49,9 +30,33 @@ function inputChanged(inputId) {
     var btnShowPass = document.getElementById(`btn-senha-${inputId}`);
 
     if (input.value) {
-        btnShowPass.style.display = "block";
+        btnShowPass.style.display = "flex";
         
     } else {
         btnShowPass.style.display = "none";
     }
+}
+
+function confirmarSalvarFormularioedit() {
+    var mensagem = "Você tem certeza de que deseja salvar as informações do usuário?";
+    if (window.confirm(mensagem)) {
+        // Coletar os dados do formulário
+        var username = document.getElementById("editusername").value;
+        var useremail = document.getElementById("edituseremail").value;
+        var userpassword = document.getElementById("edituserpassword").value;
+
+        // Valide os dados do formulário, se necessário
+
+        // Enviar os dados para onde você precisar (por exemplo, usando uma solicitação AJAX)
+        // Aqui você pode enviar os dados para o seu servidor ou realizar ações necessárias.
+
+        // Após a conclusão, você pode fechar o modal
+        closeModal('editModal');
+    }
+}
+
+function confirmDelete() {	
+    // Adicione aqui a lógica para excluir o usuario    
+    alert('Post deletado com sucesso!');	    
+    closeModal('deleteModal');	   
 }

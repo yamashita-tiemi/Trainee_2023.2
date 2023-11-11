@@ -197,3 +197,684 @@ tr:hover {
         font-size: 18px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*criar usuario */
+#createModal{
+    display: none;
+    position: absolute;
+    width: 64%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    border-radius: 0.7vw;
+    
+}
+#createModal .modal-container {
+    background-image: url("../assets/img-user-art.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0%
+    
+}
+#createModal .dados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 7%;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+form
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+input {
+    font-family: 'Manjari', sans-serif;
+    border: 0.1vw solid #401c2a;
+    border-radius: 1.5vw;
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+    padding: 0.6vw 2.4vw 0.3vw 0.7vw;
+    width: 17vw;
+    outline: none;
+    flex-grow: 1;
+
+}
+
+.olhinho {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#btn-senha-userpassword, #btn-senha-passwordconfirm {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    color: #858585;
+}
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
+
+#createModal .ilutracao{
+    width: 70%;
+}
+#createModal .ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.criaruser button{
+    font-family: 'Manjari', sans-serif;
+    align-self: flex-end;
+    font-size: 1.1vw;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
+    background-color: #dd0b63a9;
+    color: #000;
+    font-weight: 700;
+}
+
+.criaruser button:hover{
+    background-color: #dd0b63dd;
+}
+
+#createModal .fechar{
+    display: flex;
+    background-color: #dd0b64;
+}
+#createModal .fechar:hover{
+    background-color: #dd0b6391;
+}
+#createModal #botaosalvar{
+    font-size: 1.1vw;
+    font-family: 'Manjari', sans-serif;
+    margin-right: 5%;
+    letter-spacing: 0.15vw;
+    border-radius: 0.8vw;
+    padding: 0.5vw;
+    padding-bottom: 0vw;
+    background-color: #dd0b63;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
+}
+#createModal #botaosalvar:hover{
+    background-color: #dd0b63ac;
+}
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    .modal {
+        width: 74%;
+        border-radius: 1vw;
+    }
+    #createModal .modal-container {
+        background-image: url("../assets/img-usuer-respon.png");
+        flex-direction: column-reverse;
+    }
+    #createModal .dados{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    input {
+        font-size: 3.3vw;
+        border-radius: 3vw;
+        margin-bottom: 1.3vw;
+        padding: 1.1vw;
+        padding-right: 5.7vw;
+        width: 40vw;
+    }   
+    #createModal .ilutracao{
+        width: 50%;
+    }
+    .criaruser button{
+        font-size: 2.8vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    #createModal .fechar svg{
+        width: 2vw;   
+    }
+    #createModal #botaosalvar{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 1.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+    }
+}
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .modal {
+        width: 80%;
+    }
+    #createModal .fechar svg{
+        width: 1.5vw;   
+    }
+    #createModal .dados{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+   
+    input {
+        font-size: 1.6vw;
+        padding-right: 3.5vw;
+        width: 23vw;
+    }
+    
+    #createModal .ilutracao{
+        width: 67%;
+    }
+    
+    .criaruser button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    #createModal #botaosalvar{
+        font-size: 1.9vw;
+        letter-spacing: 0.2vw;
+        border-radius: 1.2vw;
+        padding: 0.6vw;
+        padding-bottom: 0vw;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/*deletar usuario */
+
+#deleteModal {
+    
+    display: none;
+    position: fixed;
+    width: 33%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    
+}
+.modal-container-delete {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0%
+    
+}
+.dados-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+    font-size: 1vw;
+    font-weight: 700;
+}
+.dados-delete h2{
+    margin: 0.5vw;
+    margin-top: 1.1vw;
+
+}
+.dados-delete h3{
+    margin: 0.5vw;
+    margin-bottom: 1.4vw;
+
+}
+.modal-container-delete .ilutracao{
+    width: 58%;
+    margin-top: 1%;
+}
+.modal-container-delete .ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dados-delete .botoes button {
+    padding: 0.45vw;
+    padding-bottom: 0.2vw;
+    margin: 0.7vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+    background-color: #b74b93;
+    color: #fff;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
+    border: none;
+    border-radius: 0.3vw;
+    font-size: 0.95vw;
+    font-family: 'Manjari', sans-serif;
+}
+.dados-delete .botoes button:hover {
+    background-color:  #f18fcd;
+
+}
+
+
+
+
+@media screen and (min-width: 436px) and (max-width: 800px){
+    #deleteModal{
+        width: 40%;
+    }
+    .dados-delete .botoes button{
+        font-size: 1.5vw;
+        border-radius: 0.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 1.5vw;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 435px){
+    #deleteModal{
+        width: 71%;
+    }
+    .dados-delete .botoes button{
+        font-size: 3vw;
+        border-radius: 0.7vw;
+        padding: 1vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 2.8vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*visualizar usuario */
+#viewModal  {
+    
+    display: none;
+    position: fixed;
+    width: 64%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    
+}
+.modal-container-visualizacao {
+    background-image: url("../assets/img-visualiz-user.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0%
+    
+}
+.dados-visualiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88%;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.dados-visualiz h2{
+    border: 0.3vw solid #6f0550; /* Espessura da borda e cor (preto) */
+    padding: 0.6vw;
+    padding-bottom: 0vw;
+    margin: 0%;
+    font-size: 2vw;
+}
+.userInfo
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.modal-container-visualizacao .ilutracao-visualiz{
+    width: 70%;
+}
+.ilutracao-visualiz img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#viewModal .fechar{
+    display: flex;
+    background-color: #dd0b64;
+    
+}
+#viewModal .fechar:hover{
+    background-color: #dd0b6391;
+}
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    #viewModal {
+        width: 74%;
+    }
+    .modal-container-visualizacao {
+        background-image: url("../assets/img-visualiz-user-responsiv.png");
+        background-position: 0% 15%;
+        flex-direction: column-reverse;
+    }
+    .dados-visualiz{
+        width: 92%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    .dados-visualiz h2{
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+        font-size: 3.7vw;
+    }
+      
+    #viewModal .fechar i{
+        font-size: 1.7vw;
+            
+    }
+}
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    #viewModal  {
+        width: 80%;
+    }
+    .fechar i{
+        font-size: 1vw;
+        width: 1.1vw;   
+    }
+    .dados-visualiz{
+        width: 100%;
+        font-size: 2.1vw;
+    }
+    
+    .ilutracao-visualiz {
+        width: 67%;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* editar usuario*/
+#editModal {
+    display: none;
+    position: absolute;
+    width: 64%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    border-radius: 0.7vw;
+}
+.modal-container-edit{
+    background-image: url("../assets/img-edit-user-fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+    text-align: center;
+}
+
+.dados-edit{        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: auto;
+    width: 50%;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin: 2%;
+    
+}
+
+.dados-edit button{
+    background-color:  #f297d4;
+    font-size: 1.9vw;
+    padding: 0.6vw;
+    font-family: 'Manjari', sans-serif;
+    align-self: flex-center;
+    font-size: 15px;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
+    color: #000000;
+    font-weight: 700;
+}
+
+.dados-edit button:hover{
+    background-color: #e379c0;
+}
+#editModal .fechar{
+    padding-top: 0.4vw;
+    padding-bottom: 0.2vw;
+} 
+.edituser button {
+    font-family: Manjari, sans-serif;
+    font-size: 1.1vw;
+    background-color: rgba(221, 11, 99, 0.663);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-radius: 1vw;
+    padding: 0.5vw 0.5vw 0.1vw;
+}
+#btn-senha-userpasswordnovo, #btn-senha-passwordconfirmnovo {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    color: #858585;
+}
+
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
+
+#botaosalvaredit{
+    
+    background-color: #dd0b63;
+    margin-right: 5%;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 7px;
+    margin-top: 6px;    
+    font-family: 'Manjari', sans-serif;
+    font-size: 1.1vw;
+    letter-spacing: 0.15vw;
+    border-radius: 0.8vw;
+    padding: 0.5vw 0.5vw 0vw;
+}
+
+#botaosalvaredit:hover{
+    background-color: #f18fcd;
+}
+
+
+
+.ilutracao-edit{
+    width: 70%;
+    
+}
+
+.ilutracao-edit img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 12px;
+}
+
+#editModal img{
+    white-space: inherit;
+    z-index: 1;
+}
+
+
+.dados-edit  h2{
+    display: inline-block;
+}
+
+
+#editModal  button{    
+    background-color: #b74b93;
+}
+
+#editModal  button:hover{
+    background-color:  #f18fcd;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    #editModal {
+        width: 61%;
+        border-radius: 1vw;
+    }
+    #editModal .modal-container-edit {
+        background-image: url("../assets/img-edit-user-responsiv.png");
+        flex-direction: column-reverse;
+    }
+    #editModal .dados-edit{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.3vw;
+    }
+
+    #editModal input {
+        font-size: 2.8vw;
+        border-radius: 3vw;
+        margin-bottom: 1.3vw;
+        padding: 1.1vw;
+        padding-right: 5.7vw;
+        width: 40vw;
+    }   
+    #editModal .ilutracao-edit{
+        width: 50%;
+        margin-right: 8%;
+    }
+    #editModal .fechar{
+        padding-top: 0;
+        padding-bottom: 0.4vw;
+    } 
+    .edituser button{
+        font-size: 2.5vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    #editModal .fechar svg{
+        width: 2vw;   
+    }
+    #editModal #botaosalvaredit{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 1.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+    }
+}
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    #editModal {
+        width: 80%;
+    }
+    #editModal .fechar svg{
+        width: 1.5vw;   
+    }
+    #editModal .dados-edit{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+   
+    input {
+        font-size: 1.6vw;
+        padding-right: 3.5vw;
+        width: 23vw;
+    }
+    
+    #editModal .ilutracao-edit{
+        width: 67%;
+    }
+    
+    .edituser button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    #editModal #botaosalvaredit{
+        font-size: 1.9vw;
+        letter-spacing: 0.2vw;
+        border-radius: 1.2vw;
+        padding: 0.6vw;
+        padding-bottom: 0vw;
+    }
+    
+}
+
