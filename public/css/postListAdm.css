@@ -1,42 +1,508 @@
-body {
-    font-family: 'Manjari', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-}
 
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
 
-button {
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #401c2a;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
 
-button:hover {
-    background-color: #6f0550;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*modal delte*/
-
-.modal-delete {
+#deleteModal {
+    font-family: 'Manjari', sans-serif;
     display: none;
     position: fixed;
     top: 50%;
@@ -77,15 +543,15 @@ button:hover {
     margin-bottom: 1.5vw;
 
 }
-.ilutracao{
+#deleteModal .ilutracao{
     width: 80%;
 }
-.ilutracao img{
+#deleteModal .ilutracao img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.botoes button {
+#deleteModal .botoes button {
     padding: 0.45vw;
     padding-bottom: 0.2vw;
     margin-bottom: 0.5vw;
@@ -97,16 +563,16 @@ button:hover {
     font-size: 0.95vw;
     font-family: 'Manjari', sans-serif;
 }
-.botoes button:hover {
+#deleteModal .botoes button:hover {
     background-color: #a7107a;
 }
 
 
 @media screen and (min-width: 436px) and (max-width: 800px){
-    .modal-delete{
+    #deleteModal{
         width: 40%;
     }
-    .botoes button{
+    #deleteModal .botoes button{
         font-size: 1.5vw;
         border-radius: 0.7vw;
         padding: 0.8vw;
@@ -118,10 +584,10 @@ button:hover {
 
 }
 @media screen and (min-width: 0px) and (max-width: 435px){
-    .modal-delete{
+    #deleteModal{
         width: 71%;
     }
-    .botoes button{
+    #deleteModal .botoes button{
         font-size: 3vw;
         border-radius: 0.7vw;
         padding: 1vw;
