@@ -13,7 +13,7 @@ body{
 
 .nav1{
     
-    background: linear-gradient(180deg, rgba(146, 0, 61, 0.795) 20%, rgb(161, 22, 0) 120%);
+    background: linear-gradient(180deg, #7A114D -18.17%, #D40863 100%);
     position: fixed;
     top: 6%;
     left: 1%;
@@ -68,7 +68,6 @@ a.texto{
 .logout a {
     width: 250px;
     margin-top: 18vh;
-    margin-left: 1px;
     height: fit-content;
     display: inline-block;
     font-size: 20px;
@@ -89,6 +88,7 @@ a{
 .logout a:hover,
 .navegador a:hover{
     background-color: #dd0b64;
+    border: 2px solid #fff;
 }
 
 
