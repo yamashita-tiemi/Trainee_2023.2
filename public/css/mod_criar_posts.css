@@ -69,7 +69,7 @@ button:hover {
 
 /*implemente os codigos do modal a partir daqui */
 input, textarea {
-    font-size: 18px;
+    font-size: 3vh;
     border-radius: 5px;
     border: 1px #272727 solid;
     width: 50%;
@@ -128,10 +128,11 @@ textarea {
     .inputsContainer {
         flex-direction: column;
         align-items: center;
-        height: 80vh;
+        height: auto;
     }
     
     input, textarea {
+        font-size: 2vh;
         width: 60%;
     }
     
