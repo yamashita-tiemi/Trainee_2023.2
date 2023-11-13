@@ -11,13 +11,14 @@ class PostsController
 {
 
     public function view() {
-        $posts = App::get('database')->selectAll('postlist');
+        $posts = App::get('saltoalto')->selectAll('posts');
         $tables = [
-            'postlist' => $posts,
+            'posts' => $posts,
         ];
 
-        return view('postListadm', $tables);
+        return view('admin/postListadm', $tables);
     }
+
 
     public function createPosts() {
         $parametros = [
@@ -29,12 +30,13 @@ class PostsController
         ];
 
         var_dump(compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
-        App::get('database')->insert('posts', compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
+        App::get('saltoalto')->insert('posts', compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
 
         return redirect('posts');
 
         return view('admin/postListadm', $tables);
     }
+
 
     public function editPosts() {
         $parametros = [
@@ -45,23 +47,27 @@ class PostsController
             'imagempost' => $_POST['imagempost'],
         ];
 
-        return view('admin/postListadm', $tables);
+        App::get('saltoalto')-> editPosts('posts', $POST['id'], $parametros);
+        header('Location: /admin/postListadm', $tables);
     }
+
 
     public function deletePosts() {
         $id= $_POST[$id];
-        $posts = App::get('database')->selectAll('postlist');
+        $posts = App::get('saltoalto')->delete('posts', $id);
         $tables = [
-            'postlist' => $posts,
+            'posts' => $posts,
         ];
 
-        return view('admin/postListadm', $tables);
+        header('Location: /admin/postListadm');
     }
+
 
     public function index()
     {
-        return view('site/index');
+        return view('admin/postListadm');
     }
+
 
     public function postList()
     {

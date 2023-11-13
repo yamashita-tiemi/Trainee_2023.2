@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\ExampleController;
+use App\Controllers\PostsController;
 use App\Core\Router;
-use PostsController;
 
-    $router->get('', 'ExampleController@index');
+    $router->get('', 'PostsController@index');
 
     // $router->get('admin', 'ExampleController@view');
     // $router->get('admin', 'ExampleController@create');
@@ -15,4 +14,6 @@ use PostsController;
     $router->get('posts', 'PostsController@view');
     $router->post('posts/create', 'PostsController@createPosts');
     $router->post('posts/delete', 'PostsController@deletePosts');
+    $router->post('posts/update', 'PostsController@editPosts');
+
 ?>
