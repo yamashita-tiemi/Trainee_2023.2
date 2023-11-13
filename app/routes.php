@@ -13,7 +13,7 @@ use App\Core\Router;
 
     $router->get('', 'PostsController@view');
     $router->post('posts/create', 'PostsController@createPosts');
-    $router->post('/posts/delete', 'PostsController@deletePosts');
-    $router->post('/posts/update', 'PostsController@editPosts');
+    $router->post('posts/delete', 'PostsController@deletePosts');
+    $router->post('posts/update', 'PostsController@editPosts');
 
 ?>

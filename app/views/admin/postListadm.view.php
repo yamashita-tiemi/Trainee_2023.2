@@ -57,9 +57,22 @@
                             <td>
                                 <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
                                 <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
-                                <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
+                                <button onclick="openModal('deleteModal<?=$post->id?>')"> <i class="bi bi-trash"></i> Deletar</button>
                             </td>
                         </tr>
+
+                        <div id="deleteModal<?=$post->id?>" class="modal">
+                            <div class="modal-container">
+                                <form id="deletepost" class="deletePost" method="post" action="/posts/delete" enctype="multipart/form-data">
+                                    <input hidden name="id" value="<?=$post->id ?>">
+                                    <h2>Deletar Post</h2>
+                                    <!-- Confirmação de exclusão -->
+                                    <h3>Realmente deseja deletar esse Post?</h3>
+                                    <button type="submit">Confirmar</button>
+                                    <button onclick="closeModal('deleteModal')">Cancelar</button>
+                                </form>
+                            </div>
+                        </div>
                     <?php endforeach; ?>
                 <?php else : ?>
                     <tr>
@@ -127,16 +140,6 @@
             <h2>Visualizar Post</h2>
             <!-- Lista de posts -->
             <button onclick="closeModal('viewModal')">Fechar</button>
-        </div>
-    </div>
-
-    <div id="deleteModal" class="modal">
-        <div class="modal-container">
-            <h2>Deletar Post</h2>
-            <!-- Confirmação de exclusão -->
-            <h3>Realmente deseja deletar esse Post?</h3>
-            <button onclick="confirmDelete()">Confirmar</button>
-            <button onclick="closeModal('deleteModal')">Cancelar</button>
         </div>
     </div>
 

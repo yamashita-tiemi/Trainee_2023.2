@@ -23,7 +23,7 @@ class PostsController
             'content' => $_POST['conteudopost'],
             'author' => $_POST['autorpost'],
             'created_at' => $_POST['data_criacaopost'],
-            'imagempost' => $_POST['imagempost'],
+            // 'imagempost' => $_POST['imagempost'],
         ];
 
         App::get('database')->insert('posts', $parametros);
@@ -38,7 +38,7 @@ class PostsController
             'conteudopost' => $_POST['conteudopost'],
             'autorpost' => $_POST['autorpost'],
             'data_criacaopost' => $_POST['data_criacaopost'],
-            'imagempost' => $_POST['imagempost'],
+            // 'imagempost' => $_POST['imagempost'],
         ];
 
         App::get('database')-> editPosts('posts', $POST['id'], $parametros);
@@ -47,13 +47,10 @@ class PostsController
 
 
     public function deletePosts() {
-        $id= $_POST[$id];
-        $posts = App::get('database')->delete('posts', $id);
-        $tables = [
-            'posts' => $posts,
-        ];
+        $id = $_POST['id'];
+        App::get('database')->delete('posts', $id);
 
-        header('Location: /admin/postListadm');
+        header('Location: /');
     }
 
 

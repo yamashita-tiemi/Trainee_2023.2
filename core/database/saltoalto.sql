@@ -33,8 +33,7 @@ CREATE TABLE `posts` (
   `content` text NOT NULL,
   `image` mediumtext NOT NULL,
   `created_at` date NOT NULL,
-  `author` int(50) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `author` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -59,7 +58,6 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `foreignKey` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -74,9 +72,6 @@ ALTER TABLE `users`
 --
 -- Constraints for table `posts`
 --
-ALTER TABLE `posts`
-  ADD CONSTRAINT `foreignKey` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
