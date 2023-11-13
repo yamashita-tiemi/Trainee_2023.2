@@ -1,7 +1,7 @@
 <?php 
 
     require 'mod_create_posts.html';
-    require_once '../../Controllers/PostsController.php';
+    // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
 
     $controller = new PostsController();

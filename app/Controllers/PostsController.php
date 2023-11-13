@@ -5,13 +5,13 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-require_once '../../../core/App.php';
+// require_once '../../../core/App.php';
 
 class PostsController
 {
 
     public function view() {
-        $posts = App::get('saltoalto')->selectAll('posts');
+        $posts = App::get('database')->selectAll('posts');
         $tables = [
             'posts' => $posts,
         ];
@@ -30,7 +30,7 @@ class PostsController
         ];
 
         var_dump(compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
-        App::get('saltoalto')->insert('posts', compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
+        App::get('database')->insert('posts', compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
 
         return redirect('posts');
 
@@ -47,14 +47,14 @@ class PostsController
             'imagempost' => $_POST['imagempost'],
         ];
 
-        App::get('saltoalto')-> editPosts('posts', $POST['id'], $parametros);
+        App::get('database')-> editPosts('posts', $POST['id'], $parametros);
         header('Location: /admin/postListadm', $tables);
     }
 
 
     public function deletePosts() {
         $id= $_POST[$id];
-        $posts = App::get('saltoalto')->delete('posts', $id);
+        $posts = App::get('database')->delete('posts', $id);
         $tables = [
             'posts' => $posts,
         ];
