@@ -9,9 +9,10 @@
     <title>Sidebar</title>
 </head>
 <body>
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
 <div class="nav1">
             <div class="botao">
-                <i class="bi bi-list"></i>
+                <i class="bi bi-list" id="bb" ></i>
              </div>
              
              <div class="navegador">
@@ -41,6 +42,48 @@
                 </div>
 </div>
 
+<div class="pqp">
+<div class="nav">
+    <h1>DASHBOARD</h1>
+    <div class="logoutBtn" >
+        <h2>Log Out</h2>
+        <img src="../../../public/assets/dashboard/🦆 icon _log out_.svg" alt="Log Out">
+    </div>
+</div>
+<div class="cards">
+    <div>
+        <img src="../../../public/assets/dashboard/🦆 icon _people_.svg" alt="Users">
+        <h2>Gerenciar Usuários</h2>
+    </div>
+    <div>
+        <img src="../../../public/assets/dashboard/🦆 icon _file add_.svg" alt="Posts">
+        <h2>Gerenciar Publicações</h2>
+    </div>
+</div>
+</div>
+
+
+<script>
+    const buttonEl = document.querySelector("#bb")
+    const sideEl = document.querySelector(".nav1")
+    const telaEl = document.querySelector(".pqp")
+
+    const opened = () => {
+        document.getElementById('overlay').style.display = 'block';
+
+        if(sideEl.classList.contains("grande")){
+        sideEl.classList.remove("grande")
+        telaEl.classList.remove("css")
+        
+        }else{
+        sideEl.classList.add("grande")   
+        telaEl.classList.add("css")
+        }
+    }
+
+
+    buttonEl.addEventListener("click",opened)
+</script>
 
 </body>
 </html>
