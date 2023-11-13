@@ -13,7 +13,7 @@ body {
     background-color: #f4f4f4;
 }
 
-img {
+#imagem-preview {
     background-color: #6f0550;
     min-width: 60%;
     height: 50%;
@@ -23,6 +23,10 @@ img {
 
 .modal {
     display: none;
+}
+
+#createModal {
+    background-image: url(../assets/img-user-art.png);
     position: fixed;
     height: 85vh;
     width: 70vw;
@@ -33,7 +37,6 @@ img {
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url(../assets/create_modal/Frame\ 1.png);
     background-size: cover;
     z-index: 1;
 }

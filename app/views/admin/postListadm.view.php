@@ -62,19 +62,26 @@
                         </tr>
 
                         <div id="deleteModal<?=$post->id?>" class="modal">
-                            <div class="modal-container">
-                                <form id="deletepost" class="deletePost" method="post" action="/posts/delete" enctype="multipart/form-data">
-                                    <input hidden name="id" value="<?=$post->id ?>">
-                                    <h2>Deletar Post</h2>
-                                    <!-- Confirmação de exclusão -->
-                                    <h3>Realmente deseja deletar esse Post?</h3>
-                                    <button type="submit">Confirmar</button>
-                                    <button type="button" onclick="closeModal('deleteModal')">Cancelar</button>
-                                </form>
+                            <div class="modal-container-delete">
+                                <div class="ilutracao">
+                                    <img src="../../../public/assets/delete-post.png">
+                                </div>
+                                <div class="modal-container">
+                                    <form id="deletepost" class="deletePost" method="post" action="/posts/delete" enctype="multipart/form-data">
+                                        <input hidden name="id" value="<?=$post->id ?>">
+                                        <h2>Deletar Post</h2>
+                                        <!-- Confirmação de exclusão -->
+                                        <h3>Realmente deseja deletar esse Post?</h3>
+                                        <div class="botoes">
+                                            <button type="submit">Confirmar</button>
+                                            <button type="button" onclick="closeModal('deleteModal')">Cancelar</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
 
-                        <div id="editModal<?=$post->id?>" class="modal">
+                        <div id="editModal<?=$post->id?>" class="modal editmodal">
                             <!--botão de fechar o modal-->
                             <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
                             <div class="modal-container-edit">
@@ -115,6 +122,28 @@
                                 </div>
                                 <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
                             </div>
+                        </div>
+
+                        <div id="viewModal" class="modal">
+                            <button onclick="closeModal('viewModal-post')" class="fechar"><i class="bi bi-x-lg"></i></button>
+                            <div class="modal-container-visualizacao-post">
+                                <div class="dados-visualiz-post">
+                                    <h2>Dados do Post</h2>
+                                    <div id="PostInfo">
+
+                                        <p><strong>Id:</strong> <span id="viewid"></span></p>
+                                        <p><strong>Titulo:</strong> <span id="viewtitulo"></span></p>
+                                        <p><strong>Conteúdo:</strong> <span id="viewConteúdo"></span></p>
+                                        <img id="modalImage" src="" alt="Imagem do Post">
+                                        <p><strong>Data de Criação:</strong> <span id="modalDate"></span></p>
+                                        <p><strong>Autor:</strong> <span id="modalAuthor"></span></p>
+
+                                    </div>
+                                </div>
+                                <div class="ilutracao-visualiz-post">
+                                    <img src="../../../public/assets/visualiz-post.png">
+                                </div>
+                            </div> 
                         </div>
                     <?php endforeach; ?>
                 <?php else : ?>
