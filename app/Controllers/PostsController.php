@@ -12,29 +12,23 @@ class PostsController
 
     public function view() {
         $posts = App::get('database')->selectAll('posts');
-        $tables = [
-            'posts' => $posts,
-        ];
 
-        return view('admin/postListadm', $tables);
+        return view('admin/postListadm', compact('posts'));
     }
 
 
     public function createPosts() {
         $parametros = [
-            'titulopost' => $_POST['titulopost'],
-            'conteudopost' => $_POST['conteudopost'],
-            'autorpost' => $_POST['autorpost'],
-            'data_criacaopost' => $_POST['data_criacaopost'],
+            'title' => $_POST['titulopost'],
+            'content' => $_POST['conteudopost'],
+            'author' => $_POST['autorpost'],
+            'created_at' => $_POST['data_criacaopost'],
             'imagempost' => $_POST['imagempost'],
         ];
 
-        var_dump(compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
-        App::get('database')->insert('posts', compact('titulopost', 'conteudopost', 'autorpost', 'data_criacaopost', 'imagempost'));
+        App::get('database')->insert('posts', $parametros);
 
-        return redirect('posts');
-
-        return view('admin/postListadm', $tables);
+        header('Location: /');
     }
 
 

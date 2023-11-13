@@ -11,44 +11,45 @@ function closeModal(modalId) {
     });
     document.getElementById('overlay').style.display = 'none';
 }
-function confirmarSalvarFormularioposts() {
-    var mensagem = "Você tem certeza de que deseja salvar o post?";
 
-    if (window.confirm(mensagem)) {
-        // Coletar os dados do formulário
-        var titulopost = document.getElementById("titulopost").value;
-        var conteudopost = document.getElementById("conteudopost").value;
-        var imagempost = document.getElementById("imagempost").files[0];
-        var data_criacaopost = document.getElementById("data_criacaopost").value;
-        var autorpost = document.getElementById("autorpost").value;
+// function confirmarSalvarFormularioposts() {
+//     var mensagem = "Você tem certeza de que deseja salvar o post?";
 
-        // Validar os dados do formulário, se necessário
+//     if (window.confirm(mensagem)) {
+//         // Coletar os dados do formulário
+//         var titulopost = document.getElementById("titulopost").value;
+//         var conteudopost = document.getElementById("conteudopost").value;
+//         var imagempost = document.getElementById("imagempost").files[0];
+//         var data_criacaopost = document.getElementById("data_criacaopost").value;
+//         var autorpost = document.getElementById("autorpost").value;
 
-        // Criar um objeto FormData para enviar os dados, incluindo a imagem
-        var formData = new FormData();
-        formData.append("titulopost", titulopost);
-        formData.append("conteudopost", conteudopost);
-        formData.append("imagempost", imagempost);
-        formData.append("data_criacaopost", data_criacaopost);
-        formData.append("autorpost", autorpost);
+//         // Validar os dados do formulário, se necessário
 
-        // Enviar os dados para onde você precisar (por exemplo, usando uma solicitação AJAX)
-        // Substitua "processar_post.php" pela URL ou script que processa o formulário no servidor.
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "processar_post.php", true);
-        xhr.send(formData);
+//         // Criar um objeto FormData para enviar os dados, incluindo a imagem
+//         var formData = new FormData();
+//         formData.append("titulopost", titulopost);
+//         formData.append("conteudopost", conteudopost);
+//         formData.append("imagempost", imagempost);
+//         formData.append("data_criacaopost", data_criacaopost);
+//         formData.append("autorpost", autorpost);
 
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // Processo de sucesso, você pode lidar com a resposta aqui
-                alert("Post salvo com sucesso!");
-            }
-        };
+//         // Enviar os dados para onde você precisar (por exemplo, usando uma solicitação AJAX)
+//         // Substitua "processar_post.php" pela URL ou script que processa o formulário no servidor.
+//         var xhr = new XMLHttpRequest();
+//         xhr.open("POST", "processar_post.php", true);
+//         xhr.send(formData);
 
-        // Após a conclusão, você pode fechar o modal
-        closeModal('createModal');
-    }
-}
+//         xhr.onreadystatechange = function () {
+//             if (xhr.readyState == 4 && xhr.status == 200) {
+//                 // Processo de sucesso, você pode lidar com a resposta aqui
+//                 alert("Post salvo com sucesso!");
+//             }
+//         };
+
+//         // Após a conclusão, você pode fechar o modal
+//         closeModal('createModal');
+//     }
+// }
 
 function previewImage() {
     var input = document.getElementById('imagempost');

@@ -4,8 +4,6 @@
     // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
 
-    $controller = new PostsController();
-    $controller->view();
 
 ?>
 
