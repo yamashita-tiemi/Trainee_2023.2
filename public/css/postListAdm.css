@@ -195,3 +195,291 @@ tr:hover {
         font-size: 18px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*modal delte*/
+#deleteModal {
+    font-family: 'Manjari', sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27%;
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    
+}
+.modal-container-delete {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0%
+    
+}
+.dados-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+    font-size: 1vw;
+    font-weight: 700;
+}
+.dados-delete h2{
+    margin: 0.5vw;
+    margin-top: 1.5vw;
+
+}
+.dados-delete h3{
+    margin: 0.5vw;
+    margin-bottom: 1.5vw;
+
+}
+#deleteModal .ilutracao{
+    width: 80%;
+}
+#deleteModal .ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#deleteModal .botoes button {
+    padding: 0.45vw;
+    padding-bottom: 0.2vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+    background-color: #6f0550;
+    color: #fff;
+    border: none;
+    border-radius: 0.3vw;
+    font-size: 0.95vw;
+    font-family: 'Manjari', sans-serif;
+}
+#deleteModal .botoes button:hover {
+    background-color: #a7107a;
+}
+
+
+@media screen and (min-width: 436px) and (max-width: 800px){
+    #deleteModal{
+        width: 40%;
+    }
+    #deleteModal .botoes button{
+        font-size: 1.5vw;
+        border-radius: 0.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 1.5vw;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 435px){
+    #deleteModal{
+        width: 71%;
+    }
+    #deleteModal .botoes button{
+        font-size: 3vw;
+        border-radius: 0.7vw;
+        padding: 1vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 2.8vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*visualizar usuario */
+#viewModal{
+    font-family: 'Manjari', sans-serif;
+    display: none;
+    position: fixed;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    
+}
+.modal-container-visualizacao-post {
+    background-image: url("../assets/img-visualiz.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0%
+    
+}
+#viewModal .fechar i{
+    font-size: 1.4vw;
+        
+}
+#viewModal button{
+    margin: 0.4vw;
+    padding: 0.5%;
+    width: 2.4vw;
+    background-color: #401c2a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 0.3vw;
+    justify-content: center;
+    
+}
+#viewModal button:hover {
+    background-color: #6f0550;
+}
+
+.dados-visualiz-post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88%;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.dados-visualiz-post h2{
+    border: 0.3vw solid #6f0550; /* Espessura da borda e cor (preto) */
+    padding: 0.6vw;
+    padding-bottom: 0vw;
+    margin: 0%;
+    font-size: 2vw;
+}
+#PostInfo
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.ilutracao-visualiz-post{
+    width: 40%;
+
+}
+.ilutracao-visualiz-post img{
+    width: 100%;
+}
+
+.modal-visualiz-post .fechar{
+    display: flex;
+    background-color: #dd0b64;
+    font-size: 0.8vw;
+    margin: 0.2vw;
+}
+.modal-visualiz-post .fechar:hover{
+    background-color: #dd0b6391;
+}
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    #viewModal {
+        width: 74%;
+    }
+    .modal-container-visualizacao-post {
+        flex-direction: column-reverse;
+    }
+    .dados-visualiz-post{
+        width: 92%;
+        margin-left: 0%;
+        font-size: 3.8vw;
+    }
+    .dados-visualiz-post h2{
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+        font-size: 3.5vw;
+    }
+
+
+    #viewModal .fechar i{
+        font-size: 2.6vw;
+    }
+    #viewModal button{
+        width: 3.6vw;
+    }
+}
+
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    #viewModal {
+        width: 80%;
+    }
+    .dados-visualiz-post{
+        width: 100%;
+        font-size: 2.2vw;
+    }
+    .ilutracao-visualiz-post {
+        width: 45%;
+    }
+
+    #viewModal .fechar i{
+        font-size: 1.4vw;
+            
+    }
+    #viewModal button{
+        margin: 0%;
+        padding: 0.5%;
+        width: 2.4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+}
