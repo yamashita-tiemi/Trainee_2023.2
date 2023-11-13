@@ -56,7 +56,7 @@
                             <td><?=$post->author ?></td>
                             <td>
                                 <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                                <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
+                                <button onclick="openModal('editModal<?=$post->id?>')"> <i class="bi bi-pencil-square"></i> Editar</button>
                                 <button onclick="openModal('deleteModal<?=$post->id?>')"> <i class="bi bi-trash"></i> Deletar</button>
                             </td>
                         </tr>
@@ -69,8 +69,51 @@
                                     <!-- Confirmação de exclusão -->
                                     <h3>Realmente deseja deletar esse Post?</h3>
                                     <button type="submit">Confirmar</button>
-                                    <button onclick="closeModal('deleteModal')">Cancelar</button>
+                                    <button type="button" onclick="closeModal('deleteModal')">Cancelar</button>
                                 </form>
+                            </div>
+                        </div>
+
+                        <div id="editModal<?=$post->id?>" class="modal">
+                            <!--botão de fechar o modal-->
+                            <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
+                            <div class="modal-container-edit">
+                                <!-- Formulário para criar post -->
+                                <div class="dados-edit">
+
+                                    <form class="EditarPost" method="post" action="/posts/update" enctype="multipart/form-data">
+                                        <div class="inputsContainermep">
+                                            <div class="leftmep">
+                                                <h2>Editar Post</h2>
+                                                <input hidden name="id" value="<?=$post->id ?>">
+                                                <label for="titulopost">Título:</label>
+                                                <input type="text" name="titulopost" id="titulopost" required value="<?=$post->title?>">
+                                                <br>
+                                                <label for="conteudopost">Conteúdo:</label>
+                                                <textarea name="conteudopost" id="conteudopost" required><?=$post->content?></textarea>
+                                                <br>
+                                                <label for="data_criacaopost">Data de Criação:</label>
+                                                <input type="date" name="data_criacaopost" id="data_criacaopost" required value="<?=$post->created_at?>">
+                                                <br>
+                                                <label for="autorpost">Autor:</label>
+                                                <input type="text" name="autorpost" id="autorpost" required value="<?=$post->author?>">
+                                                <br>
+                                            </div>
+                                            <div class="rightmep">
+                                                <label for="imagempost">Imagem:</label>
+                                                <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()" value="<?=$post->image?>">
+                                                <br>
+                                                <img id="imagem-previewmep" src="" style="max-width: 30vw;">
+                                            </div>
+                                        </div>
+                                        <div class="botoesinferioresmep" style="display: flex; width: 100%; justify-content: center;">
+                                            <button type="reset">Limpar seções</button>
+                                            <!--botão de salvar o formulario-->
+                                            <button id="botaosalvar" type="submit">Salvar</button> 
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -91,47 +134,6 @@
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
 
     <!-- Modais -->
-    <div id="editModal" class="modal">
-        <!--botão de fechar o modal-->
-        <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
-        <div class="modal-container-edit">
-            <!-- Formulário para criar post -->
-            <div class="dados-edit">
-
-                <form class="EditarPost" method="post" enctype="multipart/form-data">
-                    <div class="inputsContainermep">
-                        <div class="leftmep">
-                            <h2>Editar Post</h2>
-                            <label for="titulopost">Título:</label>
-                            <input type="text" name="titulopost" id="titulopost" required>
-                            <br>
-                            <label for="conteudopost">Conteúdo:</label>
-                            <textarea name="conteudopost" id="conteudopost" required></textarea>
-                            <br>
-                            <label for="data_criacaopost">Data de Criação:</label>
-                            <input type="date" name="data_criacaopost" id="data_criacaopost" required>
-                            <br>
-                            <label for="autorpost">Autor:</label>
-                            <input type="text" name="autorpost" id="autorpost" required>
-                            <br>
-                        </div>
-                        <div class="rightmep">
-                            <label for="imagempost">Imagem:</label>
-                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
-                            <br>
-                            <img id="imagem-previewmep" src="" style="max-width: 30vw;">
-                        </div>
-                    </div>
-                    <div class="botoesinferioresmep" style="display: flex; width: 100%; justify-content: center;">
-                        <button type="reset">Limpar seções</button>
-                        <!--botão de salvar o formulario-->
-                        <button id="botaosalvar" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
-                    </div>
-                </form>
-            </div>
-             <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
-        </div>
-    </div>
 
 <script src="../../../public/js/mod_edit_posts.js"></script>
 

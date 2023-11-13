@@ -11,7 +11,7 @@ use App\Core\Router;
     // $router->get('admin', 'ExampleController@edit');
     // $router->get('admin', 'ExampleController@delete');
 
-    $router->get('', 'PostsController@view');
+    $router->get('posts', 'PostsController@view');
     $router->post('posts/create', 'PostsController@createPosts');
     $router->post('posts/delete', 'PostsController@deletePosts');
     $router->post('posts/update', 'PostsController@editPosts');

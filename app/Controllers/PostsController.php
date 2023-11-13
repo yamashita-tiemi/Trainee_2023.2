@@ -5,8 +5,6 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-// require_once '../../../core/App.php';
-
 class PostsController
 {
 
@@ -28,21 +26,21 @@ class PostsController
 
         App::get('database')->insert('posts', $parametros);
 
-        header('Location: /');
+        header('Location: /posts');
     }
 
 
     public function editPosts() {
         $parametros = [
-            'titulopost' => $_POST['titulopost'],
-            'conteudopost' => $_POST['conteudopost'],
-            'autorpost' => $_POST['autorpost'],
-            'data_criacaopost' => $_POST['data_criacaopost'],
+            'title' => $_POST['titulopost'],
+            'content' => $_POST['conteudopost'],
+            'author' => $_POST['autorpost'],
+            'created_at' => $_POST['data_criacaopost'],
             // 'imagempost' => $_POST['imagempost'],
         ];
 
-        App::get('database')-> editPosts('posts', $POST['id'], $parametros);
-        header('Location: /admin/postListadm', $tables);
+        App::get('database')-> editPosts('posts', $_POST['id'], $parametros);
+        header('Location: /posts');
     }
 
 
@@ -50,7 +48,7 @@ class PostsController
         $id = $_POST['id'];
         App::get('database')->delete('posts', $id);
 
-        header('Location: /');
+        header('Location: /posts');
     }
 
 
