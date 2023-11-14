@@ -11,14 +11,12 @@ body{
     background-color:antiquewhite;
 }
 
-
 .nav1{
-    
+    display: block;
     background: linear-gradient(180deg, #7A114D -18.17%, #D40863 100%);
     position: fixed;
     top: 6%;
     left: 1%;
-    z-index: 1;
     overflow: hidden;
     flex-direction: column;
     width:50px;
@@ -26,10 +24,28 @@ body{
     margin-top: 1.6%;
     margin-left: 5px;
     border-radius: 10px;
+    z-index: 3;
+    transition: all .2s;
+    
 }
 
+
+#overlay {
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2;
+    cursor: pointer; 
+  }
 .nav1.grande{
     width: 250px;
+    transition: all .2s;
 }
 
 .botao{
@@ -110,13 +126,13 @@ a{
 
 
 
-@media (min-width:281px) and (max-width: 319px){
-   
-    .nav1.grande{
-        width: 100%;
-        height: 100%;
-    }
-    
+@media  (max-width: 320px){
+   .nav1{
+    width: 30px;
+   }
+   .nav1.grande{
+    width: 180px;
+   }
     .navegador{
         height: 74%;
     }
@@ -139,16 +155,16 @@ a{
     }
     .icone{
         font-size: 20px;
-        margin-left: 6px;
+        margin-left: 3px;
     }
     .botao{
         font-size: 24px;
-        margin-left: 6px;
+        margin-left: 2px;
     }
    
 }
 
-@media screen and (max-width:768px){
+@media (min-width:321px) and (max-width:768px){
     .nav1.grande{
         width: 170px;
     }
@@ -209,14 +225,15 @@ h2 {
     font-size: 2.4vw;
 }
 
-.pqp{
+.redimensiona{
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    }
+    transition: all .2s;
+}
 
-.pqp.css{
+.redimensiona.css{
     width: 80%;
     margin-left: 20%;
 }
@@ -327,7 +344,7 @@ h2 {
         font-size: 3.5vh;
     }
 
-    .pqp.css{
+    .redimensiona.css{
         width: 80%;
         margin-left: 24%;
     }

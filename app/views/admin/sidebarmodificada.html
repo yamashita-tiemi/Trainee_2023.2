@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Sidebar</title>
 </head>
+
 <body>
-    <div id="overlay" class="overlay" onclick="closeModal()"></div>
-<div class="nav1">
+    <div id="overlay"></div>
+
+    
+        <div class="nav1">
             <div class="botao">
-                <i class="bi bi-list" id="bb" ></i>
-             </div>
-             
-             <div class="navegador">
+                <i class="bi bi-list" id="bb"></i>
+            </div>
+
+            <div class="navegador">
                 <a href="#">
                     <span class="icone"><i class="bi bi-columns-gap"></i></span>
                     <span class="texto">Dashboard</span>
                 </a>
-           
+
                 <a href="#">
                     <span class="icone"><i class="bi bi-people-fill"></i></span>
                     <span class="texto">Usuários</span>
                 </a>
-            
+
                 <a href="#">
                     <span class="icone"><i class="bi bi-file-earmark-post"></i></span>
                     <span class="texto">Posts</span>
                 </a>
-           
-            
             </div>
+
+            <div class="logout">
+                <a href="#">
+                    <span class="icone"><i class="bi bi-box-arrow-right"></i></span>
+                    <span class="texto">Log Out</span>
+                </a>
+            </div>
+        </div>
+
+
+    <div class="redimensiona">
+        <div class="nav">
+            <h1>DASHBOARD</h1>
+            <div class="logoutBtn">
+                <h2>Log Out</h2>
+                <img src="../../../public/assets/dashboard/🦆 icon _log out_.svg" alt="Log Out">
+            </div>
+        </div>
+        <div class="cards">
+            <div>
+                <img src="../../../public/assets/dashboard/🦆 icon _people_.svg" alt="Users">
+                <h2>Gerenciar Usuários</h2>
+            </div>
+            <div>
+                <img src="../../../public/assets/dashboard/🦆 icon _file add_.svg" alt="Posts">
+                <h2>Gerenciar Publicações</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const buttonEl = document.querySelector("#bb")
+        const sideEl = document.querySelector(".nav1")
+        const telaEl = document.querySelector(".redimensiona")
+
+        const opened = () => {
             
-                <div class="logout">
-                    <a href="#">
-                        <span class="icone"><i class="bi bi-box-arrow-right"></i></span>
-                        <span class="texto">Log Out</span>
-                    </a>
-                </div>
-</div>
 
-<div class="pqp">
-<div class="nav">
-    <h1>DASHBOARD</h1>
-    <div class="logoutBtn" >
-        <h2>Log Out</h2>
-        <img src="../../../public/assets/dashboard/🦆 icon _log out_.svg" alt="Log Out">
-    </div>
-</div>
-<div class="cards">
-    <div>
-        <img src="../../../public/assets/dashboard/🦆 icon _people_.svg" alt="Users">
-        <h2>Gerenciar Usuários</h2>
-    </div>
-    <div>
-        <img src="../../../public/assets/dashboard/🦆 icon _file add_.svg" alt="Posts">
-        <h2>Gerenciar Publicações</h2>
-    </div>
-</div>
-</div>
+            if (sideEl.classList.contains("grande")) {
+                sideEl.classList.remove("grande")
+                telaEl.classList.remove("css")
+                document.getElementById("overlay").style.display = "none";
 
 
-<script>
-    const buttonEl = document.querySelector("#bb")
-    const sideEl = document.querySelector(".nav1")
-    const telaEl = document.querySelector(".pqp")
-
-    const opened = () => {
-        document.getElementById('overlay').style.display = 'block';
-
-        if(sideEl.classList.contains("grande")){
-        sideEl.classList.remove("grande")
-        telaEl.classList.remove("css")
-        
-        }else{
-        sideEl.classList.add("grande")   
-        telaEl.classList.add("css")
+            } else {
+                sideEl.classList.add("grande")
+                telaEl.classList.add("css")
+                document.getElementById('overlay').style.display = 'block';
+            }
         }
-    }
 
+        buttonEl.addEventListener("click", opened)
 
-    buttonEl.addEventListener("click",opened)
-</script>
+        
+        
+            
+       
+    </script>
 
 </body>
+
 </html>
