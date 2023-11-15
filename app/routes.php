@@ -15,7 +15,8 @@ use App\Core\Router;
     $router->get('posts', 'PostsController@posts');
     $router->get('posts/pvi', 'PostsController@pvi');
 
-    $router->get('login', 'PostsController@login');
+    $router->get('loginpage', 'PostsController@loginpage');
+    $router->post('login', 'PostsController@login');
 
     $router->get('admin', 'PostsController@admin');
     $router->get('admin/posts', 'PostsController@view');

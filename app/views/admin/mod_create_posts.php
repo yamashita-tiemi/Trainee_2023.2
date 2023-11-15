@@ -53,7 +53,7 @@
                         </div>
                         <div class="right">
                             <label for="imagempost">Imagem:</label>
-                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
+                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" required onchange="previewImage()">
                             <br>
                             <img id="imagem-preview" src="" style="max-width: 300px;">
                         </div>

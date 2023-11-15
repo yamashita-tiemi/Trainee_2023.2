@@ -24,22 +24,21 @@
          </form>
       </div>
       
-   <form class="formlogin">
+   <form id="redirect6" class="formlogin" action="/login" method="post">
       <img src="../../../public/assets/logo-saltoalto.png">
 
          <h3 class="cadastrar">Login</h3>
          <label>E-mail:</label>
          <br>
-         <input type="text" placeholder="exemplo@email.com" >
+         <input name="emaillogin" type="text" placeholder="exemplo@email.com">
          <br><br>
          <label>Senha:</label>
          <br>
-         <input type="password" placeholder="*********" >
+         <input name="senhalogin" type="password" placeholder="*********" >
          <br><br>
 
-      <a href="">
+      <a onclick="redirect6()" href="#">
       <div class="efetuarcadastro">
-         <button hidden type="submit"></button>
         <h3>Entrar</h3>
       </div>
       </a>
@@ -50,6 +49,9 @@
    <script>
         function redirect5() {
             document.getElementById('redirect5').submit();
+        }
+        function redirect6() {
+            document.getElementById('redirect6').submit();
         }
    </script>
 

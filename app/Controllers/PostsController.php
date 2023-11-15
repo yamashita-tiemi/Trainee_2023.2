@@ -91,13 +91,31 @@ class PostsController
         return view('site/postIndividual', compact('posts'), compact('users'));
     }
 
-    public function login() {
+    public function loginpage() {
         $posts = App::get('database')->selectAll('posts');
         $users = App::get('database')->selectAll('users');
 
         return view('site/login', compact('posts'), compact('users'));
     }
 
+    public function login() {
+        $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+
+        $emaillog = $_POST['emaillogin'];
+        $senhalog = $_POST['senhalogin'];
+
+        foreach ($users as $user) {
+            if ($user->email === $emaillog && $user->password === $senhalog) {
+                header('Location: /admin');
+            }
+
+            else {
+                echo "Email ou senha incorretos";
+                die();
+            }
+        }
+    }
 
     public function index()
     {
