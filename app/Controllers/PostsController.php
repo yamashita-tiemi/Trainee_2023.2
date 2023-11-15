@@ -52,6 +52,13 @@ class PostsController
         header('Location: /posts');
     }
 
+    public function landingPage() {
+        $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+
+        return view('site/landingPage', compact('posts'), compact('users'));
+    }
+
 
     public function index()
     {

@@ -1,3 +1,13 @@
+<?php 
+
+    require 'navbar.html';
+    // require_once '../../Controllers/PostsController.php';
+    use App\Controllers\PostsController;
+
+
+?>
+
+
 <!DOCTYPE html>
 <!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
@@ -133,6 +143,11 @@
       </div>  
     </div>
 
+    <?php 
+
+      require 'footer.html';
+    
+    ?>
 
   </body>
 </html>
