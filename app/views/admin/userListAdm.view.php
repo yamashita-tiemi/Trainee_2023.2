@@ -47,8 +47,8 @@
                     <td><?= $user->email ?></td>
                     <td>
                         <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="modalEdit('editModal', '<?=$user->id?>', '<?=$user->name?>', '<?=$user->email?>', '<?=$user->password?>')"></i>editarf</button>
-                        <button onclick="openModal('deleteModal', <?= $user->id ?>)"> <i class="bi bi-trash"></i> Deletar</button>
+                        <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
+                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -70,6 +70,7 @@
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
     <!-- Modais -->
+    <?php foreach ($users as $user) : ?>
     <div id="createModal" class="modal">
         <button onclick="closeModal('createModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
@@ -109,11 +110,14 @@
         <button onclick="closeModal('viewModal')" class="fechar"><i class="bi bi-x-lg"></i></button>
         <div class="modal-container-visualizacao">
             <div class="dados-visualiz">
+                
                 <h2>Dados do Usuário</h2>
                 <div id="userInfo">
-                    <p><strong>Id:</strong> <span id="viewid"></span></p>
-                    <p><strong>Nome:</strong> <span id="viewUsername"></span></p>
-                    <p><strong>Email:</strong> <span id="viewUseremail"></span></p>
+                <form class="container" action="users/view" method="GET">
+                    <p><strong>Id:</strong> <span id="viewid"><?= $user->id ?></span></p>
+                    <p><strong>Nome:</strong> <span id="viewUsername" ><?= $user->name ?></span></p>
+                    <p><strong>Email:</strong> <span id="viewUseremail"><?= $user->email ?></span></p>
+                    </form>
                 </div>
             </div>
             <div class="ilutracao-visualiz">
@@ -140,7 +144,7 @@
                     <input type="text"placeholder="Nome Sobrenome" id="editusername" name="name" value ="<?=$user->name?>" >
 
                     <label for="edituseremail">Novo Email</label>
-                    <input type="email" placeholder="exemplo@email.com" id="edituseremail" name="email" >
+                    <input type="email" placeholder="exemplo@email.com" id="edituseremail" name="email" value ="<?=$user->email?>">
 
                     <label for="userpassword">Senha do Usuário</label>
                     <div class="olhinho">
@@ -184,6 +188,7 @@
             </div>
         </div>
     </div>
+    <?php endforeach; ?>
     <script src="../../../public/js/userListAdm.js"></script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

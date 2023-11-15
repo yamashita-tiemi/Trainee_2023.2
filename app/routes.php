@@ -8,6 +8,7 @@ use UsuariosController;
     $router->get('', 'ExampleController@index');
 
     $router->get('users', 'UsuariosController@view');
+    $router->get('users/view', 'UsuariosController@view');
     $router->post('users/create', 'UsuariosController@createUsers');
     $router->post('users/update', 'UsuariosController@update'); 
     $router->post('users/delete', 'UsuariosController@delete'); 
