@@ -15,21 +15,24 @@
              </div>
              
              <div class="navegador">
-                <a href="#">
-                    <span class="icone"><i class="bi bi-columns-gap"></i></span>
-                    <span class="texto">Dashboard</span>
-                </a>
-           
-                <a href="#">
-                    <span class="icone"><i class="bi bi-people-fill"></i></span>
-                    <span class="texto">Usuários</span>
-                </a>
-            
-                <a href="#">
-                    <span class="icone"><i class="bi bi-file-earmark-post"></i></span>
-                    <span class="texto">Posts</span>
-                </a>
-           
+                <form id="redirect1" action="/admin">
+                    <a onclick="redirect1()" href="#">
+                        <span class="icone"><i class="bi bi-columns-gap"></i></span>
+                        <span class="texto">Dashboard</span>
+                    </a>
+                </form>
+                <form id="redirect2" action="/admin/users">
+                    <a onclick="redirect2()" href="#">
+                        <span class="icone"><i class="bi bi-people-fill"></i></span>
+                        <span class="texto">Usuários</span>
+                    </a>
+                </form>    
+                <form id="redirect3" action="/admin/posts">
+                    <a onclick="redirect3()" href="#">
+                        <span class="icone"><i class="bi bi-file-earmark-post"></i></span>
+                        <span class="texto">Posts</span>
+                    </a>
+                </form>
             
             </div>
             
@@ -44,4 +47,19 @@
 
 
 </body>
+
+
+<script>
+    function redirect1() {
+      document.getElementById('redirect1').submit();
+    }
+    function redirect2() {
+      document.getElementById('redirect2').submit();
+    }
+    function redirect3() {
+      document.getElementById('redirect3').submit();
+    }
+</script>
+
+
 </html>

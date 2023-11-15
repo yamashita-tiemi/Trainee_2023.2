@@ -11,13 +11,14 @@ use App\Core\Router;
     // $router->get('admin', 'ExampleController@edit');
     // $router->get('admin', 'ExampleController@delete');
 
-    $router->get('index', 'PostsController@landingPage');
-    $router->get('index/posts', 'PostsController@posts');
-    $router->get('index/posts/pvi', 'PostsController@pvi');
+    $router->get('', 'PostsController@landingPage');
+    $router->get('posts', 'PostsController@posts');
+    $router->get('posts/pvi', 'PostsController@pvi');
 
-    $router->get('posts', 'PostsController@view');
-    $router->post('posts/create', 'PostsController@createPosts');
-    $router->post('posts/delete', 'PostsController@deletePosts');
-    $router->post('posts/update', 'PostsController@editPosts');
+    $router->get('admin', 'PostsController@admin');
+    $router->get('admin/posts', 'PostsController@view');
+    $router->post('admin/posts/create', 'PostsController@createPosts');
+    $router->post('admin/posts/delete', 'PostsController@deletePosts');
+    $router->post('admin/posts/update', 'PostsController@editPosts');
 
 ?>

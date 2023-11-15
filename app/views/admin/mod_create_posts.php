@@ -24,7 +24,7 @@
             <!-- Formulário para criar post -->
             <div class="dados-Criar">
 
-                <form class="CriarPost" method="post" action="/posts/create" enctype="multipart/form-data">
+                <form class="CriarPost" method="post" action="admin/posts/create" enctype="multipart/form-data">
                     <div class="inputsContainer">
                         <div class="left">
                             <h2>Criar um Novo Post</h2>

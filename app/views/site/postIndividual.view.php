@@ -1,4 +1,11 @@
+<?php 
 
+    require 'navbar.html';
+    // require_once '../../Controllers/PostsController.php';
+    use App\Controllers\PostsController;
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -78,4 +85,11 @@
         </div>
     <?php endforeach; ?>
 </body>
+
+<?php 
+
+require 'footer.html';
+
+?>
+
 </html>

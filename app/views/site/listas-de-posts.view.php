@@ -1,3 +1,12 @@
+<?php 
+
+    require 'navbar.html';
+    // require_once '../../Controllers/PostsController.php';
+    use App\Controllers\PostsController;
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,7 +24,7 @@
     <?php foreach ($posts as $post) : ?>
 
         <div class="cardContainer">
-            <form action="/index/posts/pvi">
+            <form action="/posts/pvi">
                 <div class="cardHover">
                     <input name="post-id" hidden value="<?=$post->id?>">
                     <button type="submit">
@@ -55,6 +64,12 @@
         </ul>
     </div>
 </body>
+
+<?php 
+
+require 'footer.html';
+
+?>
 
 </html>
 

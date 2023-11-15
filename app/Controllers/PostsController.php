@@ -15,6 +15,13 @@ class PostsController
         return view('admin/postListadm', compact('posts'), compact('users'));
     }
 
+    public function admin() {
+        $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+
+        return view('admin/dashboard', compact('posts'), compact('users'));
+    }
+
 
     public function createPosts() {
         $parametros = [
@@ -27,7 +34,7 @@ class PostsController
 
         App::get('database')->insert('posts', $parametros);
 
-        header('Location: /posts');
+        header('Location: admin/posts');
     }
 
 
@@ -41,7 +48,7 @@ class PostsController
         ];
 
         App::get('database')-> editPosts('posts', $_POST['id'], $parametros);
-        header('Location: /posts');
+        header('Location: admin/posts');
     }
 
 
@@ -49,7 +56,7 @@ class PostsController
         $id = $_POST['id'];
         App::get('database')->delete('posts', $id);
 
-        header('Location: /posts');
+        header('Location: admin/posts');
     }
 
     public function landingPage() {

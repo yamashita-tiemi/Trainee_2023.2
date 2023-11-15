@@ -4,6 +4,7 @@
     // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
 
+    require 'sidebar.html';
 
 ?>
 
@@ -75,7 +76,7 @@
                                     <img src="../../../public/assets/delete-post.png">
                                 </div>
                                 <div class="modal-container">
-                                    <form id="deletepost" class="deletePost" method="post" action="/posts/delete" enctype="multipart/form-data">
+                                    <form id="deletepost" class="deletePost" method="post" action="admin/posts/delete" enctype="multipart/form-data">
                                         <input hidden name="id" value="<?=$post->id ?>">
                                         <h2>Deletar Post</h2>
                                         <!-- Confirmação de exclusão -->
@@ -100,7 +101,7 @@
                                 <!-- Formulário para criar post -->
                                 <div class="dados-edit">
 
-                                    <form class="EditarPost" method="post" action="/posts/update" enctype="multipart/form-data">
+                                    <form class="EditarPost" method="post" action="admin/posts/update" enctype="multipart/form-data">
                                         <div class="inputsContainermep">
                                             <div class="leftmep">
                                                 <h2>Editar Post</h2>
