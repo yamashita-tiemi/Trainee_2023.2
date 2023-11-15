@@ -51,8 +51,8 @@ function closeModal(modalId) {
 //     }
 // }
 
-function previewImage() {
-    var input = document.getElementById('imagempost');
+function previewImagemep() {
+    var input = document.getElementById('imagempostmep');
     var preview = document.getElementById('imagem-previewmep');
     // var fundoimg = document.getElementById('fundoimgmep');
     // fundoimg.style.display = 'block';

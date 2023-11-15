@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/mod_ed_posts_2.css">
+    <link rel="stylesheet" href="../../../public/css/postListAdm.css">
     <link rel="stylesheet" href="../../../public/css/mod_ed_posts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,48 +17,59 @@
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
 
     <!-- Modais -->
-    <div id="editModal" class="modal">
+    <div id="editModal<?=$post->id?>" class="modal editmodal">
         <!--botão de fechar o modal-->
         <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
         <div class="modal-container-edit">
             <!-- Formulário para criar post -->
             <div class="dados-edit">
 
-                <form class="EditarPost" action="/posts/editPosts" method="post" enctype="multipart/form-data">
+                <form class="EditarPost" method="post" action="/admin/posts/update" enctype="multipart/form-data">
                     <div class="inputsContainermep">
                         <div class="leftmep">
                             <h2>Editar Post</h2>
+                            <input hidden name="id" value="<?=$post->id ?>">
                             <label for="titulopost">Título:</label>
-                            <input type="text" name="titulopost" id="titulopost" required>
+                            <input type="text" name="titulopost" id="titulopost" required value="<?=$post->title?>">
                             <br>
                             <label for="conteudopost">Conteúdo:</label>
-                            <textarea name="conteudopost" id="conteudopost" required></textarea>
+                            <textarea name="conteudopost" id="conteudopost" required><?=$post->content?></textarea>
                             <br>
                             <label for="data_criacaopost">Data de Criação:</label>
-                            <input type="date" name="data_criacaopost" id="data_criacaopost" required>
+                            <input type="date" name="data_criacaopost" id="data_criacaopost" required value="<?=$post->created_at?>">
                             <br>
                             <label for="autorpost">Autor:</label>
-                            <input type="text" name="autorpost" id="autorpost" required>
+                                <?php if (isset($users) && !empty($users)) : ?>
+                                        <select name="autorpost" required>
+                                            <?php foreach ($users as $user) :?>
+                                                <option value="<?=$user->id ?>">
+                                                    <?php echo $user->name?>
+                                                </option>
+                                            <?php endforeach; ?>    
+                                        </select>
+                                <?php else : ?>
+                                    <option></option>
+                                <?php endif; ?>
                             <br>
                         </div>
                         <div class="rightmep">
                             <label for="imagempost">Imagem:</label>
                             <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
                             <br>
-                            <img id="imagem-previewmep" src="" style="max-width: 30vw;">
+                            <img id="imagem-preview" src="" style="max-width: 300px;">
                         </div>
                     </div>
                     <div class="botoesinferioresmep" style="display: flex; width: 100%; justify-content: center;">
                         <button type="reset">Limpar seções</button>
                         <!--botão de salvar o formulario-->
-                        <button id="botaosalvar" type="submit" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
+                        <button id="botaosalvar" type="submit">Salvar</button> 
                     </div>
                 </form>
             </div>
-             <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
+            <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
         </div>
     </div>
 
 </body>
-<script src="../../../public/js/mod_edit_posts.js"></script>
+<script src="../../../public/js/postListadm.js"></script>
 </html>

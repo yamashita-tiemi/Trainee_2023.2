@@ -39,16 +39,6 @@
                 </tr>
             </thead>
             <tbody class="tborypla">
-            <!-- <tr>
-                    <td>1</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
-                </tr> -->
                 <?php if (isset($posts) && !empty($posts)) : ?>
                     <?php foreach ($posts as $post) : ?>
                         <tr>
@@ -76,7 +66,7 @@
                                     <img src="../../../public/assets/delete-post.png">
                                 </div>
                                 <div class="modal-container">
-                                    <form id="deletepost" class="deletePost" method="post" action="admin/posts/delete" enctype="multipart/form-data">
+                                    <form id="deletepost" class="deletePost" method="post" action="/admin/posts/delete" enctype="multipart/form-data">
                                         <input hidden name="id" value="<?=$post->id ?>">
                                         <h2>Deletar Post</h2>
                                         <!-- Confirmação de exclusão -->
@@ -93,59 +83,11 @@
 
                         <!-- MODAL DE EDITAR -->
 
+                        <?php 
 
-                        <div id="editModal<?=$post->id?>" class="modal editmodal">
-                            <!--botão de fechar o modal-->
-                            <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
-                            <div class="modal-container-edit">
-                                <!-- Formulário para criar post -->
-                                <div class="dados-edit">
+                                require 'mod_edit_posts.php'
 
-                                    <form class="EditarPost" method="post" action="/admin/posts/update" enctype="multipart/form-data">
-                                        <div class="inputsContainermep">
-                                            <div class="leftmep">
-                                                <h2>Editar Post</h2>
-                                                <input hidden name="id" value="<?=$post->id ?>">
-                                                <label for="titulopost">Título:</label>
-                                                <input type="text" name="titulopost" id="titulopost" required value="<?=$post->title?>">
-                                                <br>
-                                                <label for="conteudopost">Conteúdo:</label>
-                                                <textarea name="conteudopost" id="conteudopost" required><?=$post->content?></textarea>
-                                                <br>
-                                                <label for="data_criacaopost">Data de Criação:</label>
-                                                <input type="date" name="data_criacaopost" id="data_criacaopost" required value="<?=$post->created_at?>">
-                                                <br>
-                                                <label for="autorpost">Autor:</label>
-                                                    <?php if (isset($users) && !empty($users)) : ?>
-                                                            <select name="autorpost" required>
-                                                                <?php foreach ($users as $user) :?>
-                                                                    <option value="<?=$user->id ?>">
-                                                                        <?php echo $user->name?>
-                                                                    </option>
-                                                                <?php endforeach; ?>    
-                                                            </select>
-                                                    <?php else : ?>
-                                                        <option></option>
-                                                    <?php endif; ?>
-                                                <br>
-                                            </div>
-                                            <div class="rightmep">
-                                                <label for="imagempost">Imagem:</label>
-                                                <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()" value="<?=$post->image?>">
-                                                <br>
-                                                <img id="imagem-previewmep" src="" style="max-width: 30vw;">
-                                            </div>
-                                        </div>
-                                        <div class="botoesinferioresmep" style="display: flex; width: 100%; justify-content: center;">
-                                            <button type="reset">Limpar seções</button>
-                                            <!--botão de salvar o formulario-->
-                                            <button id="botaosalvar" type="submit">Salvar</button> 
-                                        </div>
-                                    </form>
-                                </div>
-                                <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
-                            </div>
-                        </div>
+                        ?>
 
 
                         <!-- MODAL DE VISUALIZAÇÃO -->
@@ -201,9 +143,9 @@
 
     <!-- Modais -->
 
-<script src="../../../public/js/mod_edit_posts.js"></script>
-
 </body>
+
+<script src="../../../public/js/mod_edit_posts.js"></script>
 <script src="../../../public/js/postListadm.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

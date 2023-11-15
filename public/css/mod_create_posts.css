@@ -10,7 +10,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #cfb698
 }
 
 #imagem-preview {
@@ -78,6 +78,10 @@ input, textarea {
 .escolherImg {
     width: 80%;
     font-size: 1vw;
+}
+
+.right img {
+    object-fit: cover;
 }
 
 textarea {
