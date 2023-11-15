@@ -28,6 +28,39 @@ class UsuariosController{
         return redirect('users');
 
     }
+    public function update ()
+    {
+        $parameters = [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+        ];
 
-    
+        App::get('database')->edit($_POST['id'], 'users', $parameters);
+        return redirect('users');
+
+        
+    }
+
+    public function delete()
+    {
+        
+        App::get('database')->delete('users', $_POST['id']);
+        return redirect('users');
+    }
+
+
+
+
+    private function getUserById($users, $userId)
+    {
+        foreach ($users as $user) {
+            if ($user->id === $userId) {
+                return $user;
+            }
+        }
+
+        return null;
+    }
+
 }

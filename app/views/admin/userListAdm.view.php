@@ -1,3 +1,14 @@
+<?php 
+
+    
+    // require_once '../../Controllers/PostsController.php';
+    use App\Controllers\UsuariosController;
+
+   
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,58 +28,47 @@
         <button onclick="openModal('createModal')"> <i class="bi bi-person-add"></i> Criar Usuário</button>
     </div>
     <div class="tableconteinerula">
-        <table>
-            <thead>
-                <tr>
-                    <th class="idula">ID</th>
-                    <th>Usuário</th>
-                    <th>Email</th>
-                    <th class="actionula">Ações</th>
-                </tr>
-            </thead>
-            <tbody class="tbory">
+    <table>
+    <thead>
+        <tr>
+            <th class="idula">ID</th>
+            <th>Usuário</th>
+            <th>Email</th>
+            <th class="actionula">Ações</th>
+        </tr>
+    </thead>
+    <tbody class="tbory">
 
-                <!--</tr>
-                    <td>01</td>
-                    <td>Lorem</td>
-                    <td>ipsum@saltoalto.com</td>
+        <?php if (isset($users) && !empty($users)) : ?>
+            <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td><?= $user->id ?></td>
+                    <td><?= $user->name ?></td>
+                    <td><?= $user->email ?></td>
                     <td>
                         <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
+                        <button onclick="modalEdit('editModal', '<?=$user->id?>', '<?=$user->name?>', '<?=$user->email?>', '<?=$user->password?>')"></i>editarf</button>
+                        <button onclick="openModal('deleteModal', <?= $user->id ?>)"> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
-                </tr>*/-->
-
-                <?php if (isset($users) && !empty($users)) : ?>
-                    <?php foreach ($users as $user) : ?>
-                        <tr>
-                            <td><?=$user->id ?></td>
-                            <td><?=$user->name ?></td>
-                            <td><?=$user->email ?></td>
-                            <td>
-                                <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                                <button onclick="openModal('editModal')"> <i class="bi bi-pencil-square"></i> Editar</button>
-                                <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <tr>
-                        <td colspan="4">Nenhum usuario disponível</td>
-                    </tr>
-                <?php endif; ?>
-                
-            </tbody>
-            <tfoot>
-                <tr>
                 </tr>
-            </tfoot>
-        </table>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <tr>
+                <td colspan="4">Nenhum usuário disponível</td>
+            </tr>
+        <?php endif; ?>
+        
+    </tbody>
+    <tfoot>
+        <tr>
+        </tr>
+    </tfoot>
+</table>
+
     </div>
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
-
     <!-- Modais -->
     <div id="createModal" class="modal">
         <button onclick="closeModal('createModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -80,9 +80,9 @@
                 <h2>Criar Usuário</h2>
                 <form id="criaruser" class="criaruser" method="post" action="/users/create">
                     <label for="username">Nome de Usuário:</label>
-                    <input type="text"placeholder="Nome Sobrenome"  name="name">
+                    <input type="text"placeholder="Nome Sobrenome"  id="username" name="name">
                     <label for="useremail">Email do Usuário</label>
-                    <input type="email" placeholder="exemplo@email.com"  name="email">
+                    <input type="email" placeholder="exemplo@email.com" id="useremail"  name="email">
                     <label for="userpassword">Senha do Usuário</label>
                     <div class="olhinho">
                         <input type="password" placeholder="********" id="userpassword" name="password" oninput="inputChanged('userpassword')">
@@ -133,22 +133,24 @@
             </div>  
             <div class="dados-edit">
                 <h2>Editar Informações do Usuário</h2>
-                <form id="edituser" class="edituser" >
+                <form id="edituser" class="edituser" method="post" action="users/update" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?= $user->id ?>">
+               
                     <label for="editusername">Novo Nome de Usuário:</label>
-                    <input type="text"placeholder="Nome Sobrenome" id="editusername" name="editusername">
+                    <input type="text"placeholder="Nome Sobrenome" id="editusername" name="name" value ="<?=$user->name?>" >
 
                     <label for="edituseremail">Novo Email</label>
-                    <input type="email" placeholder="exemplo@email.com" id="edituseremail" name="edituseremail">
+                    <input type="email" placeholder="exemplo@email.com" id="edituseremail" name="email" >
 
                     <label for="userpassword">Senha do Usuário</label>
                     <div class="olhinho">
-                        <input type="password" placeholder="********" id="userpasswordnovo" name="userpasswordnovo" oninput="inputChanged('userpasswordnovo')">
+                        <input type="password" placeholder="********" id="userpasswordnovo" name="password" oninput="inputChanged('userpasswordnovo')">
                         <i class="bi bi-eye-fill" id="btn-senha-userpasswordnovo" style="display: none;" onclick="mostrarSenha('userpasswordnovo')"></i>
                     </div>
 
                     <label for="passwordconfirm">Confirme a Senha</label>
                     <div class="olhinho">
-                        <input type="password" placeholder="********" id="passwordconfirmnovo" name="passwordconfirmnovo" oninput="inputChanged('passwordconfirmnovo')">
+                        <input type="password" placeholder="********" id="passwordconfirmnovo" name="password" oninput="inputChanged('passwordconfirmnovo')">
                         <i class="bi bi-eye-fill" id="btn-senha-passwordconfirmnovo" style="display: none;" onclick="mostrarSenha('passwordconfirmnovo')"></i>
                     </div>
                     
@@ -159,7 +161,7 @@
             
         </div>
         
-        <button form="edituser" id="botaosalvaredit" onclick="confirmarSalvarFormulario()" >Salvar</button> 
+        <button type="submit" form="edituser" id="botaosalvaredit" onclick="confirmarSalvarFormulario()" >Salvar</button> 
     </div>
 
     <div id="deleteModal" class="modal">
@@ -169,17 +171,19 @@
             </div>
 
             <div class="dados-delete">
-                <h2>Deletar Usuário</h2>
-                <!-- Confirmação de exclusão -->
-                <h3>Realmente deseja deletar esse Usuário?</h3>
-                <div class="botoes">
-                    <button onclick="confirmDelete()">Confirmar</button>
-                    <button onclick="closeModal('deleteModal')">Cancelar</button>
+                <form class="container" action="/users/delete" method="POST">
+                <input type="hidden" name="id" value="" >
+                    <h2>Deletar Usuário</h2>
+                    <!-- Confirmação de exclusão -->
+                    <h3>Realmente deseja deletar esse Usuário?</h3>
+                    <div class="botoes">
+                        <button type="submit" onsubmit="" ">Confirmar</button>
+                        <button type="submit" onsubmit="" onclick="closeModal('deleteModal')">Cancelar</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
-
     <script src="../../../public/js/userListAdm.js"></script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

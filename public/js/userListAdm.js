@@ -3,7 +3,39 @@ function openModal(modalId) {
     document.getElementById(modalId).style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
 }
+function modalEdit(m, id, userName, email) {
+    if (m === 'editModal') {
+        openModal(m);
 
+        // Preencher os campos do formulário de edição com os valores recebidos
+      /*  document.getElementById('edituserid').value = id;
+        document.getElementById('editusername').value = userName;
+        document.getElementById('edituseremail').value = email;*/
+    } else {
+        console.log("Erro no índice");
+    }
+}
+
+/*
+function open_modal(m, i)
+{   
+    console.log("valor de I: "+ i);
+    modal = document.getElementById(m);
+    span = document.getElementsByClassName('close')[i];
+
+    modal.style.display = "block";
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+*/
 function closeModal(modalId) {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
@@ -55,8 +87,3 @@ function confirmarSalvarFormularioedit() {
     }
 }
 
-function confirmDelete() {	
-    // Adicione aqui a lógica para excluir o usuario    
-    alert('Post deletado com sucesso!');	    
-    closeModal('deleteModal');	   
-}
