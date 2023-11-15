@@ -59,6 +59,21 @@ class PostsController
         return view('site/landingPage', compact('posts'), compact('users'));
     }
 
+    public function posts() {
+        $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+
+        return view('site/listas-de-posts', compact('posts'), compact('users'));
+    }
+
+    public function pvi() {
+        $id = $_GET['post-id'];
+        $posts = App::get('database')->selectOne('posts', $id);
+        $users = App::get('database')->selectAll('users');
+
+        return view('site/postIndividual', compact('posts'), compact('users'));
+    }
+
 
     public function index()
     {

@@ -12,6 +12,8 @@ use App\Core\Router;
     // $router->get('admin', 'ExampleController@delete');
 
     $router->get('index', 'PostsController@landingPage');
+    $router->get('index/posts', 'PostsController@posts');
+    $router->get('index/posts/pvi', 'PostsController@pvi');
 
     $router->get('posts', 'PostsController@view');
     $router->post('posts/create', 'PostsController@createPosts');
