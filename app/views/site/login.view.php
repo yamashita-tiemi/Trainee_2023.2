@@ -39,6 +39,7 @@
 
       <a href="">
       <div class="efetuarcadastro">
+         <button hidden type="submit"></button>
         <h3>Entrar</h3>
       </div>
       </a>

@@ -160,7 +160,7 @@
 
                                         <p><strong>Id:</strong> <span id="viewid"><?=$post->id ?></span></p>
                                         <p><strong>Titulo:</strong> <span id="viewtitulo"> <?=$post->title ?></span></p>
-                                        <p><strong>Conteúdo:</strong> <span id="viewConteúdo"> <?=$post->content ?></span></p>
+                                        <p><strong>Conteúdo:</strong> <span id="viewConteudo"> <?=$post->content ?></span></p>
                                         <img id="modalImage" src="" alt="Imagem do Post">
                                         <p><strong>Data de Criação:</strong> <span id="modalDate"> <?=$post->created_at ?></span></p>
                                         <?php if (isset($users) && !empty($users)) : ?>
