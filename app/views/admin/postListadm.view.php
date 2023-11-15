@@ -1,6 +1,6 @@
 <?php 
 
-    require 'mod_create_posts.html';
+    require 'mod_create_posts.php';
     // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
 
@@ -53,7 +53,11 @@
                         <tr>
                             <td><?=$post->id ?></td>
                             <td><?=$post->title ?></td>
-                            <td><?=$post->author ?></td>
+                            <?php foreach ($users as $user) : ?>
+                               <?php if ($post->author === $user->id) : ?>
+                                    <td><?=$user->name ?></td>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                             <td>
                                 <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
                                 <button onclick="openModal('editModal<?=$post->id?>')"> <i class="bi bi-pencil-square"></i> Editar</button>
@@ -103,7 +107,16 @@
                                                 <input type="date" name="data_criacaopost" id="data_criacaopost" required value="<?=$post->created_at?>">
                                                 <br>
                                                 <label for="autorpost">Autor:</label>
-                                                <input type="text" name="autorpost" id="autorpost" required value="<?=$post->author?>">
+                                                    <?php if (isset($users) && !empty($users)) : ?>
+                                                        <?php foreach ($users as $user) :?>
+                                                            <!-- <input type="text" name="autorpost" id="autorpost" required value=" //$post->author"> -->
+                                                            <select name="autorpost" value="<?=$user->id?>">
+                                                                <option value="<?php echo $user->id ?>"><?php echo $user->name?></option>
+                                                            </select>
+                                                        <?php endforeach; ?>
+                                                    <?php else : ?>
+                                                        <option></option>
+                                                    <?php endif; ?>
                                                 <br>
                                             </div>
                                             <div class="rightmep">

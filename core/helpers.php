@@ -6,9 +6,10 @@
  * @param  string $name
  * @param  array  $data
  */
-function view($name, $data = [])
+function view($name, $data = [], $data2 = [])
 {
     extract($data);
+    extract($data2);
 
     return require "app/views/{$name}.view.php";
 }

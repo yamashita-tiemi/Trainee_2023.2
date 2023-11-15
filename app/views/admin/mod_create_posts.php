@@ -15,9 +15,8 @@
 <body>
 
     <!-- Sobreposição -->
-    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+    <!-- <div id="overlay" class="overlay" onclick="closeModal()"></div> -->
 
-    <!-- Modais -->
     <div id="createModal" class="modal">
         <!--botão de fechar o modal-->
         <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
@@ -39,7 +38,16 @@
                             <input type="date" name="data_criacaopost" id="data_criacaopost" required>
                             <br>
                             <label for="autorpost">Autor (Usuário):</label>
-                            <input type="text" name="autorpost" id="autorpost" required>
+                            <?php if (isset($users) && !empty($users)) : ?>
+                                <?php foreach ($users as $user) :?>
+                                    <!-- <input type="text" name="autorpost" id="autorpost" required value=" //$post->author"> -->
+                                    <select name="autorpost" value="<?=$user->id?>">
+                                        <option value="<?php echo $user->id ?>"><?php echo $user->name?></option>
+                                    </select>
+                                <?php endforeach; ?>
+                            <?php else : ?>
+                                <option></option>
+                            <?php endif; ?>
                             <br>
                         </div>
                         <div class="right">

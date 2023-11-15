@@ -10,8 +10,9 @@ class PostsController
 
     public function view() {
         $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
 
-        return view('admin/postListadm', compact('posts'));
+        return view('admin/postListadm', compact('posts'), compact('users'));
     }
 
 
