@@ -129,17 +129,29 @@ div.cardContainer:hover .blurrableDiv{
     opacity: 1;
 }
 
-.cardHover img{
+.cardHover .cardimg{
     
-    height: 15%;
+    height: 100%;
     width: auto;
     filter: none;
-
     transition: all 0.15s;
 }
 
-.cardHover img:hover{
-    height: 16%;
+.cardbut {
+    height: 4vw;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.cardbut:hover {
+    height: 4.3vw;
+}
+
+.cardHover .cardimg:hover{
+    height: 100%;
     cursor: pointer;
 }
 .options ul{
