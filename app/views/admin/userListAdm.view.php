@@ -46,149 +46,151 @@
                     <td><?= $user->name ?></td>
                     <td><?= $user->email ?></td>
                     <td>
-                        <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal')"> <i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal')"> <i class="bi bi-trash"></i> Deletar</button>
+                        <button onclick="openModal('viewModal<?= $user->id ?>')"> <i class="bi bi-eye"></i> Visualizar</button>
+                        <button onclick="openModal('editModal<?= $user->id ?>')"> <i class="bi bi-person-gear"></i> Editar</button>
+                        <button onclick="openModal('deleteModal<?= $user->id ?>')"> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
                 </tr>
-            <?php endforeach; ?>
-        <?php else : ?>
-            <tr>
-                <td colspan="4">Nenhum usuário disponível</td>
-            </tr>
-        <?php endif; ?>
-        
-    </tbody>
-    <tfoot>
-        <tr>
-        </tr>
-    </tfoot>
-</table>
-
-    </div>
-
-    <!-- Sobreposição -->
-    <div id="overlay" class="overlay" onclick="closeModal()"></div>
-    <!-- Modais -->
-    <?php foreach ($users as $user) : ?>
-    <div id="createModal" class="modal">
-        <button onclick="closeModal('createModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-          </svg></button>
-
-        <div class="modal-container">
-            <div class="dados">
-                <h2>Criar Usuário</h2>
-                <form id="criaruser" class="criaruser" method="post" action="/users/create">
-                    <label for="username">Nome de Usuário:</label>
-                    <input type="text"placeholder="Nome Sobrenome"  id="username" name="name">
-                    <label for="useremail">Email do Usuário</label>
-                    <input type="email" placeholder="exemplo@email.com" id="useremail"  name="email">
-                    <label for="userpassword">Senha do Usuário</label>
-                    <div class="olhinho">
-                        <input type="password" placeholder="********" id="userpassword" name="password" oninput="inputChanged('userpassword')">
-                        <i class="bi bi-eye-fill" id="btn-senha-userpassword" style="display: none;" onclick="mostrarSenha('userpassword')"></i>
-                    </div>
-
-                    <label for="passwordconfirm">Confirme a Senha</label>
-                    <div class="olhinho">
-                        <input type="password" placeholder="********" id="passwordconfirm" name="passwordconfirm" oninput="inputChanged('passwordconfirm')">
-                        <i class="bi bi-eye-fill" id="btn-senha-passwordconfirm" style="display: none;" onclick="mostrarSenha('passwordconfirm')"></i>
-                    </div>
-                    <button type="reset">Limpar seções</button>
-                </form> 
-            </div>
-            <div class="ilutracao">
-                <img src="../../../public/assets/ilustracao_user.png">
-            </div>
-        </div>
-
-        <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
-    </div>
-
-    <div id="viewModal" class="modal">
-        <button onclick="closeModal('viewModal')" class="fechar"><i class="bi bi-x-lg"></i></button>
-        <div class="modal-container-visualizacao">
-            <div class="dados-visualiz">
+                <!-- Sobreposição -->
+                <div id="overlay" class="overlay" onclick="closeModal()"></div>
+                <!-- Modais -->
                 
-                <h2>Dados do Usuário</h2>
-                <div id="userInfo">
-                <form class="container" action="users/view" method="GET">
-                    <p><strong>Id:</strong> <span id="viewid"><?= $user->id ?></span></p>
-                    <p><strong>Nome:</strong> <span id="viewUsername" ><?= $user->name ?></span></p>
-                    <p><strong>Email:</strong> <span id="viewUseremail"><?= $user->email ?></span></p>
-                    </form>
+                
+                <div id="viewModal<?= $user->id ?>" class="viewModal  modal">
+                    <button onclick="closeModal('viewModal')" class="fechar"><i class="bi bi-x-lg"></i></button>
+                    <div class="modal-container-visualizacao">
+                        <div class="dados-visualiz">
+                            
+                            <h2>Dados do Usuário</h2>
+                            <div id="userInfo">
+                            <form class="container" action="users/view" method="GET">
+                                <p><strong>Id:</strong> <span id="viewid"><?= $user->id ?></span></p>
+                                <p><strong>Nome:</strong> <span id="viewUsername" ><?= $user->name ?></span></p>
+                                <p><strong>Email:</strong> <span id="viewUseremail"><?= $user->email ?></span></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="ilutracao-visualiz">
+                            <img src="../../../public/assets/ilustracao-visualiz.png">
+                        </div>
+                    </div> 
                 </div>
-            </div>
-            <div class="ilutracao-visualiz">
-                <img src="../../../public/assets/ilustracao-visualiz.png">
-            </div>
-        </div> 
-    </div>
-
-    <div class="modal" id="editModal">
-        <button onclick="closeModal('editModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-          </svg></button>
-          
-        <div class="modal-container-edit">
-            <div class="ilutracao-edit">
-                <img src="../../../public/assets/img-edit-user-iconn.png">
-            </div>  
-            <div class="dados-edit">
-                <h2>Editar Informações do Usuário</h2>
-                <form id="edituser" class="edituser" method="post" action="users/update" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?= $user->id ?>">
-               
-                    <label for="editusername">Novo Nome de Usuário:</label>
-                    <input type="text"placeholder="Nome Sobrenome" id="editusername" name="name" value ="<?=$user->name?>" >
-
-                    <label for="edituseremail">Novo Email</label>
-                    <input type="email" placeholder="exemplo@email.com" id="edituseremail" name="email" value ="<?=$user->email?>">
-
-                    <label for="userpassword">Senha do Usuário</label>
-                    <div class="olhinho">
-                        <input type="password" placeholder="********" id="userpasswordnovo" name="password" oninput="inputChanged('userpasswordnovo')">
-                        <i class="bi bi-eye-fill" id="btn-senha-userpasswordnovo" style="display: none;" onclick="mostrarSenha('userpasswordnovo')"></i>
-                    </div>
-
-                    <label for="passwordconfirm">Confirme a Senha</label>
-                    <div class="olhinho">
-                        <input type="password" placeholder="********" id="passwordconfirmnovo" name="password" oninput="inputChanged('passwordconfirmnovo')">
-                        <i class="bi bi-eye-fill" id="btn-senha-passwordconfirmnovo" style="display: none;" onclick="mostrarSenha('passwordconfirmnovo')"></i>
+                
+                <div class="modal editModal" id="editModal<?= $user->id ?>" >
+                    <button onclick="closeModal('editModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                      </svg></button>
+                      
+                    <div class="modal-container-edit">
+                        <div class="ilutracao-edit">
+                            <img src="../../../public/assets/img-edit-user-iconn.png">
+                        </div>  
+                        <div class="dados-edit">
+                            <h2>Editar Informações do Usuário</h2>
+                            <form id="edituser" class="edituser" method="post" action="users/update" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="<?= $user->id ?>">
+                           
+                                <label for="editusername">Novo Nome de Usuário:</label>
+                                <input type="text"placeholder="Nome Sobrenome" id="editusername" name="name" value ="<?=$user->name?>" >
+                
+                                <label for="edituseremail">Novo Email</label>
+                                <input type="email" placeholder="exemplo@email.com" id="edituseremail" name="email" value ="<?=$user->email?>">
+                
+                                <label for="userpassword">Senha do Usuário</label>
+                                <div class="olhinho">
+                                    <input type="password" placeholder="********" id="userpasswordnovo" name="password" oninput="inputChanged('userpasswordnovo')">
+                                    <i class="bi bi-eye-fill" id="btn-senha-userpasswordnovo" style="display: none;" onclick="mostrarSenha('userpasswordnovo')"></i>
+                                </div>
+                
+                                <label for="passwordconfirm">Confirme a Senha</label>
+                                <div class="olhinho">
+                                    <input type="password" placeholder="********" id="passwordconfirmnovo" name="password" oninput="inputChanged('passwordconfirmnovo')">
+                                    <i class="bi bi-eye-fill" id="btn-senha-passwordconfirmnovo" style="display: none;" onclick="mostrarSenha('passwordconfirmnovo')"></i>
+                                </div>
+                                
+                                <button type="reset">Limpar seções</button>
+                            </form>
+                            
+                        </div>
+                        
                     </div>
                     
-                    <button type="reset">Limpar seções</button>
-                </form>
+                    <button type="submit" form="edituser" id="botaosalvaredit"  >Salvar</button> 
+                </div>
                 
+                <div id="deleteModal<?= $user->id ?>" class="deleteModal modal">
+                    <div class="modal-container-delete">
+                        <div class="ilutracao">
+                            <img src="../../../public/assets/delete-user.jpg">
+                        </div>
+                
+                        <div class="dados-delete">
+                            <form class="container" action="users/delete" method="POST">
+                            <input type="hidden" name="id" value="<?= $user->id ?>" >
+                                <h2>Deletar Usuário</h2>
+                                <!-- Confirmação de exclusão -->
+                                <h3>Realmente deseja deletar esse Usuário?</h3>
+                                <div class="botoes">
+                                    <button type="submit" onsubmit="" ">Confirmar</button>
+                                    <button type="submit" onsubmit="" onclick="closeModal('deleteModal')">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
+            <?php endforeach; ?>
+            <?php else : ?>
+                <tr>
+                    <td colspan="4">Nenhum usuário disponível</td>
+                </tr>
+                <?php endif; ?>
+                
+                
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    </tr>
+                </tfoot>
+            </table>
             
         </div>
         
-        <button type="submit" form="edituser" id="botaosalvaredit" onclick="confirmarSalvarFormulario()" >Salvar</button> 
-    </div>
-
-    <div id="deleteModal" class="modal">
-        <div class="modal-container-delete">
-            <div class="ilutracao">
-                <img src="../../../public/assets/delete-user.jpg">
-            </div>
-
-            <div class="dados-delete">
-                <form class="container" action="/users/delete" method="POST">
-                <input type="hidden" name="id" value="" >
-                    <h2>Deletar Usuário</h2>
-                    <!-- Confirmação de exclusão -->
-                    <h3>Realmente deseja deletar esse Usuário?</h3>
-                    <div class="botoes">
-                        <button type="submit" onsubmit="" ">Confirmar</button>
-                        <button type="submit" onsubmit="" onclick="closeModal('deleteModal')">Cancelar</button>
+        <div id="createModal" class="modal">
+            <button onclick="closeModal('createModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg></button>
+        
+            <div class="modal-container">
+                <div class="dados">
+                    <h2>Criar Usuário</h2>
+                    <form id="criaruser" class="criaruser" method="post" action="/users/create">
+                        <label for="username">Nome de Usuário:</label>
+                        <input type="text"placeholder="Nome Sobrenome"  id="username" name="name">
+                        <label for="useremail">Email do Usuário</label>
+                        <input type="email" placeholder="exemplo@email.com" id="useremail"  name="email">
+                        <label for="userpassword">Senha do Usuário</label>
+                        <div class="olhinho">
+                            <input type="password" placeholder="********" id="userpassword" name="password" oninput="inputChanged('userpassword')">
+                            <i class="bi bi-eye-fill" id="btn-senha-userpassword" style="display: none;" onclick="mostrarSenha('userpassword')"></i>
+                        </div>
+        
+                        <label for="passwordconfirm">Confirme a Senha</label>
+                        <div class="olhinho">
+                            <input type="password" placeholder="********" id="passwordconfirm" name="passwordconfirm" oninput="inputChanged('passwordconfirm')">
+                            <i class="bi bi-eye-fill" id="btn-senha-passwordconfirm" style="display: none;" onclick="mostrarSenha('passwordconfirm')"></i>
+                        </div>
+                        <button type="reset">Limpar seções</button>
+                    </form> 
                 </div>
-                </form>
+                <div class="ilutracao">
+                    <img src="../../../public/assets/ilustracao_user.png">
+                </div>
             </div>
+        
+            <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
         </div>
-    </div>
-    <?php endforeach; ?>
+
     <script src="../../../public/js/userListAdm.js"></script>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

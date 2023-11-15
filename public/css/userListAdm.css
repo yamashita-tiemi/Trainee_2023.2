@@ -665,7 +665,7 @@ input {
 
 
 /* editar usuario*/
-#editModal {
+.editModal {
     display: none;
     position: absolute;
     width: 64%;
@@ -717,7 +717,7 @@ input {
 .dados-edit button:hover{
     background-color: #e379c0;
 }
-#editModal .fechar{
+.editModal .fechar{
     padding-top: 0.4vw;
     padding-bottom: 0.2vw;
 } 
@@ -776,7 +776,7 @@ input {
     margin-left: 12px;
 }
 
-#editModal img{
+.editModal img{
     white-space: inherit;
     z-index: 1;
 }
@@ -787,31 +787,31 @@ input {
 }
 
 
-#editModal  button{    
+.editModal  button{    
     background-color: #b74b93;
 }
 
-#editModal  button:hover{
+.editModal  button:hover{
     background-color:  #f18fcd;
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 436px){
-    #editModal {
+    .editModal {
         width: 61%;
         border-radius: 1vw;
     }
-    #editModal .modal-container-edit {
+    .editModal .modal-container-edit {
         background-image: url("../assets/img-edit-user-responsiv.png");
         flex-direction: column-reverse;
     }
-    #editModal .dados-edit{
+    .editModal .dados-edit{
         width: 71%;
         margin-left: 0%;
         font-size: 3.3vw;
     }
 
-    #editModal input {
+    .editModal input {
         font-size: 2.8vw;
         border-radius: 3vw;
         margin-bottom: 1.3vw;
@@ -819,11 +819,11 @@ input {
         padding-right: 5.7vw;
         width: 40vw;
     }   
-    #editModal .ilutracao-edit{
+    .editModal .ilutracao-edit{
         width: 50%;
         margin-right: 8%;
     }
-    #editModal .fechar{
+    .editModal .fechar{
         padding-top: 0;
         padding-bottom: 0.4vw;
     } 
@@ -832,10 +832,10 @@ input {
         padding: 0.8vw;
         padding-bottom: 0.2vw;
     }
-    #editModal .fechar svg{
+    .editModal .fechar svg{
         width: 2vw;   
     }
-    #editModal #botaosalvaredit{
+    .editModal #botaosalvaredit{
         font-size: 2.6vw;
         letter-spacing: 0.4vw;
         border-radius: 1.7vw;
@@ -845,13 +845,13 @@ input {
 }
 
 @media screen and (min-width: 437px) and (max-width: 769px) {
-    #editModal {
+    .editModal {
         width: 80%;
     }
-    #editModal .fechar svg{
+    .editModal .fechar svg{
         width: 1.5vw;   
     }
-    #editModal .dados-edit{
+    .editModal .dados-edit{
         width: 50%;
         font-size: 2.1vw;
     }
@@ -862,7 +862,7 @@ input {
         width: 23vw;
     }
     
-    #editModal .ilutracao-edit{
+    .editModal .ilutracao-edit{
         width: 67%;
     }
     
@@ -871,7 +871,7 @@ input {
         padding: 0.6vw;
     }
     
-    #editModal #botaosalvaredit{
+    .editModal #botaosalvaredit{
         font-size: 1.9vw;
         letter-spacing: 0.2vw;
         border-radius: 1.2vw;

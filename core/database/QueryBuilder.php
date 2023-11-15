@@ -56,7 +56,7 @@ class QueryBuilder
             implode (', ', array_map(function ($parametros){
                 return "{$parametros} = :{$parametros}";
             }, array_keys($parametros))),
-            "id = :id"
+            'id = :id'
         );
 
         $parametros[ 'id'] = $id;
