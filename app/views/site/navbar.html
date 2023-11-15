@@ -23,25 +23,33 @@
                 <a href="javascript:void(0)"><h2 id="contato" class="redirectsnav">CONTATO</h2></a>
         </div>
         <div class="navButtonsContainer">
-            <div class="searchBar" tabindex="-1">
-                <input type="text" class="searchInput" tabindex="-1" height="auto" width="0%">
-                <img id="lupa" class="bottomRowIcons" src="../../../public/assets/navbar/lupa.png" height="60%" width="auto">
-            </div>
-                <div class="singIn" tabindex="-1">
+            <form>
+                <div class="searchBar" tabindex="-1">
+                    <input type="text" class="searchInput" tabindex="-1" height="auto" width="0%">
+                    <img id="lupa" class="bottomRowIcons" src="../../../public/assets/navbar/lupa.png" height="60%" width="auto">
+                </div>
+            </form>    
+            <form id="redirect4" action="/login">
+                <div onclick="redirect4()" class="singIn" tabindex="-1">
                     <img id="signIn" class="bottomRowIcons" src="../../../public/assets/navbar/person-fill.png" height="60%" width="auto">
                 </div>
-            <script src="../../../public/js/navbar.js"></script>
+            </form>
+            
         </div>
     </div>
 
     </body>
 
+    <script src="../../../public/js/navbar.js"></script>
     <script>
         function submitForm() {
           document.getElementById('blogredi').submit();
         }
         function submitForm2() {
           document.getElementById('blogredi2').submit();
+        }
+        function redirect4() {
+          document.getElementById('redirect4').submit();
         }
     </script>
       
