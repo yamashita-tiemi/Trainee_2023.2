@@ -56,10 +56,9 @@ class QueryBuilder
             implode (', ', array_map(function ($parametros){
                 return "{$parametros} = :{$parametros}";
             }, array_keys($parametros))),
-            'id = :id'
+            'id = :id' 
         );
-
-        $parametros[ 'id'] = $id;
+        $parametros['id'] = $id;
 
         try{
             $statement = $this->pdo->prepare($sql);
@@ -68,6 +67,7 @@ class QueryBuilder
             die("an error occurred when trying to uodate database : {$e->getMessage()}");
         }
     }
+
     public function delete($table, $id){
         $sql = sprintf(
             'DELETE FROM %s WHERE %s',

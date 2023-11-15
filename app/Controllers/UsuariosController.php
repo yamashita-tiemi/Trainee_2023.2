@@ -37,7 +37,7 @@ class UsuariosController{
         ];
 
         App::get('database')->edit($_POST['id'], 'users', $parameters);
-        return redirect('users');
+        header('Location: /users');
 
         
     }
