@@ -39,12 +39,13 @@
                             <br>
                             <label for="autorpost">Autor (Usuário):</label>
                             <?php if (isset($users) && !empty($users)) : ?>
-                                <?php foreach ($users as $user) :?>
-                                    <!-- <input type="text" name="autorpost" id="autorpost" required value=" //$post->author"> -->
-                                    <select name="autorpost" value="<?=$user->id?>">
-                                        <option value="<?php echo $user->id ?>"><?php echo $user->name?></option>
-                                    </select>
-                                <?php endforeach; ?>
+                                <select name="autorpost" required>
+                                    <?php foreach ($users as $user) :?>
+                                        <option value="<?=$user->id ?>">
+                                            <?php echo $user->name?>
+                                        </option>
+                                    <?php endforeach; ?>    
+                                </select>
                             <?php else : ?>
                                 <option></option>
                             <?php endif; ?>

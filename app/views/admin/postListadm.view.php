@@ -59,11 +59,15 @@
                                 <?php endif; ?>
                             <?php endforeach; ?>
                             <td>
-                                <button onclick="openModal('viewModal')"> <i class="bi bi-eye"></i> Visualizar</button>
+                                <button onclick="openModal('viewModal<?=$post->id?>')"> <i class="bi bi-eye"></i> Visualizar</button>
                                 <button onclick="openModal('editModal<?=$post->id?>')"> <i class="bi bi-pencil-square"></i> Editar</button>
                                 <button onclick="openModal('deleteModal<?=$post->id?>')"> <i class="bi bi-trash"></i> Deletar</button>
                             </td>
                         </tr>
+
+
+                        <!-- MODAL DE DELETAR -->
+
 
                         <div id="deleteModal<?=$post->id?>" class="modal">
                             <div class="modal-container-delete">
@@ -84,6 +88,10 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        <!-- MODAL DE EDITAR -->
+
 
                         <div id="editModal<?=$post->id?>" class="modal editmodal">
                             <!--botão de fechar o modal-->
@@ -108,12 +116,13 @@
                                                 <br>
                                                 <label for="autorpost">Autor:</label>
                                                     <?php if (isset($users) && !empty($users)) : ?>
-                                                        <?php foreach ($users as $user) :?>
-                                                            <!-- <input type="text" name="autorpost" id="autorpost" required value=" //$post->author"> -->
-                                                            <select name="autorpost" value="<?=$user->id?>">
-                                                                <option value="<?php echo $user->id ?>"><?php echo $user->name?></option>
+                                                            <select name="autorpost" required>
+                                                                <?php foreach ($users as $user) :?>
+                                                                    <option value="<?=$user->id ?>">
+                                                                        <?php echo $user->name?>
+                                                                    </option>
+                                                                <?php endforeach; ?>    
                                                             </select>
-                                                        <?php endforeach; ?>
                                                     <?php else : ?>
                                                         <option></option>
                                                     <?php endif; ?>
@@ -137,19 +146,31 @@
                             </div>
                         </div>
 
-                        <div id="viewModal" class="modal">
+
+                        <!-- MODAL DE VISUALIZAÇÃO -->
+
+
+                        <div id="viewModal<?=$post->id?>" class="modal">
                             <button onclick="closeModal('viewModal-post')" class="fechar"><i class="bi bi-x-lg"></i></button>
                             <div class="modal-container-visualizacao-post">
                                 <div class="dados-visualiz-post">
                                     <h2>Dados do Post</h2>
                                     <div id="PostInfo">
 
-                                        <p><strong>Id:</strong> <span id="viewid"></span></p>
-                                        <p><strong>Titulo:</strong> <span id="viewtitulo"></span></p>
-                                        <p><strong>Conteúdo:</strong> <span id="viewConteúdo"></span></p>
+                                        <p><strong>Id:</strong> <span id="viewid"><?=$post->id ?></span></p>
+                                        <p><strong>Titulo:</strong> <span id="viewtitulo"> <?=$post->title ?></span></p>
+                                        <p><strong>Conteúdo:</strong> <span id="viewConteúdo"> <?=$post->content ?></span></p>
                                         <img id="modalImage" src="" alt="Imagem do Post">
-                                        <p><strong>Data de Criação:</strong> <span id="modalDate"></span></p>
-                                        <p><strong>Autor:</strong> <span id="modalAuthor"></span></p>
+                                        <p><strong>Data de Criação:</strong> <span id="modalDate"> <?=$post->created_at ?></span></p>
+                                        <?php if (isset($users) && !empty($users)) : ?>
+                                                <?php foreach ($users as $user) :?>
+                                                    <?php if ($post->author === $user->id) : ?>
+                                                        <p><strong>Autor:</strong> <span id="modalAuthor"><?php echo $user->name?></span></p>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                        <?php else : ?>
+                                            <p><strong>Autor:</strong> <span id="modalAuthor"></span></p>
+                                        <?php endif; ?>
 
                                     </div>
                                 </div>
@@ -158,6 +179,8 @@
                                 </div>
                             </div> 
                         </div>
+
+
                     <?php endforeach; ?>
                 <?php else : ?>
                     <tr>
@@ -178,14 +201,6 @@
     <!-- Modais -->
 
 <script src="../../../public/js/mod_edit_posts.js"></script>
-
-    <div id="viewModal" class="modal">
-        <div class="modal-container">
-            <h2>Visualizar Post</h2>
-            <!-- Lista de posts -->
-            <button onclick="closeModal('viewModal')">Fechar</button>
-        </div>
-    </div>
 
 </body>
 <script src="../../../public/js/postListadm.js"></script>
