@@ -33,7 +33,7 @@
             </form>
             <div class="blurrableDiv">
                 <div class="imgContainer">
-                    <img class="backgroundImg" src="../../../public/assets/adalovelace.webp">
+                    <img class="backgroundImg" src="<?=$post->image?>">
                 </div>
                 <div class="absoluteTitleContainer">
                     <h1><?=$post->title?></h1>

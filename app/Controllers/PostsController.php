@@ -24,31 +24,41 @@ class PostsController
 
 
     public function createPosts() {
+        $caminho_temporario = $_FILES['imagempost']['tmp_name'];
+        $nome_original = $_FILES['imagempost']['name'];
+        $diretorio_destino = "../../public/images/";
+        move_uploaded_file($caminho_temporario, "../../htdocs/Trainee/public/images/" . $nome_original);
+        $caminho = $diretorio_destino . $nome_original;
         $parametros = [
             'title' => $_POST['titulopost'],
             'content' => $_POST['conteudopost'],
             'author' => $_POST['autorpost'],
             'created_at' => $_POST['data_criacaopost'],
-            // 'imagempost' => $_POST['imagempost'],
+            'image' => $caminho,
         ];
 
         App::get('database')->insert('posts', $parametros);
 
-        header('Location: admin/posts');
+        header('Location: /admin/posts');
     }
 
 
     public function editPosts() {
+        $caminho_temporario = $_FILES['imagempost']['tmp_name'];
+        $nome_original = $_FILES['imagempost']['name'];
+        $diretorio_destino = "../../public/images/";
+        move_uploaded_file($caminho_temporario, "../../htdocs/Trainee/public/images/" . $nome_original);
+        $caminho = $diretorio_destino . $nome_original;
         $parametros = [
             'title' => $_POST['titulopost'],
             'content' => $_POST['conteudopost'],
             'author' => $_POST['autorpost'],
             'created_at' => $_POST['data_criacaopost'],
-            // 'imagempost' => $_POST['imagempost'],
+            'image' => $caminho,
         ];
 
         App::get('database')-> editPosts('posts', $_POST['id'], $parametros);
-        header('Location: admin/posts');
+        header('Location: /admin/posts');
     }
 
 
@@ -56,7 +66,7 @@ class PostsController
         $id = $_POST['id'];
         App::get('database')->delete('posts', $id);
 
-        header('Location: admin/posts');
+        header('Location: /admin/posts');
     }
 
     public function landingPage() {

@@ -70,7 +70,7 @@
             </div>
         <div class="corpopvi">
             <div class="imagedivpvi">
-                <img class="opacityimgpvi" alt="Imagem do post" src="../../../public/imagens/Ada_lovelace 1.png">
+                <img class="opacityimgpvi" alt="Imagem do post" src="<?=$post->image?>">
                 <figcaption>Criadora do primeiro programa de computadores da história.</figcaption>
             </div>
             <p>
