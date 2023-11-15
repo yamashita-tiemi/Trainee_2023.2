@@ -43,7 +43,6 @@ function previewImage() {
         reader.onload = function (e) {
             preview.src = e.target.result;
         };
-        alert('Post deletado com sucesso!');
         reader.readAsDataURL(input.files[0]);
     } else {
         preview.src = ""; // Limpa a visualização se nenhum arquivo for selecionado
@@ -60,7 +59,6 @@ function previewImagemep(id) {
         reader.onload = function (e) {
             preview.src = e.target.result;
         };
-        alert('Post deletado com sucesso!');
         reader.readAsDataURL(input.files[0]);
     } else {
         preview.src = ""; // Limpa a visualização se nenhum arquivo for selecionado
