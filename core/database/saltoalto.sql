@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2023 at 08:32 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Tempo de geração: 15/11/2023 às 03:03
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `saltoalto`
+-- Banco de dados: `saltoalto`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Estrutura para tabela `posts`
 --
 
 CREATE TABLE `posts` (
@@ -33,13 +33,20 @@ CREATE TABLE `posts` (
   `content` text NOT NULL,
   `image` mediumtext NOT NULL,
   `created_at` date NOT NULL,
-  `author` int(50) NOT NULL
+  `author` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `content`, `image`, `created_at`, `author`) VALUES
+(9, 'aaaaa', 'aaaaa', '', '2023-11-14', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estrutura para tabela `users`
 --
 
 CREATE TABLE `users` (
@@ -50,28 +57,55 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Despejando dados para a tabela `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
+(2, 'aurea', 'aurea@linda.com', 'aaaa');
+
+--
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `posts`
+-- Índices de tabela `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id`) USING BTREE,
+  ADD KEY `foregnKey` (`author`);
 
 --
--- Indexes for table `users`
+-- Índices de tabela `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- Constraints for table `posts`
+-- AUTO_INCREMENT de tabela `posts`
 --
+ALTER TABLE `posts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de tabela `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `foregnKey` FOREIGN KEY (`author`) REFERENCES `users` (`id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
