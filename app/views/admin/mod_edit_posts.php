@@ -53,10 +53,10 @@
                             <br>
                         </div>
                         <div class="rightmep">
-                            <label for="imagempost">Imagem:</label>
-                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
+                            <label for="imagempostmep">Imagem:</label>
+                            <input class="escolherImg" type="file" name="imagempost" id="imagempostmep<?=$post->id?>" accept="image/*" onchange="previewImagemep(<?=$post->id?>)">
                             <br>
-                            <img id="imagem-preview" src="" style="max-width: 300px;">
+                            <img class="imagem-previewmep" id="imagem-previewmep<?=$post->id?>" src="<?=$post->image?>" style="max-width: 300px;">
                         </div>
                     </div>
                     <div class="botoesinferioresmep" style="display: flex; width: 100%; justify-content: center;">

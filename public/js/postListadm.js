@@ -49,3 +49,20 @@ function previewImage() {
         preview.src = ""; // Limpa a visualização se nenhum arquivo for selecionado
     }
 }
+
+function previewImagemep(id) {
+    var input = document.getElementById('imagempostmep' + id);
+    var preview = document.getElementById('imagem-previewmep' + id);
+    
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+        };
+        alert('Post deletado com sucesso!');
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        preview.src = ""; // Limpa a visualização se nenhum arquivo for selecionado
+    }
+}
