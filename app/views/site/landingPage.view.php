@@ -1,9 +1,6 @@
 <?php 
 
-    require 'navbar.html';
-    // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
-
 
 ?>
 
@@ -20,12 +17,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <script src="../../../public/js/landingPage.js" defer></script>
   </head>
 
 
 
   <body>
+
+  <?php 
+
+    require 'navbar.html';
+
+  ?>
 
     <div class="Titulo">
       <h1 title="Titulo do blog"> Mulheres na Ciência: Histórias de Inspiração, Inovação e Empoderamento </h1>
@@ -38,58 +40,23 @@
       <i id="left" class="fa-solid fa-angle-left" color: red></i>
 
       <ul class="carousel">
+
+      <?php foreach($posts as $post) : ?>
+
         <li class="card">
           <div class="container">
             <div class="background">
-              <div class="img"><img src="../../../public/assets/img-1.png" alt="img" draggable="false"></div>
-              <h2>Ada Lovelace foi uma matemática e escritora inglesa que viveu durante o século XIX. Reconhecida como a primeira programadora da história, Lovelace foi responsável por desenvolver</h2>
+              <div class="img"><img src="<?=$post->image?>" alt="img" draggable="false"></div>
+              <h2><?=$post->content?></h2>
             </div>
             <div class="circle">
                <a href="https://www.google.com.br/?hl=pt-BR"> Ler mais</a>
               </div> 
           </div>
         </li>
-        <li class="card">
-          <div class="container">
-            <div class="background">
-              <div class="img"><img src="../../../public/assets/img-2.jpg" alt="img" draggable="false"></div>
-              <h2>Publicação</h2>
-            </div>
-            <div class="circle">
-              <a href="https://www.google.com.br/?hl=pt-BR"> Ler mais</a>
-              </div> 
-            
-            </div>
-        </li>
-        <li class="card">
-          <div class="container">
-            <div class="background">
-              <div class="img"><img src="../../../public/assets/img-3.jpg" alt="img" draggable="false"></div>
-              <h2>Publicação</h2>
-            </div>
-            <div class="circle"><a href="https://www.google.com.br/?hl=pt-BR"> Ler mais</a></div> 
-            
-          </div>
-        </li>
-        <li class="card">
-          <div class="container">
-            <div class="background">
-              <div class="img"><img src="../../../public/assets/img-4.jpg" alt="img" draggable="false"></div>
-              <h2>Publicação</h2>
-            </div>
-            <div class="circle"><a href="https://www.google.com.br/?hl=pt-BR"> Ler mais</a></div> 
-            
-          </div>
-        </li>
-        <li class="card">
-          <div class="container">
-            <div class="background">
-              <div class="img"><img src="../../../public/assets/img-5.jpg" alt="img" draggable="false"></div>
-              <h2>Publicação</h2>
-            </div>
-            <div class="circle"><a href="https://www.google.com.br/?hl=pt-BR"> Ler mais</a></div> 
-          </div>
-        </li>
+
+        <?php endforeach; ?>
+
       </ul>
       <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
@@ -150,4 +117,5 @@
     ?>
 
   </body>
+  <script src="../../../public/js/landingPage.js"></script>
 </html>

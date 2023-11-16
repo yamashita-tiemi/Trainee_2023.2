@@ -70,7 +70,7 @@ class PostsController
     }
 
     public function landingPage() {
-        $posts = App::get('database')->selectAll('posts');
+        $posts = App::get('database')->selectForDate('posts');
         $users = App::get('database')->selectAll('users');
 
         return view('site/landingPage', compact('posts'), compact('users'));

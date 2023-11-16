@@ -4,6 +4,7 @@
 body{
     background-color: #CFB698;
     margin: 0;
+    display: grid;
 }
 
 .backgroundImg {
@@ -24,6 +25,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
+    justify-self: center;
 }
 
 div.cardContainer {
@@ -69,6 +71,10 @@ div.cardContainer:hover .blurrableDiv{
     text-wrap: wrap;
     transform: translateY(-100%);
     text-shadow: 0.08em 0.08em 0px #2e2e2e ;
+}
+
+.cardContainer form {
+    margin: 0;
 }
 
 /* Metade inferior */

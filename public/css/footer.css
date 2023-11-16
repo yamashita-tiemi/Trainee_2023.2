@@ -157,8 +157,29 @@
       Your custom CSS styles for smartphones and screens smaller than 480 px
       ========================================================================== */
    
-   @media only screen and (max-width: 768px) {
-       /* insert styles here */
+   @media only screen and (max-width: 767px) {
+
+    h2.redirects {
+        font-size: 0.8rem;
+        margin: 2% 0 2% 0;
+    }
+
+    h2.mvvTexts {
+        font-size: 0.8rem;
+    }
+
+    h2.duvidas {
+        font-size: 0.9rem;
+    }
+
+    div.socialsContainer {
+        width: 30%;
+    }
+
+    .socialsContainer a img{
+        height: 60%;
+    }
+
    }
    
    

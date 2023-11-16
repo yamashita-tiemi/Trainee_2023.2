@@ -47,6 +47,7 @@ button {
     color: #fff;
     border: none;
     border-radius: 4px;
+    font-family: 'Manjari', sans-serif;
 }
 
 button:hover {

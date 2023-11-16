@@ -45,6 +45,10 @@ div.redirectsContainer {
     z-index: 1;
 }
 
+.redirectsContainer form {
+    margin: 0;
+}
+
 div.navButtonsContainer {
     display: flex;
     flex-direction: row;
@@ -55,7 +59,7 @@ div.navButtonsContainer {
 }
 
 .navButtonsContainer form {
-    height: 5vw;
+    height: 5.5vw;
     margin: 0.1em 2% 0 0;
     display: flex;
     align-items: center;
@@ -123,7 +127,7 @@ div.searchBar.selected {
 /* Telas menores */
 
 @media screen and (max-width: 768px) {
-    h2.redirects {
+    h2.redirectsnav {
         font-size: 0.8rem;
         margin: 2% 0 2% 0;
     }
