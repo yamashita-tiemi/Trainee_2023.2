@@ -12,7 +12,9 @@ body{
 }
 
 .nav1{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
     background: linear-gradient(180deg, #7A114D -18.17%, #D40863 100%);
     position: fixed;
     top: 6%;
@@ -20,7 +22,7 @@ body{
     overflow: hidden;
     flex-direction: column;
     width:50px;
-    height: fit-content;
+    
     margin-top: 1.6%;
     margin-left: 5px;
     border-radius: 10px;
@@ -30,7 +32,7 @@ body{
 }
 
 
-#overlay {
+#overlay1 {
     position: fixed; 
     display: none; 
     width: 100%; 
@@ -43,6 +45,7 @@ body{
     z-index: 2;
     cursor: pointer; 
   }
+  
 .nav1.grande{
     width: 250px;
     transition: all .2s;
@@ -87,7 +90,7 @@ a.texto{
 
 .logout a {
     width: 250px;
-    margin-top: 18vh;
+    /*margin-top: 18vh;*/
     height: fit-content;
     display: inline-block;
     font-size: 20px;
@@ -163,7 +166,17 @@ a{
     }
    
 }
+ @media (max-width:425px){
+    .nav1{
+        height: 100vh;
+        top: 0;
+        left:0;
+        margin-top: 0;
+        margin-left: 0;
+        border-radius: 0 10px 10px 0;
+    }
 
+ }
 @media (min-width:321px) and (max-width:768px){
     .nav1.grande{
         width: 170px;

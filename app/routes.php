@@ -5,7 +5,7 @@ use App\Controllers\ExampleController;
 use App\Core\Router;
 use UsuariosController;
 
-    $router->get('', 'ExampleController@index');
+ 
 
     $router->get('users', 'UsuariosController@view');
     $router->get('users/view', 'UsuariosController@view');

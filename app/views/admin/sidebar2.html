@@ -46,57 +46,35 @@
             </div>
         </div>
 
-
-    <div class="redimensiona">
-        <div class="nav">
-            <h1>DASHBOARD</h1>
-            <div class="logoutBtn">
-                <h2>Log Out</h2>
-                <img src="../../../public/assets/dashboard/🦆 icon _log out_.svg" alt="Log Out">
-            </div>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="../../../public/assets/dashboard/🦆 icon _people_.svg" alt="Users">
-                <h2>Gerenciar Usuários</h2>
-            </div>
-            <div>
-                <img src="../../../public/assets/dashboard/🦆 icon _file add_.svg" alt="Posts">
-                <h2>Gerenciar Publicações</h2>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-        const buttonEl = document.querySelector("#bb")
-        const sideEl = document.querySelector(".nav1")
-        const telaEl = document.querySelector(".redimensiona")
-
-        const opened = () => {
-            
-
-            if (sideEl.classList.contains("grande")) {
-                sideEl.classList.remove("grande")
-                telaEl.classList.remove("css")
-                document.getElementById("overlay1").style.display = "none";
-
-
-            } else {
-                sideEl.classList.add("grande")
-                telaEl.classList.add("css")
-                document.getElementById('overlay1').style.display = 'block';
+        <script>
+            const buttonEl = document.querySelector("#bb")
+            const sideEl = document.querySelector(".nav1")
+            const telaEl = document.querySelector(".redimensiona")
+    
+            const opened = () => {
+                
+    
+                if (sideEl.classList.contains("grande")) {
+                    sideEl.classList.remove("grande")
+                    telaEl.classList.remove("css")
+                    document.getElementById('overlay1').style.display = "none";
+    
+    
+                } else {
+                    sideEl.classList.add("grande")
+                    telaEl.classList.add("css")
+                    document.getElementById('overlay1').style.display = 'block';
+                }
             }
-        }
-
-        buttonEl.addEventListener("click", opened)
-
-        
-        
+    
+            buttonEl.addEventListener("click", opened)
+    
             
-       
-    </script>
-
-</body>
-
-</html>
+            
+                
+           
+        </script>
+    
+    </body>
+    
+    </html>
