@@ -99,7 +99,7 @@ a.texto{
     line-height: 40px;
 }
 
-a{
+.nav1 a{
     transition: all .2s;
 }
 
@@ -207,12 +207,12 @@ body {
     background-color: #cfb698;
 }
 
-h1, h2 {
+.nav1 h1, .nav1 h2 {
     margin: 0;
     color: var(--text-color);
 }
 
-h1 {
+.nav1 h1 {
     align-self: flex-start;
     margin: 0;
     padding-top: 1.7%;
@@ -220,7 +220,7 @@ h1 {
     color: #d8c5ae;
 }
 
-h2 {
+.nav1 h2 {
     padding-top: 4%;
     font-weight: 400;
     font-size: 2.4vw;
@@ -340,7 +340,7 @@ h2 {
 }
 
 @media screen and (max-width: 820px) {
-    h2 {
+    .nav1 h2 {
         padding-top: 4%;
         font-size: 3.5vh;
     }

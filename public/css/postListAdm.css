@@ -331,7 +331,7 @@ tr:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #e9e6e0;
     z-index: 1;
     margin: 0%;
     padding: 0%;
@@ -398,6 +398,7 @@ tr:hover {
 }
 .ilutracao-visualiz-post img{
     width: 100%;
+    object-fit: cover;
 }
 
 .modal-visualiz-post .fechar{
@@ -415,6 +416,8 @@ tr:hover {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 10vw;
+    background-color: #401c2a;
+    width: 28vw;
 }
 
 #modalImage {
