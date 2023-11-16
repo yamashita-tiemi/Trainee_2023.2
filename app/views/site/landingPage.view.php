@@ -49,8 +49,8 @@
               <div class="img"><img src="<?=$post->image?>" alt="img" draggable="false"></div>
               <h2><?=$post->content?></h2>
             </div>
-            <form class="circle" id="redirect10<?=$post->id?>" action="/posts/pvi">
-              <div onclick="redirect10<?=$post->id?>()" class="circle">
+            <form class="circle" action="/posts/pvi" data-post-id="<?= $post->id ?>">
+              <div onclick="redirect(this)" class="circle">
                 
                   <input name="post-id" hidden value="<?=$post->id?>">
                   <a href="#"> Ler mais </a>
@@ -59,12 +59,6 @@
             </form>
           </div>
         </li>
-
-        <script>
-          function redirect10<?=$post->id?>() {
-                document.getElementById('redirect10<?=$post->id?>').submit();
-              }
-        </script>
 
         <?php endforeach; ?>
 
@@ -128,6 +122,13 @@
     ?>
 
   </body>
+
+  <script>
+    function redirect(element) {
+      const form = element.closest('form');
+      form.submit();
+    }
+  </script>
 
   <script src="../../../public/js/landingPage.js"></script>
 </html>
