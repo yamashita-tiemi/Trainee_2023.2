@@ -49,11 +49,22 @@
               <div class="img"><img src="<?=$post->image?>" alt="img" draggable="false"></div>
               <h2><?=$post->content?></h2>
             </div>
-            <div class="circle">
-               <a href="https://www.google.com.br/?hl=pt-BR"> Ler mais</a>
-              </div> 
+            <form class="circle" id="redirect10<?=$post->id?>" action="/posts/pvi">
+              <div onclick="redirect10<?=$post->id?>()" class="circle">
+                
+                  <input name="post-id" hidden value="<?=$post->id?>">
+                  <a href="#"> Ler mais </a>
+                 
+              </div>
+            </form>
           </div>
         </li>
+
+        <script>
+          function redirect10<?=$post->id?>() {
+                document.getElementById('redirect10<?=$post->id?>').submit();
+              }
+        </script>
 
         <?php endforeach; ?>
 
@@ -117,5 +128,6 @@
     ?>
 
   </body>
+
   <script src="../../../public/js/landingPage.js"></script>
 </html>
