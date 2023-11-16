@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="overlay"></div>
+    <div id="overlay1"></div>
 
     
         <div class="nav1">
@@ -50,31 +50,12 @@
         </div>
 
 
-    <script>
-        const buttonEl = document.querySelector("#bb")
-        const sideEl = document.querySelector(".nav1")
-        const telaEl = document.querySelector(".redimensiona")
-
-        const opened = () => {
-            
-
-            if (sideEl.classList.contains("grande")) {
-                sideEl.classList.remove("grande")
-                telaEl.classList.remove("css")
-                document.getElementById("overlay").style.display = "none";
 
 
-            } else {
-                sideEl.classList.add("grande")
-                telaEl.classList.add("css")
-                document.getElementById('overlay').style.display = 'block';
-            }
-        }
+</body>
 
-        buttonEl.addEventListener("click", opened)
- 
-       
-    </script>
+
+<script src="../../../public/js/sidebar.js"></script>
 
 <script>
     function redirect1() {
@@ -88,6 +69,5 @@
     }
 </script>
 
-</body>
-
+<script></script>
 </html>

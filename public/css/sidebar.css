@@ -30,7 +30,7 @@ body{
 }
 
 
-#overlay {
+#overlay1 {
     position: fixed; 
     display: none; 
     width: 100%; 
@@ -43,6 +43,7 @@ body{
     z-index: 2;
     cursor: pointer; 
   }
+
 .nav1.grande{
     width: 250px;
     transition: all .2s;

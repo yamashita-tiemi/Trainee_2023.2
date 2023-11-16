@@ -22,15 +22,13 @@
 </head>
 <body>
 
-    <div id="overlay"></div>
-
     <?php 
 
         require 'sidebar.html';
 
     ?>
 
-    <div class="redimensiona">
+    <div id="redimin" class="redimensiona">
 
     <div class="headerula">
         <h1>Lista de Posts</h1>
@@ -155,8 +153,16 @@
 
 </body>
 
+<script>
+
+    const telaEl = document.getElementById("redimin");
+
+</script>
+
 <script src="../../../public/js/mod_edit_posts.js"></script>
 <script src="../../../public/js/postListadm.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
 </html>

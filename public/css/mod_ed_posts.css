@@ -159,15 +159,30 @@ textarea {
 } */
 
 
-@media screen and (max-width: 430px) {
-    .modal {
-        height: 50%;
-    }
 
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 330px){
+
+    .modal {
+        height: 74%;
+    }
+    
     #editModal {
-        height: 70vh;
+        height: 65vh;
         background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
         border-radius: 0 0 6px 6px;
+    }
+
+    #editModal button{
+        size: 1px;
+        font-size: 1px;
+    }
+    
+    .modal-container-edit{
+        background-image: none;
     }
 
     .inputsContainermep {
@@ -178,12 +193,12 @@ textarea {
 
     .dados-edit h2 {
         margin-left: -5%;
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
     
     .EditarPost input, .EditarPost textarea {
         width: 50%;
-        font-size: 2vw;
+        font-size: 4.0vw;
     }
 
     .EditarPost textarea {
@@ -191,8 +206,10 @@ textarea {
     }
 
     .EditarPost label {
-        font-size: 2.5vw;
+        font-size: 4.0vw;
     }
+    
+    
 
     .leftmep, .rightmep {
         height: fit-content;
@@ -227,24 +244,188 @@ textarea {
     }
 
     .bi-x-lg::before {
-        font-size: 3vw;
+        
+        font-size: 5vw;
+    }
+    
+    .bi-x-lg{
+        margin: 0%;
+    }
+
+    #editModal .Fechar {
+        margin: 0px;
+        background-color: #6f054ff0;
+        padding: 3px;
+    }
+
+    .leftmep label{
+        font-size: 4vw;
+    }
+
+    .rightmep label{
+        font-size: 4vw;
+    }
+
+    .rightmep input{
+        font-size: 1.9vw;
+    }
+
+    .rightmep img{
+        height: 100px;
+    }
+
+    .leftmep textarea{
+        
+        font-size: 1.9vw;
+    }
+
+    .leftmep input{
+        font-size: 1.9vw;
+    }
+
+    .leftmep select{
+        
+        font-size: 2.0vw;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 330px) and (max-width: 436px){
+    .modal {
+        width: 74%;
+        background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
+    }
+
+    #editModal {
+        height: 70vh;
+      background-image: none;
+        border-radius: 0 0 6px 6px;
+    }
+    .modal-container-edit{
+        background-image: none;
+    }
+
+    .inputsContainermep {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dados-edit h2 {
+        margin-left: -5%;
+        font-size: 4.0vw;
+    }
+    
+    .EditarPost input, .EditarPost textarea {
+        width: 50%;
+        font-size: 4.0vw;
+    }
+
+    .EditarPost textarea {
+        height: 10vh;
+    }
+
+    .EditarPost label {
+        font-size: 4.0vw;
+    }
+
+    .leftmep, .rightmep {
+        height: fit-content;
+    }
+
+    .leftmep {
+        width: 100%;
+    }
+    
+    .rightmep {
+        height: 10%;
+        width: 100%;
+        justify-content: normal;
+    }
+
+    #imagem-previewmep {
+        height: 16vh;
+        min-width: 50%;
+    }
+
+    .ilustracaomep img{
+        max-width: 30vw;
+        max-height: 15vh;
+    }
+
+    .botoesinferioresmep {
+        margin-top: 3%;
+    }
+
+    .botoesinferioresmep button {
+        font-size: 2.0vw;
+    }
+
+    .bi-x-lg::before {
+        font-size: 9px;
     }
 
     #editModal .Fechar {
         margin: 0;
     }
-}
+    .leftmep label{
+        font-size: 4vw;
+    }
 
-@media screen and (max-width: 320px) {
+    .rightmep label{
+        font-size: 4vw;
+    }
 
-    #editModal {
-        height: 65vh;
+    .rightmep input{
+        font-size: 1.9vw;
+    }
+
+    .rightmep img{
+        height: 150px;
+    }
+
+    .leftmep textarea{
+        
+        font-size: 1.9vw;
+    }
+
+    .leftmep input{
+        font-size: 1.9vw;
+    }
+
+    .leftmep select{
+        
+        font-size: 2.0vw;
     }
 }
 
-@media screen and (max-width: 260px) {
 
-    #editModal {
-        height: 60vh;
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .modal {
+        width: 80%;
     }
+    
+    .modal-container-edit{
+        background-image: none;
+    }
+    
+    .rightmep{
+        justify-content: center;
+    }
+
+}
+
+
+
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+    .modal {
+        width: 80%;
+    }
+
 }

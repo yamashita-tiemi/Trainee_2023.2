@@ -12,11 +12,11 @@
 
     <body>
 
+    <?php require 'sidebar.html'; ?>
 
-    <div id="overlay"></div>
 
     
-        <div class="nav1">
+     <!--    <div class="nav1">
             <div class="botao">
                 <i class="bi bi-list" id="bb"></i>
             </div>
@@ -49,9 +49,9 @@
                     <span class="texto">Log Out</span>
                 </a>
             </div>
-        </div>
+        </div> -->
 
-            <div class="redimensiona">
+            <div id="redimin" class="redimensiona">
                 <div class="nav">
                     <h1>DASHBOARD</h1>
                     <div class="logoutBtn">
@@ -83,6 +83,8 @@
         function redirect2() {
           document.getElementById('userlist').submit();
         }
+
+        const telaEl = document.getElementById("redimin");
     </script>
 
     <script>
@@ -95,32 +97,6 @@
         function redirect3() {
             document.getElementById('redirect3').submit();
         }
-    </script>
-
-    <script>
-        const buttonEl = document.querySelector("#bb")
-        const sideEl = document.querySelector(".nav1")
-        const telaEl = document.querySelector(".redimensiona")
-
-        const opened = () => {
-            
-
-            if (sideEl.classList.contains("grande")) {
-                sideEl.classList.remove("grande")
-                telaEl.classList.remove("css")
-                document.getElementById("overlay").style.display = "none";
-
-
-            } else {
-                sideEl.classList.add("grande")
-                telaEl.classList.add("css")
-                document.getElementById('overlay').style.display = 'block';
-            }
-        }
-
-        buttonEl.addEventListener("click", opened)
-     
-       
     </script>
 
 </html>
