@@ -132,9 +132,9 @@
                                 <h3>Realmente deseja deletar esse Usuário?</h3>
                                 <div class="botoes">
                                     <button type="submit" onsubmit="" ">Confirmar</button>
-                                    <button type="submit" onsubmit="" onclick="closeModal('deleteModal')">Cancelar</button>
-                            </div>
-                        </form>
+                                    <button type = "button" onclick="closeModal('deleteModal')">Cancelar</button>
+                                </div>
+                            </form>
                     </div>
                 </div>
             </div>
