@@ -102,6 +102,11 @@ input, textarea {
     width: 60%;
 }
 
+.leftmep select{
+    border-radius: 5px;
+    font-size: 1.5vw;
+}
+
 .rightmep {
     justify-content: center;
     width: 40%;
@@ -172,7 +177,7 @@ input, textarea {
     
     #editModal {
         height: 65vh;
-        background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
+        background-image: url("../assets/mod_edit_posts/novo-roxo-vertical.png");
         border-radius: 0 0 6px 6px;
     }
 
@@ -245,7 +250,7 @@ input, textarea {
 
     .bi-x-lg::before {
         
-        font-size: 5vw;
+        font-size:8px;
     }
     
     .bi-x-lg{
@@ -255,11 +260,14 @@ input, textarea {
     #editModal .Fechar {
         margin: 0px;
         background-color: #6f054ff0;
-        padding: 3px;
+        padding: 6px;
+        padding-bottom: 2px;
+        padding-top: 4px;
     }
 
     .leftmep label{
         font-size: 4vw;
+        
     }
 
     .rightmep label{
@@ -306,6 +314,8 @@ input, textarea {
       background-image: none;
         border-radius: 0 0 6px 6px;
     }
+
+
     .modal-container-edit{
         background-image: none;
     }
@@ -346,6 +356,8 @@ input, textarea {
         height: 10%;
         width: 100%;
         justify-content: normal;
+        margin-top: 8px;
+
     }
 
     #imagem-previewmep {
@@ -363,7 +375,7 @@ input, textarea {
     }
 
     .botoesinferioresmep button {
-        font-size: 2.0vw;
+        font-size: 2.3vw;
     }
 
     .bi-x-lg::before {
@@ -383,10 +395,11 @@ input, textarea {
 
     .rightmep input{
         font-size: 1.9vw;
+        width: 170px;
     }
 
     .rightmep img{
-        height: 150px;
+        height: 120px;
     }
 
     .leftmep textarea{
@@ -401,6 +414,10 @@ input, textarea {
     .leftmep select{
         
         font-size: 2.0vw;
+    }
+
+    .botoesinferioresmep {
+        margin-bottom: 10px;
     }
 }
 
@@ -417,6 +434,9 @@ input, textarea {
     
     .rightmep{
         justify-content: center;
+    }
+    .rightmep img {
+        height: 170px;
     }
 
 }
