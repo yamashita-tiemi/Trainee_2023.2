@@ -14,7 +14,6 @@
     <title>Lista de Posts Admin</title>
     <link rel="stylesheet" href="../../../public/css/mod_ed_posts.css">
     <link rel="stylesheet" href="../../../public/css/postListAdm.css">
-    <link rel="stylesheet" href="../../../public/css/sidebar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +143,7 @@
         </table>
     </div>
 
-    </div>
+
 
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
