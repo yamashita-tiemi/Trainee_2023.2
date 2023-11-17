@@ -1,8 +1,6 @@
 <?php 
 
-    // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
-
 
 ?>
 
