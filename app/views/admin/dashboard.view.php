@@ -5,6 +5,11 @@
     </head>
 
     <body>
+
+        <?php
+            require 'sidebar2.html';
+        ?>
+        <div class="redimensiona" id="redimin" >
         <div class="nav">
             <h1>DASHBOARD</h1>
             <div class="logoutBtn" >
@@ -22,5 +27,10 @@
                 <h2>Gerenciar Publicações</h2>
             </div>
         </div>
+        </div>
     </body>
+    <script>
+        const telaEl = document.getElementById("redimin")
+    </script>
+
 </html>

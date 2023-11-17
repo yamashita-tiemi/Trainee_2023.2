@@ -21,17 +21,17 @@
             </div>
 
             <div class="navegador">
-                <a href="#">
+                <a  href="/admin">
                     <span class="icone"><i class="bi bi-columns-gap"></i></span>
                     <span class="texto">Dashboard</span>
                 </a>
 
-                <a href="#">
+                <a href="/admin/users">
                     <span class="icone"><i class="bi bi-people-fill"></i></span>
                     <span class="texto">Usuários</span>
                 </a>
 
-                <a href="#">
+                <a href="admin/posts">
                     <span class="icone"><i class="bi bi-file-earmark-post"></i></span>
                     <span class="texto">Posts</span>
                 </a>
@@ -49,20 +49,21 @@
         <script>
             const buttonEl = document.querySelector("#bb")
             const sideEl = document.querySelector(".nav1")
-            const telaEl = document.querySelector(".redimensiona")
+            
     
             const opened = () => {
                 
     
                 if (sideEl.classList.contains("grande")) {
-                    sideEl.classList.remove("grande")
-                    telaEl.classList.remove("css")
+                    sideEl.classList.remove("grande");
+                    telaEl.classList.remove("css");
                     document.getElementById('overlay1').style.display = "none";
     
     
                 } else {
-                    sideEl.classList.add("grande")
-                    telaEl.classList.add("css")
+                    sideEl.classList.add("grande");
+
+                    telaEl.classList.add("css");
                     document.getElementById('overlay1').style.display = 'block';
                 }
             }

@@ -6,11 +6,6 @@
 
 }
 
-body{
-    height: 100vh;
-    background-color:antiquewhite;
-}
-
 .nav1{
     display: flex;
     justify-content: space-between;
@@ -219,24 +214,6 @@ body {
     background-color: #cfb698;
 }
 
-h1, h2 {
-    margin: 0;
-    color: var(--text-color);
-}
-
-h1 {
-    align-self: flex-start;
-    margin: 0;
-    padding-top: 1.7%;
-    font-size: 2.5vw;
-    color: #d8c5ae;
-}
-
-h2 {
-    padding-top: 4%;
-    font-weight: 400;
-    font-size: 2.4vw;
-}
 
 .redimensiona{
     display: flex;

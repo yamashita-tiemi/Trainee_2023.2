@@ -63,4 +63,10 @@ class UsuariosController{
         return null;
     }
 
+    public function admin(){
+       
+        return view ('admin/dashboard');
+    }
+
+
 }

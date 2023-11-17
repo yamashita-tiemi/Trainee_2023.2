@@ -22,7 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+        <?php
+            require 'sidebar2.html';
+        ?>
+        <div class="redimensiona" id="redimin" >
     <div class="headerula">
         <h1>Lista de Usuários</h1>
         <button onclick="openModal('createModal')"> <i class="bi bi-person-add"></i> Criar Usuário</button>
@@ -63,7 +66,7 @@
                             
                             <h2>Dados do Usuário</h2>
                             <div id="userInfo">
-                            <form class="container" action="users/view" method="GET">
+                            <form class="container" action="/admin/users/view" method="GET">
                                 <p><strong>Id:</strong> <span id="viewid"><?= $user->id ?></span></p>
                                 <p><strong>Nome:</strong> <span id="viewUsername" ><?= $user->name ?></span></p>
                                 <p><strong>Email:</strong> <span id="viewUseremail"><?= $user->email ?></span></p>
@@ -87,7 +90,7 @@
                         </div>  
                         <div class="dados-edit">
                             <h2>Editar Informações do Usuário</h2>
-                            <form id="edituser<?=$user->id?>" class="edituser" method="post" action="users/update" enctype="multipart/form-data">
+                            <form id="edituser<?=$user->id?>" class="edituser" method="post" action="/admin/users/update" enctype="multipart/form-data">
                             <input hidden name="id" value="<?=$user->id?>">
                            
                                 <label for="editusername">Novo Nome de Usuário:  </label>
@@ -125,7 +128,7 @@
                         </div>
                 
                         <div class="dados-delete">
-                            <form class="container" action="users/delete" method="POST">
+                            <form class="container" action="/admin/users/delete" method="POST">
                             <input type="hidden" name="id" value="<?= $user->id ?>" >
                                 <h2>Deletar Usuário</h2>
                                 <!-- Confirmação de exclusão -->
@@ -164,7 +167,7 @@
             <div class="modal-container">
                 <div class="dados">
                     <h2>Criar Usuário</h2>
-                    <form id="criaruser" class="criaruser" method="post" action="/users/create">
+                    <form id="criaruser" class="criaruser" method="post" action="/admin/users/create">
                         <label for="username">Nome de Usuário:</label>
                         <input type="text"placeholder="Nome Sobrenome"  id="username" name="name">
                         <label for="useremail">Email do Usuário</label>
@@ -190,9 +193,12 @@
         
             <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
         </div>
-
+    </div>
     <script src="../../../public/js/userListAdm.js"></script>
 </body>
+<script>
+        const telaEl = document.getElementById("redimin")
+    </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

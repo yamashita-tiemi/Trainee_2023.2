@@ -7,11 +7,13 @@ use UsuariosController;
 
  
 
-    $router->get('users', 'UsuariosController@view');
-    $router->get('users/view', 'UsuariosController@view');
-    $router->post('users/create', 'UsuariosController@createUsers');
-    $router->post('users/update', 'UsuariosController@update'); 
-    $router->post('users/delete', 'UsuariosController@delete'); 
+    $router->get('admin/users', 'UsuariosController@view');
+    $router->get('admin/users/view', 'UsuariosController@view');
+    $router->post('admin/users/create', 'UsuariosController@createUsers');
+    $router->post('admin/users/update', 'UsuariosController@update'); 
+    $router->post('admin/users/delete', 'UsuariosController@delete'); 
+    
+    $router->get('admin', 'UsuariosController@admin');
     
 
 ?>
