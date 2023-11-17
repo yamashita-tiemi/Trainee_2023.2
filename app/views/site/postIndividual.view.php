@@ -1,9 +1,6 @@
 <?php 
 
-    require 'navbar.html';
-    // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
-
 
 ?>
 
@@ -19,6 +16,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <?php
+
+        require 'navbar.php';
+
+    ?>
+
     <?php foreach ($posts as $post) : ?>
         <div class="navpvi"></div>
             <div class="ondastitulo">

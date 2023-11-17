@@ -14,43 +14,6 @@
 
     <?php require 'sidebar.html'; ?>
 
-
-    
-     <!--    <div class="nav1">
-            <div class="botao">
-                <i class="bi bi-list" id="bb"></i>
-            </div>
-
-            <div class="navegador">
-                <form id="redirect8" action="/admin">
-                    <a onclick="redirect8()" href="#">
-                        <span class="icone"><i class="bi bi-columns-gap"></i></span>
-                        <span class="texto">Dashboard</span>
-                    </a>
-                </form>
-                <form id="redirect7" action="/admin/users">
-                    <a onclick="redirect7()" href="#">
-                        <span class="icone"><i class="bi bi-people-fill"></i></span>
-                        <span class="texto">Usuários</span>
-                    </a>
-                </form>    
-                <form id="redirect3" action="/admin/posts">
-                    <a onclick="redirect3()" href="#">
-                        <span class="icone"><i class="bi bi-file-earmark-post"></i></span>
-                        <span class="texto">Posts</span>
-                    </a>
-                </form>
-            
-            </div>
-
-            <div class="logout">
-                <a href="#">
-                    <span class="icone"><i class="bi bi-box-arrow-right"></i></span>
-                    <span class="texto">Log Out</span>
-                </a>
-            </div>
-        </div> -->
-
             <div id="redimin" class="redimensiona">
                 <div class="nav">
                     <h1>DASHBOARD</h1>
@@ -85,18 +48,6 @@
         }
 
         const telaEl = document.getElementById("redimin");
-    </script>
-
-    <script>
-        function redirect8() {
-            document.getElementById('redirect8').submit();
-        }
-        function redirect7() {
-            document.getElementById('redirect7').submit();
-        }
-        function redirect3() {
-            document.getElementById('redirect3').submit();
-        }
     </script>
 
 </html>

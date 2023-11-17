@@ -1,8 +1,7 @@
 <?php 
 
     require 'mod_create_posts.php';
-    // require_once '../../Controllers/PostsController.php';
-    use App\Controllers\PostsController;
+    use App\Controllers\AdminPostsController;
 
 ?>
 

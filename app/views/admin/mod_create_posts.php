@@ -14,9 +14,6 @@
 </head>
 <body>
 
-    <!-- Sobreposição -->
-    <!-- <div id="overlay" class="overlay" onclick="closeModal()"></div> -->
-
     <div id="createModal" class="modal">
         <!--botão de fechar o modal-->
         <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>

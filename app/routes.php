@@ -2,26 +2,23 @@
 
 namespace App\Controllers;
 use App\Controllers\PostsController;
+use App\Controllers\AdminPostsController;
 use App\Core\Router;
 
-    // $router->get('', 'PostsController@index');
-
-    // $router->get('admin', 'ExampleController@view');
-    // $router->get('admin', 'ExampleController@create');
-    // $router->get('admin', 'ExampleController@edit');
-    // $router->get('admin', 'ExampleController@delete');
 
     $router->get('', 'PostsController@landingPage');
     $router->get('posts', 'PostsController@posts');
     $router->get('posts/pvi', 'PostsController@pvi');
+    $router->post('posts/search', 'PostsController@search');
 
     $router->get('loginpage', 'PostsController@loginpage');
-    $router->post('login', 'PostsController@login');
+    
+    $router->post('login', 'AdminPostsController@login');
 
-    $router->get('admin', 'PostsController@admin');
-    $router->get('admin/posts', 'PostsController@view');
-    $router->post('admin/posts/create', 'PostsController@createPosts');
-    $router->post('admin/posts/delete', 'PostsController@deletePosts');
-    $router->post('admin/posts/update', 'PostsController@editPosts');
+    $router->get('admin', 'AdminPostsController@admin');
+    $router->get('admin/posts', 'AdminPostsController@postsAdm');
+    $router->post('admin/posts/create', 'AdminPostsController@createPosts');
+    $router->post('admin/posts/delete', 'AdminPostsController@deletePosts');
+    $router->post('admin/posts/update', 'AdminPostsController@editPosts');
 
 ?>
