@@ -12,12 +12,13 @@ use App\Core\Router;
     $router->post('posts/search', 'PostsController@search');
 
     $router->get('loginpage', 'PostsController@loginpage');
-    $router->post('login', 'PostsController@login');
+    
+    $router->post('login', 'AdminPostsController@login');
 
-    $router->get('admin', 'PostsController@admin');
-    $router->get('admin/posts', 'PostsController@postsAdm');
-    $router->post('admin/posts/create', 'PostsController@createPosts');
-    $router->post('admin/posts/delete', 'PostsController@deletePosts');
-    $router->post('admin/posts/update', 'PostsController@editPosts');
+    $router->get('admin', 'AdminPostsController@admin');
+    $router->get('admin/posts', 'AdminPostsController@postsAdm');
+    $router->post('admin/posts/create', 'AdminPostsController@createPosts');
+    $router->post('admin/posts/delete', 'AdminPostsController@deletePosts');
+    $router->post('admin/posts/update', 'AdminPostsController@editPosts');
 
 ?>
