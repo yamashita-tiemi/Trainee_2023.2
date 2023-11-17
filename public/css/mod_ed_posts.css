@@ -105,6 +105,10 @@ input, textarea {
 .leftmep select{
     border-radius: 5px;
     font-size: 1.5vw;
+    width: 288px;
+    width: 288px;
+    height: 29.2px;
+    
 }
 
 .rightmep {
@@ -307,11 +311,13 @@ input, textarea {
     .modal {
         width: 74%;
         background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
+        height: 595px;
+        padding-top: 13px;
+        
     }
 
     #editModal {
-        height: 70vh;
-      background-image: none;
+        background-image: none;
         border-radius: 0 0 6px 6px;
     }
 
@@ -328,12 +334,15 @@ input, textarea {
 
     .dados-edit h2 {
         margin-left: -5%;
-        font-size: 4.0vw;
+        font-size: 4.7vw;
+        margin-top: 5px;
+        margin-bottom: 7px;
     }
+    
     
     .EditarPost input, .EditarPost textarea {
         width: 50%;
-        font-size: 4.0vw;
+        font-size: 8.5px;
     }
 
     .EditarPost textarea {
@@ -341,7 +350,7 @@ input, textarea {
     }
 
     .EditarPost label {
-        font-size: 4.0vw;
+        font-size: 8.5px;
     }
 
     .leftmep, .rightmep {
@@ -393,31 +402,36 @@ input, textarea {
         font-size: 4vw;
     }
 
-    .rightmep input{
-        font-size: 1.9vw;
-        width: 170px;
-    }
-
-    .rightmep img{
-        height: 120px;
-    }
-
     .leftmep textarea{
-        
-        font-size: 1.9vw;
+        width: 140px;
+        font-size: 8.5px
     }
 
-    .leftmep input{
-        font-size: 1.9vw;
+
+    .leftmep > input{
+        height: 14px;
+        width: 140px;
+        font-size: 8.5px;
     }
 
     .leftmep select{
-        
-        font-size: 2.0vw;
+        width: 140px;
+        height: 14px;
+        font-size: 8.5px;
     }
 
     .botoesinferioresmep {
         margin-bottom: 10px;
+    }
+
+    .rightmep input{
+        width: 180px;
+        font-size: 7.5px;
+    }
+    
+    .rightmep img{
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -439,6 +453,34 @@ input, textarea {
         height: 170px;
     }
 
+    .leftmep label{
+        font-size: 2vw;   
+        margin-top: 5px;
+    }
+
+    .rightmep label{
+        font-size: 2vw;
+    }
+
+    .leftmep h2{
+        font-size: 3.2vw;
+    }
+
+    .leftmep select{
+        width: 171px;
+         height: 18px;
+    }
+
+    .Fechar button{
+        font-size: 11px;
+    }
+
+    
+    .botoesinferioresmep {
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
 }
 
 
@@ -446,6 +488,32 @@ input, textarea {
 @media screen and (min-width: 770px) and (max-width: 1025px) {
     .modal {
         width: 80%;
+    }
+    .leftmep textarea{
+        width: 235px;
+        height: 111px;
+    }
+
+    .leftmep label{
+        font-size: 19px;
+    }
+
+    .leftmep select{
+        width: 235px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    .rightmep label{
+        font-size: 19px;
+    }
+    
+    .escolherImg{
+        font-size: 10px;
+    }
+    
+    .bi-x-lg::before{
+        margin-top: 1px;
     }
 
 }
