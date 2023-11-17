@@ -75,7 +75,7 @@
         <div class="corpopvi">
             <div class="imagedivpvi">
                 <img class="opacityimgpvi" alt="Imagem do post" src="<?=$post->image?>">
-                <figcaption>Criadora do primeiro programa de computadores da história.</figcaption>
+                <figcaption><?=$post->figurecaption?></figcaption>
             </div>
             <p>
             <?=$post->content ?>

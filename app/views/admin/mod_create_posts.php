@@ -53,6 +53,9 @@
                             <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" required onchange="previewImage()">
                             <br>
                             <img id="imagem-preview" src="" style="max-width: 300px;">
+                            <br>
+                            <label for="figurecaption">Descrição da Imagem:</label>
+                            <input type="text" name="figurecaption" id="figurecaption" required>
                         </div>
                     </div>
                     <div style="display: flex; width: 100%; justify-content: center;">

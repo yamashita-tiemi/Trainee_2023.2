@@ -29,9 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
-  `title` varchar(60) NOT NULL,
+  `title` varchar(35) NOT NULL,
   `content` text NOT NULL,
   `image` mediumtext NOT NULL,
+  `figurecaption` varchar(60) NOT NULL,
   `created_at` date NOT NULL,
   `author` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -40,8 +41,8 @@ CREATE TABLE `posts` (
 -- Despejando dados para a tabela `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `content`, `image`, `created_at`, `author`) VALUES
-(9, 'aaaaa', 'aaaaa', '', '2023-11-14', 2);
+INSERT INTO `posts` (`id`, `title`, `content`, `image`, `figurecaption`, `created_at`, `author`) VALUES
+(9, 'aaaaa', 'aaaaa', '', '', '2023-11-14', 2);
 
 -- --------------------------------------------------------
 
