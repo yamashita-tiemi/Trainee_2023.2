@@ -1,6 +1,5 @@
 <?php 
 
-    require 'navbar.html';
     // require_once '../../Controllers/PostsController.php';
     use App\Controllers\PostsController;
 
@@ -19,6 +18,14 @@
 </head>
 
 <body>
+
+    <?php 
+
+        require 'navbar.php';
+
+    ?>
+
+
     <main>
 
     <?php foreach ($posts as $post) : ?>
@@ -64,7 +71,6 @@
 
         </ul>
     </div>
-</body>
 
 <?php 
 
@@ -72,7 +78,7 @@ require 'footer.html';
 
 ?>
 
-</html>
+</body>
 
 <script>
     const NumberPage = 5
@@ -91,3 +97,6 @@ require 'footer.html';
         newList.append(newPage)
     }
 </script>
+
+</html>
+

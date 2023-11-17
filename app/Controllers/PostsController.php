@@ -49,6 +49,19 @@ class PostsController
         $diretorio_destino = "../../public/images/";
         move_uploaded_file($caminho_temporario, "../../htdocs/Trainee/public/images/" . $nome_original);
         $caminho = $diretorio_destino . $nome_original;
+
+        if (!empty($_FILES['imagempost']['tmp_name'])) {
+            $caminho_temporario = $_FILES['imagempost']['tmp_name'];
+            $nome_original = $_FILES['imagempost']['name'];
+            $diretorio_destino = "../../public/images/";
+    
+            move_uploaded_file($caminho_temporario, "../../htdocs/Trainee/public/images/" . $nome_original);
+    
+            $caminho = $diretorio_destino . $nome_original;
+        } else {
+            $caminho = $_POST['imagem_atual'];
+        }
+
         $parametros = [
             'title' => $_POST['titulopost'],
             'content' => $_POST['conteudopost'],
@@ -78,6 +91,14 @@ class PostsController
 
     public function posts() {
         $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+
+        return view('site/listas-de-posts', compact('posts'), compact('users'));
+    }
+
+    public function search() {
+        $palavra_chave = $_POST['search'];
+        $posts = App::get('database')->selectForSearch('posts', $palavra_chave);
         $users = App::get('database')->selectAll('users');
 
         return view('site/listas-de-posts', compact('posts'), compact('users'));

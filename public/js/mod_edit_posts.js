@@ -51,17 +51,18 @@ function closeModal(modalId) {
 //     }
 // }
 
-function previewImagemep() {
-    var input = document.getElementById('imagempostmep');
-    var preview = document.getElementById('imagem-previewmep');
-    // var fundoimg = document.getElementById('fundoimgmep');
-    // fundoimg.style.display = 'block';
-    var file = input.files[0];
-    var reader = new FileReader();
+function previewImagemep(id) {
+    var input = document.getElementById('imagempostmep' + id);
+    var preview = document.getElementById('imagem-previewmep' + id);
+    
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
 
-    reader.onload = function (e) {
-        preview.src = e.target.result;
-    };
-
-    reader.readAsDataURL(file);
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        preview.src = ""; // Limpa a visualização se nenhum arquivo for selecionado
+    }
 }

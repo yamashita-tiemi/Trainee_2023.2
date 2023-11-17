@@ -55,6 +55,7 @@
                         <div class="rightmep">
                             <label for="imagempostmep">Imagem:</label>
                             <input class="escolherImg" type="file" name="imagempost" id="imagempostmep<?=$post->id?>" accept="image/*" onchange="previewImagemep(<?=$post->id?>)">
+                            <input hidden value="<?=$post->image?>" name="imagem_atual">
                             <br>
                             <img class="imagem-previewmep" id="imagem-previewmep<?=$post->id?>" src="<?=$post->image?>" style="max-width: 300px;">
                         </div>
