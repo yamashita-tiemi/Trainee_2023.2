@@ -34,6 +34,7 @@ class AdminPostsController
             'content' => $_POST['conteudopost'],
             'author' => $_POST['autorpost'],
             'created_at' => $_POST['data_criacaopost'],
+            'figurecaption' => $_POST['figurecaption'],
             'image' => $caminho,
         ];
 
@@ -67,6 +68,7 @@ class AdminPostsController
             'content' => $_POST['conteudopost'],
             'author' => $_POST['autorpost'],
             'created_at' => $_POST['data_criacaopost'],
+            'figurecaption' => $_POST['figurecaption'],
             'image' => $caminho,
         ];
 
@@ -100,7 +102,7 @@ class AdminPostsController
             }
         }
     }
-    
+
 }
 
 ?>
