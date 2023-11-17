@@ -13,7 +13,7 @@
         <div class="redirectsContainer">
                 <a href="/"><h2 id="inicio" class="redirectsnav">INÍCIO</h2></a>
                 <a href="/posts"><h2 id="blog" class="redirectsnav">BLOG</h2></a>
-                <a href="javascript:void(0)"><h2 id="contato" class="redirectsnav">CONTATO</h2></a>
+                <a href="#"><h2 id="contato" class="redirectsnav">CONTATO</h2></a>
         </div>
         <div class="navButtonsContainer">
             <form method="post" action="/posts/search">
