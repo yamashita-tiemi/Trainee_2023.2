@@ -36,10 +36,21 @@
          <br><br>
 
       <a href="">
-      <div class="efetuarcadastro">
-        <h3>Entrar</h3>
-      </div>
+         <div class="cadastrar">
+            <h3>Entrar</h3>
+
+            <?php if(isset($_SESSION['error_message'])) { ?>
+               <div class="session">
+                   <?= $_SESSION['error_message'] ?>
+               </div>
+            <?php unset($_SESSION['error_message']); 
+            } ?>
+
+
+         </div>
       </a>
+
+      
       
     </form>
  </body>

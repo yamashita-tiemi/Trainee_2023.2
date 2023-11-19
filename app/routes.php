@@ -7,6 +7,8 @@ use App\Core\Router;
 
 
     $router->get('admin/login', 'LoginController@view');
-   
+    $router->post('admin/logar', 'LoginController@autentica');
+    $router->get('admin/logout', 'LoginController@logout');
+    
 
 ?>
