@@ -123,6 +123,7 @@ input, textarea {
 
 .EditarPost button {
     background-color: #6f054ff0;
+    
 }
 
 .EditarPost button:hover {
@@ -136,36 +137,23 @@ input, textarea {
 #editModal .Fechar {
     padding: 1vw;
     background-color: #6f054ff0;
+    
+    
 }
 
 #editModal .Fechar:hover {
     background-color: #770b57e2;
 }
 
-/* @media screen and (max-width: 767px) {
-    .modal {
-        height: 50vh;
-    }
-    .inputsContainer {
-        flex-direction: column;
-        align-items: center;
-        height: 40vh;
-    }
-    
-    input, textarea {
-        width: 50%;
-    }
+.botoesinferioresmep button{
+    font-size: 1.5vw;
+    padding-bottom: 2.3px;
+}
 
-    .left {
-        width: 100%;
-        height: 60%;
-    }
-    
-    .right {
-        width: 100%;
-        height: 40%;
-    }
-} */
+.bi-x-lg::before {
+    font-size: 1.5vw;
+} 
+
 
 
 
@@ -181,7 +169,7 @@ input, textarea {
     
     #editModal {
         height: 65vh;
-        background-image: url("../assets/mod_edit_posts/novo-roxo-vertical.png");
+        background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
         border-radius: 0 0 6px 6px;
     }
 
@@ -249,25 +237,26 @@ input, textarea {
     }
 
     .botoesinferioresmep button {
-        font-size: 3vw;
+        font-size: 2.5vw;
+        padding-bottom: 2.3px;
     }
 
     .bi-x-lg::before {
-        
-        font-size:8px;
+        font-size: 2.5vw;
     }
     
     .bi-x-lg{
         margin: 0%;
+        padding: 2px;
     }
 
     #editModal .Fechar {
         margin: 0px;
         background-color: #6f054ff0;
-        padding: 6px;
-        padding-bottom: 2px;
-        padding-top: 4px;
+        padding: 5px;
+    
     }
+
 
     .leftmep label{
         font-size: 4vw;
@@ -282,23 +271,39 @@ input, textarea {
         font-size: 1.9vw;
     }
 
+    .rightmep #figurecaption{
+        font-size: 2.4vw;
+
+    }
+
     .rightmep img{
         height: 100px;
     }
 
     .leftmep textarea{
-        
-        font-size: 1.9vw;
+        width: 86px;
+        height: 52px;
+        font-size: 2.3vw;
     }
 
     .leftmep input{
-        font-size: 1.9vw;
+        font-size: 2.3vw;
+        width: 86px;
+        height: 12px;
     }
 
     .leftmep select{
         
-        font-size: 2.0vw;
+        width: 86px;
+        height: 12px;
+        font-size: 2.3vw;
+   }
+   
+   .rightmep{
+        margin-top: 5px;
     }
+
+    
 
 }
 
@@ -385,15 +390,24 @@ input, textarea {
 
     .botoesinferioresmep button {
         font-size: 2.3vw;
+        padding-bottom: 2.3px;
     }
 
     .bi-x-lg::before {
         font-size: 9px;
     }
 
+
     #editModal .Fechar {
         margin: 0;
+        padding: 5px;
     }
+    
+    .bi-x-lg{
+        margin: 0%;
+        padding: 2px;
+    }
+
     .leftmep label{
         font-size: 4vw;
     }
@@ -433,6 +447,7 @@ input, textarea {
         width: 140px;
         height: 140px;
     }
+
 }
 
 
@@ -471,14 +486,18 @@ input, textarea {
          height: 18px;
     }
 
-    .Fechar button{
+    #editModal .Fechar button{
         font-size: 11px;
+        padding-bottom: 1.5px;
     }
-
     
     .botoesinferioresmep {
         margin-bottom: 10px;
         font-size: 11px;
+    }
+
+    .botoesinferioresmep button{
+        padding-bottom: 3.7px;
     }
 
 }
@@ -514,29 +533,11 @@ input, textarea {
     
     .bi-x-lg::before{
         margin-top: 1px;
+        font-size: 1.5vw;
+    }
+
+    .botoesinferioresmep button{
+        padding-bottom: 2.3px;
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
