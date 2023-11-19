@@ -13,7 +13,7 @@
  <body>
 
 
-    <form>
+    <form method="post" action="/admin/logar">
       <div class="separacao">
          <a href="https:/google.com.br" >
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 26 24" fill="none" >
@@ -28,28 +28,28 @@
          <h3 class="cadastrar">Login</h3>
          <label>E-mail:</label>
          <br>
-         <input type="text" placeholder="exemplo@email.com" >
+         <input name="email" type="text" placeholder="exemplo@email.com" >
          <br><br>
          <label>Senha:</label>
          <br>
-         <input type="password" placeholder="*********" >
+         <input name="password" type="password" placeholder="*********" >
          <br><br>
 
       <button type="submit" class="efetuarcadastro">
          <div class="cadastrar">
             <h3>Entrar</h3>
 
-            <?php if(isset($_SESSION['error_message'])) { ?>
+           
+
+         </div>
+      </button>
+
+       <?php if(isset($_SESSION['error_message'])) { ?>
                <div class="session">
                    <?= $_SESSION['error_message'] ?>
                </div>
             <?php unset($_SESSION['error_message']); 
             } ?>
-            
-         </div>
-      </button>
-
-      
       
     </form>
  </body>

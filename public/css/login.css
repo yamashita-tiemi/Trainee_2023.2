@@ -9,7 +9,7 @@ body{
 
 .separacao{
     width: 10%;
-    display: inline-block;
+    display: block;
     float: left;
     margin-top: 20px;
     margin-left: 12px;

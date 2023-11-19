@@ -14,6 +14,11 @@ class LoginController
         return view('site/login');
     }
 
+    public function admin()
+    {
+        return view('admin/dashboard');
+    }
+
 
     public function autentica()
     {
@@ -22,11 +27,11 @@ class LoginController
         $id = App::get('database')->autenticar('users', $email, $password);
         
         session_start();
-        
+
         if($id > 0)
         {
             $_SESSION['logado'] = $id;
-            return redirect('admin/dashboard');
+            return redirect('admin');
         }
 
         $_SESSION['error_message'] = "E-mail ou senha incorretos";
