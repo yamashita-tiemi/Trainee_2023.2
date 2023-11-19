@@ -72,11 +72,13 @@ input{
     width: 400px;
     height: 51px;
     margin-top: 62px;
+    border: 0;
     
 }
 
 .efetuarcadastro:hover{
     background: #FFB4A2;
+    cursor: pointer;
 }
 .efetuarcadastro h3{
     color: black;

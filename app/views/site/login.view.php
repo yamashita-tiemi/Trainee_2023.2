@@ -35,7 +35,7 @@
          <input type="password" placeholder="*********" >
          <br><br>
 
-      <a href="">
+      <button type="submit" class="efetuarcadastro">
          <div class="cadastrar">
             <h3>Entrar</h3>
 
@@ -45,10 +45,9 @@
                </div>
             <?php unset($_SESSION['error_message']); 
             } ?>
-
-
+            
          </div>
-      </a>
+      </button>
 
       
       
