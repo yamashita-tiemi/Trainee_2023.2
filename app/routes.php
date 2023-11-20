@@ -16,4 +16,6 @@ use UsuariosController;
     $router->get('admin', 'UsuariosController@admin');
     
 
+    $router->get('site/listas-de-posts', 'PaginacaoController@view')
+
 ?>

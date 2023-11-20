@@ -12,6 +12,10 @@ class UsuariosController{
         $tables = [
             'users'=> $users,
         ];
+
+        $page = 1;
+        $total_page = 5;
+        return view ('admin/userListAdm',compact( 'users', 'page', 'total_page') );
         
         return view ('admin/userListAdm', $tables);
     }
@@ -48,7 +52,7 @@ class UsuariosController{
     {
         
         App::get('database')->delete('users', $_POST['id']);
-        
+
         return redirect('admin/users');
     }
 

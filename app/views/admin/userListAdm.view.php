@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
-    
+   
 
     <link rel="stylesheet" href="../../../public/css/userListAdm.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -195,10 +195,14 @@
         
             <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
         </div>
+        
+        <?php
+            require "./app/views/Include/IncludePaginacao.php"
+        ?>
+
     </div>
 
    
-
     <script src="../../../public/js/userListAdm.js"></script>
 </body>
 <script>
@@ -206,4 +210,5 @@
     </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </html>

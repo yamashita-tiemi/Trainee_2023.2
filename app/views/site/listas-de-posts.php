@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <main>
+    <main method= "get" action= "/site/listas-de-posts">
         <div class="cardContainer">
             <div class="cardHover">
                 <img id="lerMais" src="../../../public/assets/botao_hover.png">
@@ -147,18 +147,9 @@
 
        
     </main>
-    <div class="options">
-        <ul>
-
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-
-
-
-        </ul>
-    </div>
+        <?php
+            require "./app/views/Include/IncludePaginacao.php"
+        ?>
 </body>
 
 </html>
