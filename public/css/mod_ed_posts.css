@@ -69,7 +69,7 @@ button:hover {
 
 
 /*implemente os codigos do modal a partir daqui */
-input, textarea {
+input, textarea, select {
     font-size: 1.5vw;
     border-radius: 5px;
     border: 1px #272727 solid;
@@ -105,8 +105,7 @@ input, textarea {
 .leftmep select{
     border-radius: 5px;
     font-size: 1.5vw;
-    width: 288px;
-    width: 288px;
+    width: 50%;
     height: 29.2px;
     
 }
@@ -281,20 +280,18 @@ input, textarea {
     }
 
     .leftmep textarea{
-        width: 86px;
+        width: 50%;
         height: 52px;
         font-size: 2.3vw;
     }
 
     .leftmep input{
         font-size: 2.3vw;
-        width: 86px;
+        width: 50%;
         height: 12px;
     }
 
     .leftmep select{
-        
-        width: 86px;
         height: 12px;
         font-size: 2.3vw;
    }
@@ -345,7 +342,7 @@ input, textarea {
     }
     
     
-    .EditarPost input, .EditarPost textarea {
+    .EditarPost input, .EditarPost textarea , .EditarPost select {
         width: 50%;
         font-size: 8.5px;
     }
@@ -417,19 +414,16 @@ input, textarea {
     }
 
     .leftmep textarea{
-        width: 140px;
         font-size: 8.5px
     }
 
 
     .leftmep > input{
         height: 14px;
-        width: 140px;
         font-size: 8.5px;
     }
 
     .leftmep select{
-        width: 140px;
         height: 14px;
         font-size: 8.5px;
     }
@@ -439,7 +433,7 @@ input, textarea {
     }
 
     .rightmep input{
-        width: 180px;
+    
         font-size: 7.5px;
     }
     
@@ -482,7 +476,6 @@ input, textarea {
     }
 
     .leftmep select{
-        width: 171px;
          height: 18px;
     }
 
@@ -509,7 +502,6 @@ input, textarea {
         width: 80%;
     }
     .leftmep textarea{
-        width: 235px;
         height: 111px;
     }
 
@@ -518,7 +510,6 @@ input, textarea {
     }
 
     .leftmep select{
-        width: 235px;
         height: 22px;
         font-size: 14px;
     }
