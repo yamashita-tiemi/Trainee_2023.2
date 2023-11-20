@@ -12,7 +12,7 @@ use UsuariosController;
     $router->post('admin/users/create', 'UsuariosController@createUsers');
     $router->post('admin/users/update', 'UsuariosController@update'); 
     $router->post('admin/users/delete', 'UsuariosController@delete'); 
-    
+
     $router->get('admin', 'UsuariosController@admin');
     
 

@@ -12,6 +12,7 @@ class UsuariosController{
         $tables = [
             'users'=> $users,
         ];
+        
         return view ('admin/userListAdm', $tables);
     }
 
@@ -25,7 +26,7 @@ class UsuariosController{
         
         App::get('database')->insert('users', $parmetros);
 
-        return redirect('users');
+        return redirect('admin/users');
 
     }
     public function update ()
@@ -37,7 +38,8 @@ class UsuariosController{
         ];
 
         App::get('database')->edit($_POST['id'], 'users', $parameters);
-        header('Location: /users');
+        
+        return redirect('admin/users');
 
         
     }
@@ -46,7 +48,8 @@ class UsuariosController{
     {
         
         App::get('database')->delete('users', $_POST['id']);
-        return redirect('users');
+        
+        return redirect('admin/users');
     }
 
 

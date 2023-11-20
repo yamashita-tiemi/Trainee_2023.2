@@ -116,6 +116,7 @@ td {
 th {
     background: rgba(255, 93, 87, 0.85);
     padding-top: 10px;
+    text-align: center;
 }
 
 .tbory tr {
