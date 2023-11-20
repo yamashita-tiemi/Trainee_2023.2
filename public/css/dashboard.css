@@ -44,7 +44,7 @@ h2 {
     width: 70%;
     height: 20vh;
     margin-top: 3vh;
-    background: linear-gradient(90deg, rgba(255, 0, 106, 0.795) 2%, rgba(255,94,71,1) 100%);
+    background: linear-gradient(271deg, #FF5D57 0%, #DD0B64 101.04%);
     align-items: center;
     justify-content: center;
 }
@@ -52,12 +52,13 @@ h2 {
 
 .nav h1 {
     font-size: 5vw;
+    color: #fff;
 }
 
 .logoutBtn {
     display: flex;
     padding: 0 0.5vw 0 1vw;
-    background: rgb(255, 119, 98);
+    background: #D40863;
     margin-right: 1vw;
     position: absolute;
     justify-content: center;
@@ -86,7 +87,7 @@ h2 {
     display: flex;
     height: 70vh;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -95,7 +96,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(255, 25, 121, 0.815) 0%, rgba(255,94,71,1) 100%);;
+    background: #D40863;
     width: 20vw;
     height: 20vw;
     border-radius: 10px;
@@ -117,6 +118,7 @@ h2 {
 
 .cards h2 {
     text-align: center;
+    color: #fff;
 }
 
 @media screen and (max-width: 1280px) {

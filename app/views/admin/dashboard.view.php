@@ -1,6 +1,12 @@
 <?php
 
-require 'sidebar.html';
+session_start();
+
+if (!isset($_SESSION['logado'])) {
+    
+    redirect('admin/login');
+    exit(); 
+}
 
 ?>
 
@@ -11,36 +17,32 @@ require 'sidebar.html';
     </head>
 
     <body>
+
+        <?php
+            require 'sidebar2.html';
+        ?>
+        <div class="redimensiona" id="redimin" >
         <div class="nav">
             <h1>DASHBOARD</h1>
-            <div class="logoutBtn" >
+            <a href="/admin/logout" class="logoutBtn">
                 <h2>Log Out</h2>
                 <img src="../../../public/assets/dashboard/🦆 icon _log out_.svg" alt="Log Out">
-            </div>
+            </a>
         </div>
         <div class="cards">
-            <form id="userlist" action="/admin/users">
-                <div onclick="redirect2()">
-                    <img src="../../../public/assets/dashboard/🦆 icon _people_.svg" alt="Users">
-                    <h2>Gerenciar Usuários</h2>
-                </div>
-            </form>
-            <form id="postlist" action="/admin/posts">
-                <div onclick="redirect()">
-                    <img src="../../../public/assets/dashboard/🦆 icon _file add_.svg" alt="Posts">
-                    <h2>Gerenciar Publicações</h2>
-                </div>
-            </form>
+            <div>
+                <img src="../../../public/assets/dashboard/🦆 icon _people_.svg" alt="Users">
+                <h2>Gerenciar Usuários</h2>
+            </div>
+            <div>
+                <img src="../../../public/assets/dashboard/🦆 icon _file add_.svg" alt="Posts">
+                <h2>Gerenciar Publicações</h2>
+            </div>
+        </div>
         </div>
     </body>
-
     <script>
-        function redirect() {
-          document.getElementById('postlist').submit();
-        }
-        function redirect2() {
-          document.getElementById('userlist').submit();
-        }
+        const telaEl = document.getElementById("redimin")
     </script>
 
 </html>

@@ -102,4 +102,71 @@ class QueryBuilder
         }
     }
 
+    public function edit ($id, $table, $parametros)
+    {
+        $sql = sprintf(
+            'UPDATE %s
+            SET %s
+            WHERE %s;',
+            $table,
+            implode (', ', array_map(function ($parametros){
+                return "{$parametros} = :{$parametros}";
+            }, array_keys($parametros))),
+            'id = :id' 
+        );
+        $parametros['id'] = $id;
+
+        try{
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parametros);
+        } catch (Exception $e){
+            die("an error occurred when trying to uodate database : {$e->getMessage()}");
+        }
+    }
+
+    public function deleteUser($table, $id){
+        $sql = sprintf(
+            'DELETE FROM %s WHERE %s',
+            $table,
+            "id = :id"
+        );
+        try{
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute(compact('id'));
+        }catch(Exception $e){
+            die("an error occurred when trying to delete from database: {$e->getMessage()}");
+        }
+    }
+
+    public function autenticar($table, $email, $senha)
+    {
+
+        $sql = sprintf(
+            'SELECT id FROM %s WHERE email = :email AND password = :senha',
+            $table
+        );
+    
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+
+
+            $stmt->execute();
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result && isset($result['id'])) {
+            return $result['id'];
+        } else {
+            return 0;
+        }
+        
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 }
