@@ -43,6 +43,7 @@ class LoginController
     {
         session_start();
         unset($_SESSION['logado']);
+        session_destroy();
         return redirect('admin/login');
     }
 

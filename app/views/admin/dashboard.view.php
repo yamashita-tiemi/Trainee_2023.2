@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['logado'])) {
+    
+    redirect('admin/login');
+    exit(); 
+}
+
+?>
+
 <!DOCTYPE html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +19,12 @@
     <body>
         <div class="nav">
             <h1>DASHBOARD</h1>
-            <div class="logoutBtn" >
+           
+            <a href="/admin/logout" class="logoutBtn" href="/admin/logout" >
                 <h2>Log Out</h2>
                 <img src="../../../public/assets/dashboard/🦆 icon _log out_.svg" alt="Log Out">
-            </div>
+            </a>
+           
         </div>
         <div class="cards">
             <div>

@@ -47,7 +47,14 @@ class QueryBuilder
 
             $stmt->execute();
 
-            return $stmt->fetch(PDO::FETCH_NUM);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result && isset($result['id'])) {
+            return $result['id'];
+        } else {
+            return 0;
+        }
+        
         } catch (Exception $e) {
             die($e->getMessage());
         }
