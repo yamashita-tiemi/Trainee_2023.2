@@ -72,7 +72,7 @@ input{
     width: 400px;
     height: 51px;
     margin-top: 62px;
-    
+    border: 0;
 }
 
 .efetuarcadastro:hover{

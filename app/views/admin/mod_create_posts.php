@@ -14,9 +14,6 @@
 </head>
 <body>
 
-    <!-- Sobreposição -->
-    <!-- <div id="overlay" class="overlay" onclick="closeModal()"></div> -->
-
     <div id="createModal" class="modal">
         <!--botão de fechar o modal-->
         <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
@@ -53,9 +50,12 @@
                         </div>
                         <div class="right">
                             <label for="imagempost">Imagem:</label>
-                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" onchange="previewImage()">
+                            <input class="escolherImg" type="file" name="imagempost" id="imagempost" accept="image/*" required onchange="previewImage()">
                             <br>
                             <img id="imagem-preview" src="" style="max-width: 300px;">
+                            <br>
+                            <label for="figurecaption">Descrição da Imagem:</label>
+                            <input type="text" name="figurecaption" id="figurecaption" required>
                         </div>
                     </div>
                     <div style="display: flex; width: 100%; justify-content: center;">

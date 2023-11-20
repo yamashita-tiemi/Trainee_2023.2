@@ -13,3 +13,12 @@ document.getElementById("lupa").addEventListener("click", () => {
         focused = false
     }
 })
+
+document.getElementById('contato').addEventListener("click", function () {
+    const tam = document.body.scrollHeight || document.documentElement.scrollHeight;
+    console.log(tam);
+    window.scroll({
+        top: tam,
+        behavior: 'smooth'  // Isso cria uma rolagem suave, mas é opcional
+    });
+});

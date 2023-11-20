@@ -44,6 +44,36 @@ class QueryBuilder
         }
     }
 
+    public function selectForDate($table)
+    {
+        $sql = "SELECT * FROM posts ORDER BY created_at DESC LIMIT 5";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectForSearch($table, $palavras_chave)
+    {
+        $sql = "SELECT * FROM posts WHERE content LIKE '%" . $palavras_chave . "%' OR title LIKE '%" . $palavras_chave . "%'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parametros) {
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)',
