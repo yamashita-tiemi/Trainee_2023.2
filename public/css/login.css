@@ -7,6 +7,18 @@ body{
     background: linear-gradient(117deg, #6F0550 0%, #DD0B64 35.31%, #FF5D57 69.69%, #CFB698 100%);
 }
 
+.olhinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.olho {
+    cursor: pointer;
+    position: absolute;
+    right: 25%;
+    color: #858585;
+}
 .separacao{
     width: 10%;
     display: block;
@@ -96,14 +108,15 @@ input{
 }
 
 .session {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     margin-top: 1vw;
-    color: rgb(255, 85, 85);
+    color: rgb(255, 68, 68);
     text-align: center;
     font-family: 'Manjari', sem serifa;
     font-weight: 600;
     text-shadow: 0.05vw 0.05vw 0.3vw black;
 }
+
 
 
 
@@ -138,7 +151,7 @@ input{
     .efetuarcadastro{
         width: 220px;
         height: 38px;
-        margin-top: 26px;
+        margin-top: 11px;
     }
    
     .efetuarcadastro h3{
@@ -148,6 +161,12 @@ input{
 
     .session {
         font-size: 15px;
+    }
+    .olho {
+        cursor: pointer;
+        position: absolute;
+        right: 15%;
+        color: #858585;
     }
 }
 
@@ -179,11 +198,21 @@ input{
     .efetuarcadastro{
         width: 280px;
         height: 40px;
-        margin-top: 44px;
+        margin-top: 26px;
     }
     
     .efetuarcadastro h3{
         font-size: 18px;
         margin-top: -14px;
+    }
+
+    .olho {
+        cursor: pointer;
+        position: absolute;
+        right: 21%;
+        color: #858585;
+    }
+    .session {
+        font-size: 16px;
     }
 }

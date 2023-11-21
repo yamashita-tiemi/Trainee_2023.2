@@ -7,6 +7,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../../../public/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
  </head>
 
@@ -32,9 +33,11 @@
          <br><br>
          <label>Senha:</label>
          <br>
-         <input name="password" type="password" placeholder="*********" >
+         <div class="olhinho">
+            <input name="password" type="password" placeholder="*********" id="password" oninput="inputChanged('password')">
+            <i class="bi bi-eye-fill olho" id="btn-senha-password" style="display: none;" onclick="mostrarSenha('password')"></i>
+         </div>
          <br><br>
-
          <?php if(isset($_SESSION['error_message'])) { ?>
                <div class="session">
                   <?= $_SESSION['error_message'] ?>
@@ -42,6 +45,7 @@
             <?php unset($_SESSION['error_message']); 
             } ?>
 
+      
       <button type="submit" class="efetuarcadastro">
          <div class="cadastrar">
             <h3>Entrar</h3>
@@ -50,5 +54,6 @@
       
       
     </form>
+    <script src="../../../public/js/login.js"></script>
  </body>
  </html>
