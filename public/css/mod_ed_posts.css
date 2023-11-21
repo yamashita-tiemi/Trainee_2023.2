@@ -132,15 +132,21 @@ input, textarea, select {
     font-weight: 700;
 }
 
-#editModal .Fechar {
-    padding: 1vw;
+.editmodal .Fechar {
+    padding: 0.5vw;
     background-color: #6f054ff0;
     
     
 }
 
-#editModal .Fechar:hover {
+.editmodal .Fechar:hover {
     background-color: #770b57e2;
+}
+
+.editmodal i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .botoesinferioresmep button{
@@ -149,6 +155,8 @@ input, textarea, select {
 }
 
 .bi-x-lg::before {
+    display: flex;
+    justify-content: center;
     font-size: 1.5vw;
 } 
 
@@ -165,13 +173,13 @@ input, textarea, select {
         height: 74%;
     }
     
-    #editModal {
+    .editmodal {
         height: 65vh;
         background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
         border-radius: 0 0 6px 6px;
     }
 
-    #editModal button{
+    .editmodal button{
         size: 1px;
         font-size: 1px;
     }
@@ -248,7 +256,7 @@ input, textarea, select {
         padding: 2px;
     }
 
-    #editModal .Fechar {
+    .editmodal .Fechar {
         margin: 0px;
         background-color: #6f054ff0;
         padding: 5px;
@@ -309,7 +317,7 @@ input, textarea, select {
 
 
 @media screen and (min-width: 330px) and (max-width: 436px){
-    .modal {
+    .editmodal {
         width: 74%;
         background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
         height: 595px;
@@ -317,7 +325,7 @@ input, textarea, select {
         
     }
 
-    #editModal {
+    .editmodal {
         background-image: none;
         border-radius: 0 0 6px 6px;
     }

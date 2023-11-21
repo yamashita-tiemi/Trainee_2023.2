@@ -35,21 +35,16 @@
          <input name="password" type="password" placeholder="*********" >
          <br><br>
 
-      <button type="submit" class="efetuarcadastro">
-         <div class="cadastrar">
-            <h3>Entrar</h3>
-
-           
-
-         </div>
-      </button>
-
-       <?php if(isset($_SESSION['error_message'])) { ?>
+         <?php if(isset($_SESSION['error_message'])) { ?>
                <div class="session">
                    <?= $_SESSION['error_message'] ?>
                </div>
             <?php unset($_SESSION['error_message']); 
             } ?>
+
+      <button type="submit" class="efetuarcadastro cadastrar">
+            Entrar
+      </button>
       
     </form>
  </body>
