@@ -103,14 +103,14 @@
                 
                                 <label for="userpassword">Senha do Usuário</label>
                                 <div class="olhinho">
-                                    <input type="password" placeholder="********" id="userpasswordnovo" name="password" oninput="inputChanged('userpasswordnovo')">
-                                    <i class="bi bi-eye-fill" id="btn-senha-userpasswordnovo" style="display: none;" onclick="mostrarSenha('userpasswordnovo')"></i>
+                                    <input type="password" placeholder="********" id="userpasswordnovo<?=$user->id?>" name="password" oninput="inputChanged('userpasswordnovo<?=$user->id?>')">
+                                    <i class="bi bi-eye-fill olho"  id="btn-senha-userpasswordnovo<?=$user->id?>" style="display: none;" onclick="mostrarSenha('userpasswordnovo<?=$user->id?>')"></i>
                                 </div>
                 
                                 <label for="passwordconfirm">Confirme a Senha</label>
                                 <div class="olhinho">
-                                    <input type="password" placeholder="********" id="passwordconfirmnovo" name="password" oninput="inputChanged('passwordconfirmnovo')">
-                                    <i class="bi bi-eye-fill" id="btn-senha-passwordconfirmnovo" style="display: none;" onclick="mostrarSenha('passwordconfirmnovo')"></i>
+                                    <input type="password" placeholder="********" id="passwordconfirmnovo<?=$user->id?>" name="password" oninput="inputChanged('passwordconfirmnovo<?=$user->id?>')">
+                                    <i class="bi bi-eye-fill olho" id="btn-senha-passwordconfirmnovo<?=$user->id?>" style="display: none;" onclick="mostrarSenha('passwordconfirmnovo<?=$user->id?>')"></i>
                                 </div>
                                 
                                 <button type="reset">Limpar seções</button>
@@ -120,7 +120,7 @@
                         
                     </div>
                     
-                    <button type="submit" form="edituser<?=$user->id?>" id="botaosalvaredit"  >Salvar</button> 
+                    <button type="submit" form="edituser<?=$user->id?>" id="botaosalvaredit"  onclick="return validaredit()" >Salvar</button> 
                 </div>
                 
                 <div id="deleteModal<?= $user->id ?>" class="deleteModal modal">
@@ -171,19 +171,19 @@
                     <h2>Criar Usuário</h2>
                     <form id="criaruser" class="criaruser" method="post" action="/admin/users/create">
                         <label for="username">Nome de Usuário:</label>
-                        <input type="text"placeholder="Nome Sobrenome"  id="username" name="name">
+                        <input type="text"placeholder="Nome Sobrenome"  id="username" name="name" required>
                         <label for="useremail">Email do Usuário</label>
-                        <input type="email" placeholder="exemplo@email.com" id="useremail"  name="email">
+                        <input type="email" placeholder="exemplo@email.com" id="useremail"  name="email" required>
                         <label for="userpassword">Senha do Usuário</label>
                         <div class="olhinho">
-                            <input type="password" placeholder="********" id="userpassword" name="password" oninput="inputChanged('userpassword')">
-                            <i class="bi bi-eye-fill" id="btn-senha-userpassword" style="display: none;" onclick="mostrarSenha('userpassword')"></i>
+                            <input type="password" placeholder="********" id="userpassword" name="password" oninput="inputChanged('userpassword')" required>
+                            <i class="bi bi-eye-fill olho" id="btn-senha-userpassword" style="display: none;" onclick="mostrarSenha('userpassword')"></i>
                         </div>
         
                         <label for="passwordconfirm">Confirme a Senha</label>
                         <div class="olhinho">
-                            <input type="password" placeholder="********" id="passwordconfirm" name="passwordconfirm" oninput="inputChanged('passwordconfirm')">
-                            <i class="bi bi-eye-fill" id="btn-senha-passwordconfirm" style="display: none;" onclick="mostrarSenha('passwordconfirm')"></i>
+                            <input type="password" placeholder="********" id="passwordconfirm" name="passwordconfirm" oninput="inputChanged('passwordconfirm')" required>
+                            <i class="bi bi-eye-fill olho" id="btn-senha-passwordconfirm" style="display: none;" onclick="mostrarSenha('passwordconfirm')"></i>
                         </div>
                         <button type="reset">Limpar seções</button>
                     </form> 
@@ -193,7 +193,7 @@
                 </div>
             </div>
         
-            <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
+            <button type="submit" form="criaruser" id="botaosalvar" onclick="return validar()">Salvar</button> 
         </div>
     </div>
 

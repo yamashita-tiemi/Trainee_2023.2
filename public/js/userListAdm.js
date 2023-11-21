@@ -56,3 +56,42 @@ function confirmarSalvarFormularioedit() {
     }
 }
 
+function validar() {
+    var senha = document.getElementById("userpassword").value;
+    var confirm_senha = document.getElementById("passwordconfirm").value;
+
+    if (senha == "" || senha.length <= 5) {
+        alert("Preencha o campo senha com no mínimo 6 caracteres");
+        document.getElementById("userpassword").focus();
+        return false;
+    }
+
+    if (senha != confirm_senha) {
+        alert("Senhas diferentes");
+        document.getElementById("passwordconfirm").focus();
+        return false;
+    }
+
+    return true; // Retornará true se a validação passar e o formulário será enviado
+}
+
+
+function validaredit() {
+    var senha = document.getElementById("userpasswordnovo").value;
+    var confirm_senha = document.getElementById("passwordconfirmnovo").value;
+
+    if (senha == "" || senha.length <= 5) {
+        alert("Preencha o campo senha com no mínimo 6 caracteres");
+        document.getElementById("userpasswordnovo").focus();
+        return false;
+    }
+
+    if (senha != confirm_senha) {
+        alert("Senhas diferentes");
+        document.getElementById("passwordconfirmnovo").focus();
+        return false;
+    }
+
+    return true; // Retornará true se a validação passar e o formulário será enviado
+}
+
