@@ -8,16 +8,41 @@ use Exception;
 class UsuariosController{
 
     public function view(){
+       
+
+        if(isset($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+
+            if($page<=0){
+                return redirect ('admin/users');
+            }
+        }
+
+        else{
+            $_GET['pagina'] = 1;
+            $page = 1;
+        }
+
         $users = App::get('database')->selectAll('users');
         $tables = [
             'users'=> $users,
         ];
 
-        $page = 1;
-        $total_page = 5;
-        return view ('admin/userListAdm',compact( 'users', 'page', 'total_page') );
+        $itens_por_pag = 8;
+        $start_limit = $itens_por_pag * $page -  $itens_por_pag;
+        $roust_count = App::get('database')->CountAll($tables);
+
+        if($start_limit> $roust_count){
+            return redirect ('admin/users');
+        }
+
+        $total_page = ceil( $roust_count/ $itens_por_pag);
+
+
+
+        return view ('admin/users',compact( 'users', 'page', 'total_page') );
         
-        return view ('admin/userListAdm', $tables);
+        return view ('admin/users)', $tables);
     }
 
     public function createUsers(){
