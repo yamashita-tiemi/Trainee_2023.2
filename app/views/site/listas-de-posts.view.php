@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/listas-de-posts.css">
     <link rel="stylesheet" href="../../../public/css/global.css">
     <title>Listas De Posts</title>
@@ -57,28 +58,19 @@
 
 
 
-    <div class="options">
-        <ul>
+    <?php
+        require "./app/views/Include/IncludePaginacao.php"
+    ?>
 
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <?php 
 
+        require 'footer.html';
 
-
-        </ul>
-    </div>
-
-<?php 
-
-require 'footer.html';
-
-?>
+    ?>
 
 </body>
 
-<script>
+<!-- <script>
     const NumberPage = 5
     for (var page = 5; page <= NumberPage; page++) {
         const newPage = document.createElement("li")
@@ -94,7 +86,7 @@ require 'footer.html';
         const newList = document.querySelector("ul")
         newList.append(newPage)
     }
-</script>
+</script> -->
 
 </html>
 

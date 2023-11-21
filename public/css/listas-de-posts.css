@@ -193,8 +193,16 @@ div.cardContainer:hover .blurrableDiv{
 }
 
 ul li{
-    margin-bottom: 10%;
+    margin-top: 2%;
     
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.active>.page-link {
+    background-color: red;
 }
 
 

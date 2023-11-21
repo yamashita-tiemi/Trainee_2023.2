@@ -15,7 +15,7 @@ use App\Core\Router;
     $router->get('admin/logout', 'LoginController@logout');
 
     $router->get('', 'PostsController@landingPage');
-    $router->get('posts', 'PostsController@posts');
+    $router->get('posts', 'PaginationController@view');
     $router->get('posts/pvi', 'PostsController@pvi');
     $router->post('posts/search', 'PostsController@search');
 

@@ -199,4 +199,35 @@ class QueryBuilder
         }
     }
 
+    public function countAll($tables){
+        $sql = "SELECT COUNT(*) FROM {$tables}";
+
+        try{
+            $statement = $this -> pdo->prepare($sql);
+
+            $statement-> execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        }catch (Exception $e){
+            die("an error occurred when trying to count from database: {$e->getMessage()}");
+        }
+    }
+
+    public function pagination($table, $start, $limit){
+        if($table == 'posts'){
+            $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
+        }else{
+            $res = "SELECT * FROM users ORDER BY id ASC LIMIT {$start}, {$limit}";
+        }
+        
+        try{
+            $res = $this->pdo->prepare($res);
+            $res->execute();
+
+            return $res->fetchAll(PDO::FETCH_CLASS);
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
 }
