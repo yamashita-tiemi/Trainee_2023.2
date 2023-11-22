@@ -3,7 +3,7 @@
   <ul class="pagination">
 
     <li class="page-item">
-      <a class="page-link text-dark" href="?pagina= <? $page > 1 ? $page - 1 : 1 ?>"  aria-label="Anterior">
+      <a class="page-link text-dark" href="?pagina= <?= $page > 1 ? $page - 1 : 1 ?>"  aria-label="Anterior">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>

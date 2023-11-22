@@ -11,8 +11,9 @@ class AdminPostsController
     public function postsAdm() {
         $posts = App::get('database')->selectAll('posts');
         $users = App::get('database')->selectAll('users');
+        $numposts = App::get('database')->countAll('posts');
 
-        return view('admin/postListadm', compact('posts'), compact('users'));
+        return view('admin/postListadm', compact('posts', 'numposts'), compact('users'));
     }
 
     public function admin() {

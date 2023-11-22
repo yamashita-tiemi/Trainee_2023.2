@@ -25,4 +25,7 @@ use App\Core\Router;
     $router->post('admin/posts/delete', 'AdminPostsController@deletePosts');
     $router->post('admin/posts/update', 'AdminPostsController@editPosts');
 
+    $router->post('perd', 'LoginController@senha');
+    $router->post('pass', 'LoginController@pass');
+
 ?>

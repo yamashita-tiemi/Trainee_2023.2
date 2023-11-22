@@ -109,28 +109,28 @@ class QueryBuilder
     }
 
 
-    public function editPosts($table, $id, $parametros)
-    {
-        $sql = sprintf(
-            'UPDATE %s SET %s WHERE %s',
-            $table,
-            implode(', ', array_map( function($parametros) {
-                return "{$parametros} = :{$parametros}";
-            }, array_keys($parametros) )), 
-            'id = :id'
-        );
+    // public function editPosts($table, $id, $parametros)
+    // {
+    //     $sql = sprintf(
+    //         'UPDATE %s SET %s WHERE %s',
+    //         $table,
+    //         implode(', ', array_map( function($parametros) {
+    //             return "{$parametros} = :{$parametros}";
+    //         }, array_keys($parametros) )), 
+    //         'id = :id'
+    //     );
 
-        $parametros['id'] = $id;
+    //     $parametros['id'] = $id;
 
-        try {
-            $statement = $this->pdo->prepare($sql);
+    //     try {
+    //         $statement = $this->pdo->prepare($sql);
 
-            $statement->execute($parametros);
+    //         $statement->execute($parametros);
 
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
+    //     } catch (Exception $e) {
+    //         die($e->getMessage());
+    //     }
+    // }
 
     public function edit ($id, $table, $parametros)
     {
@@ -228,6 +228,40 @@ class QueryBuilder
         } catch(Exception $e){
             die($e->getMessage());
         }
+    }
+
+    public function senha($users, $token, $email) {
+        $sql = "UPDATE $users SET reset_token = :token WHERE email = :email";
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindParam(':token', $token, PDO::PARAM_STR);
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function pass($users, $token){
+        $stmt = $this->pdo->prepare("SELECT id, email FROM users WHERE reset_token = :token");
+        $stmt->bindParam(':token', $token);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function redef($hashed_password, $user){
+        $stmt = $this->pdo->prepare('UPDATE users SET password = :password, reset_token = "", reset_token_expires = NULL WHERE id = :id');
+        $stmt->bindParam(':password', $hashed_password);
+        $stmt->bindParam(':id', $user['id']);
+        $stmt->execute();
+    }
+
+    public function pass2($users){
+        $stmt = $this->pdo->prepare("SELECT id, email FROM :users WHERE reset_token = :token AND reset_token_expires > NOW()");
+        $stmt->bindParam(':users', $users);
+        $stmt->bindParam(':token', $token);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 }

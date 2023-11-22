@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['logado'])) {
+    
+    redirect('admin/login');
+    exit(); 
+}
+
+?>
+
 <?php 
 
     require 'mod_create_posts.php';
@@ -45,91 +57,91 @@
             </thead>
             <tbody class="tborypla">
                 <?php if (isset($posts) && !empty($posts)) : ?>
-                    <?php foreach ($posts as $post) : ?>
-                        <tr>
-                            <td><?=$post->id ?></td>
-                            <td><?=$post->title ?></td>
-                            <?php foreach ($users as $user) : ?>
-                               <?php if ($post->author === $user->id) : ?>
-                                    <td><?=$user->name ?></td>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                            <td>
-                                <button onclick="openModal('viewModal<?=$post->id?>')"> <i class="bi bi-eye"></i> Visualizar</button>
-                                <button onclick="openModal('editModal<?=$post->id?>')"> <i class="bi bi-pencil-square"></i> Editar</button>
-                                <button onclick="openModal('deleteModal<?=$post->id?>')"> <i class="bi bi-trash"></i> Deletar</button>
-                            </td>
-                        </tr>
+                    <?php $cont = 1;?>
+                        <?php foreach ($posts as $post) : ?>
+                            <tr>
+                                <td><?=$cont?></td>
+                                <td><?=$post->title ?></td>
+                                <?php foreach ($users as $user) : ?>
+                                    <?php if ($post->author === $user->id) : ?>
+                                        <td><?=$user->name ?></td>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                                <td>
+                                    <button onclick="openModal('viewModal<?=$post->id?>')"> <i class="bi bi-eye"></i> Visualizar</button>
+                                    <button onclick="openModal('editModal<?=$post->id?>')"> <i class="bi bi-pencil-square"></i> Editar</button>
+                                    <button onclick="openModal('deleteModal<?=$post->id?>')"> <i class="bi bi-trash"></i> Deletar</button>
+                                </td>
+                            </tr>
+
+                            <!-- MODAL DE DELETAR -->
 
 
-                        <!-- MODAL DE DELETAR -->
-
-
-                        <div id="deleteModal<?=$post->id?>" class="modal">
-                            <div class="modal-container-delete">
-                                <div class="ilutracao">
-                                    <img src="../../../public/assets/delete-post.png">
-                                </div>
-                                <div class="modal-container">
-                                    <form id="deletepost" class="deletePost" method="post" action="/admin/posts/delete" enctype="multipart/form-data">
-                                        <input hidden name="id" value="<?=$post->id ?>">
-                                        <h2>Deletar Post</h2>
-                                        <!-- Confirmação de exclusão -->
-                                        <h3>Realmente deseja deletar esse Post?</h3>
-                                        <div class="botoes">
-                                            <button type="submit">Confirmar</button>
-                                            <button type="button" onclick="closeModal('deleteModal')">Cancelar</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- MODAL DE EDITAR -->
-
-                        <?php 
-
-                                require 'mod_edit_posts.php'
-
-                        ?>
-
-
-                        <!-- MODAL DE VISUALIZAÇÃO -->
-
-
-                        <div id="viewModal<?=$post->id?>" class="modal">
-                            <button onclick="closeModal('viewModal-post')" class="fechar"><i class="bi bi-x-lg"></i></button>
-                            <div class="modal-container-visualizacao-post">
-                                <div class="dados-visualiz-post">
-                                    <h2>Dados do Post</h2>
-                                    <div id="PostInfo">
-
-                                        <p><strong>Id:</strong> <span id="viewid"><?=$post->id ?></span></p>
-                                        <p><strong>Titulo:</strong> <span id="viewtitulo"> <?=$post->title ?></span></p>
-                                        <p><strong>Conteúdo:</strong> <span id="viewConteudo"> <?=$post->content ?></span></p>
-                                        <img id="modalImage" src="<?=$post->image?>" alt="Imagem do Post">
-                                        <p><strong>Data de Criação:</strong> <span id="modalDate"> <?=$post->created_at ?></span></p>
-                                        <?php if (isset($users) && !empty($users)) : ?>
-                                                <?php foreach ($users as $user) :?>
-                                                    <?php if ($post->author === $user->id) : ?>
-                                                        <p><strong>Autor:</strong> <span id="modalAuthor"><?php echo $user->name?></span></p>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
-                                        <?php else : ?>
-                                            <p><strong>Autor:</strong> <span id="modalAuthor"></span></p>
-                                        <?php endif; ?>
-
+                            <div id="deleteModal<?=$post->id?>" class="modal">
+                                <div class="modal-container-delete">
+                                    <div class="ilutracao">
+                                        <img src="../../../public/assets/delete-post.png">
+                                    </div>
+                                    <div class="modal-container">
+                                        <form id="deletepost" class="deletePost" method="post" action="/admin/posts/delete" enctype="multipart/form-data">
+                                            <input hidden name="id" value="<?=$post->id ?>">
+                                            <h2>Deletar Post</h2>
+                                            <!-- Confirmação de exclusão -->
+                                            <h3>Realmente deseja deletar esse Post?</h3>
+                                            <div class="botoes">
+                                                <button type="submit">Confirmar</button>
+                                                <button type="button" onclick="closeModal('deleteModal')">Cancelar</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                                <div class="ilutracao-visualiz-post">
-                                    <img src="../../../public/assets/visualiz-post.png">
-                                </div>
-                            </div> 
-                        </div>
+                            </div>
 
 
-                    <?php endforeach; ?>
+                            <!-- MODAL DE EDITAR -->
+
+                            <?php 
+
+                                    require 'mod_edit_posts.php'
+
+                            ?>
+
+
+                            <!-- MODAL DE VISUALIZAÇÃO -->
+
+
+                            <div id="viewModal<?=$post->id?>" class="modal">
+                                <button onclick="closeModal('viewModal-post')" class="fechar"><i class="bi bi-x-lg"></i></button>
+                                <div class="modal-container-visualizacao-post">
+                                    <div class="dados-visualiz-post">
+                                        <h2>Dados do Post</h2>
+                                        <div id="PostInfo">
+                                            <?php// for($cont = 1; $contp < $numposts; $cont++) : ?>
+                                            <p><strong>Id:</strong> <span id="viewid"></span></p>
+                                            <?php// endfor; ?>
+                                            <p><strong>Titulo:</strong> <span id="viewtitulo"> <?=$post->title ?></span></p>
+                                            <p><strong>Conteúdo:</strong> <span id="viewConteudo"> <?=$post->content ?></span></p>
+                                            <img id="modalImage" src="<?=$post->image?>" alt="Imagem do Post">
+                                            <p><strong>Data de Criação:</strong> <span id="modalDate"> <?=$post->created_at ?></span></p>
+                                            <?php if (isset($users) && !empty($users)) : ?>
+                                                    <?php foreach ($users as $user) :?>
+                                                        <?php if ($post->author === $user->id) : ?>
+                                                            <p><strong>Autor:</strong> <span id="modalAuthor"><?php echo $user->name?></span></p>
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                            <?php else : ?>
+                                                <p><strong>Autor:</strong> <span id="modalAuthor"></span></p>
+                                            <?php endif; ?>
+
+                                        </div>
+                                    </div>
+                                    <div class="ilutracao-visualiz-post">
+                                        <img src="../../../public/assets/visualiz-post.png">
+                                    </div>
+                                </div> 
+                            </div>
+                            <?php $cont = $cont + 1; ?>
+                        <?php endforeach; ?>
                 <?php else : ?>
                     <tr>
                         <td colspan="4">Nenhum post disponível</td>

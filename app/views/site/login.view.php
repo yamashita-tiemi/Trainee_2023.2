@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../../../public/css/mod_ed_posts.css">
     <link rel="stylesheet" href="../../../public/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     
  </head>
 
  <body>
+
+ <div id="overlay" class="overlay" onclick="closeModal()"></div>
 
 
     <form class="formlogin" method="post" action="/admin/logar">
@@ -39,6 +42,9 @@
                <div class="session">
                    <?= $_SESSION['error_message'] ?>
                </div>
+               <button type="button" onclick="openModal('perdisenha')" class="">
+                  Esqueci minha senha
+               </button>
             <?php unset($_SESSION['error_message']); 
             } ?>
 
@@ -46,6 +52,28 @@
             Entrar
       </button>
       
-    </form>
+   </form>
+
+   <form class="modal" style="display: none; position: absolute; z-index: 4;" id="perdisenha" action="/perd" method="post">
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" required>
+      <button type="submit">Recuperar Senha</button>
+   </form>
+
+    <script>
+      function openModal(modalId) {
+         closeModal(); // Fecha qualquer modal aberto antes de abrir outro
+         document.getElementById(modalId).style.display = 'block';
+         document.getElementById('overlay').style.display = 'block';
+      }
+
+      function closeModal(modalId) {
+         const modals = document.querySelectorAll('.modal');
+         modals.forEach(modal => {
+            modal.style.display = 'none';
+         });
+         document.getElementById('overlay').style.display = 'none';
+      }
+   </script>
  </body>
  </html>
