@@ -11,7 +11,7 @@ class PaginationController{
         if(isset($_GET['pagina'])){
             $page = intval($_GET['pagina']);
             if($page<=0){
-                return redirect ('posts');
+                return redirect ('users');
             }
         } else {
             $page = 1;
@@ -23,18 +23,18 @@ class PaginationController{
         //     'posts'=> $posts,
         // ];
 
-        $itens_por_pag = 10;
-        $start_limit = $itens_por_pag * $page -  $itens_por_pag;
-        $roust_count = App::get('database')->countAll('posts');
+        $qntd_users = 5;
+        $start_limit = $qntd_users * $page -  $qntd_users;
+        $roust_count = App::get('database')->countAll('users');
 
         if($start_limit > $roust_count){
-            return redirect ('admin/userListAdm');
+            return redirect ('admin/users');
         }
 
-        $posts = App::get('database')->pagination('posts', $start_limit, $itens_por_pag);
+        $users = App::get('database')->pagination('posts', $start_limit, $qntd_users);
 
-        $total_page = ceil($roust_count/ $itens_por_pag);
+        $total_page = ceil($roust_count/ $qntd_users);
 
-        return view('site/listas-de-posts', compact('users', 'posts', 'page', 'total_page') );
+        return view('admin/users', compact('users', 'posts', 'page', 'total_page') );
     }
 }

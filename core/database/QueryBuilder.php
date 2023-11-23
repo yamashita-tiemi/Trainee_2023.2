@@ -14,20 +14,6 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
-    {
-        $sql = "select * from {$table}";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
 
     public function insert($table, $parametros) {
         $sql = sprintf(
@@ -82,8 +68,23 @@ class QueryBuilder
         }
     }
 
-    public function CountAll($tables){
-        $sql = "SELECT COUNT(*) FROM {$tables}";
+     public function selectAll($table)
+    {
+        $sql = "select * from {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }   
+
+    public function countAll($table){
+        $sql = "SELECT COUNT(*) FROM users ";
 
         try{
             $statement = $this -> pdo->prepare($sql);
@@ -95,7 +96,7 @@ class QueryBuilder
             die("an error occurred when trying to count from database: {$e->getMessage()}");
         }
     }
-
+         
     public function pagination($table, $start, $limit){
         if($table == 'posts'){
             $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
@@ -108,7 +109,7 @@ class QueryBuilder
             $res->execute();
 
             return $res->fetchAll(PDO::FETCH_CLASS);
-        }catch(Exception $e){
+        } catch(Exception $e){
             die($e->getMessage());
         }
     }
