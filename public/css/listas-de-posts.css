@@ -197,12 +197,18 @@ ul li{
     
 }
 
-.pagination {
-    justify-content: center;
+.pagination{
+    justify-content: center; 
+     overflow: visible;
 }
 
+.active>.page-link:hover{
+    transform: scale(110%);
+}
 .active>.page-link {
-    background-color: red;
+    background-color: #9c395f;
+    border-color: #9c395f;
+
 }
 
 
