@@ -35,7 +35,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 3;
 }
 
 button {
@@ -218,8 +218,9 @@ tr:hover {
     display: none;
     position: absolute;
     width: 64%;
+    height: auto;
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
@@ -421,16 +422,17 @@ input {
 
 /*deletar usuario */
 
-#deleteModal {
+.deleteModal {
     
     display: none;
     position: fixed;
     width: 33%;
+    height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
@@ -539,17 +541,17 @@ input {
 
 
 /*visualizar usuario */
-#viewModal  {
+.viewModal  {
     
     display: none;
     position: fixed;
     width: 64%;
+    height: auto;
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
-    text-align: -webkit-right;
-    
+   
 }
 .modal-container-visualizacao {
     background-image: url("../assets/img-visualiz-user.png");
@@ -670,8 +672,9 @@ input {
     display: none;
     position: absolute;
     width: 64%;
+    height: auto;
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
@@ -805,6 +808,7 @@ input {
     .editModal .modal-container-edit {
         background-image: url("../assets/img-edit-user-responsiv.png");
         flex-direction: column-reverse;
+
     }
     .editModal .dados-edit{
         width: 71%;

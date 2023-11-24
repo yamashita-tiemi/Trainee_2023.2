@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../../public/css/paginacao.css">
+
 <nav aria-label="Navegação da página" class="wt-3">
 
   <ul class="pagination">
