@@ -15,7 +15,7 @@ use UsuariosController;
 
     $router->get('admin', 'UsuariosController@admin');
     
-    $router->get('users', 'PaginationController@view');
+   
     
 
 ?>
