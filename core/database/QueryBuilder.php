@@ -230,38 +230,21 @@ class QueryBuilder
         }
     }
 
-    public function senha($users, $token, $email) {
-        $sql = "UPDATE $users SET reset_token = :token WHERE email = :email";
+    public function paginationAdm($table, $start, $limit){
+        if($table == 'posts'){
+            $res = "SELECT * FROM posts ORDER BY id ASC LIMIT {$start}, {$limit}";
+        }else{
+            $res = "SELECT * FROM users ORDER BY id ASC LIMIT {$start}, {$limit}";
+        }
+        
         try{
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(':token', $token, PDO::PARAM_STR);
-            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-            $stmt->execute();
+            $res = $this->pdo->prepare($res);
+            $res->execute();
+
+            return $res->fetchAll(PDO::FETCH_CLASS);
         } catch(Exception $e){
             die($e->getMessage());
         }
-    }
-
-    public function pass($users, $token){
-        $stmt = $this->pdo->prepare("SELECT id, email FROM users WHERE reset_token = :token");
-        $stmt->bindParam(':token', $token);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function redef($hashed_password, $user){
-        $stmt = $this->pdo->prepare('UPDATE users SET password = :password, reset_token = "", reset_token_expires = NULL WHERE id = :id');
-        $stmt->bindParam(':password', $hashed_password);
-        $stmt->bindParam(':id', $user['id']);
-        $stmt->execute();
-    }
-
-    public function pass2($users){
-        $stmt = $this->pdo->prepare("SELECT id, email FROM :users WHERE reset_token = :token AND reset_token_expires > NOW()");
-        $stmt->bindParam(':users', $users);
-        $stmt->bindParam(':token', $token);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 }

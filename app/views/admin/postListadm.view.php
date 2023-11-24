@@ -23,7 +23,7 @@ if (!isset($_SESSION['logado'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Posts Admin</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/postListAdm.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../public/css/mod_ed_posts.css">
@@ -57,7 +57,6 @@ if (!isset($_SESSION['logado'])) {
             </thead>
             <tbody class="tborypla">
                 <?php if (isset($posts) && !empty($posts)) : ?>
-                    <?php $cont = 1;?>
                         <?php foreach ($posts as $post) : ?>
                             <tr>
                                 <td><?=$cont?></td>
@@ -160,7 +159,9 @@ if (!isset($_SESSION['logado'])) {
     <!-- Sobreposição -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
 
-    <!-- Modais -->
+    <?php
+        require "./app/views/Include/IncludePaginacao.php"
+    ?>
 
 </body>
 

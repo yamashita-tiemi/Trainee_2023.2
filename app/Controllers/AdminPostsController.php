@@ -9,11 +9,35 @@ class AdminPostsController
 {
 
     public function postsAdm() {
-        $posts = App::get('database')->selectAll('posts');
-        $users = App::get('database')->selectAll('users');
         $numposts = App::get('database')->countAll('posts');
 
-        return view('admin/postListadm', compact('posts', 'numposts'), compact('users'));
+        if(isset($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page<=0){
+                return redirect ('admin/posts');
+            }
+        } else {
+            $page = 1;
+        }
+
+        $users = App::get('database')->selectAll('users');
+        $posts = App::get('database')->selectAll('posts');
+       
+        $qntd_posts = 5;
+        $start_limit = $qntd_posts * $page -  $qntd_posts;
+        $roust_count = App::get('database')->countAll('posts');
+
+        if($start_limit > $roust_count){
+            return redirect ('admin/posts');
+        }
+
+        $posts = App::get('database')->paginationAdm('posts', $start_limit, $qntd_posts);
+
+        $total_page = ceil($roust_count/ $qntd_posts);
+
+        $cont = $start_limit + 1;
+
+        return view("admin/post" . "ListAdm", compact('users', 'posts', 'page', 'total_page', 'numposts', 'cont') );
     }
 
     public function admin() {

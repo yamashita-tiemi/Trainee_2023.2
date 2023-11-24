@@ -54,12 +54,6 @@
       
    </form>
 
-   <form class="modal" style="display: none; position: absolute; z-index: 4;" id="perdisenha" action="/perd" method="post">
-      <label for="email">E-mail:</label>
-      <input type="email" name="email" required>
-      <button type="submit">Recuperar Senha</button>
-   </form>
-
     <script>
       function openModal(modalId) {
          closeModal(); // Fecha qualquer modal aberto antes de abrir outro

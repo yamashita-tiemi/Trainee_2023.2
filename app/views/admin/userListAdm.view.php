@@ -27,6 +27,7 @@ if (!isset($_SESSION['logado'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../public/css/userListAdm.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -153,6 +154,7 @@ if (!isset($_SESSION['logado'])) {
                     </div>
                 </div>
             </div>
+            <?php $cont = $cont + 1; ?>
             <?php endforeach; ?>
             <?php else : ?>
                 <tr>
@@ -206,6 +208,11 @@ if (!isset($_SESSION['logado'])) {
             <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
         </div>
     </div>
+
+    <?php
+        require "./app/views/Include/IncludePaginacao.php"
+    ?>
+
     <script src="../../../public/js/userListAdm.js"></script>
 </body>
 <script>

@@ -8,11 +8,35 @@ use Exception;
 class UsuariosController{
 
     public function view(){
+        $numusers = App::get('database')->countAll('users');
+
+        if(isset($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page<=0){
+                return redirect ('admin/users');
+            }
+        } else {
+            $page = 1;
+        }
+
         $users = App::get('database')->selectAll('users');
-        $tables = [
-            'users'=> $users,
-        ];
-        return view ('admin/userListAdm', $tables);
+        $posts = App::get('database')->selectAll('posts');
+       
+        $qntd_users = 5;
+        $start_limit = $qntd_users * $page -  $qntd_users;
+        $roust_count = App::get('database')->countAll('users');
+
+        if($start_limit > $roust_count){
+            return redirect ('admin/users');
+        }
+
+        $users = App::get('database')->paginationAdm('users', $start_limit, $qntd_users);
+
+        $total_page = ceil($roust_count/ $qntd_users);
+
+        $cont = $start_limit + 1;
+
+        return view("admin/user" . "ListAdm", compact('users', 'users', 'page', 'total_page', 'numusers', 'cont') );
     }
 
     public function createUsers(){
@@ -28,6 +52,7 @@ class UsuariosController{
         return redirect('users');
 
     }
+
     public function update ()
     {
         $parameters = [

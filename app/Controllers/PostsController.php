@@ -27,7 +27,28 @@ class PostsController
         $posts = App::get('database')->selectForSearch('posts', $palavra_chave);
         $users = App::get('database')->selectAll('users');
 
-        return view('site/listas-de-posts', compact('posts'), compact('users'));
+        if(isset($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page<=0){
+                return redirect ('posts');
+            }
+        } else {
+            $page = 1;
+        }
+
+        $itens_por_pag = 6;
+        $start_limit = $itens_por_pag * $page -  $itens_por_pag;
+        $roust_count = count($posts);
+
+        if($start_limit > $roust_count){
+            return redirect ('admin/userListAdm');
+        }
+
+        $posts = App::get('database')->pagination('posts', $start_limit, $itens_por_pag);
+
+        $total_page = ceil($roust_count/ $itens_por_pag);
+
+        return view('site/listas-de-posts', compact('users', 'posts', 'page', 'total_page') );
     }
 
     public function pvi() {

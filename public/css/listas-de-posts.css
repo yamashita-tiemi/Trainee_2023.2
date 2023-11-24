@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
 
 /* Metade superior */
+html {
+    width: 1vw;
+}
+
 body{
     background-color: #CFB698;
     margin: 0;
@@ -194,7 +198,10 @@ div.cardContainer:hover .blurrableDiv{
 
 ul li{
     margin-top: 2%;
-    
+}
+
+.page-link {
+    background-color: #ddd;
 }
 
 .pagination{
