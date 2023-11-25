@@ -17,18 +17,18 @@ class UsuariosController{
     }
 
     public function createUsers(){
-        
+
         if ( App::get('database')->verifiesIfEmailAlreadyExists($_POST['email'])) {
-            http_response_code(400);
-            echo 'Erro: O e-mail já está em uso.';
-            return redirect('admin/users');
+            session_start();
+            $_SESSION['email_exist'] = true;
+            header('Location: /admin/users');
             exit();
         }
 
         $parmetros = [
-        'name' => $_POST['name'],
-        'email' => $_POST['email'],
-        'password' => $_POST['password'],
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
         ];
         
         App::get('database')->insert('users', $parmetros);

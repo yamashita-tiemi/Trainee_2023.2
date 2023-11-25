@@ -4,6 +4,13 @@
     // require_once '../../Controllers/PostsController.php';
     use App\Controllers\UsuariosController;
 
+    session_start();
+
+    if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
+        echo  "<script>alert('Email já existe!');</script>";
+        $_SESSION['email_exist'] = false;
+    }
+
    
 
 ?>
