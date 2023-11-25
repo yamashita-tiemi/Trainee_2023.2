@@ -1,13 +1,22 @@
+<?php 
+
+    
+    // require_once '../../Controllers/PostsController.php';
+    use App\Controllers\SearchController;
+
+   
+
+?>
+
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="../../../public/css/navbar.css">
         <link rel="stylesheet" href="../../../public/css/global.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <div class="navbarContainer">
         <div class="logoContainer">
-            <img src="../../../public/assets/navbar/saltoaltologo.png" height="110%" width="auto">
+            <img src="../../../public/assets/navbar/saltoaltologo.png" width="100%" height="auto">
         </div>
     </div>
     <div class="bottomRow">
@@ -16,15 +25,15 @@
             <a href=""><h2 id="blog" class="redirects">BLOG</h2></a>
             <a href=""><h2 id="contato" class="redirects">CONTATO</h2></a>
         </div>
-        <div class="navButtonsContainer">
+        <form class="navButtonsContainer" method="post" action="/user/posts/search">
             <div class="searchBar" tabindex="-1">
-                <input type="text" class="searchInput" tabindex="-1" height="auto" width="0%">
+                <input id="searchInput" name="search" type="text" class="searchInput" tabindex="-1" height="auto" width="0%">
                 <img id="lupa" class="bottomRowIcons" src="../../../public/assets/navbar/lupa.png" height="60%" width="auto">
             </div>
                 <div class="singIn" tabindex="-1">
                     <img id="signIn" class="bottomRowIcons" src="../../../public/assets/navbar/person-fill.png" height="60%" width="auto">
                 </div>
+            </form>
             <script src="../../../public/js/navbar.js"></script>
-        </div>
     </div>
 </html>

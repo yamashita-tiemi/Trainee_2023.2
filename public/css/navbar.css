@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
 
-a {
+.navbarContainer, .bottomRow a {
     text-decoration: inherit;
     color: inherit;
     cursor: pointer;
@@ -23,6 +23,9 @@ h2.redirects:hover {
 }
 
 div.navbarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #401c2a;
     width: 100%;
     aspect-ratio: 10;
@@ -30,7 +33,7 @@ div.navbarContainer {
 
 div.logoContainer {
     display: flex;
-    height: 100%;
+    width: 30%;
     justify-content: center;
     align-items: center;
 }
@@ -44,10 +47,11 @@ div.redirectsContainer {
     align-items: center;
 }
 
-div.navButtonsContainer {
+form.navButtonsContainer {
     display: flex;
     flex-direction: row;
     width: 30%;
+    height: 100%;
     padding-right: 3%;
     justify-content: flex-end;
     align-items: center;
@@ -59,6 +63,7 @@ div.bottomRow {
     top: 0;
     display: flex;
     flex-direction: row;
+    width: 100%;
     justify-content: space-between;
     height: 6vw;
     box-shadow: 0 5px 4px rgba(58, 58, 58, 0.8);
@@ -91,22 +96,23 @@ input.searchInput.selected {
 
 div.searchBar, div.singIn {
     display: flex;
-    height: 46%;
-    aspect-ratio: 1;
+    height: 2.5vw;
+    width: 2.5vw;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    border: 0.2vw solid #cfb698;
-    background: rgb(0, 0, 0, 0);
+    border: 2.3px solid #cfb698;
+    background: #00000000;
     margin-right: 2%;
 }
 
 div.searchBar.selected {
-    aspect-ratio: 8;
+    width: 80%;
+    max-height: 100%;
     justify-content: flex-end;
     border-radius: 1.2vw;
     padding-right: 2%;
-    transition: aspect-ratio 0.15s;
+    transition: all 0.15s;
 }
 
 
@@ -130,11 +136,13 @@ div.searchBar.selected {
     }
 
     div.searchBar {
-        aspect-ratio: 8;
-        justify-content: flex-end;
-        border-radius: 2vw;
-        padding-right: 2%;
+        justify-content: center;
         margin: 0 0 1vw 0;
+    }
+
+    div.searchBar.selected {
+        justify-content: flex-end;
+        padding-right: 0.3%;
     }
 
     div.bottomRow {
@@ -148,6 +156,7 @@ div.searchBar.selected {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         width: 100%;
         padding-right: 0;
         margin-right: 3%;
@@ -155,7 +164,8 @@ div.searchBar.selected {
 
     div.searchBar, div.singIn {
         height: 5vw;
-        width: auto;
+        width: 5vw;
+        border-radius: 100%;
         margin: 2vw 0 2vw 0.5vw;
     }
 
@@ -165,7 +175,6 @@ div.searchBar.selected {
     
 
     input.searchInput {
-        display: flex;
         font-size: 0.6rem;
         width: 100%;
         padding: 0.06rem 0 0 0.3rem;

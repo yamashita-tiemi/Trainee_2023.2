@@ -1,15 +1,25 @@
-var focused = false;
-document.getElementById("lupa").addEventListener("click", () => {
+    var focused = false;
     let bar = document.getElementsByClassName("searchBar")[0]
     let input = document.getElementsByClassName("searchInput")[0]
+    let form = document.getElementsByTagName("form")[0]
+document.getElementById("lupa").addEventListener("click", () => {
+    console.log(focused)
+    if(focused){
+        if(input.value) {
+            form.submit()
+        }
 
-    bar.classList.toggle("selected")
-    input.classList.toggle("selected")
-    if(!focused){
-        input.focus()
-        focused = true
-    } else {
         input.blur()
-        focused = false
+    } else {
+        focused = true
+        bar.classList.add("selected")
+        input.classList.add("selected")
+        input.focus()
     }
+})
+
+input.addEventListener('blur', () => {
+    bar.classList.remove("selected")
+    input.classList.remove("selected")
+    setTimeout(() => focused = false, 1000)
 })

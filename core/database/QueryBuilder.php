@@ -28,4 +28,24 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function selectForSearch($searchString)
+    {
+        $sql = sprintf('select * from posts WHERE content LIKE :searchString OR title LIKE :searchString');
+
+        try {
+            $PDOSearchString = '%'.$searchString.'%';
+            $stmt = $this->pdo->prepare($sql);
+            
+            $stmt->bindParam(':searchString', $PDOSearchString, PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
 }

@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Controllers;
-use App\Controllers\ExampleController;
+use App\Controllers\SearchController;
 use App\Core\Router;
 
-    $router->get('', 'ExampleController@index');
-
+    $router->post('user/posts/search', 'SearchController@search');
+    $router->get('user/posts/show', 'SearchController@view');
 ?>

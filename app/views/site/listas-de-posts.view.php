@@ -1,0 +1,82 @@
+<?php 
+
+    
+    // require_once '../../Controllers/PostsController.php';
+    use App\Controllers\SearchController;
+
+   
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/css/listas-de-posts.css">
+    <link rel="stylesheet" href="../../../public/css/global.css">
+    <title>Listas De Posts</title>
+</head>
+
+<body>
+    <?php
+       require 'navbar.view.php';
+    ?>
+    <main>
+    <?php if(!empty($posts)) :?>
+    <?php foreach ($posts as $post) : ?>
+        <div class="cardContainer">
+                <div class="cardHover">
+                    <img id="lerMais" src="../../../public/assets/botao_hover.png">
+                </div>
+                <div class="blurrableDiv">
+                    <div class="imgContainer">
+                        <img class="backgroundImg" src="../../../public/assets/adalovelace.webp">
+                    </div>
+                    <div class="absoluteTitleContainer">
+                        <h1><?= $post->title; ?></h1>
+                    </div>
+                    <div class="previewContainer">
+                        <h2><?= $post->content ?></h2>
+                    </div>
+                </div>
+            </div>
+    <?php endforeach; ?>
+    <?php else: ?>
+        <h1>Nenhum post encontrado.</h1>
+    <?php endif; ?>
+    </main>
+    <div class="options">
+        <ul>
+
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+
+
+
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const NumberPage = 5
+    for (var page = 5; page <= NumberPage; page++) {
+        const newPage = document.createElement("li")
+        newPage.classList.add("page-item")
+
+        const PageNumber = document.createElement("a")
+        PageNumber.classList.add("page-link")
+        PageNumber.setAttribute("href", `https://google.com/${page}`)
+        PageNumber.append(page)
+
+        newPage.append(PageNumber)
+
+        const newList = document.querySelector("ul")
+        newList.append(newPage)
+    }
+</script>
