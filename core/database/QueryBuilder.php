@@ -170,29 +170,28 @@ class QueryBuilder
 
     public function autenticar($table, $email, $senha)
     {
-
-        $sql = sprintf(
-            'SELECT id FROM %s WHERE email = :email AND password = :senha',
-            $table
-        );
+            $sql = sprintf(
+                'SELECT * FROM %s WHERE email = :email',
+                $table
+            );
     
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
 
 
             $stmt->execute();
 
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($result && isset($result['id'])) {
-            return $result['id'];
-        } else {
-            return 0;
-        }
+            if ($result && isset($result['id'])) {
+                if (password_verify($senha, $result['password'])) {
+                    return $result['id'];
+                }
+            }
+                return 0;
         
         } catch (Exception $e) {
             die($e->getMessage());

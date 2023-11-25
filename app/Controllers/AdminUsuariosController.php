@@ -13,7 +13,7 @@ class UsuariosController{
         if(isset($_GET['pagina'])){
             $page = intval($_GET['pagina']);
             if($page<=0){
-                return redirect ('admin/users');
+                return redirect ('admin/user' . "ListAdm");
             }
         } else {
             $page = 1;
@@ -27,7 +27,7 @@ class UsuariosController{
         $roust_count = App::get('database')->countAll('users');
 
         if($start_limit > $roust_count){
-            return redirect ('admin/users');
+            return redirect ('admin/user' . "ListAdm");
         }
 
         $users = App::get('database')->paginationAdm('users', $start_limit, $qntd_users);
@@ -49,14 +49,14 @@ class UsuariosController{
         }
 
         $parmetros = [
-        'name' => $_POST['name'],
-        'email' => $_POST['email'],
-        'password' => $_POST['password'],
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
         ];
         
         App::get('database')->insert('users', $parmetros);
 
-        return redirect('users');
+        return redirect('admin/users');
 
     }
 
@@ -65,7 +65,7 @@ class UsuariosController{
         $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
-            'password' => $_POST['password'],
+            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
         ];
 
         App::get('database')->edit($_POST['id'], 'users', $parameters);
