@@ -196,7 +196,7 @@ div.cardContainer:hover .blurrableDiv{
     margin-bottom: 20px;
 }
 
-ul li {
+.pagination li {
     margin-top: 2%;
 }
 
@@ -206,7 +206,7 @@ ul li {
 
 .pagination{
     justify-content: center; 
-     overflow: visible;
+    overflow: visible;
 }
 
 .active>.page-link:hover{
@@ -229,7 +229,7 @@ ul li {
 
 }
 
-ul li:hover {
+.pagination li:hover {
     color:  #dd0b64;
     font-size: 24px;
     transform: scale(110%);
@@ -237,7 +237,7 @@ ul li:hover {
 }
 
 
-ul li a:hover{
+.pagination li a:hover{
     color:  #dd0b64;
     font-size: 24px;
     transform: scale(110%);

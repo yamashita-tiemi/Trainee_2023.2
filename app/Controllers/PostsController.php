@@ -23,8 +23,13 @@ class PostsController
     }
 
     public function search() {
-        $palavra_chave = $_POST['search'];
-        $posts = App::get('database')->selectForSearch('posts', $palavra_chave);
+
+        session_start();
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $_SESSION['palavra_chave'] = $_POST['search'];
+        }
+        $postsPg = App::get('database')->selectForSearch('posts', $_SESSION['palavra_chave']);
         $users = App::get('database')->selectAll('users');
 
         if(isset($_GET['pagina'])){
@@ -38,13 +43,13 @@ class PostsController
 
         $itens_por_pag = 6;
         $start_limit = $itens_por_pag * $page -  $itens_por_pag;
-        $roust_count = count($posts);
+        $roust_count = count($postsPg);
 
         if($start_limit > $roust_count){
             return redirect ('admin/userListAdm');
         }
 
-        $posts = App::get('database')->pagination('posts', $start_limit, $itens_por_pag);
+        $posts = array_slice($postsPg, $start_limit, $itens_por_pag);
 
         $total_page = ceil($roust_count/ $itens_por_pag);
 

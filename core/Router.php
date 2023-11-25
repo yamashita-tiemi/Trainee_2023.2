@@ -52,6 +52,18 @@ class Router
     }
 
     /**
+     * Register a ALL route.
+     *
+     * @param string $uri
+     * @param string $controller
+     */
+    public function match($methods, $uri, $controller) {
+        foreach ($methods as $method) {
+            $this->routes[$method][$uri] = $controller;
+        }
+    }
+
+    /**
      * Load the requested URI's associated controller method.
      *
      * @param string $uri

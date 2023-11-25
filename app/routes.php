@@ -17,7 +17,7 @@ use App\Core\Router;
     $router->get('', 'PostsController@landingPage');
     $router->get('posts', 'PaginationController@view');
     $router->get('posts/pvi', 'PostsController@pvi');
-    $router->post('posts/search', 'PostsController@search');
+    $router->match(['GET', 'POST'], 'posts/search', 'PostsController@search');
 
     $router->get('admin', 'AdminPostsController@admin');
     $router->get('admin/posts', 'AdminPostsController@postsAdm');
