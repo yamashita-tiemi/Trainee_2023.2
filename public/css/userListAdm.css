@@ -421,7 +421,7 @@ input {
 
 /*deletar usuario */
 
-#deleteModal {
+.deleteModal {
     
     display: none;
     position: fixed;
@@ -496,8 +496,8 @@ input {
 
 
 @media screen and (min-width: 436px) and (max-width: 800px){
-    #deleteModal{
-        width: 40%;
+    .deleteModal{
+        width: 60%;
     }
     .dados-delete .botoes button{
         font-size: 1.5vw;
@@ -511,7 +511,7 @@ input {
 
 }
 @media screen and (min-width: 0px) and (max-width: 435px){
-    #deleteModal{
+    .deleteModal{
         width: 71%;
     }
     .dados-delete .botoes button{
@@ -539,7 +539,7 @@ input {
 
 
 /*visualizar usuario */
-#viewModal  {
+.viewModal  {
     
     display: none;
     position: fixed;
@@ -592,20 +592,20 @@ input {
     object-fit: cover;
 }
 
-#viewModal .fechar{
+.viewModal .fechar{
     display: flex;
     background-color: #dd0b64;
     
 }
-#viewModal .fechar:hover{
+.viewModal .fechar:hover{
     background-color: #dd0b6391;
 }
-#viewModal form{
+.viewModal form{
     align-items: flex-start;
 }
 
 @media screen and (min-width: 0px) and (max-width: 436px){
-    #viewModal {
+    .viewModal {
         width: 74%;
     }
     .modal-container-visualizacao {
@@ -624,13 +624,13 @@ input {
         font-size: 3.7vw;
     }
       
-    #viewModal .fechar i{
+    .viewModal .fechar i{
         font-size: 1.7vw;
             
     }
 }
 @media screen and (min-width: 437px) and (max-width: 769px) {
-    #viewModal  {
+    .viewModal  {
         width: 80%;
     }
     .fechar i{

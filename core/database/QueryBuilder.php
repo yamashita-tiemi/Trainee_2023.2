@@ -83,5 +83,24 @@ class QueryBuilder
     }
 
 
+    public function verifiesIfEmailAlreadyExists($email) {
+        $sql = "SELECT COUNT(*) AS total FROM users WHERE email = :email";
+    
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->bindParam(':email', $email);
+            $statement->execute();
+    
+            $row = $statement->fetch(PDO::FETCH_ASSOC);
+    
+            // Se o e-mail já existir, retorna verdadeiro (true), senão, retorna falso (false)
+            return ($row['total'] > 0);
+        } catch (Exception $e) {
+            die("An error occurred when trying to check email existence in the database: {$e->getMessage()}");
+        }
+    }
+    
+
+
 
 }

@@ -12,11 +12,18 @@ class UsuariosController{
         $tables = [
             'users'=> $users,
         ];
-        
+    
         return view ('admin/userListAdm', $tables);
     }
 
     public function createUsers(){
+        
+        if ( App::get('database')->verifiesIfEmailAlreadyExists($_POST['email'])) {
+            http_response_code(400);
+            echo 'Erro: O e-mail já está em uso.';
+            return redirect('admin/users');
+            exit();
+        }
 
         $parmetros = [
         'name' => $_POST['name'],

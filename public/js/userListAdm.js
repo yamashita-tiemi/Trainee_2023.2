@@ -95,3 +95,14 @@ function validaredit() {
     return true; // Retornará true se a validação passar e o formulário será enviado
 }
 
+
+//Função para lidar com a resposta do servidor
+function handleResponse(response) {
+    if (response.status === 400) {
+        // Se o status for 400 (erro), exibe um alerta com a mensagem de erro
+        alert(response.statusText);
+    } else {
+        // Caso contrário, faça qualquer outra coisa com a resposta
+        console.log(response.data);
+    }
+}
