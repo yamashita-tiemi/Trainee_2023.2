@@ -5,9 +5,9 @@
     </head>
 
     <div class="navbarContainer">
-        <div class="logoContainer">
+        <a href="/" class="logoContainer">
             <img src="../../../public/assets/navbar/saltoaltologo.png" height="110%" width="auto">
-        </div>
+        </a>
     </div>
     <div class="bottomRownav">
         <div class="redirectsContainer">

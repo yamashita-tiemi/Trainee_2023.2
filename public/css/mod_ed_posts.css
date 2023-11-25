@@ -38,7 +38,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-image: url(../assets/mod_edit_posts/fundo-roxo.png);
     background-size: cover;
-    z-index: 3;
+    z-index: 4;
 }
 
 .overlay {

@@ -42,9 +42,6 @@
                <div class="session">
                    <?= $_SESSION['error_message'] ?>
                </div>
-               <button type="button" onclick="openModal('perdisenha')" class="">
-                  Esqueci minha senha
-               </button>
             <?php unset($_SESSION['error_message']); 
             } ?>
 

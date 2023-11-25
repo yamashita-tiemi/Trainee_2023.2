@@ -1,0 +1,23 @@
+li {
+    margin-bottom: 2%;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: rgba(221, 11, 100, 0.5);
+    border-color: #a79a9f;
+}
+
+.page-link{
+    background-color: #ddd;
+    border-color: #a79a9f;
+}
+
+.page-link:hover{
+    background-color: rgba(221, 11, 100, 0.5);
+    border-color: #a79a9f;
+}

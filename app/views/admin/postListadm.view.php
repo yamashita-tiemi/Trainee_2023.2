@@ -116,12 +116,12 @@ if (!isset($_SESSION['logado'])) {
                                         <h2>Dados do Post</h2>
                                         <div id="PostInfo">
                                             <?php// for($cont = 1; $contp < $numposts; $cont++) : ?>
-                                            <p><strong>Id:</strong> <span id="viewid"></span></p>
+                                            <p><strong>Id:</strong> <span id="viewid"><?=$post->id?></span></p>
                                             <?php// endfor; ?>
-                                            <p><strong>Titulo:</strong> <span id="viewtitulo"> <?=$post->title ?></span></p>
-                                            <p><strong>Conteúdo:</strong> <span id="viewConteudo"> <?=$post->content ?></span></p>
+                                            <strong>Titulo:</strong><p> <span id="viewtitulo"> <?=$post->title ?></span></p>
+                                            <strong>Conteúdo:</strong><p> <span id="viewConteudo"> <?=$post->content ?></span></p>
                                             <img id="modalImage" src="<?=$post->image?>" alt="Imagem do Post">
-                                            <p><strong>Data de Criação:</strong> <span id="modalDate"> <?=$post->created_at ?></span></p>
+                                            <strong>Data de Criação:</strong><p> <span id="modalDate"> <?=$post->created_at ?></span></p>
                                             <?php if (isset($users) && !empty($users)) : ?>
                                                     <?php foreach ($users as $user) :?>
                                                         <?php if ($post->author === $user->id) : ?>

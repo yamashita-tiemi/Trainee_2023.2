@@ -30,10 +30,11 @@
 
    h2.mvvTexts {
        font-family: "Roboto Mono", monospace;
+       display: none;
        font-size: 1.2rem;
        color: #cfb698;
        margin-top: -1vw;
-       width: 33%;
+       width: 100%;
        text-align: center;
        opacity: 0;
        z-index: 3;
@@ -130,7 +131,7 @@
    div.mvvTextsContainer {
        display: flex;
        height: auto;
-       width: 70%;
+       width: 60%;
        justify-content: space-evenly;
    }
 

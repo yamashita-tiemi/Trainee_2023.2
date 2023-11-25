@@ -8,6 +8,11 @@ if (!isset($_SESSION['logado'])) {
     exit(); 
 }
 
+if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
+    echo  "<script>alert('Email já existe!');</script>";
+    $_SESSION['email_exist'] = false;
+}
+
 ?>
 
 <?php 

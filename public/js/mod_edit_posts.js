@@ -10,6 +10,7 @@ function closeModal(modalId) {
         modal.style.display = 'none';
     });
     document.getElementById('overlay').style.display = 'none';
+    alert("Você não salvou seu post!");
 }
 
 // function confirmarSalvarFormularioposts() {

@@ -14,6 +14,8 @@ h2.redirectsnav {
     font-size: 1.2rem;
     font-family: "Manjari", sans-serif;
     color: #cfb698;
+    font-weight: 700;
+    margin: 0;
 }
 
 h2.redirectsnav:hover {
@@ -26,9 +28,12 @@ div.navbarContainer {
     background-color: #401c2a;
     width: 100%;
     aspect-ratio: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-div.logoContainer {
+a.logoContainer {
     display: flex;
     height: 100%;
     justify-content: center;

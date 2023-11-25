@@ -19,7 +19,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+    z-index: 3;
 }
  button {
     margin: 5px;
@@ -78,7 +78,7 @@ body {
     position: absolute;
     width: 64%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
