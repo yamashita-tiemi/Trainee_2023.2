@@ -24,6 +24,7 @@ body {
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
+    border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 4;
 }
@@ -619,6 +620,7 @@ input {
     padding-bottom: 0vw;
     margin: 0%;
     font-size: 2vw;
+    margin-bottom: 10%;
 }
 .userInfo
 {

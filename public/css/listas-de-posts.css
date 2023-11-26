@@ -57,6 +57,7 @@ div.cardContainer {
 div.cardContainer:hover {
     transform: scale(110%);
 }
+
 div.cardContainer:hover .blurrableDiv{
     filter: blur(0.1rem);
 }
@@ -165,6 +166,7 @@ div.cardContainer:hover .blurrableDiv{
     height: 100%;
     cursor: pointer;
 }
+
 .options ul{
     padding: 0;
     display: flex;
@@ -198,6 +200,9 @@ div.cardContainer:hover .blurrableDiv{
 
 .pagination li {
     margin-top: 2%;
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+    position: relative;
 }
 
 .page-link {
@@ -205,8 +210,10 @@ div.cardContainer:hover .blurrableDiv{
 }
 
 .pagination{
+    display: inline-block;
     justify-content: center; 
     overflow: visible;
+
 }
 
 .active>.page-link:hover{
@@ -214,6 +221,7 @@ div.cardContainer:hover .blurrableDiv{
     font-size: 24px;
     transform: scale(110%);
     transition: 0.2s ;
+    transform-origin: center;
 }
 
 .page-link:hover {
@@ -221,6 +229,7 @@ div.cardContainer:hover .blurrableDiv{
     font-size: 24px;
     transform: scale(110%);
     transition: 0.2s ;
+    transform-origin: center;
 }
 
 .active>.page-link {
@@ -234,6 +243,7 @@ div.cardContainer:hover .blurrableDiv{
     font-size: 24px;
     transform: scale(110%);
     transition: 0.2s ;
+    transform-origin: center;
 }
 
 
