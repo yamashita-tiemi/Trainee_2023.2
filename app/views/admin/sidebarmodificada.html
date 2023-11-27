@@ -89,11 +89,19 @@
             }
         }
 
+        const fecharAoClicarFora = (event) => {
+    
+        if (!sideEl.contains(event.target)) {
+            sideEl.
+        
+            classList.remove("grande");
+            telaEl.classList.remove("css");
+            document.getElementById("overlay1").style.display = "none";
+        }
+    };
         buttonEl.addEventListener("click", opened)
-
         
-        
-            
+        document.addEventListener("click", fecharAoClicarFora);
        
     </script>
 
