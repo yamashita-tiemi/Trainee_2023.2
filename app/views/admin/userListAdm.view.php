@@ -119,13 +119,13 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
                 
                                 <label for="userpassword">Senha do Usuário</label>
                                 <div class="olhinho">
-                                    <input type="password" placeholder="********" id="userpasswordnovo" name="password" oninput="inputChanged('userpasswordnovo')">
+                                    <input type="password" placeholder="********" class="userpasswordnovo" id="userpasswordnovo<?= $user->id ?>" name="password" oninput="inputChanged('userpasswordnovo')">
                                     <i class="bi bi-eye-fill" id="btn-senha-userpasswordnovo" style="display: none;" onclick="mostrarSenha('userpasswordnovo')"></i>
                                 </div>
                 
                                 <label for="passwordconfirm">Confirme a Senha</label>
                                 <div class="olhinho">
-                                    <input type="password" placeholder="********" id="passwordconfirmnovo" name="password" oninput="inputChanged('passwordconfirmnovo')">
+                                    <input type="password" placeholder="********" class="passwordconfirmnovo" id="passwordconfirmnovo<?= $user->id ?>" name="password" oninput="inputChanged('passwordconfirmnovo')">
                                     <i class="bi bi-eye-fill" id="btn-senha-passwordconfirmnovo" style="display: none;" onclick="mostrarSenha('passwordconfirmnovo')"></i>
                                 </div>
                                 
@@ -136,7 +136,7 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
                         
                     </div>
                     
-                    <button type="submit" form="edituser<?=$user->id?>" id="botaosalvaredit"  >Salvar</button> 
+                    <button type="submit" form="edituser<?=$user->id?>" id="botaosalvaredit" onclick='return validaredit("userpasswordnovo<?= $user->id ?>", "passwordconfirmnovo<?= $user->id ?>")' >Salvar</button> 
                 </div>
                 
                 <div id="deleteModal<?= $user->id ?>" class="deleteModal modal">
@@ -210,7 +210,7 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
                 </div>
             </div>
         
-            <button type="submit" form="criaruser" id="botaosalvar" onclick="confirmarSalvarFormulario()" >Salvar</button> 
+            <button type="submit" form="criaruser" id="botaosalvar" onclick="return validar()">Salvar</button> 
         </div>
     </div>
 
@@ -222,6 +222,11 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
 </body>
 <script>
         const telaEl = document.getElementById("redimin")
+        function openModal(modalId) {
+            closeModal(); // Fecha qualquer modal aberto antes de abrir outro
+            document.getElementById(modalId).style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -13,7 +13,7 @@ class UsuariosController{
         if(isset($_GET['pagina'])){
             $page = intval($_GET['pagina']);
             if($page<=0){
-                return redirect ('admin/user' . "ListAdm");
+                return redirect ('admin/users');
             }
         } else {
             $page = 1;
@@ -27,7 +27,7 @@ class UsuariosController{
         $roust_count = App::get('database')->countAll('users');
 
         if($start_limit > $roust_count){
-            return redirect ('admin/user' . "ListAdm");
+            return redirect ('admin/users');
         }
 
         $users = App::get('database')->paginationAdm('users', $start_limit, $qntd_users);
@@ -62,6 +62,15 @@ class UsuariosController{
 
     public function update ()
     {
+        $user = App::get('database')->selectOneUser('users', $_POST['id']);
+
+        if ( App::get('database')->verifiesIfEmailAlreadyExists($_POST['email']) == true && $_POST['email'] != $user['email']) {
+            session_start();
+            $_SESSION['email_exist'] = true;
+            header('Location: /admin/users');
+            exit();
+        }
+
         $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
@@ -69,7 +78,7 @@ class UsuariosController{
         ];
 
         App::get('database')->edit($_POST['id'], 'users', $parameters);
-        header('Location: /users');
+        return redirect('admin/users');
 
         
     }
@@ -78,7 +87,7 @@ class UsuariosController{
     {
         
         App::get('database')->deleteUser('users', $_POST['id']);
-        return redirect('users');
+        return redirect('admin/users');
     }
 
 

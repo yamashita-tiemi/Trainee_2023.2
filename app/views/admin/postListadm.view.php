@@ -49,7 +49,7 @@ if (!isset($_SESSION['logado'])) {
         <table>
             <thead>
                 <tr>
-                    <th class="idula">ID</th>
+                    <th class="idula">NUM</th>
                     <th>Titulo</th>
                     <th>Criador</th>
                     <th class="actionula">Ações</th>

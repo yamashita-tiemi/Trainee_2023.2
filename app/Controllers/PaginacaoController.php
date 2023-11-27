@@ -28,7 +28,7 @@ class PaginationController{
         $roust_count = App::get('database')->countAll('posts');
 
         if($start_limit > $roust_count){
-            return redirect ('admin/userListAdm');
+            return redirect ('admin/users');
         }
 
         $posts = App::get('database')->pagination('posts', $start_limit, $itens_por_pag);

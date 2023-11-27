@@ -44,6 +44,21 @@ class QueryBuilder
         }
     }
 
+    public function selectOneUser($table, $id)
+    {
+        $sql = "select * from {$table} where id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function selectForDate($table)
     {
         $sql = "SELECT * FROM posts ORDER BY created_at DESC LIMIT 5";
