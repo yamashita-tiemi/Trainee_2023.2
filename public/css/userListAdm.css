@@ -146,11 +146,14 @@ tr:hover {
         font-size: 18px;
         width: fit-content;
         white-space: nowrap;
-        height: 40%;
+    }
+    
+    .redimensiona{
+        margin-left: 5%;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 813px) {
     
     table {
         display: inline-block;
@@ -167,6 +170,10 @@ tr:hover {
     .headerula button {
         margin-right: 10%;
         font-size: 14px;
+    }
+
+    .redimensiona{
+        margin-left: 7.5%;
     }
 }
 
@@ -188,6 +195,10 @@ tr:hover {
         margin-left: 10%;
         font-size: 10px;
     }
+
+    .redimensiona{
+        margin-left: 11%;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -197,8 +208,17 @@ tr:hover {
     .headerula h1 {
         font-size: 18px;
     }
-}
 
+    .redimensiona{
+        margin-left: 6.5%;
+    }
+}
+ 
+@media (min-width:425px) and (max-width:460px){
+    .redimensiona{
+        margin-left: 12.6%;
+    }
+}
 
 
 

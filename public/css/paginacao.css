@@ -18,3 +18,9 @@
     background-color: rgba(221, 11, 100, 0.5);
     border-color: #a79a9f;
 }
+
+@media (min-width:320px) and (max-width:680px){
+    .pagination-div{
+        
+    }
+}
