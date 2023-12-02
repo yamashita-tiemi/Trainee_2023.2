@@ -52,7 +52,7 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
     <table>
     <thead>
         <tr>
-            <th class="idula">ID</th>
+            <th class="idula">NUM</th>
             <th>Usuário</th>
             <th>Email</th>
             <th class="actionula">Ações</th>
@@ -63,7 +63,7 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
         <?php if (isset($users) && !empty($users)) : ?>
             <?php foreach ($users as $user) : ?>
                 <tr>
-                    <td><?= $user->id ?></td>
+                    <td><?= $cont ?></td>
                     <td><?= $user->name ?></td>
                     <td><?= $user->email ?></td>
                     <td>
