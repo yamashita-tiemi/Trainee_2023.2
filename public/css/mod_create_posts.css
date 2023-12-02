@@ -108,6 +108,17 @@ textarea {
     width: 40%;
 }
 
+#createModal i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-x-lg::before{
+    margin-top: 1px;
+    font-size: 1.5vw;
+}
+
 @media screen and (max-width: 767px) {
     .modal {
         height: 50vh;

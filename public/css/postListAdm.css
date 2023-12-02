@@ -178,6 +178,17 @@ ul li a:hover {
     transition: 0.2s ;
 }
 
+.viewModal i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-x-lg::before{
+    margin-top: 1px;
+    font-size: 1.5vw;
+}
+
 @media only screen and (max-width: 1280px) {
     
     .headerula h1 {
