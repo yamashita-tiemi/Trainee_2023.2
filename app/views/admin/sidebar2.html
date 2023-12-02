@@ -49,11 +49,9 @@
         <script>
             const buttonEl = document.querySelector("#bb")
             const sideEl = document.querySelector(".nav1")
-            
-    
+        
             const opened = () => {
                 
-    
                 if (sideEl.classList.contains("grande")) {
                     sideEl.classList.remove("grande");
                     telaEl.classList.remove("css");
@@ -78,14 +76,10 @@
                     document.getElementById("overlay1").style.display = "none";
                 }
             };
-                buttonEl.addEventListener("click", opened)
-                
-                document.addEventListener("click", fecharAoClicarFora);
+
+            buttonEl.addEventListener("click", opened)
+            document.addEventListener("click", fecharAoClicarFora);
     
-            
-            
-                
-           
         </script>
     
     </body>

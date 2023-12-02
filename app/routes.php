@@ -15,7 +15,7 @@ use App\Core\Router;
     $router->get('admin/logout', 'LoginController@logout');
 
     $router->get('', 'PostsController@landingPage');
-    $router->get('posts', 'PaginationController@view');
+    $router->get('posts', 'PostsController@posts');
     $router->get('posts/pvi', 'PostsController@pvi');
     $router->match(['GET', 'POST'], 'posts/search', 'PostsController@search');
 
@@ -24,8 +24,4 @@ use App\Core\Router;
     $router->post('admin/posts/create', 'AdminPostsController@createPosts');
     $router->post('admin/posts/delete', 'AdminPostsController@deletePosts');
     $router->post('admin/posts/update', 'AdminPostsController@editPosts');
-
-    $router->post('perd', 'LoginController@senha');
-    $router->post('pass', 'LoginController@pass');
-
 ?>

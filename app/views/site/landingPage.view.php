@@ -6,7 +6,6 @@
 
 
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
 
   <head>
@@ -15,7 +14,6 @@
     <link rel="icon" href="../../../public/assets/2.ico" type="image/png">
     <link rel="stylesheet" href="../../../public/css/landingPagestyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   </head>
 

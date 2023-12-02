@@ -79,18 +79,14 @@ class UsuariosController{
 
         App::get('database')->edit($_POST['id'], 'users', $parameters);
         return redirect('admin/users');
-
-        
+ 
     }
 
     public function delete()
     {
-        
-        App::get('database')->deleteUser('users', $_POST['id']);
+        App::get('database')->delete('users', $_POST['id']);
         return redirect('admin/users');
     }
-
-
 
 
     private function getUserById($users, $userId)
@@ -103,11 +99,4 @@ class UsuariosController{
 
         return null;
     }
-
-    public function admin(){
-       
-        return view ('admin/dashboard');
-    }
-
-
 }

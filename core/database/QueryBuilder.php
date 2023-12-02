@@ -123,30 +123,6 @@ class QueryBuilder
         }
     }
 
-
-    public function editPosts($table, $id, $parametros)
-    {
-        $sql = sprintf(
-            'UPDATE %s SET %s WHERE %s',
-            $table,
-            implode(', ', array_map( function($parametros) {
-                return "{$parametros} = :{$parametros}";
-            }, array_keys($parametros) )), 
-            'id = :id'
-        );
-
-        $parametros['id'] = $id;
-
-        try {
-            $statement = $this->pdo->prepare($sql);
-
-            $statement->execute($parametros);
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
     public function edit ($id, $table, $parametros)
     {
         $sql = sprintf(
@@ -169,20 +145,6 @@ class QueryBuilder
         }
     }
 
-    public function deleteUser($table, $id){
-        $sql = sprintf(
-            'DELETE FROM %s WHERE %s',
-            $table,
-            "id = :id"
-        );
-        try{
-            $statement = $this->pdo->prepare($sql);
-            $statement->execute(compact('id'));
-        }catch(Exception $e){
-            die("an error occurred when trying to delete from database: {$e->getMessage()}");
-        }
-    }
-
     public function autenticar($table, $email, $senha)
     {
             $sql = sprintf(
@@ -202,9 +164,9 @@ class QueryBuilder
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($result && isset($result['id'])) {
-                //if (password_verify($senha, $result['password'])) {
+                if (password_verify($senha, $result['password'])) {
                     return $result['id'];
-                //}
+                }
             }
                 return 0;
         
@@ -228,11 +190,8 @@ class QueryBuilder
     }
 
     public function pagination($table, $start, $limit){
-        if($table == 'posts'){
-            $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
-        }else{
-            $res = "SELECT * FROM users ORDER BY id ASC LIMIT {$start}, {$limit}";
-        }
+
+        $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
         
         try{
             $res = $this->pdo->prepare($res);
@@ -245,11 +204,8 @@ class QueryBuilder
     }
 
     public function paginationAdm($table, $start, $limit){
-        if($table == 'posts'){
-            $res = "SELECT * FROM posts ORDER BY id ASC LIMIT {$start}, {$limit}";
-        }else{
-            $res = "SELECT * FROM users ORDER BY id ASC LIMIT {$start}, {$limit}";
-        }
+
+        $res = "SELECT * FROM $table ORDER BY id ASC LIMIT {$start}, {$limit}";
         
         try{
             $res = $this->pdo->prepare($res);

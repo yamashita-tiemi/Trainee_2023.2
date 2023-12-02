@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- <script src="../../../public/js/postListadm.js"></script> -->
     <script src="../../../public/js/mod_edit_posts.js"></script>
     <title>Lista de Posts</title>
 </head>
@@ -61,11 +60,11 @@
                     <div style="display: flex; width: 100%; justify-content: center;">
                         <button type="reset">Limpar seções</button>
                         <!--botão de salvar o formulario-->
-                        <button type="submit" id="botaosalvar" onclick="confirmarSalvarFormularioposts()" >Salvar</button> 
+                        <button type="submit" id="botaosalvar">Salvar</button> 
                     </div>
                 </form>
+                
             </div>
-             <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
         </div>
     </div>
 

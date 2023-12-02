@@ -27,6 +27,10 @@
 
     <main>
 
+    <?php if (isset($posts) && empty($posts)) : ?>
+        <h2 class="notposts">Nenhum post encontrado</h2>
+    <?php endif; ?>
+
     <?php foreach ($posts as $post) : ?>
 
         <div class="cardContainer">
@@ -69,24 +73,6 @@
     ?>
 
 </body>
-
-<!-- <script>
-    const NumberPage = 5
-    for (var page = 5; page <= NumberPage; page++) {
-        const newPage = document.createElement("li")
-        newPage.classList.add("page-item")
-
-        const PageNumber = document.createElement("a")
-        PageNumber.classList.add("page-link")
-        PageNumber.setAttribute("href", `https://google.com/${page}`)
-        PageNumber.append(page)
-
-        newPage.append(PageNumber)
-
-        const newList = document.querySelector("ul")
-        newList.append(newPage)
-    }
-</script> -->
 
 </html>
 

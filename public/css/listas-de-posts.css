@@ -23,6 +23,14 @@ h1, h2 {
     color: #ffffff;
     font-weight: 700;
 }
+
+.notposts {
+    font-family: "Manjari", sans-serif;
+    color: #060000;
+    font-weight: 700;
+    margin-top: 3vw;
+}
+
 main{
     display: flex;
     flex-direction: row;

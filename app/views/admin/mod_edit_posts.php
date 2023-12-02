@@ -69,8 +69,8 @@
                         <button id="botaosalvar" type="submit">Salvar</button> 
                     </div>
                 </form>
+                
             </div>
-            <!--caso queria colocar alguma ilustracao, desenho ou imagem para o design dessa pagina que abre do modal, coloque aqui -->
         </div>
     </div>
 

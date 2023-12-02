@@ -116,9 +116,7 @@ if (!isset($_SESSION['logado'])) {
                                         
                                         <div id="PostInfo">
                                             <h2>Dados do Post</h2>
-                                        <?php// for($cont = 1; $contp < $numposts; $cont++) : ?>
                                             <p><strong>Id:</strong> <span id="viewid"><?=$post->id?></span></p>
-                                            <?php// endfor; ?>
                                             <strong>Titulo:</strong><p> <span id="viewtitulo"> <?=$post->title ?></span></p>
                                             <strong>Conteúdo:</strong><p> <span id="viewConteudo"> <?=$post->content ?></span></p>
                                             

@@ -62,19 +62,34 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
 
         <?php if (isset($users) && !empty($users)) : ?>
             <?php foreach ($users as $user) : ?>
-                <tr>
-                    <td><?= $cont ?></td>
-                    <td><?= $user->name ?></td>
-                    <td><?= $user->email ?></td>
-                    <td>
-                        <button onclick="openModal('viewModal<?= $user->id ?>')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal<?= $user->id ?>')"> <i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal<?= $user->id ?>')"> <i class="bi bi-trash"></i> Deletar</button>
-                    </td>
-                </tr>
+                <?php if($user->id == 1) : ?>
+                    <tr>
+                        <td><?= $cont ?></td>
+                        <td><?= $user->name ?></td>
+                        <td><?= $user->email ?></td>
+                        <td>
+                            <button onclick="openModal('viewModal<?= $user->id ?>')"> <i class="bi bi-eye"></i> Visualizar</button>
+                            <button class="admin_master"> <i class="bi bi-person-gear"></i> Editar</button>
+                            <button class="admin_master"> <i class="bi bi-trash"></i> Deletar</button>
+                        </td>
+                    </tr>
+                <?php else : ?>
+                    <tr>
+                        <td><?= $cont ?></td>
+                        <td><?= $user->name ?></td>
+                        <td><?= $user->email ?></td>
+                        <td>
+                            <button onclick="openModal('viewModal<?= $user->id ?>')"> <i class="bi bi-eye"></i> Visualizar</button>
+                            <button onclick="openModal('editModal<?= $user->id ?>')"> <i class="bi bi-person-gear"></i> Editar</button>
+                            <button onclick="openModal('deleteModal<?= $user->id ?>')"> <i class="bi bi-trash"></i> Deletar</button>
+                        </td>
+                    </tr>
+                <?php endif; ?>
+
                 <!-- Sobreposição -->
                 <div id="overlay" class="overlay" onclick="closeModal()"></div>
-                <!-- Modais -->
+
+                <!-- MODAL VISUALIZAR -->
                 
                 
                 <div id="viewModal<?= $user->id ?>" class="viewModal  modal">
@@ -96,6 +111,8 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
                         </div>
                     </div> 
                 </div>
+
+                <!-- MODAL EDITAR -->
                 
                 <div class="modal editModal" id="editModal<?= $user->id ?>" >
                     <button onclick="closeModal('editModal<?= $user->id ?>')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -138,6 +155,8 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
                     
                     <button type="submit" form="edituser<?=$user->id?>" id="botaosalvaredit" onclick='return validaredit("userpasswordnovo<?= $user->id ?>", "passwordconfirmnovo<?= $user->id ?>")' >Salvar</button> 
                 </div>
+
+                <!-- MODAL DELETAR -->
                 
                 <div id="deleteModal<?= $user->id ?>" class="deleteModal modal">
                     <div class="modal-container-delete">
@@ -177,6 +196,8 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
             </table>
             
         </div>
+
+        <!-- MODAL CRIAR -->
         
         <div id="createModal" class="modal">
             <button onclick="closeModal('createModal')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
