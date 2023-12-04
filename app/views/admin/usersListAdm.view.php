@@ -51,9 +51,9 @@
                     <td><?= $user->name ?></td>
                     <td><?= $user->email ?></td>
                     <td>
-                        <button onclick="openModal('viewModal<?= $user->id ?>')"> <i class="bi bi-eye"></i> Visualizar</button>
-                        <button onclick="openModal('editModal<?= $user->id ?>')"> <i class="bi bi-person-gear"></i> Editar</button>
-                        <button onclick="openModal('deleteModal<?= $user->id ?>')"> <i class="bi bi-trash"></i> Deletar</button>
+                        <button onclick="openModal('viewModal<?= $user->id ?>')" id=teste> <i class="bi bi-eye"></i> Visualizar</button>
+                        <button onclick="openModal('editModal<?= $user->id ?>')"id=teste> <i class="bi bi-person-gear"></i> Editar</button>
+                        <button onclick="openModal('deleteModal<?= $user->id ?>')"id=teste> <i class="bi bi-trash"></i> Deletar</button>
                     </td>
                 </tr>
                 <!-- Sobreposição -->
