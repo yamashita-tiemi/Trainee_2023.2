@@ -9,6 +9,7 @@ body{
     background-color: #CFB698;
     margin: 0;
     display: grid;
+    overflow-x: hidden;
 }
 
 .backgroundImg {
