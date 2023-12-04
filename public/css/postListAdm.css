@@ -37,7 +37,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+    z-index: 3;
 }
 
 button {
@@ -136,6 +136,10 @@ th {
     background-color: #ddd;
 }
 
+.tbory button {
+    line-height: 0;
+}
+
 tr:hover {
     background-color: rgba(221, 11, 100, 0.3);
 }
@@ -202,6 +206,10 @@ ul li a:hover {
         white-space: nowrap;
         height: 40%;
     }
+
+    .redimensiona{
+        margin-left: 5%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -220,6 +228,10 @@ ul li a:hover {
     .headerula button {
         margin-right: 10%;
         font-size: 14px;
+    }
+
+    .redimensiona{
+        margin-left: 7.5%;
     }
 }
 
