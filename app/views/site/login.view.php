@@ -1,4 +1,12 @@
+<?php
 
+if (isset($_SESSION['logado'])) {
+    
+   return redirect('');
+    exit(); 
+}
+
+?>
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
