@@ -158,8 +158,9 @@ tr:hover {
     }
 }
 @media (min-width:1280px) and (max-width:1440px){
-    .redimensiona{
-        margin-left: 4.5%;
+    .redimensiona.css{
+        width:85%;
+        margin-left: 18%;
     }
 }
 
