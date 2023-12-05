@@ -7,6 +7,7 @@
 .active>.page-link, .page-link.active {
     background-color: rgba(221, 11, 100, 0.5);
     border-color: #a79a9f;
+    z-index: 2;
 }
 
 .page-link{
