@@ -2,7 +2,7 @@
 
 if (isset($_SESSION['logado'])) {
     
-   return redirect('');
+   return redirect('admin');
     exit(); 
 }
 
