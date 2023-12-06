@@ -115,6 +115,10 @@ td {
     text-align: center;
 }
 
+td button {
+    line-height: 90%;
+}
+
 th {
     background: rgba(255, 93, 87, 0.85);
     padding-top: 10px;
@@ -238,7 +242,7 @@ tr:hover {
     .headerula button {
         margin-right: 10%;
         margin-left: 10%;
-        font-size: 11px;
+        font-size: 16px;
         margin-top: 3%;
     }
 
@@ -247,6 +251,9 @@ tr:hover {
         height: 60%;
     }
 
+    td button {
+        font-size: 3vw;
+    }
    
 }
 @media (min-width:500px) and (max-width:548px){
@@ -312,7 +319,7 @@ tr:hover {
 
 
 /*criar usuario */
-#createModal{
+.createModalUser {
     display: none;
     position: absolute;
     width: 64%;
@@ -808,7 +815,7 @@ input {
     padding: 0.6vw;
     font-family: 'Manjari', sans-serif;
     align-self: flex-center;
-    font-size: 15px;
+    font-size: 1.2vw;
     border-radius: 1vw;
     padding: 0.5vw;
     padding-bottom: 0.1vw;
@@ -945,6 +952,10 @@ input {
         padding: 0.8vw;
         padding-bottom: 0vw;
     }
+
+    .dados-editUser button {
+        font-size: 3vw;
+    }
 }
 
 @media screen and (min-width: 437px) and (max-width: 769px) {
@@ -980,6 +991,10 @@ input {
         border-radius: 1.2vw;
         padding: 0.6vw;
         padding-bottom: 0vw;
+    }
+
+    .dados-editUser button {
+        font-size: 2vw;
     }
     
 }

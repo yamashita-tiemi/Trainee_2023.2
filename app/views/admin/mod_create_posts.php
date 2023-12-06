@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <div id="createModal" class="modal">
+    <div id="createModal" class="modal createModal">
         <!--botão de fechar o modal-->
         <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
         <div class="modal-container-criar">

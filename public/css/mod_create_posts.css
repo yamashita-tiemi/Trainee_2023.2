@@ -13,7 +13,7 @@ body {
 }
 
 #imagem-preview {
-    background-color: #6f0550;
+    background-color: #00000000;
     min-width: 60%;
     height: 50%;
     width: auto;
@@ -24,7 +24,7 @@ body {
     display: none;
 }
 
-#createModal {
+.createModal {
     background-image: url(../assets/img-user-art.png);
     position: fixed;
     height: 85vh;
@@ -123,10 +123,15 @@ textarea {
     .modal {
         height: 50vh;
     }
+    
+    .createModal h2 {
+        text-align: center;
+    }
+
     .inputsContainer {
         flex-direction: column;
         align-items: center;
-        height: 40vh;
+        /* height: 40vh; */
     }
     
     input, textarea {
@@ -135,11 +140,11 @@ textarea {
 
     .left {
         width: 100%;
-        height: 60%;
+        /* height: 60%; */
     }
     
     .right {
         width: 100%;
-        height: 40%;
+        /* height: 40%; */
     }
 }
