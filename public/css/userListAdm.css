@@ -28,7 +28,7 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    z-index: 4;
 }
 
 .overlay {
@@ -137,6 +137,16 @@ tr:hover {
 
 .actionula {
     border-radius: 0 10px 0 0;
+}
+
+.admin_master {
+    background-color: #474747;
+    color: #fff;
+}
+
+.admin_master:hover {
+    background-color: #474747;
+    cursor: default;
 }
 
 @media (min-width: 550px) and (max-width: 1279px) {
@@ -756,7 +766,7 @@ input {
 
 
 /* editar usuario*/
-.editModal {
+.editModalUser {
     display: none;
     position: absolute;
     width: 64%;
@@ -768,7 +778,7 @@ input {
     text-align: -webkit-right;
     border-radius: 0.7vw;
 }
-.modal-container-edit{
+.modal-container-editUser{
     background-image: url("../assets/img-edit-user-fundo.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -780,7 +790,7 @@ input {
     text-align: center;
 }
 
-.dados-edit{        
+.dados-editUser{        
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -792,7 +802,7 @@ input {
     
 }
 
-.dados-edit button{
+.dados-editUser button{
     background-color:  #f297d4;
     font-size: 1.9vw;
     padding: 0.6vw;
@@ -806,10 +816,10 @@ input {
     font-weight: 700;
 }
 
-.dados-edit button:hover{
+.dados-editUser button:hover{
     background-color: #e379c0;
 }
-.editModal .fechar{
+.editModalUser .fechar{
     padding-top: 0.4vw;
     padding-bottom: 0.2vw;
 } 
@@ -868,43 +878,43 @@ input {
     margin-left: 12px;
 }
 
-.editModal img{
+.editModalUser img{
     white-space: inherit;
     z-index: 1;
 }
 
 
-.dados-edit  h2{
+.dados-editUser  h2{
     display: inline-block;
 }
 
 
-.editModal  button{    
+.editModalUser  button{    
     background-color: #b74b93;
 }
 
-.editModal  button:hover{
+.editModalUser  button:hover{
     background-color:  #f18fcd;
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 436px){
-    .editModal {
+    .editModalUser {
         width: 61%;
         border-radius: 1vw;
     }
-    .editModal .modal-container-edit {
+    .editModalUser .modal-container-editUser {
         background-image: url("../assets/img-edit-user-responsiv.png");
         flex-direction: column-reverse;
 
     }
-    .editModal .dados-edit{
+    .editModalUser .dados-editUser{
         width: 71%;
         margin-left: 0%;
         font-size: 3.3vw;
     }
 
-    .editModal input {
+    .editModalUser input {
         font-size: 2.8vw;
         border-radius: 3vw;
         margin-bottom: 1.3vw;
@@ -912,11 +922,11 @@ input {
         padding-right: 5.7vw;
         width: 40vw;
     }   
-    .editModal .ilutracao-edit{
+    .editModalUser .ilutracao-edit{
         width: 50%;
         margin-right: 8%;
     }
-    .editModal .fechar{
+    .editModalUser .fechar{
         padding-top: 0;
         padding-bottom: 0.4vw;
     } 
@@ -925,10 +935,10 @@ input {
         padding: 0.8vw;
         padding-bottom: 0.2vw;
     }
-    .editModal .fechar svg{
+    .editModalUser .fechar svg{
         width: 2vw;   
     }
-    .editModal #botaosalvaredit{
+    .editModalUser #botaosalvaredit{
         font-size: 2.6vw;
         letter-spacing: 0.4vw;
         border-radius: 1.7vw;
@@ -938,13 +948,13 @@ input {
 }
 
 @media screen and (min-width: 437px) and (max-width: 769px) {
-    .editModal {
+    .editModalUser {
         width: 80%;
     }
-    .editModal .fechar svg{
+    .editModalUser .fechar svg{
         width: 1.5vw;   
     }
-    .editModal .dados-edit{
+    .editModalUser .dados-editUser{
         width: 50%;
         font-size: 2.1vw;
     }
@@ -955,7 +965,7 @@ input {
         width: 23vw;
     }
     
-    .editModal .ilutracao-edit{
+    .editModalUser .ilutracao-edit{
         width: 67%;
     }
     
@@ -964,7 +974,7 @@ input {
         padding: 0.6vw;
     }
     
-    .editModal #botaosalvaredit{
+    .editModalUser #botaosalvaredit{
         font-size: 1.9vw;
         letter-spacing: 0.2vw;
         border-radius: 1.2vw;

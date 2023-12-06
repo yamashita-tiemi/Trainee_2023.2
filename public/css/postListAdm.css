@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Manjari', sans-serif;
     display: flex;
@@ -259,6 +267,14 @@ ul li a:hover {
         margin-right: 10%;
         margin-left: 10%;
         font-size: 10px;
+    }
+
+    td {
+        font-size: 2.5vw;
+    }
+
+    td button {
+        font-size: 2vw;
     }
 }
 

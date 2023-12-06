@@ -114,16 +114,16 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
 
                 <!-- MODAL EDITAR -->
                 
-                <div class="modal editModal" id="editModal<?= $user->id ?>" >
+                <div class="modal editModalUser" id="editModal<?= $user->id ?>" >
                     <button onclick="closeModal('editModal<?= $user->id ?>')" class="fechar"><svg xmlns="http://www.w3.org/2000/svg" width="1vw"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                         <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
                       </svg></button>
                       
-                    <div class="modal-container-edit">
+                    <div class="modal-container-editUser">
                         <div class="ilutracao-edit">
                             <img src="../../../public/assets/img-edit-user-iconn.png">
                         </div>  
-                        <div class="dados-edit">
+                        <div class="dados-editUser">
                             <h2>Editar Informações do Usuário</h2>
                             <form id="edituser<?=$user->id?>" class="edituser" method="post" action="/admin/users/update" enctype="multipart/form-data">
                             <input hidden name="id" value="<?=$user->id?>">
