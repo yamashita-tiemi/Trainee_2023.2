@@ -59,7 +59,7 @@
                             <br>
                             <img class="imagem-previewmep" id="imagem-previewmep<?=$post->id?>" src="<?=$post->image?>" style="max-width: 300px;">
                             <br>
-                            <label for="figurecaption">Título:</label>
+                            <label for="figurecaption">Legenda:</label>
                             <input type="text" name="figurecaption" id="figurecaption" required value="<?=$post->figurecaption?>">
                         </div>
                     </div>

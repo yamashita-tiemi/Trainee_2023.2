@@ -72,7 +72,7 @@ input, textarea, select {
     font-size: 1.5vw;
     border-radius: 5px;
     border: 1px #272727 solid;
-    width: 50%;
+    width: 70%;
 }
 
 .escolherImg {
@@ -104,7 +104,7 @@ input, textarea, select {
 .leftmep select{
     border-radius: 5px;
     font-size: 1.5vw;
-    width: 50%;
+    width: 70%;
     height: 29.2px;
     
 }
@@ -117,6 +117,10 @@ input, textarea, select {
 .rightmep img {
     object-fit: cover;
     background-size: cover;
+}
+
+.rightmep input{
+    width: 80%;
 }
 
 .EditarPost button {
@@ -287,24 +291,28 @@ input, textarea, select {
     }
 
     .leftmep textarea{
-        width: 50%;
+        width: 80%;
         height: 52px;
         font-size: 2.3vw;
     }
 
     .leftmep input{
         font-size: 2.3vw;
-        width: 50%;
+        width: 80%;
         height: 12px;
     }
 
     .leftmep select{
         height: 12px;
         font-size: 2.3vw;
+        width: 80%;
    }
    
    .rightmep{
         margin-top: 5px;
+    }
+    .rightmep input{
+        width: 80%;
     }
 
     
@@ -316,7 +324,7 @@ input, textarea, select {
 
 
 
-@media screen and (min-width: 330px) and (max-width: 436px){
+@media screen and (min-width: 331px) and (max-width: 436px){
     .editmodal {
         width: 74%;
         background-image: url("../assets/mod_edit_posts/fundo-roxo-vertical.jpg");
@@ -350,7 +358,7 @@ input, textarea, select {
     
     
     .EditarPost input, .EditarPost textarea , .EditarPost select {
-        width: 50%;
+        width: 80%;
         font-size: 8.5px;
     }
 
@@ -445,8 +453,12 @@ input, textarea, select {
     }
     
     .rightmep img{
-        width: 140px;
+        width: 170px;
         height: 140px;
+    }
+
+    .rightmep input{
+        width: 70%;
     }
 
 }
@@ -464,6 +476,7 @@ input, textarea, select {
     
     .rightmep{
         justify-content: center;
+        margin-right: 7%;
     }
     .rightmep img {
         height: 170px;
@@ -500,6 +513,9 @@ input, textarea, select {
         padding-bottom: 3.7px;
     }
 
+    .rightmep input{
+        width: 109%;
+    }
 }
 
 
@@ -508,6 +524,11 @@ input, textarea, select {
     .modal {
         width: 80%;
     }
+
+    .rightmep{
+        margin-right: 7%;
+    }
+
     .leftmep textarea{
         height: 111px;
     }
@@ -536,6 +557,10 @@ input, textarea, select {
 
     .botoesinferioresmep button{
         padding-bottom: 2.3px;
+    }
+    
+    .rightmep input{
+        width: 100%;
     }
 
 }
