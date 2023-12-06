@@ -77,9 +77,13 @@
                 <img class="opacityimgpvi" alt="Imagem do post" src="<?=$post->image?>">
                 <figcaption><?=$post->figurecaption?></figcaption>
             </div>
-            <p>
-            <?=$post->content ?>
-            </p>
+            <?php
+            $paragrafos = explode("\n", $post->content);
+
+            foreach ($paragrafos as $paragrafo) {
+                echo '<p>' . htmlspecialchars($paragrafo) . '</p>';
+            }
+            ?>
             <?php foreach ($users as $user) : ?>
                 <?php if ($user->id === $post->author) : ?>
                     <h2>Autor(a): <?=$user->name ?></h2>

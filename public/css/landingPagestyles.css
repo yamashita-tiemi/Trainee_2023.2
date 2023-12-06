@@ -7,7 +7,7 @@ html, body{
 
 }
 body {
-   
+   overflow-x: hidden;
     background: #cfb698;
     font-family: 'Manjari', sans-serif;;
 }
