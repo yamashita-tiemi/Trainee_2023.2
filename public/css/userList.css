@@ -1,16 +1,33 @@
-
-
-/* pagina de usurios e body para configuração geral*/
 body {
     font-family: 'Manjari', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #cfb698;
+    overflow-x: hidden;
 }
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
 .overlay {
     display: none;
     position: fixed;
@@ -18,12 +35,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
+
 button {
     margin: 5px;
     padding: 5px;
+    text-align: center;
     cursor: pointer;
     background-color: #401c2a;
     color: #fff;
@@ -31,162 +50,255 @@ button {
     border-radius: 4px;
 }
 
+button:hover {
+    background-color: #6f0550;
+}
+
+.criaruser input {
+    display: block;
+}
+
+.criaruser label {
+    display: block;
+}
+
 .headerula {
     display: flex;
     justify-content: space-around;
-    position: fixed;
     top: 0;
-    left: 0;
-    margin: 0 10% 0 10%;
-    height: 100px;
-    width: 85%;
-    border-radius: 20px;
+    margin: 1.5% 10% 5% 10%;
+    height: 18vh;
+    width: 80%;
+    border-radius: 10px;
+    background: linear-gradient(271deg, #FF5D57 0%, #DD0B64 101.04%);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.30);
     align-items: center;
 }
 
 .headerula h1 {
     display: inline-block;
-    margin-right: 20%;
+    margin-right: 2%;
 }
 
 .headerula button {
     margin-left: 10%;
+    font-size: 24px;
 }
 
-.mainula {
-    width: 90%;
+.tableconteinerula {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.grid-item {
-    border: 1px solid #ddd; /* Adicione uma borda para separar os itens */
-    padding: 16px;
+table {
+    overflow-x: scroll;
+    width: 80%;
+    white-space: nowrap;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+thead {
+    border-radius: 10px;
+    background: rgba(255, 93, 87, 0.85);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.30);
+}
+
+td {
+    padding: 8px;
     text-align: center;
 }
-.col4 {
-    grid-column: 4;
+
+th {
+    background: rgba(255, 93, 87, 0.85);
+    padding-top: 10px;
+    text-align: center;
 }
 
+.tbory tr {
+    background-color: #ddd;
+}
 
+tr:hover {
+    background-color: rgba(221, 11, 100, 0.3);
+}
 
+.idula {
+    border-radius: 10px 0 0 0;
+}
 
+.actionula {
+    border-radius: 0 10px 0 0;
+}
 
-
-
-
-
-/*deletar usuario */
-
-#deleteModal {
+@media (min-width: 550px) and (max-width: 1279px) {
     
-    display: none;
-    position: fixed;
-    width: 33%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1;
-    margin: 0%;
-    padding: 0%;
-    text-align: -webkit-right;
+    .headerula h1 {
+        font-size: 28px;
+        white-space: nowrap;
+        margin-top: 1%;
+    }
+
+    .headerula button {
+        font-size: 20px;
+        width: 154px;
+        white-space: nowrap;
+    }
+    
+    .redimensiona{
+        margin-left: 9%;
+    }
+
+    .redimensiona.css {
+        width: 79%;
+        margin-left: 18%;
+    }
+}
+@media (min-width:1280px) and (max-width:1440px){
+    .redimensiona.css{
+        width:85%;
+        margin-left: 18%;
+    }
+}
+
+@media only screen and (max-width: 813px) {
+    
+    table {
+        display: inline-block;
+    }
+    .headerula h1 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width:501px) and (max-width: 650px) {
+
+    .headerula h1 {
+        font-size: 21px;
+        margin-right: 0%;
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+    .headerula button {
+        margin-right: 10%;
+        font-size: 16px;
+        width: 150px;
+    }
+
+    .redimensiona{
+        margin-left: 11%;
+    }
+
+    #teste{
+        font-size: 13px;
+    }
+}
+
+@media (min-width:650px) and (max-width:769px){
+    .redimensiona.css{
+        margin-left: 24%;
+    }
+
     
 }
-.modal-container-delete {
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin:0%
-    
-}
-.dados-delete{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 94%;
-    font-size: 1vw;
-    font-weight: 700;
-}
-.dados-delete h2{
-    margin: 0.5vw;
-    margin-top: 1.1vw;
 
-}
-.dados-delete h3{
-    margin: 0.5vw;
-    margin-bottom: 1.4vw;
-
-}
-.modal-container-delete .ilutracao{
-    width: 58%;
-    margin-top: 1%;
-}
-.modal-container-delete .ilutracao img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.dados-delete .botoes button {
-    padding: 0.45vw;
-    padding-bottom: 0.2vw;
-    margin: 0.7vw;
-    margin-bottom: 1vw;
-    cursor: pointer;
-    background-color: #b74b93;
-    color: #fff;
-    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
-    border: none;
-    border-radius: 0.3vw;
-    font-size: 0.95vw;
-    font-family: 'Manjari', sans-serif;
-}
-.dados-delete .botoes button:hover {
-    background-color:  #f18fcd;
-
-}
-
-
-
-
-@media screen and (min-width: 436px) and (max-width: 800px){
-    #deleteModal{
-        width: 40%;
+@media only screen and (max-width: 500px) {
+    .headerula {
+        padding-top: 3%;
+        height: 20%;
+        flex-wrap: wrap;
+        padding-bottom: 5%;
     }
-    .dados-delete .botoes button{
-        font-size: 1.5vw;
-        border-radius: 0.7vw;
-        padding: 0.8vw;
-        padding-bottom: 0.1vw;
+    .headerula h1 {
+        font-size: 18px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
     }
-    .dados-delete{
-        font-size: 1.5vw;
+    .headerula button {
+        margin-right: 10%;
+        margin-left: 10%;
+        font-size: 11px;
+        margin-top: 3%;
     }
 
+    .redimensiona{
+        margin-left: 7%;
+    }
+
+   
 }
-@media screen and (min-width: 0px) and (max-width: 435px){
-    #deleteModal{
-        width: 71%;
+@media (min-width:500px) and (max-width:548px){
+    .redimensiona{
+        margin-left: 4%;
     }
-    .dados-delete .botoes button{
-        font-size: 3vw;
-        border-radius: 0.7vw;
-        padding: 1vw;
-        padding-bottom: 0.1vw;
+}
+@media (min-width:549px) and (max-width:620px){
+    #redimenin{
+        width: 80%;
+        margin-left: 32%;
     }
-    .dados-delete{
-        font-size: 2.8vw;
+}
+ 
+@media (min-width:500px) and (max-width:460px){
+    .redimensiona{
+        margin-left: 12.6%;
+    }
+
+    .headerula button {
+        margin-top: -2%;
+    }
+    .headerula h1 {
+        font-size: 18px;
+    }
+     
+    .button{
+        width: 10px;
+    }
+
+    #teste{
+        font-size: 11px;
+    }
+}
+
+@media (min-width:320px) and (max-width:500px){
+    .redimensiona{
+        margin-left: 6%;
+    }
+    #teste{
+        font-size: 12px;
+    }
+}
+@media (min-width:770px) and (max-width:1000px){
+    .redimensiona.css{
+        margin-left: 36%;
+    }
+
+    .redimensiona.css {
+        width: 79%;
+        margin-left: 34%;
+    }
+}
+
+@media (min-width:990px) and (max-width:1025px){
+    .redimensiona.css{
+        margin-left: 26.5%;
     }
 
 }
+
+
 /*criar usuario */
 #createModal{
     display: none;
     position: absolute;
     width: 64%;
+    height: auto;
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
@@ -299,9 +411,6 @@ input {
     background-color: #dd0b63ac;
 }
 
-
-
-
 @media screen and (min-width: 0px) and (max-width: 436px){
     .modal {
         width: 74%;
@@ -344,17 +453,6 @@ input {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 437px) and (max-width: 769px) {
     .modal {
         width: 80%;
@@ -396,18 +494,142 @@ input {
 
 
 
-/*visualizar usuario */
-#viewModal  {
+
+
+
+
+/*deletar usuario */
+
+.deleteModal {
     
     display: none;
     position: fixed;
-    width: 64%;
+    width: 33%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
     margin: 0%;
     padding: 0%;
     text-align: -webkit-right;
     
+}
+.modal-container-delete {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0%
+    
+}
+.dados-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+    font-size: 1vw;
+    font-weight: 700;
+}
+.dados-delete h2{
+    margin: 0.5vw;
+    margin-top: 1.1vw;
+
+}
+.dados-delete h3{
+    margin: 0.5vw;
+    margin-bottom: 1.4vw;
+
+}
+.modal-container-delete .ilutracao{
+    width: 58%;
+    margin-top: 1%;
+}
+.modal-container-delete .ilutracao img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dados-delete .botoes button {
+    padding: 0.45vw;
+    padding-bottom: 0.2vw;
+    margin: 0.7vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+    background-color: #b74b93;
+    color: #fff;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
+    border: none;
+    border-radius: 0.3vw;
+    font-size: 0.95vw;
+    font-family: 'Manjari', sans-serif;
+}
+.dados-delete .botoes button:hover {
+    background-color:  #f18fcd;
+
+}
+
+
+
+
+@media screen and (min-width: 436px) and (max-width: 800px){
+    #deleteModal{
+        width: 40%;
+    }
+    .dados-delete .botoes button{
+        font-size: 1.5vw;
+        border-radius: 0.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 1.5vw;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 435px){
+    #deleteModal{
+        width: 71%;
+    }
+    .dados-delete .botoes button{
+        font-size: 3vw;
+        border-radius: 0.7vw;
+        padding: 1vw;
+        padding-bottom: 0.1vw;
+    }
+    .dados-delete{
+        font-size: 2.8vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*visualizar usuario */
+.viewModal  {
+    
+    display: none;
+    position: fixed;
+    width: 64%;
+    height: auto;
+    background-color: #fff;
+    z-index: 4;
+    margin: 0%;
+    padding: 0%;
+   
 }
 .modal-container-visualizacao {
     background-image: url("../assets/img-visualiz-user.png");
@@ -453,25 +675,14 @@ input {
 #viewModal .fechar{
     display: flex;
     background-color: #dd0b64;
-    font-size: 0.8vw;
+    
 }
 #viewModal .fechar:hover{
     background-color: #dd0b6391;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#viewModal form{
+    align-items: flex-start;
+}
 
 @media screen and (min-width: 0px) and (max-width: 436px){
     #viewModal {
@@ -498,18 +709,6 @@ input {
             
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 437px) and (max-width: 769px) {
     #viewModal  {
         width: 80%;
@@ -529,3 +728,239 @@ input {
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* editar usuario*/
+.editModal {
+    display: none;
+    position: absolute;
+    width: 64%;
+    height: auto;
+    background-color: #fff;
+    z-index: 4;
+    margin: 0%;
+    padding: 0%;
+    text-align: -webkit-right;
+    border-radius: 0.7vw;
+}
+.modal-container-edit{
+    background-image: url("../assets/img-edit-user-fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+    text-align: center;
+}
+
+.dados-edit{        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: auto;
+    width: 50%;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin: 2%;
+    
+}
+
+.dados-edit button{
+    background-color:  #f297d4;
+    font-size: 1.9vw;
+    padding: 0.6vw;
+    font-family: 'Manjari', sans-serif;
+    align-self: flex-center;
+    font-size: 15px;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.1vw;
+    color: #000000;
+    font-weight: 700;
+}
+
+.dados-edit button:hover{
+    background-color: #e379c0;
+}
+.editModal .fechar{
+    padding-top: 0.4vw;
+    padding-bottom: 0.2vw;
+} 
+.edituser button {
+    font-family: Manjari, sans-serif;
+    font-size: 1.1vw;
+    background-color: rgba(221, 11, 99, 0.663);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-radius: 1vw;
+    padding: 0.5vw 0.5vw 0.1vw;
+}
+#btn-senha-userpasswordnovo, #btn-senha-passwordconfirmnovo {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    color: #858585;
+}
+
+::placeholder {
+    color: #9c9c9c; /* Define a cor do texto de espaço reservado para cinza (#999) */
+}
+
+#botaosalvaredit{
+    
+    background-color: #dd0b63;
+    margin-right: 5%;
+    box-shadow: 0vw 0.1vw 0.3vw 0.1vw #6a6a6a;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 7px;
+    margin-top: 6px;    
+    font-family: 'Manjari', sans-serif;
+    font-size: 1.1vw;
+    letter-spacing: 0.15vw;
+    border-radius: 0.8vw;
+    padding: 0.5vw 0.5vw 0vw;
+}
+
+#botaosalvaredit:hover{
+    background-color: #f18fcd;
+}
+
+
+
+.ilutracao-edit{
+    width: 70%;
+    
+}
+
+.ilutracao-edit img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 12px;
+}
+
+.editModal img{
+    white-space: inherit;
+    z-index: 1;
+}
+
+
+.dados-edit  h2{
+    display: inline-block;
+}
+
+
+.editModal  button{    
+    background-color: #b74b93;
+}
+
+.editModal  button:hover{
+    background-color:  #f18fcd;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 436px){
+    .editModal {
+        width: 61%;
+        border-radius: 1vw;
+    }
+    .editModal .modal-container-edit {
+        background-image: url("../assets/img-edit-user-responsiv.png");
+        flex-direction: column-reverse;
+
+    }
+    .editModal .dados-edit{
+        width: 71%;
+        margin-left: 0%;
+        font-size: 3.3vw;
+    }
+
+    .editModal input {
+        font-size: 2.8vw;
+        border-radius: 3vw;
+        margin-bottom: 1.3vw;
+        padding: 1.1vw;
+        padding-right: 5.7vw;
+        width: 40vw;
+    }   
+    .editModal .ilutracao-edit{
+        width: 50%;
+        margin-right: 8%;
+    }
+    .editModal .fechar{
+        padding-top: 0;
+        padding-bottom: 0.4vw;
+    } 
+    .edituser button{
+        font-size: 2.5vw;
+        padding: 0.8vw;
+        padding-bottom: 0.2vw;
+    }
+    .editModal .fechar svg{
+        width: 2vw;   
+    }
+    .editModal #botaosalvaredit{
+        font-size: 2.6vw;
+        letter-spacing: 0.4vw;
+        border-radius: 1.7vw;
+        padding: 0.8vw;
+        padding-bottom: 0vw;
+    }
+}
+
+@media screen and (min-width: 437px) and (max-width: 769px) {
+    .editModal {
+        width: 80%;
+    }
+    .editModal .fechar svg{
+        width: 1.5vw;   
+    }
+    .editModal .dados-edit{
+        width: 50%;
+        font-size: 2.1vw;
+    }
+   
+    input {
+        font-size: 1.6vw;
+        padding-right: 3.5vw;
+        width: 23vw;
+    }
+    
+    .editModal .ilutracao-edit{
+        width: 67%;
+    }
+    
+    .edituser button{
+        font-size: 1.9vw;
+        padding: 0.6vw;
+    }
+    
+    .editModal #botaosalvaredit{
+        font-size: 1.9vw;
+        letter-spacing: 0.2vw;
+        border-radius: 1.2vw;
+        padding: 0.6vw;
+        padding-bottom: 0vw;
+    }
+    
+}
+

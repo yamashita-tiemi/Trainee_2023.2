@@ -232,16 +232,17 @@ a {
     margin-top: 20%;
 }
 .element {
-    width: 40%;
-    height: 70%;
+    width: 30%;
+    height: 60%;
     border-radius: 4%;
     position: relative;
+    font-size: medium;
     line-height: 1.3;
 }
 
 #element1 {
     
-    width: 36%;
+    width: 32%;
     height: 75%;
     background: rgba(221, 11, 100, 0.65);
     z-index: 1;
@@ -258,11 +259,13 @@ a {
     position: absolute;
     margin-top: -10%;
     margin-left: 15%;
+    padding-bottom: 2%;
 }
 
 #element2 .img{
     width: 63%;
     margin-left: 20%;
+    margin-top: 2%;
     z-index: 2;
 }
 
@@ -272,15 +275,15 @@ a {
     object-fit: cover;
 }
 #element2 h4{
-    width: 70%;
+    width: 96%;
     height: 19%;
     text-align:left;
-    font-size: 1.8vw;
+    font-size: 1.6vw;
     font-weight: 400;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.2px;
     color: #CFB698;
-    margin-left: 2%;
-    margin-top: 4%;
+    margin-left: 4%;
+    margin-top: 2%;
 }
 
 #element3 {
@@ -308,11 +311,12 @@ a {
     height: 2%;
     text-align:right;
     float: right;
-    font-size: 1.8vw;
+    font-size: 1.6vw;
     font-weight: 400;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.2px;
     color: #401C2A;
-    margin-right: 2%;
+    margin-right: 4%;
+    margin-top: 0;
 }
 
 

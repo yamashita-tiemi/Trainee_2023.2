@@ -1,12 +1,16 @@
+* {
+    box-sizing: inherit;
+}
+
 body {
     font-family: 'Manjari', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
     margin: 0;
-    background-color: #cfb698
+    background-color: #cfb698;
+    overflow-x: hidden;
 }
 
 .modal-container {
@@ -18,15 +22,13 @@ body {
 .modal {
     display: none;
     position: fixed;
-    height: auto;
-    width: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 4;
+    z-index: 1;
 }
 
 .overlay {
@@ -49,7 +51,6 @@ button {
     color: #fff;
     border: none;
     border-radius: 4px;
-    font-family: 'Manjari', sans-serif;
 }
 
 button:hover {
@@ -68,7 +69,7 @@ button:hover {
     display: flex;
     justify-content: space-around;
     top: 0;
-    margin: 5% 10% 5% 10%;
+    margin: 1.5% 10% 5% 10%;
     height: 18vh;
     width: 80%;
     border-radius: 10px;
@@ -79,17 +80,12 @@ button:hover {
 
 .headerula h1 {
     display: inline-block;
-    margin-right: 20%;
-    line-height: 0.6;
-    margin-bottom: 0;
+    margin-right: 2%;
 }
 
 .headerula button {
     margin-left: 10%;
-    width: 20%;
-    height: 50%;
     font-size: 24px;
-    line-height: 0.6;
 }
 
 .tableconteinerula {
@@ -117,27 +113,18 @@ thead {
 td {
     padding: 8px;
     text-align: center;
-    font-size: 1.6vw;
-}
-
-td button {
-    font-size: 1vw;
-    text-align: center;
-    line-height: 0.7;
 }
 
 th {
     background: rgba(255, 93, 87, 0.85);
     padding-top: 10px;
     text-align: center;
+    font-size: 80%;
+    padding: 1% 1% 0 1%;
 }
 
 .tbory tr {
     background-color: #ddd;
-}
-
-.tbory button {
-    line-height: 0;
 }
 
 tr:hover {
@@ -152,42 +139,34 @@ tr:hover {
     border-radius: 0 10px 0 0;
 }
 
-.admin_master {
-    background-color: #474747;
-    color: #fff;
-}
-
-.admin_master:hover {
-    background-color: #474747;
-}
-
-.viewModal i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bi-x-lg::before{
-    margin-top: 1px;
-    font-size: 1.5vw;
-}
-
-@media only screen and (max-width: 1280px) {
+@media (min-width: 550px) and (max-width: 1279px) {
     
     .headerula h1 {
         font-size: 28px;
         white-space: nowrap;
+        margin-top: 1%;
     }
 
     .headerula button {
-        font-size: 18px;
-        width: fit-content;
+        font-size: 20px;
+        width: 154px;
         white-space: nowrap;
-        height: 40%;
     }
     
     .redimensiona{
-        margin-left: 5%;
+        margin-left: 9%;
+        height: 60%;
+    }
+
+    .redimensiona.css {
+        width: 79%;
+        margin-left: 18%;
+    }
+}
+@media (min-width:1280px) and (max-width:1440px){
+    .redimensiona.css{
+        width:85%;
+        margin-left: 18%;
     }
 }
 
@@ -196,170 +175,130 @@ tr:hover {
     table {
         display: inline-block;
     }
-}
-
-@media only screen and (max-width: 780px) {
-
     .headerula h1 {
         font-size: 24px;
-        margin-right: 10%;
+    }
+}
+
+@media (min-width:501px) and (max-width: 650px) {
+
+    .headerula h1 {
+        font-size: 21px;
+        margin-right: 0%;
         margin-left: 10%;
+        margin-top: 3%;
     }
     .headerula button {
         margin-right: 10%;
-        font-size: 14px;
+        font-size: 16px;
+        width: 150px;
     }
 
     .redimensiona{
-        margin-left: 7.5%;
+        margin-left: 11%;
+        height: 60%;
+    }
+
+    #teste{
+        font-size: 13px;
     }
 }
 
+@media (min-width:650px) and (max-width:769px){
+    .redimensiona.css{
+        margin-left: 24%;
+    }
 
-@media only screen and (min-width: 561px) and (max-width: 770px) {
+    
+}
+
+@media only screen and (max-width: 500px) {
     .headerula {
         padding-top: 3%;
-        height: 10%;
+        height: 20%;
         flex-wrap: wrap;
         padding-bottom: 5%;
     }
     .headerula h1 {
-        font-size: 20px;
+        font-size: 18px;
         margin-left: 10%;
         margin-right: 10%;
+        margin-top: 5%;
     }
     .headerula button {
         margin-right: 10%;
         margin-left: 10%;
-        font-size: 16px;
-        text-align: center;
-        padding-bottom: 4.3%;
-        margin-top: -1.0%;
-    }
-
-    .tbory button{
-        font-size: 13.5px;
+        font-size: 11px;
+        margin-top: 3%;
     }
 
     .redimensiona{
-        margin-left: 12.5%;
-    }
-}
-
-
-@media only screen and (min-width: 377px) and (max-width: 560px) {
-    .headerula{
-        display: block;
-        margin-bottom: 20px;
-        width: 80%;
-    }
-    
-    .headerula button {
-        margin-bottom: 0%;
-        margin-top: 0%;
-        height: 30%;
-        margin-left: 110px;
-    }
-    
-    .headerula h1 {
-        font-size: 25px;
-        margin-left: 70px;
-        margin-top: 29px;
-    
-    }
-    .tbory{
-        font-size: 17px;
-    }
-    .tbory button{
-        font-size: 14px;
+        margin-left: 7%;
+        height: 60%;
     }
 
-}
-
-
-@media only screen and (min-width: 322px) and (max-width: 376px) {
-    .headerula{
-        display: block;
-        margin-bottom: 20px;
-        width: 80%;
-    }
    
-    .headerula button {
-        margin-bottom: 0%;
-        margin-top: 0%;
-        height: 30%;
-        margin-left: 90px;
-    }
-    
-    .headerula h1 {
-        font-size: 24px;
-        margin-left: 55px;
-        margin-top: 29px;
-    
-    }
-
+}
+@media (min-width:500px) and (max-width:548px){
     .redimensiona{
-        margin-left: 6.5%;
+        margin-left: 4%;
+        height: 60%;
     }
-
-    .tbory{
-        font-size: 16px;
+}
+@media (min-width:549px) and (max-width:620px){
+    #redimenin{
+        width: 80%;
+        margin-left: 32%;
     }
-
-    .tbory button{
-        font-size: 13px;
-    }
-
-
-
 }
  
-@media only screen and (min-width: 0px) and (max-width: 321px) {
-    .headerula{
-        display: block;
-        margin-bottom: 20px;
-        width: 80%;
+@media (min-width:500px) and (max-width:460px){
+    .redimensiona{
+        margin-left: 12.6%;
+        height: 60%;
     }
-   
+
     .headerula button {
-        height: 30%;
-        margin-top: 2%;
-        height: 30%;
-        margin-left: 68px;
+        margin-top: -2%;
     }
     .headerula h1 {
-        font-size: 22px;
-        margin-left: 42px;
-        margin-top: 28px;
+        font-size: 18px;
+    }
+     
+    .button{
+        width: 10px;
     }
 
+    #teste{
+        font-size: 11px;
+    }
+}
+
+@media (min-width:320px) and (max-width:500px){
     .redimensiona{
-        margin-left: 6.5%;
-
+        margin-left: 6%;
+    }
+    #teste{
+        font-size: 12px;
+    }
+}
+@media (min-width:770px) and (max-width:1000px){
+    .redimensiona.css{
+        margin-left: 36%;
     }
 
-    .tbory{
-        font-size: 15px;
+    .redimensiona.css {
+        width: 79%;
+        margin-left: 34%;
     }
+}
 
-    .tbory button{
-        font-size: 12.5px;
+@media (min-width:990px) and (max-width:1025px){
+    .redimensiona.css{
+        margin-left: 26.5%;
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*criar usuario */

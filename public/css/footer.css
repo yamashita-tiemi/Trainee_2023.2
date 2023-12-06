@@ -174,11 +174,11 @@
     }
 
     div.socialsContainer {
-        width: 30%;
+        width: 40%;
     }
 
     .socialsContainer a img{
-        height: 60%;
+        height: 7vw;
     }
 
    }

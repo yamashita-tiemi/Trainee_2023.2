@@ -108,6 +108,10 @@ table {
     border-radius: 10px;
 }
 
+.tablepost {
+    display: table;
+}
+
 thead {
     border-radius: 10px;
     background: rgba(255, 93, 87, 0.85);
@@ -236,6 +240,10 @@ ul li a:hover {
 }
 
 @media only screen and (max-width: 500px) {
+    .tablepost {
+        display: inline-block;
+    }
+
     .headerula {
         padding-top: 3%;
         height: 10%;
