@@ -14,7 +14,7 @@ function closeModal(modalId) {
 
 function confirmDelete() {
     // Adicione aqui a lógica para excluir o post
-    alert('Post deletado com sucesso!');
+   // alert('Post deletado com sucesso!');
     closeModal('deleteModal');
 }
 
