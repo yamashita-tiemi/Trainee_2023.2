@@ -182,6 +182,12 @@
     }
 
    }
+
+   @media only screen and (max-width: 400px) {
+        div.absoluteLine {
+            /* width: 125vw; */
+        }
+   }
    
    
    

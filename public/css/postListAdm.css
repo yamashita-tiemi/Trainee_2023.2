@@ -72,6 +72,11 @@ button:hover {
     display: block;
 }
 
+label {
+    font-size: 1.6vw;
+    font-weight: 700;
+}
+
 .headerula {
     display: flex;
     justify-content: space-around;
@@ -92,12 +97,11 @@ button:hover {
     margin-bottom: 0;
 }
 
-.headerula button {
+.criarpostbotao {
     margin-left: 10%;
-    width: 20%;
-    height: 50%;
+    width: 15%;
     font-size: 24px;
-    line-height: 0.6;
+    padding-top: 1%;
 }
 
 .tableconteinerula {
@@ -129,7 +133,6 @@ thead {
 td {
     padding: 8px;
     text-align: center;
-    font-size: 1.6vw;
 }
 
 td button {
@@ -138,7 +141,8 @@ td button {
     line-height: 0.7;
 }
 
-th {
+.thposts {
+    font-size: 1.3vw;
     background: rgba(255, 93, 87, 0.85);
     padding-top: 10px;
     text-align: center;
@@ -212,7 +216,7 @@ ul li a:hover {
         white-space: nowrap;
     }
 
-    .headerula button {
+    .criarpostbotao {
         font-size: 18px;
         width: fit-content;
         white-space: nowrap;
@@ -222,6 +226,10 @@ ul li a:hover {
     .redimensiona{
         margin-left: 5%;
     }
+
+    td button {
+        font-size: 1.2vw;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -229,21 +237,38 @@ ul li a:hover {
     table {
         display: inline-block;
     }
+
+    td button {
+        font-size: 1.8vw;
+    }
+
+    .thposts {
+        font-size: 2vw;
+    }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 767px) {
 
     .headerula h1 {
         font-size: 24px;
         margin-left: 10%;
     }
-    .headerula button {
+    .criarpostbotao {
         margin-right: 10%;
-        font-size: 14px;
+        font-size: 12px;
+        padding: 2.5%;
+    }
+
+    td {
+        font-size: 2vw;
     }
 
     .redimensiona{
         margin-left: 7.5%;
+    }
+
+    .thposts {
+        font-size: 3vw;
     }
 }
 
@@ -258,19 +283,21 @@ ul li a:hover {
         flex-wrap: wrap;
         padding-bottom: 5%;
     }
+
     .headerula h1 {
         font-size: 20px;
         margin-left: 10%;
         margin-right: 10%;
     }
-    .headerula button {
+
+    .criarpostbotao {
         margin-right: 10%;
         margin-left: 10%;
         font-size: 10px;
     }
 
     td {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
 
     td button {
@@ -279,8 +306,8 @@ ul li a:hover {
 }
 
 @media only screen and (max-width: 400px) {
-    .headerula button {
-        margin-top: -2%;
+    .criarpostbotao {
+        font-size: 10px;
     }
     .headerula h1 {
         font-size: 18px;

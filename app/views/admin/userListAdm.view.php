@@ -46,7 +46,7 @@ if(isset($_SESSION['email_exist']) && $_SESSION['email_exist'] == true) {
         <div class="redimensiona" id="redimin" >
     <div class="headerula">
         <h1>Lista de Usuários</h1>
-        <button onclick="openModal('createModal')"> <i class="bi bi-person-add"></i> Criar Usuário</button>
+        <button class="criaruserbotao" onclick="openModal('createModal')"> <i class="bi bi-person-add"></i> Criar Usuário</button>
     </div>
     <div class="tableconteinerula">
     <table>

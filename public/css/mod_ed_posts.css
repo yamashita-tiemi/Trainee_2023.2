@@ -78,9 +78,14 @@ input, textarea, select {
     width: 70%;
 }
 
+#conteudopost {
+    height: 300px;
+    margin-bottom: 2%;
+}
+
 .escolherImg {
     width: 80%;
-    font-size: 1vw;
+    font-size: 15px;
 }
 
 .editmodal textarea {
@@ -341,6 +346,10 @@ input, textarea, select {
         border-radius: 0 0 6px 6px;
     }
 
+    #conteudopost {
+        height: 100px;
+    }
+
 
     .modal-container-edit{
         background-image: none;
@@ -485,6 +494,10 @@ input, textarea, select {
         height: 15vw;
     }
 
+    #conteudopost {
+        height: 100px;
+    }
+
     .leftmep label{
         font-size: 2vw;   
         margin-top: 5px;
@@ -547,10 +560,6 @@ input, textarea, select {
 
     .rightmep label{
         font-size: 19px;
-    }
-    
-    .escolherImg{
-        font-size: 10px;
     }
     
     .bi-x-lg::before{

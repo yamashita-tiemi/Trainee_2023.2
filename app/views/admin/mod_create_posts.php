@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <div id="createModal" class="modal createModal">
+    <div id="createModal" class="modal createModalposts">
         <!--botão de fechar o modal-->
         <button class="Fechar" onclick="closeModal('createModal')"><i class="bi bi-x-lg"></i></button>
         <div class="modal-container-criar">
@@ -57,10 +57,10 @@
                             <input type="text" name="figurecaption" id="figurecaption" required>
                         </div>
                     </div>
-                    <div style="display: flex; width: 100%; justify-content: center;">
+                    <div class="botoesmodalcriarposts" style="display: flex; justify-content: center;">
                         <button type="reset">Limpar seções</button>
                         <!--botão de salvar o formulario-->
-                        <button type="submit" id="botaosalvar">Salvar</button> 
+                        <button type="submit" id="botaosalvarposts">Salvar</button> 
                     </div>
                 </form>
                 

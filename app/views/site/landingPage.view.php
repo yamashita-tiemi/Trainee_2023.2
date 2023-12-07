@@ -45,6 +45,7 @@
           <div class="container">
             <div class="background">
               <div class="img"><img src="<?=$post->image?>" alt="img" draggable="false"></div>
+              <h1><?=$post->title?></h1>
               <h2><?=$post->content?></h2>
             </div>
             <form class="circle" action="/posts/pvi" data-post-id="<?= $post->id ?>">

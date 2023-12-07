@@ -44,16 +44,16 @@ if (!isset($_SESSION['logado'])) {
 
     <div class="headerula">
         <h1>Lista de Posts</h1>
-        <button onclick="openModal('createModal')"> <i class="bi bi-file-plus"></i>  Criar Post</button>
+        <button class="criarpostbotao" onclick="openModal('createModal')"> <i class=" bi bi-file-plus"></i>  Criar Post</button>
     </div>
     <div class="tableconteinerula">
         <table class="tablepost">
             <thead>
                 <tr>
-                    <th class="idula">NUM</th>
-                    <th>Titulo</th>
-                    <th>Criador</th>
-                    <th class="actionula">Ações</th>
+                    <th class="idula thposts">NUM</th>
+                    <th class="thposts">Titulo</th>
+                    <th class="thposts">Criador</th>
+                    <th class="actionula thposts">Ações</th>
                 </tr>
             </thead>
             <tbody class="tborypla">

@@ -30,10 +30,10 @@
                             <input hidden name="id" value="<?=$post->id ?>">
                             <label for="titulopost">Título:</label>
                             <input type="text" name="titulopost" id="titulopost" required value="<?=$post->title?>">
-                            <br>
+                            
                             <label for="conteudopost">Conteúdo:</label>
                             <textarea name="conteudopost" id="conteudopost" required><?=$post->content?></textarea>
-                            <br>
+                            
                             <label for="data_criacaopost">Data de Criação:</label>
                             <input type="date" name="data_criacaopost" id="data_criacaopost" required value="<?=$post->created_at?>">
                             <br>
