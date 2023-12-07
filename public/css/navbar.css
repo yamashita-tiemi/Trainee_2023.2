@@ -32,7 +32,7 @@ div.navbarContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 13vw;
+    height: 10vw;
 }
 
 a.logoContainer {
@@ -144,6 +144,7 @@ div.searchBar.selected {
         background-color: #401c2a;
         width: 100%;
         aspect-ratio: 7;
+        height: 13vw;
     }
 
     div.redirectsContainer {
