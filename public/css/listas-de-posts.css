@@ -3,6 +3,7 @@
 /* Metade superior */
 
 body{
+    font-family: "Manjari", sans-serif;
     background-color: #CFB698;
     margin: 0;
     display: flex;
@@ -159,16 +160,24 @@ div.cardContainer:hover .blurrableDiv{
 }
 
 .cardbut {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #6f0550;
+    color: white;
     height: 4vw;
+    width: 8vw;
     padding: 0;
     margin: 0;
     border: 0;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all 0.2s ease-in-out;
+    font-size: 1.3vw;
+    text-align: center;
 }
 
 .cardbut:hover {
-    height: 4.3vw;
+    height: 5vw;
+    width: 9vw;
+    font-size: 1.5vw;
 }
 
 .cardHover .cardimg:hover{
@@ -222,7 +231,7 @@ div.cardContainer:hover .blurrableDiv{
     display: inline-block;
     justify-content: center; 
     overflow: visible;
-
+    font-family: var(--bs-body-font-family);
 }
 
 .active>.page-link:hover{
@@ -282,6 +291,12 @@ div.cardContainer:hover .blurrableDiv{
     .cardHover img:hover{
         height: 15%;
         cursor: pointer;
+    }
+
+    .cardbut {
+        height: 12vw;
+        width: 24vw;
+        font-size: 4vw;
     }
    
     .options ul{

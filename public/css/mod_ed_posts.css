@@ -78,8 +78,12 @@ input, textarea, select {
     width: 70%;
 }
 
+input {
+    max-height: 5vh;
+}
+
 #conteudopost {
-    height: 300px;
+    height: 15vh;
     margin-bottom: 2%;
 }
 

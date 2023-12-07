@@ -23,7 +23,7 @@
                 <form class="CriarPost" method="post" action="/admin/posts/create" enctype="multipart/form-data">
                     <div class="inputsContainer">
                         <div class="left">
-                            <h2>Criar um Novo Post</h2>
+                            <h2>Criar Post</h2>
                             <label for="titulopost">Título:</label>
                             <input type="text" name="titulopost" id="titulopost" required>
                             <br>

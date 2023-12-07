@@ -37,8 +37,8 @@
             <form action="/posts/pvi">
                 <div class="cardHover">
                     <input name="post-id" hidden value="<?=$post->id?>">
-                    <button class="cardbut" type="submit">
-                        <img class="cardimg" id="lerMais" src="../../../public/assets/botao_hover.png">
+                    <button class="cardbut" type="submit"> LER MAIS
+                        <!-- <img class="cardimg" id="lerMais" src="../../../public/assets/botao_hover.png"> -->
                     </button>
                 </div>
             </form>
